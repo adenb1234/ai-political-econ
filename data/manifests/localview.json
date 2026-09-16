@@ -35,5 +35,5 @@
   "geo_crosswalk_residuals": "data/processed/crosswalks/localview_place_to_county_v0_residuals.csv",
   "meta_spine": "data/processed/localview/meta_spine_v0.parquet",
   "meta_spine_qa": "data/processed/qa/localview_meta_spine_v0_qa.json",
-  "recorded_at_utc": "2026-09-16T18:38:54.216630+00:00"
+  "recorded_at_utc": "2026-09-16T18:40:36.619401+00:00"
 }
