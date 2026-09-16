@@ -1,10 +1,10 @@
 # Sources — free-data access notes
 
 Policy: backbone uses **no paid APIs**. Keys are optional enrichment only.  
-Canonical per-layer free-status and next-step inventory: [`SOURCE_INVENTORY.md`](SOURCE_INVENTORY.md). This file remains the access-URL reference.
+Per-layer free status, verified raw state, blockers, and next steps (A/B/E/F/G) are tracked in [`SOURCE_INVENTORY.md`](SOURCE_INVENTORY.md). This file remains the access-URL reference.
 Refresh cadence targets match [`WORKING_SPEC.md`](WORKING_SPEC.md).
 
-**Operational matrix:** free-source status, FIPS×month readiness, next ingest steps, and blockers live in [`SOURCE_INVENTORY.md`](SOURCE_INVENTORY.md) (access date 2026-09-16 PT).
+**Inventory pointer:** the matrix is checked against `data/raw/` and `data/manifests/` as of 2026-09-16 PT; this document keeps the source URLs and access notes.
 
 ---
 ## E — Crowd Counting Consortium (mobilization)

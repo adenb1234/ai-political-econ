@@ -3,7 +3,7 @@
 **Access / verification date:** 2026-09-16 (PT).  
 **Policy:** backbone uses **no paid APIs / no paid credits**. Do not invent empirical rows. Bulk raw stays under `data/raw/` (gitignored); manifests + this doc are the operational record.
 
-**Canonical home:** this file is the tracker’s free-source status/readiness matrix (`docs/SOURCE_INVENTORY.md`). A draft previously lived in `/workspace/ai-backlash-free-data/docs/SOURCE_INVENTORY.md`.
+**Canonical home:** this file is the tracker’s free-source status/readiness matrix (`docs/SOURCE_INVENTORY.md`). The merge source was the separate free-data workspace draft; all operational paths below are relative to this tracker repo.
 
 **Companion docs:** narrative access URL notes in [`SOURCES.md`](SOURCES.md) · schema spine in [`WORKING_SPEC.md`](WORKING_SPEC.md) · taxonomy in [`TAXONOMY.md`](TAXONOMY.md) · CCC filter [`filters/ccc_ai_keywords_v0.md`](filters/ccc_ai_keywords_v0.md) (`ccc_rules_v0`).
 
@@ -21,20 +21,17 @@ Phase priority from working spec: **A → B → E** first, then **G**, then **F*
 
 ## Per-layer free status summary (raw files and manifests checked on disk 2026-09-16 PT)
 
-| Layer | Free status | On-disk / manifest detail | FIPS × month | Aden / paid blocker? |
-|-------|-------------|---------------------------|--------------|----------------------|
-| **A** LocalView | **already-have-raw** (codebook + meta) | codebook + meta `downloaded`; transcripts deferred | `partial` | None (transcript size is ops) |
-| **B** LegiScan | **blocked** | `blocked` / `documented_only`; raw empty | `not started` | **Yes — free account bulk drop or free API key** |
-| **B** Open States | **blocked** (optional) | `documented_only` | `not started` | **Yes — free API key** (defer vs LegiScan) |
-| **E** CCC phase 3 | **already-have-raw** (+ transform v0) | `downloaded`; events/panel/QA on disk | `partial` → matched rows OK | None for access |
-| **F** Arctic Shift | **ready** (documented; no dump) | `documented_only` | `not started` | Torrent size / disk budget |
-| **F** Google Trends | **ready** (pilot) | `documented_only` | `not started` (DMA→county hard) | Rate limits / crosswalk |
-| **D** Local media RSS/HTML | policy only | none yet | `not started` | Legal/ToS per site; curate feeds first |
-| **G** EIA-861 | **already-have-raw** | `downloaded` | `partial` (utility→county TBD) | None |
-| **G** LBNL / ISO / registries | **ready** (document-only) | `documented_only` | `partial` / `not started` | Hand-curation for opposition lists |
-| geo Census gazetteer | **already-have-raw** | `downloaded` | `ready` (spine helper) | None |
-| D Media Cloud | notes only | `documented_only` | `not started` | **`MC_API_KEY`**; NewsBank paid excluded |
-| H Calibration | cite-as-published | n/a | n/a national | No free bulk assumed |
+The required layer status is one of `ready`, `blocked`, or `already-have-raw`. Where a layer has both a verified raw input and documented follow-on sources, the layer status reflects the verified raw input; the detail rows below preserve the next-step distinction.
+
+| Layer | Free status | Verified on-disk / manifest state | FIPS × month | Aden / paid blocker? |
+|-------|-------------|-----------------------------------|--------------|----------------------|
+| **A** Deliberation | **already-have-raw** | LocalView codebook + metadata downloaded; transcripts deferred | `partial` | None for free access |
+| **B** Legislation | **blocked** | LegiScan raw empty; Open States documented only | `not started` | **Yes — free LegiScan bulk drop/key; optional Open States key** |
+| **E** Mobilization | **already-have-raw** | CCC phase 3 downloaded; versioned transform outputs on disk | `partial` → matched rows checked | None for access |
+| **F** Vernacular | **ready** | Arctic Shift and Google Trends documented only; no raw dumps | `not started` | Dump size, rate limits, and geo crosswalk |
+| **G** Project ledger | **already-have-raw** | EIA-861 downloaded; LBNL/ISO/registries documented only | `partial` / `not started` | No access blocker; hand-curation and schema work remain |
+
+Supplemental free options (Google Trends, hand-curated opposition registries, Media Cloud, and local RSS/HTML) are documented below without claiming unverified downloads. Census is a verified geography helper, not one of the five study layers.
 
 ---
 
