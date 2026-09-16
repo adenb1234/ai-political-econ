@@ -7,9 +7,13 @@ from __future__ import annotations
 
 import argparse
 import zipfile
+from datetime import datetime
 from pathlib import Path
+from zoneinfo import ZoneInfo
 
 from ._download import ROOT, sha256_file, try_download, write_manifest
+
+PT = ZoneInfo("America/Los_Angeles")
 
 GAZ_URL = (
     "https://www2.census.gov/geo/docs/maps-data/data/gazetteer/"
@@ -123,6 +127,7 @@ def fetch_ct_town_to_cog(force: bool = False) -> Path:
         "url": CT_TOWN_TO_COG_URL,
         "path": str(dest.relative_to(ROOT)),
         "status": "downloaded",
+        "access_date_pt": datetime.now(PT).date().isoformat(),
         "notes": (
             "CT Data Collaborative town → 2022 planning-region county-equivalents "
             "(Census adopted COGs as county-equivalents in 2022; 2024 gazetteer "
@@ -144,7 +149,11 @@ def fetch_ct_town_to_cog(force: bool = False) -> Path:
         source_id="census_ct_town_to_planning_region",
         notes=extra["notes"],
         license_note=extra["license_note"],
-        extra={"layer": "geo", "upstream": extra["upstream"]},
+        extra={
+            "layer": "geo",
+            "upstream": extra["upstream"],
+            "access_date_pt": extra["access_date_pt"],
+        },
     )
     print(msg)
     if not ok:

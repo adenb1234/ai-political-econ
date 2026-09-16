@@ -3,11 +3,12 @@
   "url": "https://raw.githubusercontent.com/CT-Data-Collaborative/ct-town-to-planning-region/main/ct-town-to-planning-region.csv",
   "path": "data/raw/census/ct_town_to_planning_region.csv",
   "status": "downloaded",
+  "access_date_pt": "2026-09-16",
   "notes": "CT Data Collaborative town \u2192 2022 planning-region county-equivalents (Census adopted COGs as county-equivalents in 2022; 2024 gazetteer no longer lists Fairfield/Litchfield/etc.). MIT license. Access date recorded in manifest; do not treat as LocalView empirical rows.",
   "license_note": "MIT (CT Data Collaborative); derived from Census TIGER 2022",
   "layer": "geo",
   "upstream": "https://github.com/CT-Data-Collaborative/ct-town-to-planning-region",
   "bytes": 11988,
   "sha256": "4592692e000ba77c5ff37dc308f415d9b1504b325337c66d096e9878977f11a9",
-  "recorded_at_utc": "2026-09-16T18:30:07.685041+00:00"
+  "recorded_at_utc": "2026-09-16T18:31:18.607722+00:00"
 }
