@@ -37,7 +37,7 @@ st_fips_raw,place_names,multiple_cities,predicted_st_fips,n_meta_rows,county_fip
 0159472;0171190,Phenix City city; Smiths Station city,1,0171190,63,01081,AL,Lee County,01081,medium,predicted_place_to_county,national_places → counties gazetteer; from predicted_st_fips for multi-city
 0159472;0171190,Phenix City city; Smiths Station city,1,UNKNOWN,121,01081,AL,Lee County,01081,medium,compound_tokens_agree,all resolvable tokens agree on one county
 0169120,Selma city,0,,112,01047,AL,Dallas County,01047,high,place_to_county,national_places → counties gazetteer
-0169240,Semmes city,0,,63,,AL,,,none,unmatched_place,7-digit not in national_places / no safe county equiv
+0169240,Semmes city,0,,63,01097,AL,Mobile County,01097,medium,place_by_county_2020,national_places miss; ANSI 2020 place_by_county → counties gaz
 0171190,Smiths Station city,0,,14,01081,AL,Lee County,01081,high,place_to_county,national_places → counties gazetteer
 0174352,Sylacauga city,0,,7,01121,AL,Talladega County,01121,high,place_to_county,national_places → counties gazetteer
 0177304,Tuskegee city,0,,24,01087,AL,Macon County,01087,high,place_to_county,national_places → counties gazetteer
@@ -204,7 +204,7 @@ st_fips_raw,place_names,multiple_cities,predicted_st_fips,n_meta_rows,county_fip
 1271400,Temple Terrace city,0,,255,12057,FL,Hillsborough County,12057,high,place_to_county,national_places → counties gazetteer
 1271900,Titusville city,0,,541,12009,FL,Brevard County,12009,high,place_to_county,national_places → counties gazetteer
 1304000,Atlanta,0,,1344,,GA,,13089;13121,low,ambiguous_multi_county_place,place spans 2 counties; FIPS not invented
-1310944,Brookhaven city,0,,200,,GA,,,none,unmatched_place,7-digit not in national_places / no safe county equiv
+1310944,Brookhaven city,0,,200,13089,GA,DeKalb County,13089,medium,place_by_county_2020,national_places miss; ANSI 2020 place_by_county → counties gaz
 13117,Forsyth County,0,,233,13117,GA,Forsyth County,13117,high,county_geoid_validated,validated against 2024 counties gazetteer
 13119,Franklin County,0,,2,13119,GA,Franklin County,13119,high,county_geoid_validated,validated against 2024 counties gazetteer
 1312456,Calhoun city,0,,21,13129,GA,Gordon County,13129,high,place_to_county,national_places → counties gazetteer

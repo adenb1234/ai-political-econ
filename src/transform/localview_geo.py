@@ -5,6 +5,7 @@ Uses:
   - Census 2024 counties gazetteer (validate 5-digit county GEOIDs)
   - Census 2024 places gazetteer (validate 7-digit place GEOIDs)
   - Census national_places.txt (place GEOID → county name(s))
+  - Census ANSI national_place_by_county2020.txt (fallback COUNTYFP)
 
 Does not invent FIPS for ambiguous multi-city / multi-county / UNKNOWN rows.
 Does not download transcript tarballs.
@@ -30,6 +31,8 @@ PLACES_GAZ = ROOT / "data" / "raw" / "census" / "2024_Gaz_place_national.txt"
 NATIONAL_PLACES = ROOT / "data" / "raw" / "census" / "national_places.txt"
 # CT Data Collaborative (MIT): town → 2022 planning-region county-equivalents (Census adopted 2022).
 CT_TOWN_TO_COG = ROOT / "data" / "raw" / "census" / "ct_town_to_planning_region.csv"
+# Census ANSI 2020 place×county (COUNTYFP). Fallback when national_places.txt misses a GEOID.
+PLACE_BY_COUNTY_2020 = ROOT / "data" / "raw" / "census" / "national_place_by_county2020.txt"
 OUT_CSV = ROOT / "data" / "processed" / "crosswalks" / "localview_place_to_county_v0.csv"
 OUT_QA = ROOT / "data" / "processed" / "qa" / "localview_place_to_county_v0_qa.json"
 OUT_RESIDUALS = (
@@ -168,6 +171,122 @@ def load_ct_town_to_cog(path: Path | None = None) -> dict[str, tuple[str, str]]:
                 continue
             out[_norm_name(town)] = (fips, ce_name)
     return out
+
+
+
+
+def load_place_by_county_2020(
+    path: Path | None = None,
+) -> dict[str, list[tuple[str, str]]]:
+    """place GEOID (statefp+placefp) → [(county_fips, county_name), ...] (order preserved).
+
+    Source: Census ANSI codes2020/national_place_by_county2020.txt (public domain).
+    Optional — empty dict if missing. Multi-county places keep multiple rows.
+    """
+    path = path or PLACE_BY_COUNTY_2020
+    if not path.exists():
+        return {}
+    out: dict[str, list[tuple[str, str]]] = {}
+    with path.open(encoding="utf-8", errors="replace", newline="") as f:
+        reader = csv.DictReader(f, delimiter="|")
+        for row in reader:
+            statefp = (row.get("STATEFP") or "").strip()
+            placefp = (row.get("PLACEFP") or "").strip()
+            countyfp = (row.get("COUNTYFP") or "").strip()
+            countyname = (row.get("COUNTYNAME") or "").strip()
+            if not (statefp and placefp and countyfp):
+                continue
+            geoid = f"{statefp}{placefp}"
+            try:
+                fips = f"{int(statefp):02d}{int(countyfp):03d}"
+            except ValueError:
+                continue
+            bucket = out.setdefault(geoid, [])
+            if not any(existing[0] == fips for existing in bucket):
+                bucket.append((fips, countyname))
+    return out
+
+
+def _try_place_by_county_2020(
+    digits: str,
+    place_names: str,
+    *,
+    by_fips: dict[str, County],
+    place_by_county: dict[str, list[tuple[str, str]]],
+    tok: str,
+    in_gaz: bool,
+    method_prefix: str,
+) -> CrosswalkRow | None:
+    """Map 7-digit place GEOID via ANSI 2020 place×county when national_places misses it.
+
+    Accepts only when exactly one county FIPS is present in the 2024 counties gazetteer.
+    Multi-county → ambiguous (candidates in all_county_fips); no FIPS invented.
+    """
+    if not place_by_county:
+        return None
+    rows = place_by_county.get(digits) or []
+    if not rows:
+        return None
+    counties: list[County] = []
+    seen: set[str] = set()
+    for fips, _name in rows:
+        c = by_fips.get(fips)
+        if c and c.fips not in seen:
+            seen.add(c.fips)
+            counties.append(c)
+    pref = f"{method_prefix}" if method_prefix else ""
+    if not counties:
+        all_raw = ";".join(f for f, _ in rows)
+        return CrosswalkRow(
+            st_fips_raw=tok,
+            place_names=place_names,
+            multiple_cities=0,
+            predicted_st_fips="",
+            n_meta_rows=0,
+            county_fips="",
+            state="",
+            county_name="",
+            all_county_fips=all_raw,
+            confidence="none",
+            method=f"{pref}unmatched_place_by_county_stale",
+            notes=(
+                "ANSI 2020 place_by_county hit(s) not in 2024 counties gaz "
+                f"(raw={all_raw}); FIPS not invented"
+            ),
+        )
+    if len(counties) == 1:
+        c = counties[0]
+        return CrosswalkRow(
+            st_fips_raw=tok,
+            place_names=place_names,
+            multiple_cities=0,
+            predicted_st_fips="",
+            n_meta_rows=0,
+            county_fips=c.fips,
+            state=c.state,
+            county_name=c.name,
+            all_county_fips=c.fips,
+            confidence="medium",
+            method=f"{pref}place_by_county_2020",
+            notes=(
+                "national_places miss; ANSI 2020 place_by_county → counties gaz"
+                + ("" if in_gaz else "; place GEOID not in 2024 places gaz")
+            ),
+        )
+    return CrosswalkRow(
+        st_fips_raw=tok,
+        place_names=place_names,
+        multiple_cities=0,
+        predicted_st_fips="",
+        n_meta_rows=0,
+        county_fips="",
+        state=counties[0].state,
+        county_name="",
+        all_county_fips=";".join(c.fips for c in counties),
+        confidence="low",
+        method=f"{pref}ambiguous_place_by_county_2020",
+        notes=f"ANSI 2020 place spans {len(counties)} counties; FIPS not invented",
+    )
 
 
 def _national_places_by_name(
@@ -360,6 +479,7 @@ def _map_single_token(
     national_places: dict[str, PlaceRef],
     national_places_by_name: dict[tuple[str, str], list[PlaceRef]] | None = None,
     ct_town_to_cog: dict[str, tuple[str, str]] | None = None,
+    place_by_county: dict[str, list[tuple[str, str]]] | None = None,
     method_prefix: str = "",
 ) -> CrosswalkRow | None:
     """Map one GEOID-like token. Returns None if token empty."""
@@ -560,6 +680,19 @@ def _map_single_token(
             if ct_hit is not None:
                 return ct_hit
 
+        # ANSI 2020 place×county (covers post-2010 incorporations missing from national_places.txt).
+        pbc_hit = _try_place_by_county_2020(
+            digits,
+            place_names,
+            by_fips=by_fips,
+            place_by_county=place_by_county or {},
+            tok=tok,
+            in_gaz=in_gaz,
+            method_prefix=method_prefix,
+        )
+        if pbc_hit is not None:
+            return pbc_hit
+
         return CrosswalkRow(
             st_fips_raw=tok,
             place_names=place_names,
@@ -572,7 +705,7 @@ def _map_single_token(
             all_county_fips="",
             confidence="none",
             method=f"{pref}unmatched_place",
-            notes="7-digit not in national_places / no safe county equiv",
+            notes="7-digit not in national_places / place_by_county_2020 / no safe county equiv",
         )
 
     return CrosswalkRow(
@@ -604,6 +737,7 @@ def map_place_key(
     national_places: dict[str, PlaceRef],
     national_places_by_name: dict[tuple[str, str], list[PlaceRef]] | None = None,
     ct_town_to_cog: dict[str, tuple[str, str]] | None = None,
+    place_by_county: dict[str, list[tuple[str, str]]] | None = None,
 ) -> CrosswalkRow:
     tokens = _split_tokens(st_fips)
     pred = (predicted_st_fips or "").strip()
@@ -623,6 +757,7 @@ def map_place_key(
                     national_places=national_places,
                     national_places_by_name=national_places_by_name,
                     ct_town_to_cog=ct_town_to_cog,
+                    place_by_county=place_by_county,
                     method_prefix="predicted_",
                 )
                 if mapped and mapped.county_fips:
@@ -648,6 +783,7 @@ def map_place_key(
                 national_places=national_places,
                 national_places_by_name=national_places_by_name,
                 ct_town_to_cog=ct_town_to_cog,
+                place_by_county=place_by_county,
             )
             if m:
                 resolved.append(m)
@@ -707,6 +843,7 @@ def map_place_key(
         national_places=national_places,
         national_places_by_name=national_places_by_name,
         ct_town_to_cog=ct_town_to_cog,
+        place_by_county=place_by_county,
     )
     assert mapped is not None
     mapped.st_fips_raw = st_fips
@@ -747,6 +884,7 @@ def build_crosswalk(
     national_places = load_national_places()
     national_places_by_name = _national_places_by_name(national_places)
     ct_town_to_cog = load_ct_town_to_cog()
+    place_by_county = load_place_by_county_2020()
 
     rows: list[CrosswalkRow] = []
     for rec in grouped.itertuples(index=False):
@@ -763,6 +901,7 @@ def build_crosswalk(
                 national_places=national_places,
                 national_places_by_name=national_places_by_name,
                 ct_town_to_cog=ct_town_to_cog,
+                place_by_county=place_by_county,
             )
         )
 
@@ -800,6 +939,11 @@ def build_crosswalk(
             "ct_town_to_planning_region": (
                 "data/raw/census/ct_town_to_planning_region.csv"
                 if ct_town_to_cog
+                else None
+            ),
+            "place_by_county_2020": (
+                "data/raw/census/national_place_by_county2020.txt"
+                if place_by_county
                 else None
             ),
         },

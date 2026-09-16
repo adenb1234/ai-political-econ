@@ -12,6 +12,7 @@ from src.transform.localview_geo import (
     _national_places_by_name,
     load_ct_town_to_cog,
     load_national_places,
+    load_place_by_county_2020,
     load_places_gaz,
     map_place_key,
 )
@@ -28,6 +29,7 @@ def _ctx():
         national_places=national_places,
         national_places_by_name=_national_places_by_name(national_places),
         ct_town_to_cog=load_ct_town_to_cog(),
+        place_by_county=load_place_by_county_2020(),
     )
 
 
@@ -48,16 +50,27 @@ def test_ma_name_alias_amherst():
     assert row.method == "place_name_alias_to_county"
 
 
-def test_semmes_stays_unmatched():
+def test_semmes_al_via_place_by_county_2020():
     ctx = _ctx()
+    assert ctx["place_by_county"], "missing national_place_by_county2020.txt"
     row = map_place_key("0169240", "Semmes city", 0, "", 1, **ctx)
-    assert row.county_fips == ""
-    assert row.confidence == "none"
-    assert row.method == "unmatched_place"
+    assert row.county_fips == "01097"
+    assert row.state == "AL"
+    assert row.method == "place_by_county_2020"
+
+
+def test_brookhaven_ga_via_place_by_county_2020():
+    ctx = _ctx()
+    assert ctx["place_by_county"], "missing national_place_by_county2020.txt"
+    row = map_place_key("1310944", "Brookhaven city", 0, "", 1, **ctx)
+    assert row.county_fips == "13089"
+    assert row.state == "GA"
+    assert row.method == "place_by_county_2020"
 
 
 if __name__ == "__main__":
     test_ct_town_to_planning_region()
     test_ma_name_alias_amherst()
-    test_semmes_stays_unmatched()
+    test_semmes_al_via_place_by_county_2020()
+    test_brookhaven_ga_via_place_by_county_2020()
     print("ok")

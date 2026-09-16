@@ -37,6 +37,17 @@ CT_TOWN_TO_COG_URL = (
 )
 CT_TOWN_TO_COG_DEST = ROOT / "data" / "raw" / "census" / "ct_town_to_planning_region.csv"
 
+# 2020 ANSI place-by-county (COUNTYFP per place). Complements older national_places.txt
+# which omits some post-2010 incorporations still present in the 2024 places gazetteer
+# (e.g. Semmes AL, Brookhaven GA). Public domain.
+PLACE_BY_COUNTY_2020_URL = (
+    "https://www2.census.gov/geo/docs/reference/codes2020/"
+    "national_place_by_county2020.txt"
+)
+PLACE_BY_COUNTY_2020_DEST = (
+    ROOT / "data" / "raw" / "census" / "national_place_by_county2020.txt"
+)
+
 
 def _write_gaz_manifest(txt: Path) -> None:
     write_manifest(
@@ -161,11 +172,60 @@ def fetch_ct_town_to_cog(force: bool = False) -> Path:
     return dest
 
 
-def fetch(force: bool = False) -> tuple[Path, Path, Path]:
+def fetch_place_by_county_2020(force: bool = False) -> Path:
+    dest = PLACE_BY_COUNTY_2020_DEST
+    access_date_pt = datetime.now(PT).date().isoformat()
+    payload = {
+        "source_id": "census_place_by_county_2020",
+        "url": PLACE_BY_COUNTY_2020_URL,
+        "path": str(dest.relative_to(ROOT)),
+        "status": "downloaded",
+        "access_date_pt": access_date_pt,
+        "notes": (
+            "Census ANSI 2020 national_place_by_county2020.txt — STATEFP+PLACEFP → "
+            "COUNTYFP (one row per place×county; multi-county places have multiple rows). "
+            "Used as fallback when national_places.txt lacks a 2024 places-gaz GEOID "
+            "(Semmes AL / Brookhaven GA). Public domain; do not invent FIPS."
+        ),
+        "license_note": "US government work / public domain",
+        "layer": "geo",
+    }
+    if dest.exists() and not force:
+        print(f"already present: {dest}")
+        payload.update({"bytes": dest.stat().st_size, "sha256": sha256_file(dest)})
+        # Preserve prior access stamp when unchanged
+        meta = ROOT / "data" / "manifests" / "census_place_by_county_2020.json"
+        if meta.exists():
+            import json
+
+            try:
+                prior = json.loads(meta.read_text(encoding="utf-8"))
+                if prior.get("sha256") == payload["sha256"] and prior.get("access_date_pt"):
+                    payload["access_date_pt"] = prior["access_date_pt"]
+            except Exception:  # noqa: BLE001
+                pass
+        write_manifest("census_place_by_county_2020", payload)
+        return dest
+    ok, msg = try_download(
+        PLACE_BY_COUNTY_2020_URL,
+        dest,
+        source_id="census_place_by_county_2020",
+        notes=payload["notes"],
+        license_note=payload["license_note"],
+        extra={"layer": "geo", "access_date_pt": access_date_pt},
+    )
+    print(msg)
+    if not ok:
+        raise SystemExit(1)
+    return dest
+
+
+def fetch(force: bool = False) -> tuple[Path, Path, Path, Path]:
     return (
         fetch_gaz_places(force=force),
         fetch_national_places(force=force),
         fetch_ct_town_to_cog(force=force),
+        fetch_place_by_county_2020(force=force),
     )
 
 

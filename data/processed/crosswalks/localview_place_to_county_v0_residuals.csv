@@ -7,7 +7,6 @@ st_fips_raw,place_names,multiple_cities,predicted_st_fips,n_meta_rows,county_fip
 0135896,Hoover city,0,,93,,AL,,01073;01117,low,ambiguous_multi_county_place,place spans 2 counties; FIPS not invented
 0137000,Huntsville city,0,,175,,AL,,01083;01089,low,ambiguous_multi_county_place,place spans 2 counties; FIPS not invented
 0141968,Leeds city,0,,33,,AL,,01073;01117;01115,low,ambiguous_multi_county_place,place spans 3 counties; FIPS not invented
-0169240,Semmes city,0,,63,,AL,,,none,unmatched_place,7-digit not in national_places / no safe county equiv
 0402830,Apache Junction city,0,,580,,AZ,,04013;04021,low,ambiguous_multi_county_place,place spans 2 counties; FIPS not invented
 0566080,Springdale city,0,,442,,AR,,05007;05143,low,ambiguous_multi_county_place,place spans 2 counties; FIPS not invented
 0661068;06077,Riverbank city; San Joaquin County,1,UNKNOWN,116,,,,06077;06099,low,ambiguous_compound,multi-city/compound st_fips; no single county invented; predicted UNKNOWN/empty
@@ -16,7 +15,6 @@ st_fips_raw,place_names,multiple_cities,predicted_st_fips,n_meta_rows,county_fip
 0854330,Northglenn city,0,,250,,CO,,08001;08123,low,ambiguous_multi_county_place,place spans 2 counties; FIPS not invented
 0877290,Thornton city,0,,141,,CO,,08001;08123,low,ambiguous_multi_county_place,place spans 2 counties; FIPS not invented
 1304000,Atlanta,0,,1344,,GA,,13089;13121,low,ambiguous_multi_county_place,place spans 2 counties; FIPS not invented
-1310944,Brookhaven city,0,,200,,GA,,,none,unmatched_place,7-digit not in national_places / no safe county equiv
 1378800; 1333980; 1323872,Valdosta city; Gordon city; Douglas city,1,UNKNOWN,224,,,,13069;13185;13319,low,ambiguous_compound,multi-city/compound st_fips; no single county invented; predicted UNKNOWN/empty
 1644200; 16055,Kootenai city; Kootenai County,1,UNKNOWN,702,,,,16017;16055,low,ambiguous_compound,multi-city/compound st_fips; no single county invented; predicted UNKNOWN/empty
 1703012,Aurora city,0,,137,,IL,,17043;17089;17093;17197,low,ambiguous_multi_county_place,place spans 4 counties; FIPS not invented

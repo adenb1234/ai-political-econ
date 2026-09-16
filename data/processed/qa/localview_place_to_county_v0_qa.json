@@ -1,21 +1,20 @@
 {
   "crosswalk_version": "localview_place_to_county_v0",
-  "built_at_utc": "2026-09-16T18:29:24.801550+00:00",
+  "built_at_utc": "2026-09-16T18:37:36.799237+00:00",
   "meta_path": "data/raw/localview/meta_localview.parquet",
   "meta_rows": 301659,
   "distinct_st_fips_raw": 989,
   "unique_place_keys": 1150,
-  "keys_matched_to_county": 1038,
-  "keys_matched_share": 0.9026,
+  "keys_matched_to_county": 1040,
+  "keys_matched_share": 0.9043,
   "keys_ambiguous_or_low": 110,
   "keys_ambiguous_share": 0.0957,
-  "meta_rows_matched_to_county": 269001,
-  "meta_rows_matched_share": 0.8917,
+  "meta_rows_matched_to_county": 269264,
+  "meta_rows_matched_share": 0.8926,
   "confidence_counts": {
     "high": 786,
     "low": 110,
-    "medium": 252,
-    "none": 2
+    "medium": 254
   },
   "method_counts": {
     "place_to_county": 734,
@@ -24,7 +23,7 @@
     "predicted_place_to_county": 93,
     "compound_tokens_agree": 61,
     "ambiguous_compound": 22,
-    "unmatched_place": 2,
+    "place_by_county_2020": 2,
     "ct_town_to_planning_region": 3,
     "county_geoid_validated": 77,
     "place_name_alias_to_county": 2,
@@ -35,11 +34,12 @@
     "counties_gaz": "data/raw/census/2024_Gaz_counties_national.txt",
     "places_gaz": "data/raw/census/2024_Gaz_place_national.txt",
     "national_places": "data/raw/census/national_places.txt",
-    "ct_town_to_planning_region": "data/raw/census/ct_town_to_planning_region.csv"
+    "ct_town_to_planning_region": "data/raw/census/ct_town_to_planning_region.csv",
+    "place_by_county_2020": "data/raw/census/national_place_by_county2020.txt"
   },
-  "residual_unmatched_keys": 2,
-  "residual_unmatched_meta_rows": 263,
+  "residual_unmatched_keys": 0,
+  "residual_unmatched_meta_rows": 0,
   "notes": "Unique keys are (st_fips, place_names, multiple_cities, predicted_st_fips). Multi-county places and unresolved multi-city compounds leave county_fips empty and list candidates in all_county_fips when known. CT rows may use town\u2192planning-region COG FIPS (2022 Census change). No empirical event rows invented.",
   "residuals_path": "data/processed/crosswalks/localview_place_to_county_v0_residuals.csv",
-  "residuals_keys": 112
+  "residuals_keys": 110
 }

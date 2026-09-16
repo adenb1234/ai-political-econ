@@ -1,0 +1,13 @@
+{
+  "source_id": "census_place_by_county_2020",
+  "url": "https://www2.census.gov/geo/docs/reference/codes2020/national_place_by_county2020.txt",
+  "path": "data/raw/census/national_place_by_county2020.txt",
+  "status": "downloaded",
+  "access_date_pt": "2026-09-16",
+  "notes": "Census ANSI 2020 national_place_by_county2020.txt \u2014 STATEFP+PLACEFP \u2192 COUNTYFP (one row per place\u00d7county; multi-county places have multiple rows). Used as fallback when national_places.txt lacks a 2024 places-gaz GEOID (Semmes AL / Brookhaven GA). Public domain; do not invent FIPS.",
+  "license_note": "US government work / public domain",
+  "layer": "geo",
+  "bytes": 2736928,
+  "sha256": "9996494d33cf6ee4527491508aa1b8dae85dcff3a979886e19b0b375e5d06ec6",
+  "recorded_at_utc": "2026-09-16T18:37:34.224835+00:00"
+}

@@ -25,6 +25,7 @@ There is **no dedicated `county_fips` or `county` column**. County FIPS can occu
 - Places gazetteer `data/raw/census/2024_Gaz_place_national.txt` — validate 7-digit place GEOIDs
 - `data/raw/census/national_places.txt` — place GEOID → county *name(s)* (multi-county as comma lists)
 - `data/raw/census/ct_town_to_planning_region.csv` — CT Data Collaborative (MIT) town → 2022 planning-region county-equivalents (needed because 2024 gaz uses COGs, not legacy CT counties)
+- `data/raw/census/national_place_by_county2020.txt` — Census ANSI 2020 place×county (`COUNTYFP`); fallback when `national_places.txt` omits a 2024 places-gaz GEOID
 
 **Outputs:**
 
@@ -32,19 +33,19 @@ There is **no dedicated `county_fips` or `county` column**. County FIPS can occu
 - `data/processed/crosswalks/localview_place_to_county_v0_residuals.csv` (confidence `none`/`low`)
 - `data/processed/qa/localview_place_to_county_v0_qa.json`
 
-**QA (rebuild 2026-09-16 PT, after CT + name-alias):**
+**QA (rebuild 2026-09-16 PT, after CT + name-alias + place_by_county_2020):**
 
 | Metric | Value |
 |--------|------:|
 | Meta rows | 301,659 |
 | Distinct `st_fips` raw | 989 |
 | Unique place keys `(st_fips, place_names, multiple_cities, predicted_st_fips)` | 1,150 |
-| Keys matched to a single `county_fips` | 1,038 (90.26%) |
+| Keys matched to a single `county_fips` | 1,040 (90.43%) |
 | Keys ambiguous / low confidence | 110 (9.57%) |
-| Keys unmatched (`none`) | 2 |
-| Meta rows with matched county | 269,001 (89.17%) |
+| Keys unmatched (`none`) | 0 |
+| Meta rows with matched county | 269,264 (89.26%) |
 
-**Fallbacks added:** `ct_town_to_planning_region` (3 keys); `place_name_alias_to_county` (2 keys). Residual unmatched: Semmes city (AL `0169240`, 63 rows), Brookhaven city (GA `1310944`, 200 rows).
+**Fallbacks:** `ct_town_to_planning_region` (3 keys); `place_name_alias_to_county` (2 keys); `place_by_county_2020` (2 keys — Semmes AL `0169240` → `01097` Mobile; Brookhaven GA `1310944` → `13089` DeKalb). Residual unmatched keys: **0**.
 
 **Confidence policy:** multi-city / compound `st_fips`, `predicted_st_fips=UNKNOWN`/empty, and multi-county places leave `county_fips` empty (candidates may appear in `all_county_fips`). No FIPS invented.
 
@@ -69,15 +70,15 @@ There is **no dedicated `county_fips` or `county` column**. County FIPS can occu
 | Metric | Value |
 |--------|------:|
 | Meta rows | 301,659 |
-| Matched county (`county_fips` non-empty) | 269,001 (89.17%) |
+| Matched county (`county_fips` non-empty) | 269,264 (89.26%) |
 | Ambiguous (empty `county_fips`, candidates in `all_county_fips`) | 32,395 |
-| Unmatched (no county candidates) | 263 |
+| Unmatched (no county candidates) | 0 |
 | Month parse success (`YYYY-MM`) | 281,074 (93.18%) |
 | Month parse fail (null/unparseable `meeting_date`) | 20,585 (6.82%) |
-| Spine-ready (`county_fips` ∧ `month`) | 251,070 (83.23%) |
+| Spine-ready (`county_fips` ∧ `month`) | 251,210 (83.28%) |
 | Rows unjoined to crosswalk | 0 |
 
 **Policy:** no invented FIPS; ambiguous multi-county / compound keys keep empty `county_fips` (candidates in `all_county_fips`). Empty `month` only when `meeting_date` is null/unparseable. CT matched rows use planning-region FIPS (e.g. `09190` Western Connecticut Planning Region).
 
-**Next:** human-review ambiguous/multi-county keys; resolve 2 residual unmatched places if a safe Census GEOID appears; optional `county_fips × month` meeting-count panel once ambiguity policy is set. Still do **not** download transcript tarballs.
+**Next:** human-review 110 ambiguous/multi-county keys (32,395 meta rows); optional `county_fips × month` meeting-count panel once ambiguity policy is set. Still do **not** download transcript tarballs.
 

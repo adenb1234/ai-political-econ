@@ -8,5 +8,5 @@
   "notes": "Census national_places.txt \u2014 place GEOID to county name(s). Multi-county places list comma-separated county names; do not invent a single FIPS.",
   "license_note": "US government work / public domain",
   "layer": "geo",
-  "recorded_at_utc": "2026-09-16T16:37:44.618271+00:00"
+  "recorded_at_utc": "2026-09-16T18:37:34.221235+00:00"
 }
