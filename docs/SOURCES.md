@@ -64,7 +64,7 @@ Filter downstream for AI / data-center / energy-related claims via `claims_*` / 
 | **Codebook download** | `https://dataverse.harvard.edu/api/access/datafile/14077924` |
 | **Geo** | `st_fips` / place names in codebook — crosswalk to county FIPS in phase 1 |
 | **Fetcher** | `src/ingest/localview.py` |
-| **Sample on disk** | `data/raw/localview/codebook.md` |
+| **Sample on disk** | `data/raw/localview/codebook.md`; `meta_localview.parquet` (~35 MB) |
 | **Not mirrored** | Full transcript tarballs (multi-GB); download on demand |
 
 Bias (from spec): places that record meetings skew larger / richer / more urban.

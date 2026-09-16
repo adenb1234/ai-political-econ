@@ -22,7 +22,13 @@
       "name": "transcripts_localview_part3.tar"
     }
   ],
-  "status": "codebook_downloaded",
-  "notes": "Full transcripts intentionally not auto-fetched (\u22485+ GB). Use Dataverse API access/datafile/{id} when ready. Geo: st_fips / place_names per codebook \u2014 county crosswalk TBD.",
-  "recorded_at_utc": "2026-09-16T16:14:14.408504+00:00"
+  "status": "meta_downloaded",
+  "notes": "Full transcripts intentionally not auto-fetched (\u22485+ GB); transcript tarballs remain excluded. Metadata parquet downloaded. Geo: st_fips / place_names per codebook \u2014 county crosswalk TBD.",
+  "recorded_at_utc": "2026-09-16T16:29:49.479690+00:00",
+  "meta_path": "data/raw/localview/meta_localview.parquet",
+  "meta_bytes": 35339621,
+  "meta_sha256": "a7eccd0bdf7e62399207a0caa950a0e4ea33a5677fbcef8bb72f7008b24025f5",
+  "meta_status": "downloaded",
+  "meta_access_date_pt": "2026-09-16",
+  "meta_accessed_at_utc": "2026-09-16T16:29:49.479690+00:00"
 }

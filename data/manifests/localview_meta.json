@@ -1,0 +1,15 @@
+{
+  "source_id": "localview_meta",
+  "url": "https://dataverse.harvard.edu/api/access/datafile/14233652",
+  "path": "data/raw/localview/meta_localview.parquet",
+  "bytes": 35339621,
+  "sha256": "a7eccd0bdf7e62399207a0caa950a0e4ea33a5677fbcef8bb72f7008b24025f5",
+  "status": "downloaded",
+  "notes": "LocalView metadata parquet (~35 MB).",
+  "license_note": "Harvard Dataverse / LocalView terms",
+  "doi": "10.7910/DVN/NJTBEM",
+  "layer": "A",
+  "recorded_at_utc": "2026-09-16T16:28:28.744779+00:00",
+  "access_date_pt": "2026-09-16",
+  "accessed_at_utc": "2026-09-16T16:29:49.479690+00:00"
+}

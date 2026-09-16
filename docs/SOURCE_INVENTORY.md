@@ -10,7 +10,7 @@
 **Spine keys every free ingest must hit:** `county_fips` (5-digit GEOID), `state` (USPS), `month` (`YYYY-MM`). Events also carry `event_date` / layer / taxonomy fields; panel is `PRIMARY KEY (county_fips, month)`.
 
 **Layer free-status vocabulary:** `ready` · `blocked` · `already-have-raw`  
-**Manifest / on-disk detail:** `downloaded` · `documented_only` · `blocked` · `codebook_downloaded`  
+**Manifest / on-disk detail:** `downloaded` · `documented_only` · `blocked` · `codebook_downloaded` · `meta_downloaded`  
 **FIPS × month crosswalk:** `ready` · `partial` · `not started`
 
 Live URL checks used polite `curl` HEAD/GET from this box on **2026-09-16 PT**. Do not treat a 403 as “source gone” when login/Cloudflare is known.
@@ -23,7 +23,7 @@ Phase priority from working spec: **A → B → E** first, then **G**, then **F*
 
 | Layer | Free status | On-disk / manifest detail | FIPS × month | Aden / paid blocker? |
 |-------|-------------|---------------------------|--------------|----------------------|
-| **A** LocalView | **ready** (partial raw) | codebook + metadata `downloaded`; transcript tarballs deferred | `partial` | None (transcript size is ops) |
+| **A** LocalView | **already-have-raw** (codebook + meta) | codebook + meta `downloaded`; transcripts deferred | `partial` | None (transcript size is ops) |
 | **B** LegiScan | **blocked** | `blocked` / `documented_only`; raw empty | `not started` | **Yes — free account bulk drop or free API key** |
 | **B** Open States | **blocked** (optional) | `documented_only` | `not started` | **Yes — free API key** (defer vs LegiScan) |
 | **E** CCC phase 3 | **already-have-raw** (+ transform v0) | `downloaded`; events/panel/QA on disk | `partial` → matched rows OK | None for access |
@@ -38,15 +38,15 @@ Phase priority from working spec: **A → B → E** first, then **G**, then **F*
 
 ---
 
-## A — LocalView (deliberation) — **ready** (metadata raw)
+## A — LocalView (deliberation) — **already-have-raw** (codebook + meta; transcripts deferred)
 
 | Field | Detail |
 |-------|--------|
-| **Free status** | **ready** for geo crosswalk; codebook and metadata are on disk |
+| **Free status** | **already-have-raw** (codebook + meta); next work is geo crosswalk, not download |
 | **Free access path** | Dataset DOI [10.7910/DVN/NJTBEM](https://doi.org/10.7910/DVN/NJTBEM). Codebook: `https://dataverse.harvard.edu/api/access/datafile/14077924`. Meta parquet (~35 MB): `https://dataverse.harvard.edu/api/access/datafile/14233652`. Transcripts: datafile ids `14233653`–`14233655` (~2 GB × 2 + ~1 GB). Replication code DOI [10.7910/DVN/KHUXIN](https://doi.org/10.7910/DVN/KHUXIN). |
 | **License / ToS** | Harvard Dataverse / LocalView terms; cite DOI. Meeting-recording places skew larger / richer / more urban. |
 | **Raw on disk** | **yes:** `data/raw/localview/codebook.md` (6,387 bytes; sha256 `f175fb1f…ec2f`) and `data/raw/localview/meta_localview.parquet` (35,339,621 bytes; sha256 `a7eccd0b…25f5` per `localview_meta.json`). Transcript tarballs remain deferred. |
-| **Manifests** | `localview.json`, `localview_codebook.json`, `localview_meta.json` (`downloaded`) |
+| **Manifests** | `localview.json` (`meta_downloaded`), `localview_codebook.json`, `localview_meta.json` |
 | **Geo / FIPS** | **`partial`.** Codebook documents `st_fips` / place names; county FIPS crosswalk + meeting-date → `YYYY-MM` still TBD. |
 | **Next free step** | Inspect metadata geo fields and design the place/state-to-county-FIPS crosswalk; do **not** pull transcript tarballs. |
 | **Blockers** | None for free access. Transcript size (~5+ GB) is an ops choice, not a paywall. |
