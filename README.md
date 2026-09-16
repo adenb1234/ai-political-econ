@@ -58,7 +58,7 @@ Grievance taxonomy: [`docs/TAXONOMY.md`](docs/TAXONOMY.md)
 ```
 ai-backlash-tracker/
 ├── README.md
-├── docs/           WORKING_SPEC, SOURCES, TAXONOMY
+├── docs/           WORKING_SPEC, SOURCES, SOURCE_INVENTORY, TAXONOMY
 ├── schema/         SQL DDL
 ├── src/geo/        FIPS helpers
 ├── src/ingest/     layer fetchers (real free downloads where possible)
