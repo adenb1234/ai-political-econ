@@ -1,0 +1,14 @@
+{
+  "source_id": "media_cloud",
+  "layer": "D",
+  "docs": "https://www.mediacloud.org/",
+  "status": "documented_only",
+  "api_key_present": false,
+  "newsbank": {
+    "status": "paid_excluded_from_backbone",
+    "notes": "Do not gate free pipeline on NewsBank access."
+  },
+  "notes": "No synthetic news rows. Wire SearchApi when MC_API_KEY is available.",
+  "local_access_note": "data/raw/media_cloud/ACCESS.md",
+  "recorded_at_utc": "2026-09-16T16:14:14.297987+00:00"
+}

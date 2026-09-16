@@ -1,0 +1,3 @@
+# Free-data scaffold — keep deps minimal until ingest needs grow
+# mediacloud  # optional, layer D when MC_API_KEY is set
+# pyarrow     # optional, LocalView meta parquet

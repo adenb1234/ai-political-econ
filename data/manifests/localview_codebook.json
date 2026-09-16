@@ -1,0 +1,12 @@
+{
+  "source_id": "localview_codebook",
+  "path": "data/raw/localview/codebook.md",
+  "bytes": 6387,
+  "sha256": "f175fb1f6866a1e3ab3313791691620b38a7b82dd051a94117c8078ae07bec2f",
+  "status": "downloaded",
+  "url": "https://dataverse.harvard.edu/api/access/datafile/14077924",
+  "doi": "10.7910/DVN/NJTBEM",
+  "layer": "A",
+  "license_note": "Harvard Dataverse / LocalView terms",
+  "recorded_at_utc": "2026-09-16T16:14:13.991155+00:00"
+}

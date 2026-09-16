@@ -1,0 +1,11 @@
+{
+  "source_id": "arctic_shift",
+  "layer": "F",
+  "repo": "https://github.com/ArthurHeitmann/arctic_shift",
+  "download_links": "https://github.com/ArthurHeitmann/arctic_shift/blob/master/download_links.md",
+  "status": "documented_only",
+  "blocker": "Torrent/HTTP dumps are multi-GB to multi-TB; not auto-mirrored in scaffold",
+  "notes": "Crosswalk city/regional subreddits to county FIPS is a separate geo table.",
+  "local_access_note": "data/raw/arctic_shift/ACCESS.md",
+  "recorded_at_utc": "2026-09-16T16:14:14.248013+00:00"
+}

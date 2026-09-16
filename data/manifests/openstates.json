@@ -1,0 +1,10 @@
+{
+  "source_id": "openstates",
+  "layer": "B",
+  "docs": "https://docs.openstates.org/",
+  "status": "documented_only",
+  "api_key_present": false,
+  "notes": "Use for committee detail beyond LegiScan. Set OPENSTATES_API_KEY to enable live pulls in a later phase. Public docs only in this scaffold \u2014 no fabricated legislative sample.",
+  "license_note": "Open States terms / CC depending on endpoint",
+  "recorded_at_utc": "2026-09-16T16:14:14.192100+00:00"
+}

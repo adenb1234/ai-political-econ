@@ -1,0 +1,38 @@
+{
+  "source_id": "project_ledger_sources",
+  "layer": "G",
+  "status": "index",
+  "sources": [
+    {
+      "name": "EIA-861",
+      "url": "https://www.eia.gov/electricity/data/eia861/",
+      "fetcher": "src/ingest/eia_861.py",
+      "access": "public domain, no key"
+    },
+    {
+      "name": "LBNL Queued Up",
+      "url": "https://emp.lbl.gov/queues",
+      "access": "free XLSX editions; check current publication page",
+      "notes": "Generation/storage interconnection \u2014 not load/data-center permits"
+    },
+    {
+      "name": "ISO/RTO queues",
+      "examples": [
+        "PJM",
+        "MISO",
+        "CAISO",
+        "ERCOT",
+        "NYISO",
+        "ISO-NE",
+        "SPP"
+      ],
+      "access": "per-ISO open data portals; schemas differ"
+    },
+    {
+      "name": "National data-center permit registry",
+      "access": "does not exist \u2014 coverage is whatever we build (WORKING_SPEC)"
+    }
+  ],
+  "notes": "Denominator layer. Never invent proposed/approved/denied counts.",
+  "recorded_at_utc": "2026-09-16T16:14:14.351220+00:00"
+}

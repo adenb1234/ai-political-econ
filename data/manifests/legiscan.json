@@ -1,0 +1,14 @@
+{
+  "source_id": "legiscan",
+  "layer": "B",
+  "bulk_portal": "https://legiscan.com/datasets",
+  "api_base": "https://api.legiscan.com/",
+  "status": "documented_only",
+  "api_key_present": false,
+  "portal_http_status": 403,
+  "portal_blocker": "HTTP Error 403: Forbidden",
+  "local_files": [],
+  "notes": "Free tier exists but bulk ZIPs require login; API needs LEGISCAN_API_KEY. Drop purchased/free bulk extracts into data/raw/legiscan/ when available. No synthetic bill data is generated here.",
+  "license_note": "LegiScan terms of use; attribution required",
+  "recorded_at_utc": "2026-09-16T16:14:33.930853+00:00"
+}

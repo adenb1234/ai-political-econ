@@ -1,0 +1,78 @@
+# LocalView Public Meetings Database
+
+## Version 3 Codebook
+
+`id`: URL ID for the YouTube video. You can recover the original YouTube URL (to, for example, watch the video in your browser) with 'https://youtube.com/watch?v=' + the video ID.
+
+`title`: Title of YouTube video
+
+`description`: Description text for YouTube video (at time of scraping)
+
+`published_at`: Date of upload to YouTube. Note this may differ in some cases from the date the meeting was held (see `meeting_date` below).
+
+`thumbnail`: The thumbnail image for the YouTube video (at time of scraping)
+
+`view_count`: Number of views for YouTube video (at time of scraping)
+
+`like_count`: Number of likes for YouTube video (at time of scraping)
+
+`comment_count`: Number of comments YouTube video (at time of scraping)
+
+`duration`: Length of YouTube video in ISO 8601 time duration format. Note that some videos are livestreamed on YouTube, so you may want to check for outliers when using this columh.
+
+`channel_id`: URL ID for YouTube channel. You can visit the channel's YouTube page with `https://youtube.com/channel/` + `channel_id`
+
+`st_fips`: Concatenated state + FIPS code identifying place of meeting based on our team prediction and manual verification.
+
+`place_names`: Name of place(s) as reported in U.S. Census.
+
+`multiple_cities`: Binary flag for if multiple cities are covered by this video
+
+`predicted_st_fips`: If there are multiple cities, what is our best guess at the `st_fips` variable?
+
+`meeting_date`: Predicted date that meeting took place, scraped from the title or description page. Otherwise, the `published_at` date
+
+`government_type`: The type of government (Municipal Council, Planning Commission, etc.)
+
+## Example Code for Reading Transcripts
+
+This is some example R code for how to combine the metadata file (`meta_localview.parquet`) with the transcript files (`transcripts_localview_partN.tar`) to get only transcripts you want. We recommend filtering the metadata file down to only the meetings you're interested in before combining it with the transcripts to keep the resulting dataframe manageable. 
+
+```
+transcripts <- nanoparquet::read_parquet(
+  file = "path/to/meta_localview.parquet"
+) |> 
+  dplyr::filter(
+    # some sort of filtering steps to only work with the videos you want
+  ) |> 
+  dplyr::mutate(
+    path_transcript = fs::path(
+      "/path/to/unzipped_transcripts",
+      paste0(channel_id, "__", id, ".txt")
+    ),
+    transcript = purrr::map(path_transcript, ~ readLines(.x, warn = FALSE))
+  )
+```
+
+## Guidance for Working with LocalView Data
+
+Here, we include several pieces of common advice for working with LocalView data.
+
+**Identifying meeting locations**: Local government YouTube channels do not directly report administrative identifiers. This means that `st_fips` reflects our internal team predictions about the (Census) place that a meeting was held. We are confident in the broad accuracy of these identifiers, but mistakes can happen. Please write to us with any potential errors you find and we would be happy to update these identifiers.
+
+**Meeting types**: Users should be mindful that local governments hold various types of public meetings---regular, special, work sessions, committee, hearings, etc.--- and names may be inconsistent between places. Researchers should filter the full LocalView database to the type of meeting most useful for their analysis. For example, researchers most interested in "traditional" public meetings (i.e. regular public meetings with policy discussions, votes, and opportunities for public comment) may wish to filter out other types of meetings based on provided data (e.g. video titles). Further, we have done our best to exclude videos that are not local government meetings, but please feel free to write to us with any potential errors you find.
+
+**The video ID no longer appears active**: Occasionally, older videos in LocalView will be unavailable on YouTube. This occurs most often when districts delete their channels, or remove old videos. For completeness, we maintain the videos in our data at time of scraping.
+
+**The meeting has no transcript**: Some meetings in our data have no associated transcript (generally indicated by "<No transcript available>" in the associated transcript file). These are not scraping errors, but rather reflect that at the time of our scraping, there was no associated caption on YouTube. This can happen for several reasons, but most often means the channel owner either removed captions from this video, or YouTube's auto-captioning algorithm did not create them (often due to predicted poor audio quality). Interested users can create their own transcripts from LocalView data by following a process similar to that presented in this pre-print: https://osf.io/preprints/socarxiv/bhy4f_v1
+
+**I found transcription errors.**: The default captions we provide in LocalView are automatically generated by the YouTube auto-captioning algorithm. While research has found these transcripts to be highly accurate for most uses, YouTube auto-captioning can struggle in cases of low audio quality or when transcribing rare proper nouns like surnames (see, for example https://doi.org/10.1017/pan.2018.62 and https://osf.io/preprints/socarxiv/nxjr6_v2). Users may wish to create their own custom captions using higher-powered transcription models, following an approach similar to this pre-print: https://osf.io/preprints/socarxiv/bhy4f_v1
+
+**The data is missing (a specific YouTube channel)**: We are frequently reviewing and updating our list of local government channel IDs. If you have identified a YouTube channel that we have missed, please feel free to write to us and we would be happy to include past and future videos in future data releases.
+
+**How should we cite LocalView?**: Thank you for asking! Below, please find recommended citations for the original paper and the dataset:
+
+- Paper: Barari, Soubhik, and Tyler Simko. "LocalView, a database of public meetings for the study of local politics and policy-making in the United States." Scientific Data 10, no. 1 (2023): 135.
+- Dataset: Barari, Soubhik; Simko, Tyler; Reece, Mason, 2023, "LocalView Public Meetings Database", https://doi.org/10.7910/DVN/NJTBEM, Harvard Dataverse.
+
+Finally, users may also be interested in DistrictView---our companion project focused on school board meetings: https://districtview.net/

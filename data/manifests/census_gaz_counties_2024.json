@@ -1,0 +1,12 @@
+{
+  "source_id": "census_gaz_counties_2024",
+  "path": "data/raw/census/2024_Gaz_counties_national.txt",
+  "bytes": 647830,
+  "sha256": "0a121d136b434e3ae749d053db19dfbacbb56eebf30335cfa5031388803b4451",
+  "status": "downloaded",
+  "url": "https://www2.census.gov/geo/docs/maps-data/data/gazetteer/2024_Gazetteer/2024_Gaz_counties_national.zip",
+  "layer": "geo",
+  "license_note": "US government work / public domain",
+  "notes": "Unpacked from 2024_Gaz_counties_national.zip",
+  "recorded_at_utc": "2026-09-16T16:14:13.949659+00:00"
+}

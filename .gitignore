@@ -1,0 +1,47 @@
+# Python
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+dist/
+build/
+
+# Env / secrets
+.env
+.env.*
+!.env.example
+
+# Large / raw data — keep manifests, ignore bulk downloads
+data/raw/**/*.csv
+data/raw/**/*.tsv
+data/raw/**/*.txt
+data/raw/**/*.tab
+data/raw/**/*.zip
+data/raw/**/*.tar
+data/raw/**/*.tar.gz
+data/raw/**/*.zst
+data/raw/**/*.parquet
+data/raw/**/*.xlsx
+data/raw/**/*.xls
+data/raw/**/*.pdf
+data/raw/**/*.docx
+# Allow small documentation samples under raw
+!data/raw/**/ACCESS.md
+!data/raw/**/codebook.md
+!data/raw/**/.gitkeep
+
+data/processed/**
+!data/processed/.gitkeep
+
+# OS / editor
+.DS_Store
+.idea/
+.vscode/
+*.swp
+
+# Jupyter
+.ipynb_checkpoints/

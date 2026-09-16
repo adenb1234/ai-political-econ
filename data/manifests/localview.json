@@ -1,0 +1,28 @@
+{
+  "source_id": "localview",
+  "layer": "A",
+  "doi": "10.7910/DVN/NJTBEM",
+  "dataset_page": "https://doi.org/10.7910/DVN/NJTBEM",
+  "codebook_path": "data/raw/localview/codebook.md",
+  "meta_parquet_url": "https://dataverse.harvard.edu/api/access/datafile/14233652",
+  "transcript_parts": [
+    {
+      "datafile_id": 14233653,
+      "approx_bytes": 2135971840,
+      "name": "transcripts_localview_part1.tar"
+    },
+    {
+      "datafile_id": 14233654,
+      "approx_bytes": 2136422400,
+      "name": "transcripts_localview_part2.tar"
+    },
+    {
+      "datafile_id": 14233655,
+      "approx_bytes": 1038776320,
+      "name": "transcripts_localview_part3.tar"
+    }
+  ],
+  "status": "codebook_downloaded",
+  "notes": "Full transcripts intentionally not auto-fetched (\u22485+ GB). Use Dataverse API access/datafile/{id} when ready. Geo: st_fips / place_names per codebook \u2014 county crosswalk TBD.",
+  "recorded_at_utc": "2026-09-16T16:14:14.408504+00:00"
+}

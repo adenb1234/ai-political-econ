@@ -1,0 +1,11 @@
+{
+  "source_id": "eia_861_2024",
+  "path": "data/raw/eia/f8612024.zip",
+  "bytes": 4568208,
+  "sha256": "77ce49c60ac5a6bad50c442fc401aad5404a21da875dc5cbaba353af5ede54de",
+  "status": "downloaded",
+  "url": "https://www.eia.gov/electricity/data/eia861/zip/f8612024.zip",
+  "layer": "G",
+  "license_note": "US EIA / public domain",
+  "recorded_at_utc": "2026-09-16T16:14:13.990910+00:00"
+}
