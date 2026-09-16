@@ -202,6 +202,15 @@ def build_spine(
     # Also overall confidence including unmatched (empty → "unjoined")
     conf_all = out_df["confidence"].replace("", "unjoined").value_counts().to_dict()
 
+    # Row-level geo buckets aligned with crosswalk confidence policy:
+    # matched = non-empty county_fips; ambiguous = empty county_fips but
+    # candidates in all_county_fips; unmatched = neither.
+    has_all = out_df["all_county_fips"].astype(str).str.len() > 0
+    rows_matched = int(has_county.sum())
+    rows_ambiguous = int((~has_county & has_all).sum())
+    rows_unmatched = int((~has_county & ~has_all).sum())
+    month_ok = int(has_month.sum())
+
     qa = {
         "spine_version": SPINE_VERSION,
         "built_at_utc": datetime.now(timezone.utc).isoformat(),
@@ -212,9 +221,14 @@ def build_spine(
         "join_keys": JOIN_KEYS_META,
         "meta_rows": n_meta,
         "crosswalk_keys": n_xw,
-        "rows_with_county_fips": int(has_county.sum()),
+        "rows_matched_county": rows_matched,
+        "rows_ambiguous": rows_ambiguous,
+        "rows_unmatched": rows_unmatched,
+        "rows_with_county_fips": rows_matched,
         "rows_with_county_fips_share": round(float(has_county.mean()), 4) if n_meta else 0.0,
-        "rows_with_month": int(has_month.sum()),
+        "month_parse_success": month_ok,
+        "month_parse_fail": parse_fail,
+        "rows_with_month": month_ok,
         "rows_with_month_share": round(float(has_month.mean()), 4) if n_meta else 0.0,
         "meeting_date_parse_fail": parse_fail,
         "meeting_date_parse_fail_share": round(parse_fail / n_meta, 4) if n_meta else 0.0,

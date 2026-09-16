@@ -65,9 +65,11 @@ There is **no dedicated `county_fips` or `county` column**. County FIPS can occu
 | Metric | Value |
 |--------|------:|
 | Meta rows | 301,659 |
-| Rows with `county_fips` | 266,458 (88.33%) |
-| Rows with `month` | 281,074 (93.18%) |
-| `meeting_date` parse fail (null/unparseable) | 20,585 (6.82%) |
+| Matched county (`county_fips` non-empty) | 266,458 (88.33%) |
+| Ambiguous (empty `county_fips`, candidates in `all_county_fips`) | 32,395 |
+| Unmatched (no county candidates) | 2,806 |
+| Month parse success (`YYYY-MM`) | 281,074 (93.18%) |
+| Month parse fail (null/unparseable `meeting_date`) | 20,585 (6.82%) |
 | Spine-ready (`county_fips` ∧ `month`) | 248,645 (82.43%) |
 | Rows unjoined to crosswalk | 0 |
 

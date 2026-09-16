@@ -45,7 +45,7 @@ Supplemental free options (Google Trends, hand-curated opposition registries, Me
 | **Raw on disk** | **yes:** `data/raw/localview/codebook.md` (6,387 bytes; sha256 `f175fb1f…ec2f`) and `data/raw/localview/meta_localview.parquet` (35,339,621 bytes; sha256 `a7eccd0b…25f5` per `localview_meta.json`). Transcript tarballs remain deferred. |
 | **Manifests** | `localview.json` (`meta_downloaded`), `localview_codebook.json`, `localview_meta.json` |
 | **Processed (v0)** | Crosswalk: `data/processed/crosswalks/localview_place_to_county_v0.csv`. **Meta spine:** `data/processed/localview/meta_spine_v0.parquet` (`make spine-localview` → join + `month`); QA `data/processed/qa/localview_meta_spine_v0_qa.json`. Transform: `src/transform/localview_meta_spine.py`. |
-| **Geo / FIPS** | **`partial`.** Place→county crosswalk v0 + meta spine v0 shipped. Spine QA (2026-09-16 PT): 301,659 meta rows; 266,458 with `county_fips` (88.33%); 281,074 with `month` (93.18%); 248,645 spine-ready (82.43%); 20,585 `meeting_date` null/parse-fail. See `docs/notes/localview_meta_geo_v0.md`. |
+| **Geo / FIPS** | **`partial`.** Place→county crosswalk v0 + meta spine v0 shipped. Spine QA (2026-09-16 PT): 301,659 meta rows; matched county 266,458 (88.33%); ambiguous 32,395; unmatched 2,806; month ok 281,074 / fail 20,585; spine-ready 248,645 (82.43%). See `docs/notes/localview_meta_geo_v0.md`. |
 | **Next free step** | Human-review ambiguous/multi-county place keys (`all_county_fips` / low confidence); optional panel rollup of meeting counts by `county_fips × month` once ambiguity policy is set. Do **not** pull transcript tarballs. |
 | **Blockers** | None for free access. Transcript size (~5+ GB) is an ops choice, not a paywall. |
 
