@@ -259,7 +259,7 @@ Pew, Gallup, AP-NORC national AI/tech series and ballot measures: **cite release
 
 ## Exact next free ingest actions (priority A→B→E)
 
-1. **A:** Join LocalView crosswalk v0 onto meta; derive `month` from `meeting_date`; review ambiguous keys (no transcript tarballs).
+1. **A:** Meta spine v0 landed (`make spine-localview`; 248,645 spine-ready). **Next:** human-review ambiguous/multi-county keys; optional `county_fips × month` meeting-count panel. No transcript tarballs.
 2. **E:** Already past raw + `ccc_rules_v0` transform; optional phase-2 CCC backfill later.
 3. **G:** LBNL Queued Up XLSX on disk — design generation/storage queue → county×month transform (not DC permits). Optionally pick one ISO next.
 4. **B:** Unblock only after Aden free LegiScan drop or free API key.
@@ -293,7 +293,7 @@ Pew, Gallup, AP-NORC national AI/tech series and ballot measures: **cite release
 
 ## Verification log
 
-**Verified on disk 2026-09-16 PT (ls sizes + sha256sum where checked):** CCC CSV 47,231,658 bytes / sha256 matches manifest; LocalView codebook 6,387 plus metadata parquet 35,339,621 bytes / sha256 matches manifests; EIA zip 4,568,208 / sha256 matches; Census txt 647,830 / sha256 matches; LegiScan/Open States/Arctic Shift raw empty or ACCESS-only; CCC processed events/panel/QA present as above. **Later same day PT:** Census places gaz + `national_places.txt` downloaded; LocalView place→county crosswalk v0 QA (1,150 keys; 1,033 matched / 0.8983; meta-row match 0.8833); LBNL Queued Up XLSX 15,571,236 bytes / sha256 `794582d3…08b6`.
+**Verified on disk 2026-09-16 PT (ls sizes + sha256sum where checked):** CCC CSV 47,231,658 bytes / sha256 matches manifest; LocalView codebook 6,387 plus metadata parquet 35,339,621 bytes / sha256 matches manifests; EIA zip 4,568,208 / sha256 matches; Census txt 647,830 / sha256 matches; LegiScan/Open States/Arctic Shift raw empty or ACCESS-only; CCC processed events/panel/QA present as above. **Later same day PT:** Census places gaz + `national_places.txt` downloaded; LocalView place→county crosswalk v0 QA (1,150 keys; 1,033 matched / 0.8983; meta-row match 0.8833); LocalView meta spine v0 (`data/processed/localview/meta_spine_v0.parquet`) QA: matched 266,458 / ambiguous 32,395 / unmatched 2,806; month ok 281,074 / fail 20,585; spine-ready 248,645; LBNL Queued Up XLSX 15,571,236 bytes / sha256 `794582d3…08b6`.
 
 **Verified live with curl 2026-09-16 PT (this pass):** LBNL Queued Up portal + 2026 publication page + XLSX HEAD **200** (`content-length` 15571236); EIA portal HEAD **503**/GET **200**, zip **200**; LegiScan datasets + API **403**; Open States docs **200**; Arctic Shift repo + download_links **200**; Google Trends **200**; Media Cloud **200**; Census gazetteer zip **200**; CCC project page **200** / Dataverse datafile HEAD **403** (file already on disk; range GET pattern works for LocalView meta **206**); PJM/MISO/CAISO(PascalCase)/ERCOT/NYISO/ISO-NE/SPP landing pages **200** (CAISO lowercase path **404**); datacenterwatch.org + datacenterknowledge.com **200**.
 

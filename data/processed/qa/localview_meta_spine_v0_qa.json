@@ -1,6 +1,6 @@
 {
   "spine_version": "localview_meta_spine_v0",
-  "built_at_utc": "2026-09-16T17:07:52.225139+00:00",
+  "built_at_utc": "2026-09-16T17:13:09.806618+00:00",
   "access_date_pt": "2026-09-16",
   "meta_path": "data/raw/localview/meta_localview.parquet",
   "crosswalk_path": "data/processed/crosswalks/localview_place_to_county_v0.csv",
