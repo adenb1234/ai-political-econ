@@ -10,5 +10,5 @@
   "local_files": [],
   "notes": "Free tier exists but bulk ZIPs require login; API needs LEGISCAN_API_KEY. Drop purchased/free bulk extracts into data/raw/legiscan/ when available. No synthetic bill data is generated here.",
   "license_note": "LegiScan terms of use; attribution required",
-  "recorded_at_utc": "2026-09-16T16:14:33.930853+00:00"
+  "recorded_at_utc": "2026-09-16T16:21:46.515957+00:00"
 }

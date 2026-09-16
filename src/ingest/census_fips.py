@@ -34,6 +34,25 @@ def fetch(force: bool = False) -> Path:
         raise SystemExit(1)
     with zipfile.ZipFile(ZIP_DEST) as zf:
         zf.extract(TXT_NAME, path=ZIP_DEST.parent)
+    # Manifest should point at the usable gazetteer TXT, not the zip.
+    from ._download import sha256_file, write_manifest
+
+    write_manifest(
+        "census_gaz_counties_2024",
+        {
+            "source_id": "census_gaz_counties_2024",
+            "url": GAZ_URL,
+            "path": str(txt.relative_to(ROOT)),
+            "zip_path": str(ZIP_DEST.relative_to(ROOT)),
+            "bytes": txt.stat().st_size,
+            "zip_bytes": ZIP_DEST.stat().st_size,
+            "sha256": sha256_file(txt),
+            "status": "downloaded",
+            "notes": "Unpacked from 2024_Gaz_counties_national.zip",
+            "license_note": "US government work / public domain",
+            "layer": "geo",
+        },
+    )
     print(f"extracted {txt}")
     return txt
 

@@ -1,13 +1,13 @@
 {
   "source_id": "ccc_phase3",
+  "url": "https://dataverse.harvard.edu/api/access/datafile/14226873",
   "path": "data/raw/ccc/ccc-phase3-public.csv",
   "bytes": 47231658,
   "sha256": "70253a0eb7b2820acb2ff3b3ba9b7c1d48635421af46c88f17e4fae9481fb621",
   "status": "downloaded",
-  "url": "https://dataverse.harvard.edu/api/access/datafile/14226873",
+  "notes": "CCC phase 3 public CSV (2025\u2013); ~65k event rows",
+  "license_note": "Harvard Dataverse / CCC terms; cite DOI 10.7910/DVN/RI9JFU",
   "doi": "10.7910/DVN/RI9JFU",
   "layer": "E",
-  "license_note": "Harvard Dataverse / CCC terms",
-  "notes": "CCC phase 3 public CSV (2025\u2013)",
-  "recorded_at_utc": "2026-09-16T16:14:13.986527+00:00"
+  "recorded_at_utc": "2026-09-16T16:18:35.030709+00:00"
 }
