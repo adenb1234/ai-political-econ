@@ -33,6 +33,7 @@ data/raw/**/*.docx
 !data/raw/**/ACCESS.md
 !data/raw/**/codebook.md
 !data/raw/**/.gitkeep
+!data/raw/census/ct_town_to_planning_region.csv
 
 data/processed/**
 !data/processed/.gitkeep
@@ -40,6 +41,8 @@ data/processed/**
 !data/processed/crosswalks/**
 !data/processed/qa/
 !data/processed/qa/*.json
+!data/processed/localview/
+!data/processed/localview/**
 
 # OS / editor
 .DS_Store

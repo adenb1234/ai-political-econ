@@ -81,6 +81,7 @@ def _write_localview_manifest(*, meta_path: Path | None) -> None:
                 "meta_accessed_at_utc": prior_access_utc or stamps["accessed_at_utc"],
                 "geo_crosswalk": "data/processed/crosswalks/localview_place_to_county_v0.csv",
                 "geo_crosswalk_qa": "data/processed/qa/localview_place_to_county_v0_qa.json",
+                "geo_crosswalk_residuals": "data/processed/crosswalks/localview_place_to_county_v0_residuals.csv",
                 "meta_spine": "data/processed/localview/meta_spine_v0.parquet",
                 "meta_spine_qa": "data/processed/qa/localview_meta_spine_v0_qa.json",
             }
@@ -150,12 +151,13 @@ def _ensure_meta_geo(*, rebuild_crosswalk: bool = False) -> None:
     if rebuild_crosswalk or not CROSSWALK_CSV.exists():
         print("geo: building place→county crosswalk v0 …")
         rows, qa = build_crosswalk(DEST_META)
-        csv_path, qa_path = write_crosswalk(rows, qa)
+        csv_path, qa_path, res_path = write_crosswalk(rows, qa)
         print(
             f"geo: wrote {csv_path.relative_to(ROOT)} ({qa['unique_place_keys']} keys; "
             f"meta_matched_share={qa['meta_rows_matched_share']})"
         )
         print(f"geo: wrote {qa_path.relative_to(ROOT)}")
+        print(f"geo: wrote {res_path.relative_to(ROOT)}")
     else:
         print(f"geo: crosswalk already present: {CROSSWALK_CSV.relative_to(ROOT)}")
 

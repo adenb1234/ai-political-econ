@@ -25,6 +25,14 @@ NATIONAL_PLACES_URL = (
 )
 NATIONAL_PLACES_DEST = ROOT / "data" / "raw" / "census" / "national_places.txt"
 
+# Small MIT-licensed town→planning-region table (CT Data Collaborative).
+# Needed because 2024 county gazetteer uses COGs, not legacy CT counties.
+CT_TOWN_TO_COG_URL = (
+    "https://raw.githubusercontent.com/CT-Data-Collaborative/"
+    "ct-town-to-planning-region/main/ct-town-to-planning-region.csv"
+)
+CT_TOWN_TO_COG_DEST = ROOT / "data" / "raw" / "census" / "ct_town_to_planning_region.csv"
+
 
 def _write_gaz_manifest(txt: Path) -> None:
     write_manifest(
@@ -108,8 +116,48 @@ def fetch_national_places(force: bool = False) -> Path:
     return dest
 
 
-def fetch(force: bool = False) -> tuple[Path, Path]:
-    return fetch_gaz_places(force=force), fetch_national_places(force=force)
+def fetch_ct_town_to_cog(force: bool = False) -> Path:
+    dest = CT_TOWN_TO_COG_DEST
+    extra = {
+        "source_id": "census_ct_town_to_planning_region",
+        "url": CT_TOWN_TO_COG_URL,
+        "path": str(dest.relative_to(ROOT)),
+        "status": "downloaded",
+        "notes": (
+            "CT Data Collaborative town → 2022 planning-region county-equivalents "
+            "(Census adopted COGs as county-equivalents in 2022; 2024 gazetteer "
+            "no longer lists Fairfield/Litchfield/etc.). MIT license. "
+            "Access date recorded in manifest; do not treat as LocalView empirical rows."
+        ),
+        "license_note": "MIT (CT Data Collaborative); derived from Census TIGER 2022",
+        "layer": "geo",
+        "upstream": "https://github.com/CT-Data-Collaborative/ct-town-to-planning-region",
+    }
+    if dest.exists() and not force:
+        print(f"already present: {dest}")
+        extra.update({"bytes": dest.stat().st_size, "sha256": sha256_file(dest)})
+        write_manifest("census_ct_town_to_planning_region", extra)
+        return dest
+    ok, msg = try_download(
+        CT_TOWN_TO_COG_URL,
+        dest,
+        source_id="census_ct_town_to_planning_region",
+        notes=extra["notes"],
+        license_note=extra["license_note"],
+        extra={"layer": "geo", "upstream": extra["upstream"]},
+    )
+    print(msg)
+    if not ok:
+        raise SystemExit(1)
+    return dest
+
+
+def fetch(force: bool = False) -> tuple[Path, Path, Path]:
+    return (
+        fetch_gaz_places(force=force),
+        fetch_national_places(force=force),
+        fetch_ct_town_to_cog(force=force),
+    )
 
 
 def main() -> None:

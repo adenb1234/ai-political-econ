@@ -7,7 +7,7 @@ export PYTHONPATH := $(CURDIR)
 help:
 	@echo "Targets:"
 	@echo "  make fetch-census          Download Census county FIPS gazetteer"
-	@echo "  make fetch-census-places   Download Census places gaz + national_places"
+	@echo "  make fetch-census-places   Download Census places gaz + national_places + CT town→COG"
 	@echo "  make fetch-ccc             Download CCC phase-3 public CSV"
 	@echo "  make fetch-eia             Download EIA-861 2024 zip"
 	@echo "  make fetch-lbnl            Download LBNL Queued Up 2026 XLSX"

@@ -28,8 +28,13 @@ from src.ingest._download import ROOT
 META_PATH = ROOT / "data" / "raw" / "localview" / "meta_localview.parquet"
 PLACES_GAZ = ROOT / "data" / "raw" / "census" / "2024_Gaz_place_national.txt"
 NATIONAL_PLACES = ROOT / "data" / "raw" / "census" / "national_places.txt"
+# CT Data Collaborative (MIT): town → 2022 planning-region county-equivalents (Census adopted 2022).
+CT_TOWN_TO_COG = ROOT / "data" / "raw" / "census" / "ct_town_to_planning_region.csv"
 OUT_CSV = ROOT / "data" / "processed" / "crosswalks" / "localview_place_to_county_v0.csv"
 OUT_QA = ROOT / "data" / "processed" / "qa" / "localview_place_to_county_v0_qa.json"
+OUT_RESIDUALS = (
+    ROOT / "data" / "processed" / "crosswalks" / "localview_place_to_county_v0_residuals.csv"
+)
 
 COUNTY_LABEL_RE = re.compile(
     r"(?i)\b(county|parish|census area|borough|municipio|city and borough|municipality)\b"
@@ -137,6 +142,172 @@ def load_national_places(path: Path | None = None) -> dict[str, PlaceRef]:
     return out
 
 
+
+def load_ct_town_to_cog(path: Path | None = None) -> dict[str, tuple[str, str]]:
+    """Normalize town name → (5-digit planning-region FIPS, region name).
+
+    Source: CT Data Collaborative ct-town-to-planning-region (MIT), derived from
+    Census TIGER 2022 county subdivisions after CT county→COG change.
+    Optional file — empty dict if missing.
+    """
+    path = path or CT_TOWN_TO_COG
+    if not path.exists():
+        return {}
+    out: dict[str, tuple[str, str]] = {}
+    with path.open(encoding="utf-8-sig", newline="") as f:
+        reader = csv.DictReader(f)
+        for row in reader:
+            town = (row.get("town_name") or "").strip()
+            ce_raw = (row.get("ce_fips_2022") or "").strip()
+            ce_name = (row.get("ce_name_2022") or "").strip()
+            if not town or not ce_raw:
+                continue
+            try:
+                fips = f"{int(ce_raw):05d}"
+            except ValueError:
+                continue
+            out[_norm_name(town)] = (fips, ce_name)
+    return out
+
+
+def _national_places_by_name(
+    national_places: dict[str, PlaceRef],
+) -> dict[tuple[str, str], list[PlaceRef]]:
+    by_name: dict[tuple[str, str], list[PlaceRef]] = defaultdict(list)
+    for ref in national_places.values():
+        by_name[(ref.state, _norm_name(ref.name))].append(ref)
+    return by_name
+
+
+def _name_alias_candidates(place_names: str) -> list[str]:
+    """Normalized name variants for MA city/town dual-status and similar labels."""
+    base = _norm_name(place_names)
+    if not base:
+        return []
+    out: list[str] = [base]
+    if base.endswith(" town"):
+        out.append(base[: -len(" town")])
+    else:
+        out.append(f"{base} town")
+    # Dedup preserve order
+    seen: set[str] = set()
+    uniq: list[str] = []
+    for n in out:
+        if n not in seen:
+            seen.add(n)
+            uniq.append(n)
+    return uniq
+
+
+def _try_ct_town_cog(
+    place_names: str,
+    *,
+    by_fips: dict[str, County],
+    ct_town_to_cog: dict[str, tuple[str, str]],
+    tok: str,
+    method_prefix: str,
+) -> CrosswalkRow | None:
+    """Map CT place label → planning-region county-equivalent when gazetteer has COGs only."""
+    if not ct_town_to_cog:
+        return None
+    for cand in _name_alias_candidates(place_names):
+        hit = ct_town_to_cog.get(cand)
+        if not hit:
+            continue
+        fips, ce_name = hit
+        c = by_fips.get(fips)
+        if not c:
+            continue
+        pref = f"{method_prefix}" if method_prefix else ""
+        return CrosswalkRow(
+            st_fips_raw=tok,
+            place_names=place_names,
+            multiple_cities=0,
+            predicted_st_fips="",
+            n_meta_rows=0,
+            county_fips=c.fips,
+            state=c.state,
+            county_name=c.name,
+            all_county_fips=c.fips,
+            confidence="medium",
+            method=f"{pref}ct_town_to_planning_region",
+            notes=(
+                f"CT legacy county names obsolete in 2024 gaz; "
+                f"mapped via town→{ce_name} (CT Data Collaborative / Census COG)"
+            ),
+        )
+    return None
+
+
+def _try_name_alias_place(
+    state: str,
+    place_names: str,
+    *,
+    by_state_name: dict[tuple[str, str], County],
+    by_name: dict[tuple[str, str], list[PlaceRef]],
+    tok: str,
+    in_gaz: bool,
+    method_prefix: str,
+) -> CrosswalkRow | None:
+    """When GEOID missing from national_places, try unique same-state name alias."""
+    if not state:
+        return None
+    refs: list[PlaceRef] = []
+    seen_geoids: set[str] = set()
+    for cand in _name_alias_candidates(place_names):
+        for ref in by_name.get((state.upper(), cand), []):
+            if ref.geoid not in seen_geoids:
+                seen_geoids.add(ref.geoid)
+                refs.append(ref)
+    if not refs:
+        return None
+    # Union counties across alias hits; accept only if single county.
+    counties: list[County] = []
+    seen_fips: set[str] = set()
+    for ref in refs:
+        for c in _resolve_county_names(ref.state, ref.county_names, by_state_name):
+            if c.fips not in seen_fips:
+                seen_fips.add(c.fips)
+                counties.append(c)
+    pref = f"{method_prefix}" if method_prefix else ""
+    if len(counties) == 1:
+        c = counties[0]
+        return CrosswalkRow(
+            st_fips_raw=tok,
+            place_names=place_names,
+            multiple_cities=0,
+            predicted_st_fips="",
+            n_meta_rows=0,
+            county_fips=c.fips,
+            state=c.state,
+            county_name=c.name,
+            all_county_fips=c.fips,
+            confidence="medium",
+            method=f"{pref}place_name_alias_to_county",
+            notes=(
+                "GEOID absent/stale in national_places; unique same-state name alias "
+                f"→ {refs[0].geoid} {refs[0].name}"
+                + ("" if in_gaz else "; place GEOID not in 2024 places gaz")
+            ),
+        )
+    if len(counties) > 1:
+        return CrosswalkRow(
+            st_fips_raw=tok,
+            place_names=place_names,
+            multiple_cities=0,
+            predicted_st_fips="",
+            n_meta_rows=0,
+            county_fips="",
+            state=state.upper(),
+            county_name="",
+            all_county_fips=";".join(c.fips for c in counties),
+            confidence="low",
+            method=f"{pref}ambiguous_name_alias",
+            notes="name alias spans multiple counties; FIPS not invented",
+        )
+    return None
+
+
 def _county_index(counties: Iterable[County]) -> tuple[dict[str, County], dict[tuple[str, str], County]]:
     by_fips = {c.fips: c for c in counties}
     by_state_name: dict[tuple[str, str], County] = {}
@@ -187,6 +358,8 @@ def _map_single_token(
     by_state_name: dict[tuple[str, str], County],
     places_gaz: dict[str, str],
     national_places: dict[str, PlaceRef],
+    national_places_by_name: dict[tuple[str, str], list[PlaceRef]] | None = None,
+    ct_town_to_cog: dict[str, tuple[str, str]] | None = None,
     method_prefix: str = "",
 ) -> CrosswalkRow | None:
     """Map one GEOID-like token. Returns None if token empty."""
@@ -312,6 +485,17 @@ def _map_single_token(
                     method=f"{pref}ambiguous_multi_county_place",
                     notes=f"place spans {len(counties)} counties; FIPS not invented",
                 )
+            # CT: 2024 gazetteer uses planning regions; national_places still has legacy counties.
+            if pref_ref.state == "CT":
+                ct_hit = _try_ct_town_cog(
+                    place_names,
+                    by_fips=by_fips,
+                    ct_town_to_cog=ct_town_to_cog or {},
+                    tok=tok,
+                    method_prefix=method_prefix,
+                )
+                if ct_hit is not None:
+                    return ct_hit
             return CrosswalkRow(
                 st_fips_raw=tok,
                 place_names=place_names,
@@ -350,6 +534,31 @@ def _map_single_token(
                     method=f"{pref}county_equiv_geoid",
                     notes="independent-city / county-equivalent GEOID match by name",
                 )
+
+        # Name-alias fallback (e.g. MA Amherst Town city ↔ Amherst town GEOID).
+        alias_hit = _try_name_alias_place(
+            state,
+            place_names,
+            by_state_name=by_state_name,
+            by_name=national_places_by_name or {},
+            tok=tok,
+            in_gaz=in_gaz,
+            method_prefix=method_prefix,
+        )
+        if alias_hit is not None:
+            return alias_hit
+
+        # CT town → planning region when GEOID path failed entirely.
+        if (state == "CT" or digits.startswith("09")):
+            ct_hit = _try_ct_town_cog(
+                place_names,
+                by_fips=by_fips,
+                ct_town_to_cog=ct_town_to_cog or {},
+                tok=tok,
+                method_prefix=method_prefix,
+            )
+            if ct_hit is not None:
+                return ct_hit
 
         return CrosswalkRow(
             st_fips_raw=tok,
@@ -393,6 +602,8 @@ def map_place_key(
     by_state_name: dict[tuple[str, str], County],
     places_gaz: dict[str, str],
     national_places: dict[str, PlaceRef],
+    national_places_by_name: dict[tuple[str, str], list[PlaceRef]] | None = None,
+    ct_town_to_cog: dict[str, tuple[str, str]] | None = None,
 ) -> CrosswalkRow:
     tokens = _split_tokens(st_fips)
     pred = (predicted_st_fips or "").strip()
@@ -410,6 +621,8 @@ def map_place_key(
                     by_state_name=by_state_name,
                     places_gaz=places_gaz,
                     national_places=national_places,
+                    national_places_by_name=national_places_by_name,
+                    ct_town_to_cog=ct_town_to_cog,
                     method_prefix="predicted_",
                 )
                 if mapped and mapped.county_fips:
@@ -433,6 +646,8 @@ def map_place_key(
                 by_state_name=by_state_name,
                 places_gaz=places_gaz,
                 national_places=national_places,
+                national_places_by_name=national_places_by_name,
+                ct_town_to_cog=ct_town_to_cog,
             )
             if m:
                 resolved.append(m)
@@ -490,6 +705,8 @@ def map_place_key(
         by_state_name=by_state_name,
         places_gaz=places_gaz,
         national_places=national_places,
+        national_places_by_name=national_places_by_name,
+        ct_town_to_cog=ct_town_to_cog,
     )
     assert mapped is not None
     mapped.st_fips_raw = st_fips
@@ -528,6 +745,8 @@ def build_crosswalk(
     by_fips, by_state_name = _county_index(counties)
     places_gaz = load_places_gaz()
     national_places = load_national_places()
+    national_places_by_name = _national_places_by_name(national_places)
+    ct_town_to_cog = load_ct_town_to_cog()
 
     rows: list[CrosswalkRow] = []
     for rec in grouped.itertuples(index=False):
@@ -542,6 +761,8 @@ def build_crosswalk(
                 by_state_name=by_state_name,
                 places_gaz=places_gaz,
                 national_places=national_places,
+                national_places_by_name=national_places_by_name,
+                ct_town_to_cog=ct_town_to_cog,
             )
         )
 
@@ -576,21 +797,40 @@ def build_crosswalk(
             "counties_gaz": "data/raw/census/2024_Gaz_counties_national.txt",
             "places_gaz": "data/raw/census/2024_Gaz_place_national.txt",
             "national_places": "data/raw/census/national_places.txt",
+            "ct_town_to_planning_region": (
+                "data/raw/census/ct_town_to_planning_region.csv"
+                if ct_town_to_cog
+                else None
+            ),
         },
+        "residual_unmatched_keys": sum(1 for r in rows if r.confidence == "none"),
+        "residual_unmatched_meta_rows": int(
+            sum(r.n_meta_rows for r in rows if r.confidence == "none")
+        ),
         "notes": (
             "Unique keys are (st_fips, place_names, multiple_cities, predicted_st_fips). "
             "Multi-county places and unresolved multi-city compounds leave county_fips empty "
-            "and list candidates in all_county_fips when known. No empirical event rows invented."
+            "and list candidates in all_county_fips when known. "
+            "CT rows may use town→planning-region COG FIPS (2022 Census change). "
+            "No empirical event rows invented."
         ),
     }
     return rows, qa
 
 
-def write_outputs(rows: list[CrosswalkRow], qa: dict, out_csv: Path | None = None, out_qa: Path | None = None) -> tuple[Path, Path]:
+def write_outputs(
+    rows: list[CrosswalkRow],
+    qa: dict,
+    out_csv: Path | None = None,
+    out_qa: Path | None = None,
+    out_residuals: Path | None = None,
+) -> tuple[Path, Path, Path]:
     out_csv = out_csv or OUT_CSV
     out_qa = out_qa or OUT_QA
+    out_residuals = out_residuals or OUT_RESIDUALS
     out_csv.parent.mkdir(parents=True, exist_ok=True)
     out_qa.parent.mkdir(parents=True, exist_ok=True)
+    out_residuals.parent.mkdir(parents=True, exist_ok=True)
 
     fieldnames = [
         "st_fips_raw",
@@ -612,8 +852,18 @@ def write_outputs(rows: list[CrosswalkRow], qa: dict, out_csv: Path | None = Non
         for r in rows:
             w.writerow({k: getattr(r, k) for k in fieldnames})
 
+    residual_rows = [r for r in rows if r.confidence in {"none", "low"}]
+    with out_residuals.open("w", encoding="utf-8", newline="") as f:
+        w = csv.DictWriter(f, fieldnames=fieldnames)
+        w.writeheader()
+        for r in residual_rows:
+            w.writerow({k: getattr(r, k) for k in fieldnames})
+
+    qa = dict(qa)
+    qa["residuals_path"] = str(out_residuals.relative_to(ROOT))
+    qa["residuals_keys"] = len(residual_rows)
     out_qa.write_text(json.dumps(qa, indent=2) + "\n", encoding="utf-8")
-    return out_csv, out_qa
+    return out_csv, out_qa, out_residuals
 
 
 def main() -> None:
@@ -622,9 +872,10 @@ def main() -> None:
     args = p.parse_args()
     meta = Path(args.meta) if args.meta else None
     rows, qa = build_crosswalk(meta)
-    csv_path, qa_path = write_outputs(rows, qa)
+    csv_path, qa_path, res_path = write_outputs(rows, qa)
     print(f"wrote {csv_path} ({len(rows)} keys)")
     print(f"wrote {qa_path}")
+    print(f"wrote {res_path} (none+low residuals)")
     print(
         "QA:",
         f"keys={qa['unique_place_keys']}",
