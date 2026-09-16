@@ -1,7 +1,7 @@
 # Sources — free-data access notes
 
 Policy: backbone uses **no paid APIs**. Keys are optional enrichment only.  
-For the per-layer free-status and next-step inventory, see [`SOURCE_INVENTORY.md`](SOURCE_INVENTORY.md). Keep this file as the access-URL reference.
+Canonical per-layer free-status and next-step inventory: [`SOURCE_INVENTORY.md`](SOURCE_INVENTORY.md). This file remains the access-URL reference.
 Refresh cadence targets match [`WORKING_SPEC.md`](WORKING_SPEC.md).
 
 **Operational matrix:** free-source status, FIPS×month readiness, next ingest steps, and blockers live in [`SOURCE_INVENTORY.md`](SOURCE_INVENTORY.md) (access date 2026-09-16 PT).

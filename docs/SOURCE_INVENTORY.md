@@ -19,7 +19,7 @@ Phase priority from working spec: **A → B → E** first, then **G**, then **F*
 
 ---
 
-## Per-layer free status summary
+## Per-layer free status summary (raw files and manifests checked on disk 2026-09-16 PT)
 
 | Layer | Free status | On-disk / manifest detail | FIPS × month | Aden / paid blocker? |
 |-------|-------------|---------------------------|--------------|----------------------|
