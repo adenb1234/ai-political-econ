@@ -36,6 +36,10 @@ data/raw/**/*.docx
 
 data/processed/**
 !data/processed/.gitkeep
+!data/processed/crosswalks/
+!data/processed/crosswalks/**
+!data/processed/qa/
+!data/processed/qa/*.json
 
 # OS / editor
 .DS_Store

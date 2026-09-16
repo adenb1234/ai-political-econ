@@ -1,3 +1,5 @@
 # Free-data scaffold — keep deps minimal until ingest needs grow
 # mediacloud  # optional, layer D when MC_API_KEY is set
-# pyarrow     # optional, LocalView meta parquet
+pyarrow>=14.0.0  # LocalView meta parquet + geo crosswalk
+pandas>=2.0.0    # LocalView geo crosswalk grouping
+# openpyxl       # optional, only if inspecting xlsx ledgers by hand

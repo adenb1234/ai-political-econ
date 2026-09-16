@@ -1,0 +1,12 @@
+{
+  "source_id": "census_national_places",
+  "url": "https://www2.census.gov/geo/docs/reference/codes/files/national_places.txt",
+  "path": "data/raw/census/national_places.txt",
+  "bytes": 2803570,
+  "sha256": "7c387c611338e82eff8ec8df30bf9af0c345dbb84a3537b2e6080f0768729027",
+  "status": "downloaded",
+  "notes": "Census national_places.txt \u2014 place GEOID to county name(s). Multi-county places list comma-separated county names; do not invent a single FIPS.",
+  "license_note": "US government work / public domain",
+  "layer": "geo",
+  "recorded_at_utc": "2026-09-16T16:37:44.618271+00:00"
+}

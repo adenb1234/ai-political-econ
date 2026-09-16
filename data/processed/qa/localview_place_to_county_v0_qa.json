@@ -1,0 +1,39 @@
+{
+  "crosswalk_version": "localview_place_to_county_v0",
+  "built_at_utc": "2026-09-16T16:37:45.303774+00:00",
+  "meta_path": "data/raw/localview/meta_localview.parquet",
+  "meta_rows": 301659,
+  "distinct_st_fips_raw": 989,
+  "unique_place_keys": 1150,
+  "keys_matched_to_county": 1033,
+  "keys_matched_share": 0.8983,
+  "keys_ambiguous_or_low": 110,
+  "keys_ambiguous_share": 0.0957,
+  "meta_rows_matched_to_county": 266458,
+  "meta_rows_matched_share": 0.8833,
+  "confidence_counts": {
+    "high": 786,
+    "low": 110,
+    "medium": 247,
+    "none": 7
+  },
+  "method_counts": {
+    "place_to_county": 734,
+    "ambiguous_multi_county_place": 88,
+    "predicted_county_geoid_validated": 64,
+    "predicted_place_to_county": 93,
+    "compound_tokens_agree": 61,
+    "ambiguous_compound": 22,
+    "unmatched_place": 4,
+    "unmatched_county_name": 3,
+    "county_geoid_validated": 77,
+    "county_label_placefp_as_county": 1,
+    "county_equiv_geoid": 3
+  },
+  "sources": {
+    "counties_gaz": "data/raw/census/2024_Gaz_counties_national.txt",
+    "places_gaz": "data/raw/census/2024_Gaz_place_national.txt",
+    "national_places": "data/raw/census/national_places.txt"
+  },
+  "notes": "Unique keys are (st_fips, place_names, multiple_cities, predicted_st_fips). Multi-county places and unresolved multi-city compounds leave county_fips empty and list candidates in all_county_fips when known. No empirical event rows invented."
+}

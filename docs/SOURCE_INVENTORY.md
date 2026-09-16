@@ -25,11 +25,11 @@ The required layer status is one of `ready`, `blocked`, or `already-have-raw`. W
 
 | Layer | Free status | Verified on-disk / manifest state | FIPS × month | Aden / paid blocker? |
 |-------|-------------|-----------------------------------|--------------|----------------------|
-| **A** Deliberation | **already-have-raw** | LocalView codebook + metadata downloaded; transcripts deferred | `partial` | None for free access |
+| **A** Deliberation | **already-have-raw** | LocalView codebook + metadata downloaded; place→county crosswalk v0 on disk; transcripts deferred | `partial` (county ready; month TBD) | None for free access |
 | **B** Legislation | **blocked** | LegiScan raw empty; Open States documented only | `not started` | **Yes — free LegiScan bulk drop/key; optional Open States key** |
 | **E** Mobilization | **already-have-raw** | CCC phase 3 downloaded; versioned transform outputs on disk | `partial` → matched rows checked | None for access |
 | **F** Vernacular | **ready** | Arctic Shift and Google Trends documented only; no raw dumps | `not started` | Dump size, rate limits, and geo crosswalk |
-| **G** Project ledger | **already-have-raw** | EIA-861 downloaded; LBNL/ISO/registries documented only | `partial` / `not started` | No access blocker; hand-curation and schema work remain |
+| **G** Project ledger | **already-have-raw** | EIA-861 + LBNL Queued Up 2026 XLSX downloaded; ISO/registries documented only | `partial` / `not started` | No access blocker; hand-curation and schema work remain |
 
 Supplemental free options (Google Trends, hand-curated opposition registries, Media Cloud, and local RSS/HTML) are documented below without claiming unverified downloads. Census is a verified geography helper, not one of the five study layers.
 
@@ -39,13 +39,13 @@ Supplemental free options (Google Trends, hand-curated opposition registries, Me
 
 | Field | Detail |
 |-------|--------|
-| **Free status** | **already-have-raw** (codebook + meta); next work is geo crosswalk, not download |
+| **Free status** | **already-have-raw** (codebook + meta + place→county crosswalk v0) |
 | **Free access path** | Dataset DOI [10.7910/DVN/NJTBEM](https://doi.org/10.7910/DVN/NJTBEM). Codebook: `https://dataverse.harvard.edu/api/access/datafile/14077924`. Meta parquet (~35 MB): `https://dataverse.harvard.edu/api/access/datafile/14233652`. Transcripts: datafile ids `14233653`–`14233655` (~2 GB × 2 + ~1 GB). Replication code DOI [10.7910/DVN/KHUXIN](https://doi.org/10.7910/DVN/KHUXIN). |
 | **License / ToS** | Harvard Dataverse / LocalView terms; cite DOI. Meeting-recording places skew larger / richer / more urban. |
 | **Raw on disk** | **yes:** `data/raw/localview/codebook.md` (6,387 bytes; sha256 `f175fb1f…ec2f`) and `data/raw/localview/meta_localview.parquet` (35,339,621 bytes; sha256 `a7eccd0b…25f5` per `localview_meta.json`). Transcript tarballs remain deferred. |
 | **Manifests** | `localview.json` (`meta_downloaded`), `localview_codebook.json`, `localview_meta.json` |
-| **Geo / FIPS** | **`partial`.** Codebook documents `st_fips` / place names; county FIPS crosswalk + meeting-date → `YYYY-MM` still TBD. |
-| **Next free step** | Inspect metadata geo fields and design the place/state-to-county-FIPS crosswalk; do **not** pull transcript tarballs. |
+| **Geo / FIPS** | **`partial`.** Place/state→county FIPS crosswalk **v0 shipped** (`make crosswalk-localview` → `data/processed/crosswalks/localview_place_to_county_v0.csv` + QA JSON). Meeting-date → `YYYY-MM` still TBD. See `docs/notes/localview_meta_geo_v0.md`. |
+| **Next free step** | Join crosswalk onto meta for spine keys; derive `month` from `meeting_date`; review ambiguous/multi-county keys. Do **not** pull transcript tarballs. |
 | **Blockers** | None for free access. Transcript size (~5+ GB) is an ops choice, not a paywall. |
 
 **Live check (2026-09-16 PT):** DOI `202`; codebook GET `200` / range `206`; meta HEAD `403` but range GET `206` — treat meta URL as reachable.
@@ -157,12 +157,13 @@ Supplemental free options (Google Trends, hand-curated opposition registries, Me
 
 | Field | Detail |
 |-------|--------|
-| **Free status** | **ready** (URL verified; not downloaded) |
+| **Free status** | **already-have-raw** |
 | **Free access path** | Portal https://emp.lbl.gov/queues · 2026 Edition https://emp.lbl.gov/publications/queued-2026-edition-characteristics · Excel: `https://emp.lbl.gov/sites/default/files/2026-05/LBNL_Ix_Queue_Data_File_thru2025.xlsx` (~15.6 MB). |
 | **License / ToS** | **CC BY 4.0** — attribute LBNL and GridTracker. Generation/storage queues — **not** load / data-center permit registry. |
-| **Raw on disk** | **no** — indexed in `project_ledger_sources.json` only. |
+| **Raw on disk** | **yes:** `data/raw/lbnl/LBNL_Ix_Queue_Data_File_thru2025.xlsx` (15,571,236 bytes; sha256 `794582d3…08b6`; access date PT 2026-09-16). Fetcher: `src/ingest/lbnl_queued_up.py` / `make fetch-lbnl`. |
+| **Manifest** | `lbnl_queued_up_2026.json` (`downloaded`; notes explicitly exclude data-center permit counts). |
 | **Geo / FIPS** | **`partial`** upstream (region/state/county map products); queue timestamps → `YYYY-MM` still need a transform plan. Do **not** invent proposed/approved/denied data-center counts. |
-| **Next free step** | Download XLSX into `data/raw/lbnl/` + manifest `lbnl_queued_up_2026.json` (sha256, bytes, access date). |
+| **Next free step** | Design a queue→county×month transform for generation/storage only; do **not** treat rows as DC permits. |
 | **Blockers** | None for free access. |
 
 **Live check (2026-09-16 PT):** portal / publication / XLSX HEAD **200** (`content-length` 15571236).
@@ -241,11 +242,11 @@ Public entry pages re-checked with curl HEAD/GET on **2026-09-16 PT** (UA `ai-ba
 
 | Field | Detail |
 |-------|--------|
-| **Free access** | `https://www2.census.gov/geo/docs/maps-data/data/gazetteer/2024_Gazetteer/2024_Gaz_counties_national.zip` — public domain |
-| **Raw on disk** | `data/raw/census/2024_Gaz_counties_national.txt` (647,830 bytes; sha256 `0a121d13…4451`; 3,222 counties + header) + zip (141,679 bytes) |
-| **Manifest** | `census_gaz_counties_2024.json` |
-| **Helper** | `src/geo/fips.py` |
-| **FIPS × month** | **`ready`** for county universe / USPS↔GEOID joins (month not in gazetteer). |
+| **Free access** | Counties: `…/2024_Gaz_counties_national.zip`. Places: `…/2024_Gaz_place_national.zip`. Place→county names: `https://www2.census.gov/geo/docs/reference/codes/files/national_places.txt`. Public domain. |
+| **Raw on disk** | Counties TXT (647,830 bytes; sha256 `0a121d13…4451`) + Places TXT (6,499,209 bytes) + `national_places.txt` (2,803,570 bytes). |
+| **Manifests** | `census_gaz_counties_2024.json`, `census_gaz_places_2024.json`, `census_national_places.json` |
+| **Helpers** | `src/geo/fips.py`; LocalView join `src/transform/localview_geo.py` (`make crosswalk-localview`) |
+| **FIPS × month** | **`ready`** for county universe / USPS↔GEOID joins (month not in gazetteer). Place→county for LocalView v0 on disk. |
 
 ---
 
@@ -257,9 +258,9 @@ Pew, Gallup, AP-NORC national AI/tech series and ballot measures: **cite release
 
 ## Exact next free ingest actions (priority A→B→E)
 
-1. **A:** Inspect the downloaded LocalView metadata for the place/state-to-county-FIPS crosswalk (no transcript tarballs).
+1. **A:** Join LocalView crosswalk v0 onto meta; derive `month` from `meeting_date`; review ambiguous keys (no transcript tarballs).
 2. **E:** Already past raw + `ccc_rules_v0` transform; optional phase-2 CCC backfill later.
-3. **G:** Download LBNL Queued Up 2026 XLSX (URL above) + manifest.
+3. **G:** LBNL Queued Up XLSX on disk — design generation/storage queue → county×month transform (not DC permits). Optionally pick one ISO next.
 4. **B:** Unblock only after Aden free LegiScan drop or free API key.
 5. **F/D:** Defer Arctic Shift torrents / Media Cloud until keys + disk plan exist.
 
@@ -278,7 +279,6 @@ Pew, Gallup, AP-NORC national AI/tech series and ballot measures: **cite release
 | G1 | No national DC permit registry | Accept hand-built ledger coverage (spec failure mode G) |
 | G2 | Opposition registries | Approve curated schema + which sites may be cited (no login-wall scrapes) |
 | Ops | GitHub remote missing | Local `.git` only (`git remote` empty) — create private remote when ready; **do not push from this agent** |
-| Ops | Dirty worktree on other paths | Leave other agents’ uncommitted `data/manifests/*` + `src/ingest/census_fips.py` unstaged |
 
 ---
 
@@ -292,7 +292,7 @@ Pew, Gallup, AP-NORC national AI/tech series and ballot measures: **cite release
 
 ## Verification log
 
-**Verified on disk 2026-09-16 PT (ls sizes + sha256sum where checked):** CCC CSV 47,231,658 bytes / sha256 matches manifest; LocalView codebook 6,387 plus metadata parquet 35,339,621 bytes / sha256 matches manifests; EIA zip 4,568,208 / sha256 matches; Census txt 647,830 / sha256 matches; LegiScan/Open States/Arctic Shift raw empty or ACCESS-only; CCC processed events/panel/QA present as above.
+**Verified on disk 2026-09-16 PT (ls sizes + sha256sum where checked):** CCC CSV 47,231,658 bytes / sha256 matches manifest; LocalView codebook 6,387 plus metadata parquet 35,339,621 bytes / sha256 matches manifests; EIA zip 4,568,208 / sha256 matches; Census txt 647,830 / sha256 matches; LegiScan/Open States/Arctic Shift raw empty or ACCESS-only; CCC processed events/panel/QA present as above. **Later same day PT:** Census places gaz + `national_places.txt` downloaded; LocalView place→county crosswalk v0 QA (1,150 keys; 1,033 matched / 0.8983; meta-row match 0.8833); LBNL Queued Up XLSX 15,571,236 bytes / sha256 `794582d3…08b6`.
 
 **Verified live with curl 2026-09-16 PT (this pass):** LBNL Queued Up portal + 2026 publication page + XLSX HEAD **200** (`content-length` 15571236); EIA portal HEAD **503**/GET **200**, zip **200**; LegiScan datasets + API **403**; Open States docs **200**; Arctic Shift repo + download_links **200**; Google Trends **200**; Media Cloud **200**; Census gazetteer zip **200**; CCC project page **200** / Dataverse datafile HEAD **403** (file already on disk; range GET pattern works for LocalView meta **206**); PJM/MISO/CAISO(PascalCase)/ERCOT/NYISO/ISO-NE/SPP landing pages **200** (CAISO lowercase path **404**); datacenterwatch.org + datacenterknowledge.com **200**.
 

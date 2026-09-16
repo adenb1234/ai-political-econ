@@ -1,0 +1,1151 @@
+st_fips_raw,place_names,multiple_cities,predicted_st_fips,n_meta_rows,county_fips,state,county_name,all_county_fips,confidence,method,notes
+0101708,Andalusia city,0,,247,01039,AL,Covington County,01039,high,place_to_county,national_places → counties gazetteer
+0101852,Anniston city,0,,11,01015,AL,Calhoun County,01015,high,place_to_county,national_places → counties gazetteer
+0102320,Argo town,0,,68,,AL,,01073;01115,low,ambiguous_multi_county_place,place spans 2 counties; FIPS not invented
+0103076,Auburn city,0,,464,01081,AL,Lee County,01081,high,place_to_county,national_places → counties gazetteer
+01043;0118976,Cullman County; Cullman city,1,01043,22,01043,AL,Cullman County,01043,medium,predicted_county_geoid_validated,validated against 2024 counties gazetteer; from predicted_st_fips for multi-city
+01043;0118976,Cullman County; Cullman city,1,0118976,47,01043,AL,Cullman County,01043,medium,predicted_place_to_county,national_places → counties gazetteer; from predicted_st_fips for multi-city
+01043;0118976,Cullman County; Cullman city,1,UNKNOWN,22,01043,AL,Cullman County,01043,medium,compound_tokens_agree,all resolvable tokens agree on one county
+0107000,Birmingham city,0,,588,,AL,,01073;01117,low,ambiguous_multi_county_place,place spans 2 counties; FIPS not invented
+01071;0138152,Jackson County; Jackson city,1,01071,432,01071,AL,Jackson County,01071,medium,predicted_county_geoid_validated,validated against 2024 counties gazetteer; from predicted_st_fips for multi-city
+01071;0138152,Jackson County; Jackson city,1,UNKNOWN,11,,,,01025;01071,low,ambiguous_compound,multi-city/compound st_fips; no single county invented; predicted UNKNOWN/empty
+01071;0168736,Jackson County; Scottsboro city,1,01071,364,01071,AL,Jackson County,01071,medium,predicted_county_geoid_validated,validated against 2024 counties gazetteer; from predicted_st_fips for multi-city
+01071;0168736,Jackson County; Scottsboro city,1,0168736,375,01071,AL,Jackson County,01071,medium,predicted_place_to_county,national_places → counties gazetteer; from predicted_st_fips for multi-city
+01071;0168736,Jackson County; Scottsboro city,1,UNKNOWN,42,01071,AL,Jackson County,01071,medium,compound_tokens_agree,all resolvable tokens agree on one county
+0109208,Brewton city,0,,319,01053,AL,Escambia County,01053,high,place_to_county,national_places → counties gazetteer
+0125240,Fairhope city,0,,654,01003,AL,Baldwin County,01003,high,place_to_county,national_places → counties gazetteer
+0126896,Florence,0,,15,01077,AL,Lauderdale County,01077,high,place_to_county,national_places → counties gazetteer
+0127616;01049;0163336,Fort Payne city; DeKalb County; Rainsville city,1,01049,71,01049,AL,DeKalb County,01049,medium,predicted_county_geoid_validated,validated against 2024 counties gazetteer; from predicted_st_fips for multi-city
+0127616;01049;0163336,Fort Payne city; DeKalb County; Rainsville city,1,0127616,53,01049,AL,DeKalb County,01049,medium,predicted_place_to_county,national_places → counties gazetteer; from predicted_st_fips for multi-city
+0127616;01049;0163336,Fort Payne city; DeKalb County; Rainsville city,1,0163336,101,01049,AL,DeKalb County,01049,medium,predicted_place_to_county,national_places → counties gazetteer; from predicted_st_fips for multi-city
+0127616;01049;0163336,Fort Payne city; DeKalb County; Rainsville city,1,UNKNOWN,45,01049,AL,DeKalb County,01049,medium,compound_tokens_agree,all resolvable tokens agree on one county
+0128696,Gadsden city,0,,160,01055,AL,Etowah County,01055,high,place_to_county,national_places → counties gazetteer
+0132848;0182992;01093;0104852;0109424;0132224;0132560;0146768,Hamilton city; Winfield city; Marion County; Bear Creek town; Brilliant town; Guin city; Hackleburg town; Marion city,1,01093,140,01093,AL,Marion County,01093,medium,predicted_county_geoid_validated,validated against 2024 counties gazetteer; from predicted_st_fips for multi-city
+0132848;0182992;01093;0104852;0109424;0132224;0132560;0146768,Hamilton city; Winfield city; Marion County; Bear Creek town; Brilliant town; Guin city; Hackleburg town; Marion city,1,0132224,35,01093,AL,Marion County,01093,medium,predicted_place_to_county,national_places → counties gazetteer; from predicted_st_fips for multi-city
+0132848;0182992;01093;0104852;0109424;0132224;0132560;0146768,Hamilton city; Winfield city; Marion County; Bear Creek town; Brilliant town; Guin city; Hackleburg town; Marion city,1,0132848,327,01093,AL,Marion County,01093,medium,predicted_place_to_county,national_places → counties gazetteer; from predicted_st_fips for multi-city
+0132848;0182992;01093;0104852;0109424;0132224;0132560;0146768,Hamilton city; Winfield city; Marion County; Bear Creek town; Brilliant town; Guin city; Hackleburg town; Marion city,1,0182992,36,,,,01093;01105,low,ambiguous_compound,multi-city/compound st_fips; no single county invented
+0132848;0182992;01093;0104852;0109424;0132224;0132560;0146768,Hamilton city; Winfield city; Marion County; Bear Creek town; Brilliant town; Guin city; Hackleburg town; Marion city,1,UNKNOWN,45,,,,01093;01105,low,ambiguous_compound,multi-city/compound st_fips; no single county invented; predicted UNKNOWN/empty
+0135800,Homewood city,0,,455,01073,AL,Jefferson County,01073,high,place_to_county,national_places → counties gazetteer
+0135896,Hoover city,0,,93,,AL,,01073;01117,low,ambiguous_multi_county_place,place spans 2 counties; FIPS not invented
+0137000,Huntsville city,0,,175,,AL,,01083;01089,low,ambiguous_multi_county_place,place spans 2 counties; FIPS not invented
+0137864,Irondale city,0,,131,01073,AL,Jefferson County,01073,high,place_to_county,national_places → counties gazetteer
+0141968,Leeds city,0,,33,,AL,,01073;01117;01115,low,ambiguous_multi_county_place,place spans 3 counties; FIPS not invented
+0143120,Lincoln city,0,,9,01121,AL,Talladega County,01121,high,place_to_county,national_places → counties gazetteer
+0150000,Mobile city,0,,1268,01097,AL,Mobile County,01097,high,place_to_county,national_places → counties gazetteer
+0151000,Montgomery city,0,,828,01101,AL,Montgomery County,01101,high,place_to_county,national_places → counties gazetteer
+0155200,Northport city,0,,337,01125,AL,Tuscaloosa County,01125,high,place_to_county,national_places → counties gazetteer
+0159472;0171190,Phenix City city; Smiths Station city,1,0171190,63,01081,AL,Lee County,01081,medium,predicted_place_to_county,national_places → counties gazetteer; from predicted_st_fips for multi-city
+0159472;0171190,Phenix City city; Smiths Station city,1,UNKNOWN,121,01081,AL,Lee County,01081,medium,compound_tokens_agree,all resolvable tokens agree on one county
+0169120,Selma city,0,,112,01047,AL,Dallas County,01047,high,place_to_county,national_places → counties gazetteer
+0169240,Semmes city,0,,63,,AL,,,none,unmatched_place,7-digit not in national_places / no safe county equiv
+0171190,Smiths Station city,0,,14,01081,AL,Lee County,01081,high,place_to_county,national_places → counties gazetteer
+0174352,Sylacauga city,0,,7,01121,AL,Talladega County,01121,high,place_to_county,national_places → counties gazetteer
+0177304,Tuskegee city,0,,24,01087,AL,Macon County,01087,high,place_to_county,national_places → counties gazetteer
+0177880,Union Springs city,0,,5,01011,AL,Bullock County,01011,high,place_to_county,national_places → counties gazetteer
+0181720,Wetumpka city,0,,191,01051,AL,Elmore County,01051,high,place_to_county,national_places → counties gazetteer
+0233140,Homer city,0,,1,02122,AK,Kenai Peninsula Borough,02122,high,place_to_county,national_places → counties gazetteer
+0258660,Palmer city,0,,255,02170,AK,Matanuska-Susitna Borough,02170,high,place_to_county,national_places → counties gazetteer
+0402830,Apache Junction city,0,,580,,AZ,,04013;04021,low,ambiguous_multi_county_place,place spans 2 counties; FIPS not invented
+0412000,Chandler city,0,,327,04013,AZ,Maricopa County,04013,high,place_to_county,national_places → counties gazetteer
+0412840,Chino Valley town,0,,302,04025,AZ,Yavapai County,04025,high,place_to_county,national_places → counties gazetteer
+0416410,Cottonwood city,0,,535,04025,AZ,Yavapai County,04025,high,place_to_county,national_places → counties gazetteer
+0427820,Glendale city,0,,6,04013,AZ,Maricopa County,04013,high,place_to_county,national_places → counties gazetteer
+0433280,Holbrook city,0,,24,04017,AZ,Navajo County,04017,high,place_to_county,national_places → counties gazetteer
+0437200,Kearny town,0,,3,04021,AZ,Pinal County,04021,high,place_to_county,national_places → counties gazetteer
+0437620,Kingman city,0,,8,04015,AZ,Mohave County,04015,high,place_to_county,national_places → counties gazetteer
+0439370,Lake Havasu City city,0,,366,04015,AZ,Mohave County,04015,high,place_to_county,national_places → counties gazetteer
+0449640,Nogales city,0,,405,04023,AZ,Santa Cruz County,04023,high,place_to_county,national_places → counties gazetteer
+0451810,Page city,0,,207,04005,AZ,Coconino County,04005,high,place_to_county,national_places → counties gazetteer
+0455000,Phoenix city,0,,805,04013,AZ,Maricopa County,04013,high,place_to_county,national_places → counties gazetteer
+0458010;04012,Quartzsite town; La Paz County,1,04012,30,04012,AZ,La Paz County,04012,medium,predicted_county_geoid_validated,validated against 2024 counties gazetteer; from predicted_st_fips for multi-city
+0458010;04012,Quartzsite town; La Paz County,1,0458010,459,04012,AZ,La Paz County,04012,medium,predicted_place_to_county,national_places → counties gazetteer; from predicted_st_fips for multi-city
+0458010;04012,Quartzsite town; La Paz County,1,UNKNOWN,116,04012,AZ,La Paz County,04012,medium,compound_tokens_agree,all resolvable tokens agree on one county
+0462140,Sahuarita town,0,,131,04019,AZ,Pima County,04019,high,place_to_county,national_places → counties gazetteer
+0466470,Show Low city,0,,429,04017,AZ,Navajo County,04017,high,place_to_county,national_places → counties gazetteer
+0477000,Tucson city,0,,232,04019,AZ,Pima County,04019,high,place_to_county,national_places → counties gazetteer
+0501990,Arkansas City city,0,,117,05041,AR,Desha County,05041,high,place_to_county,national_places → counties gazetteer
+0504840,Bella Vista city,0,,222,05007,AR,Benton County,05007,high,place_to_county,national_places → counties gazetteer
+0509460;0500580,Bryant city; Alexander city,1,0500580,8,05125,AR,Saline County,05125,medium,compound_tokens_agree,all resolvable tokens agree on one county
+0509460;0500580,Bryant city; Alexander city,1,0509460,18,05125,AR,Saline County,05125,medium,predicted_place_to_county,national_places → counties gazetteer; from predicted_st_fips for multi-city
+0509460;0500580,Bryant city; Alexander city,1,UNKNOWN,10,05125,AR,Saline County,05125,medium,compound_tokens_agree,all resolvable tokens agree on one county
+0515190,Conway city,0,,137,05045,AR,Faulkner County,05045,high,place_to_county,national_places → counties gazetteer
+0518520,Dermott city,0,,10,05017,AR,Chicot County,05017,high,place_to_county,national_places → counties gazetteer
+0523290,Fayetteville city,0,,256,05143,AR,Washington County,05143,high,place_to_county,national_places → counties gazetteer
+0528780,Greenwood city,0,,226,05131,AR,Sebastian County,05131,high,place_to_county,national_places → counties gazetteer
+0566080,Springdale city,0,,442,,AR,,05007;05143,low,ambiguous_multi_county_place,place spans 2 counties; FIPS not invented
+0571480,Van Buren city,0,,37,05033,AR,Crawford County,05033,high,place_to_county,national_places → counties gazetteer
+0574360,West Fork city,0,,4,05143,AR,Washington County,05143,high,place_to_county,national_places → counties gazetteer
+0574540,West Memphis city,0,,289,05035,AR,Crittenden County,05035,high,place_to_county,national_places → counties gazetteer
+0600296,Adelanto city,0,,13,06071,CA,San Bernardino County,06071,high,place_to_county,national_places → counties gazetteer
+0600562,Alameda city,0,,222,06001,CA,Alameda County,06001,high,place_to_county,national_places → counties gazetteer
+0600674,Albany city,0,,849,06001,CA,Alameda County,06001,high,place_to_county,national_places → counties gazetteer
+0602000,Anaheim city,0,,52,06059,CA,Orange County,06059,high,place_to_county,national_places → counties gazetteer
+0602112;06009,Angels city; Calaveras County,1,06009,471,06009,CA,Calaveras County,06009,medium,predicted_county_geoid_validated,validated against 2024 counties gazetteer; from predicted_st_fips for multi-city
+0602112;06009,Angels city; Calaveras County,1,UNKNOWN,530,06009,CA,Calaveras County,06009,medium,compound_tokens_agree,all resolvable tokens agree on one county
+0602252,Antioch city,0,,15,06013,CA,Contra Costa County,06013,high,place_to_county,national_places → counties gazetteer
+0603092,Atherton town,0,,647,06081,CA,San Mateo County,06081,high,place_to_county,national_places → counties gazetteer
+0603162,Atwater city,0,,156,06047,CA,Merced County,06047,high,place_to_county,national_places → counties gazetteer
+0604758,Beaumont city,0,,454,06065,CA,Riverside County,06065,high,place_to_county,national_places → counties gazetteer
+0604982,Bellflower city,0,,214,06037,CA,Los Angeles County,06037,high,place_to_county,national_places → counties gazetteer
+0608058,Brawley city,0,,1299,06025,CA,Imperial County,06025,high,place_to_county,national_places → counties gazetteer
+0608310,Brisbane city,0,,757,06081,CA,San Mateo County,06081,high,place_to_county,national_places → counties gazetteer
+0608954,Burbank city,0,,776,06037,CA,Los Angeles County,06037,high,place_to_county,national_places → counties gazetteer
+0609780,California City city,0,,278,06029,CA,Kern County,06029,high,place_to_county,national_places → counties gazetteer
+0609892,Calistoga city,0,,475,06055,CA,Napa County,06055,high,place_to_county,national_places → counties gazetteer
+0610928,Canyon Lake city,0,,152,06065,CA,Riverside County,06065,high,place_to_county,national_places → counties gazetteer
+0611194,Carlsbad city,0,,64,06073,CA,San Diego County,06073,high,place_to_county,national_places → counties gazetteer
+0612524,Ceres city,0,,327,06099,CA,Stanislaus County,06099,high,place_to_county,national_places → counties gazetteer
+0613014,Chico city,0,,304,06007,CA,Butte County,06007,high,place_to_county,national_places → counties gazetteer
+0613945,Clearlake city,0,,614,06033,CA,Lake County,06033,high,place_to_county,national_places → counties gazetteer
+0614190,Cloverdale city,0,,239,06097,CA,Sonoma County,06097,high,place_to_county,national_places → counties gazetteer
+0616350,Corona city,0,,61,06065,CA,Riverside County,06065,high,place_to_county,national_places → counties gazetteer
+0619766,Downey city,0,,205,06037,CA,Los Angeles County,06037,high,place_to_county,national_places → counties gazetteer
+0620956,East Palo Alto city,0,,65,06081,CA,San Mateo County,06081,high,place_to_county,national_places → counties gazetteer
+0622020,Elk Grove city,0,,12,06067,CA,Sacramento County,06067,high,place_to_county,national_places → counties gazetteer
+0622594,Emeryville city,0,,1483,06001,CA,Alameda County,06001,high,place_to_county,national_places → counties gazetteer
+0623168,Fairfax town,0,,407,06041,CA,Marin County,06041,high,place_to_county,national_places → counties gazetteer
+0630000,Glendale city,0,,2519,06037,CA,Los Angeles County,06037,high,place_to_county,national_places → counties gazetteer
+0631708,Half Moon Bay city,0,,69,06081,CA,San Mateo County,06081,high,place_to_county,national_places → counties gazetteer
+0633182;0667112,Hemet city; San Jacinto city,1,0633182,13,06065,CA,Riverside County,06065,medium,predicted_place_to_county,national_places → counties gazetteer; from predicted_st_fips for multi-city
+0633182;0667112,Hemet city; San Jacinto city,1,0667112,15,06065,CA,Riverside County,06065,medium,predicted_place_to_county,national_places → counties gazetteer; from predicted_st_fips for multi-city
+0633182;0667112,Hemet city; San Jacinto city,1,UNKNOWN,10,06065,CA,Riverside County,06065,medium,compound_tokens_agree,all resolvable tokens agree on one county
+0636546,Inglewood city,0,,551,06037,CA,Los Angeles County,06037,high,place_to_county,national_places → counties gazetteer
+0639496,Lake Forest city,0,,360,06059,CA,Orange County,06059,high,place_to_county,national_places → counties gazetteer
+0648648,Monrovia city,0,,815,06037,CA,Los Angeles County,06037,high,place_to_county,national_places → counties gazetteer
+0649270,Moreno Valley city,0,,383,06065,CA,Riverside County,06065,high,place_to_county,national_places → counties gazetteer
+0650398,National city,0,,35,06073,CA,San Diego County,06073,high,place_to_county,national_places → counties gazetteer
+0651560,Norco city,0,,28,06065,CA,Riverside County,06065,high,place_to_county,national_places → counties gazetteer
+0652526,Norwalk city,0,,10,06037,CA,Los Angeles County,06037,high,place_to_county,national_places → counties gazetteer
+0653322,Oceanside city,0,,188,06073,CA,San Diego County,06073,high,place_to_county,national_places → counties gazetteer
+0653476,Ojai city,0,,1130,06111,CA,Ventura County,06111,high,place_to_county,national_places → counties gazetteer
+0654386,Oroville city,0,,428,06007,CA,Butte County,06007,high,place_to_county,national_places → counties gazetteer
+0654806,Pacifica city,0,,1765,06081,CA,San Mateo County,06081,high,place_to_county,national_places → counties gazetteer
+0656000,Pasadena city,0,,103,06037,CA,Los Angeles County,06037,high,place_to_county,national_places → counties gazetteer
+0656700,Perris city,0,,8,06065,CA,Riverside County,06065,high,place_to_county,national_places → counties gazetteer
+0657540,Placerville city,0,,138,06017,CA,El Dorado County,06017,high,place_to_county,national_places → counties gazetteer
+0659500,Rancho Mirage city,0,,319,06065,CA,Riverside County,06065,high,place_to_county,national_places → counties gazetteer
+0660466,Rialto city,0,,103,06071,CA,San Bernardino County,06071,high,place_to_county,national_places → counties gazetteer
+0661026,Ripon city,0,,195,06077,CA,San Joaquin County,06077,high,place_to_county,national_places → counties gazetteer
+0661068;06077,Riverbank city; San Joaquin County,1,06077,1,06077,CA,San Joaquin County,06077,medium,predicted_county_geoid_validated,validated against 2024 counties gazetteer; from predicted_st_fips for multi-city
+0661068;06077,Riverbank city; San Joaquin County,1,0661068,249,06099,CA,Stanislaus County,06099,medium,predicted_place_to_county,national_places → counties gazetteer; from predicted_st_fips for multi-city
+0661068;06077,Riverbank city; San Joaquin County,1,UNKNOWN,116,,,,06077;06099,low,ambiguous_compound,multi-city/compound st_fips; no single county invented; predicted UNKNOWN/empty
+0662602,Rolling Hills,0,,122,06037,CA,Los Angeles County,06037,high,place_to_county,national_places → counties gazetteer
+0662938,Roseville city,0,,436,06061,CA,Placer County,06061,high,place_to_county,national_places → counties gazetteer
+0664224,Salinas city,0,,1705,06053,CA,Monterey County,06053,high,place_to_county,national_places → counties gazetteer
+0664434;0623168;0670364,San Anselmo town; Fairfax town; Sausalito city,1,0623168,10,06041,CA,Marin County,06041,medium,predicted_place_to_county,national_places → counties gazetteer; from predicted_st_fips for multi-city
+0664434;0623168;0670364,San Anselmo town; Fairfax town; Sausalito city,1,0664434,7,06041,CA,Marin County,06041,medium,predicted_place_to_county,national_places → counties gazetteer; from predicted_st_fips for multi-city
+0664434;0623168;0670364,San Anselmo town; Fairfax town; Sausalito city,1,0670364,3,06041,CA,Marin County,06041,medium,predicted_place_to_county,national_places → counties gazetteer; from predicted_st_fips for multi-city
+0664434;0623168;0670364,San Anselmo town; Fairfax town; Sausalito city,1,UNKNOWN,144,06041,CA,Marin County,06041,medium,compound_tokens_agree,all resolvable tokens agree on one county
+0665000,San Bernardino city,0,,3,06071,CA,San Bernardino County,06071,high,place_to_county,national_places → counties gazetteer
+0665028,San Bruno city,0,,3474,06081,CA,San Mateo County,06081,high,place_to_county,national_places → counties gazetteer
+0666070,San Dimas city,0,,21,06037,CA,Los Angeles County,06037,high,place_to_county,national_places → counties gazetteer
+0668252,San Mateo city,0,,45,06081,CA,San Mateo County,06081,high,place_to_county,national_places → counties gazetteer
+0669000,Santa Ana city,0,,7,06059,CA,Orange County,06059,high,place_to_county,national_places → counties gazetteer
+0669084,Santa Clara city,0,,4,06085,CA,Santa Clara County,06085,high,place_to_county,national_places → counties gazetteer
+0669088,Santa Clarita,0,,658,06037,CA,Los Angeles County,06037,high,place_to_county,national_places → counties gazetteer
+0670000,Santa Monica city,0,,703,06037,CA,Los Angeles County,06037,high,place_to_county,national_places → counties gazetteer
+0670098,Santa Rosa city,0,,713,06097,CA,Sonoma County,06097,high,place_to_county,national_places → counties gazetteer
+0670742,Seaside city,0,,624,06053,CA,Monterey County,06053,high,place_to_county,national_places → counties gazetteer
+0670882,Selma city,0,,481,06019,CA,Fresno County,06019,high,place_to_county,national_places → counties gazetteer
+0672016,Simi Valley city,0,,6,06111,CA,Ventura County,06111,high,place_to_county,national_places → counties gazetteer
+0673108,South Lake Tahoe city,0,,6,06017,CA,El Dorado County,06017,high,place_to_county,national_places → counties gazetteer
+0675000;06077,Stockton city; San Joaquin County,1,06077,2,06077,CA,San Joaquin County,06077,medium,predicted_county_geoid_validated,validated against 2024 counties gazetteer; from predicted_st_fips for multi-city
+0675000;06077,Stockton city; San Joaquin County,1,0675000,15,06077,CA,San Joaquin County,06077,medium,predicted_place_to_county,national_places → counties gazetteer; from predicted_st_fips for multi-city
+0675000;06077,Stockton city; San Joaquin County,1,UNKNOWN,31,06077,CA,San Joaquin County,06077,medium,compound_tokens_agree,all resolvable tokens agree on one county
+0677364;06035,Susanville city; Lassen County,1,06035,500,06035,CA,Lassen County,06035,medium,predicted_county_geoid_validated,validated against 2024 counties gazetteer; from predicted_st_fips for multi-city
+0677364;06035,Susanville city; Lassen County,1,0677364,6,06035,CA,Lassen County,06035,medium,predicted_place_to_county,national_places → counties gazetteer; from predicted_st_fips for multi-city
+0677364;06035,Susanville city; Lassen County,1,UNKNOWN,39,06035,CA,Lassen County,06035,medium,compound_tokens_agree,all resolvable tokens agree on one county
+0678092,Tehachapi city,0,,222,06029,CA,Kern County,06029,high,place_to_county,national_places → counties gazetteer
+0678120,Temecula city,0,,530,06065,CA,Riverside County,06065,high,place_to_county,national_places → counties gazetteer
+0678148,Temple City city,0,,304,06037,CA,Los Angeles County,06037,high,place_to_county,national_places → counties gazetteer
+0678582,Thousand Oaks city,0,,9,06111,CA,Ventura County,06111,high,place_to_county,national_places → counties gazetteer
+0680812,Turlock city,0,,328,06099,CA,Stanislaus County,06099,high,place_to_county,national_places → counties gazetteer
+0681666,Vallejo city,0,,27,06095,CA,Solano County,06095,high,place_to_county,national_places → counties gazetteer
+0683668,Watsonville city,0,,51,06087,CA,Santa Cruz County,06087,high,place_to_county,national_places → counties gazetteer
+0684200,West Covina city,0,,603,06037,CA,Los Angeles County,06037,high,place_to_county,national_places → counties gazetteer
+0684550,Westminster city,0,,30,06059,CA,Orange County,06059,high,place_to_county,national_places → counties gazetteer
+0685292,Whittier city,0,,14,06037,CA,Los Angeles County,06037,high,place_to_county,national_places → counties gazetteer
+0685446,Wildomar city,0,,60,06065,CA,Riverside County,06065,high,place_to_county,national_places → counties gazetteer
+0686972,Yuba City city,0,,2467,06101,CA,Sutter County,06101,high,place_to_county,national_places → counties gazetteer
+0801090,Alamosa city,0,,286,08003,CO,Alamosa County,08003,high,place_to_county,national_places → counties gazetteer
+0804935,Basalt town,0,,290,,CO,,08037;08097,low,ambiguous_multi_county_place,place spans 2 counties; FIPS not invented
+0807850,Boulder city,0,,1205,08013,CO,Boulder County,08013,high,place_to_county,national_places → counties gazetteer
+08083; 0851690,Montezuma County; Montezuma town,1,08083,387,08083,CO,Montezuma County,08083,medium,predicted_county_geoid_validated,validated against 2024 counties gazetteer; from predicted_st_fips for multi-city
+0816495,Commerce City city,0,,91,08001,CO,Adams County,08001,high,place_to_county,national_places → counties gazetteer
+0818530,Cripple Creek city,0,,6,08119,CO,Teller County,08119,high,place_to_county,national_places → counties gazetteer
+0819080,Dacono city,0,,366,08123,CO,Weld County,08123,high,place_to_county,national_places → counties gazetteer
+0820000,Denver city,0,,34,08031,CO,Denver County,08031,high,place_to_county,national_places → counties gazetteer
+0820440,Dillon town,0,,19,08117,CO,Summit County,08117,high,place_to_county,national_places → counties gazetteer
+0825280,Evans city,0,,112,08123,CO,Weld County,08123,high,place_to_county,national_places → counties gazetteer
+0827425,Fort Collins,0,,38,08069,CO,Larimer County,08069,high,place_to_county,national_places → counties gazetteer
+0841835,Lafayette city,0,,4,08013,CO,Boulder County,08013,high,place_to_county,national_places → counties gazetteer
+0843000,Lakewood city,0,,133,08059,CO,Jefferson County,08059,high,place_to_county,national_places → counties gazetteer
+0845970,Longmont city,0,,86,,CO,,08013;08123,low,ambiguous_multi_county_place,place spans 2 counties; FIPS not invented
+0851635,Monte Vista city,0,,222,08105,CO,Rio Grande County,08105,high,place_to_county,national_places → counties gazetteer
+0854330,Northglenn city,0,,250,,CO,,08001;08123,low,ambiguous_multi_county_place,place spans 2 counties; FIPS not invented
+0877290,Thornton city,0,,141,,CO,,08001;08123,low,ambiguous_multi_county_place,place spans 2 counties; FIPS not invented
+0878610; 08071,Trinidad city; Las Animas County,1,08071,72,08071,CO,Las Animas County,08071,medium,predicted_county_geoid_validated,validated against 2024 counties gazetteer; from predicted_st_fips for multi-city
+0878610; 08071,Trinidad city; Las Animas County,1,0878610,403,08071,CO,Las Animas County,08071,medium,predicted_place_to_county,national_places → counties gazetteer; from predicted_st_fips for multi-city
+0878610; 08071,Trinidad city; Las Animas County,1,UNKNOWN,227,08071,CO,Las Animas County,08071,medium,compound_tokens_agree,all resolvable tokens agree on one county
+0884770,Wiggins town,0,,208,08087,CO,Morgan County,08087,high,place_to_county,national_places → counties gazetteer
+0918430,Danbury city,0,,82,,CT,,,none,unmatched_county_name,county names not resolved: ['Fairfield County']
+0952630,New Milford town,0,,290,,CT,,,none,unmatched_county_name,county names not resolved: ['Litchfield County']
+0955990,Norwalk city,0,,1294,,CT,,,none,unmatched_county_name,county names not resolved: ['Fairfield County']
+1129,Washington County,0,,354,01129,AL,Washington County,01129,high,county_geoid_validated,validated against 2024 counties gazetteer
+12021,Collier County,0,,7,12021,FL,Collier County,12021,high,county_geoid_validated,validated against 2024 counties gazetteer
+1209550,Bunnell city,0,,78,12035,FL,Flagler County,12035,high,place_to_county,national_places → counties gazetteer
+1210725; 1201625,Carrabelle city; Apalachicola city,1,1201625,11,12037,FL,Franklin County,12037,medium,predicted_place_to_county,national_places → counties gazetteer; from predicted_st_fips for multi-city
+1210725; 1201625,Carrabelle city; Apalachicola city,1,1210725,9,12037,FL,Franklin County,12037,medium,predicted_place_to_county,national_places → counties gazetteer; from predicted_st_fips for multi-city
+1210725; 1201625,Carrabelle city; Apalachicola city,1,UNKNOWN,34,12037,FL,Franklin County,12037,medium,compound_tokens_agree,all resolvable tokens agree on one county
+1245000,Miami,0,,325,12086,FL,Miami-Dade County,12086,high,place_to_county,national_places → counties gazetteer
+1253000,Orlando city,0,,467,12095,FL,Orange County,12095,high,place_to_county,national_places → counties gazetteer
+1254025,Palm Beach town,0,,8,12099,FL,Palm Beach County,12099,high,place_to_county,national_places → counties gazetteer
+1260975,Riviera Beach city,0,,399,12099,FL,Palm Beach County,12099,high,place_to_county,national_places → counties gazetteer
+1271400,Temple Terrace city,0,,255,12057,FL,Hillsborough County,12057,high,place_to_county,national_places → counties gazetteer
+1271900,Titusville city,0,,541,12009,FL,Brevard County,12009,high,place_to_county,national_places → counties gazetteer
+1304000,Atlanta,0,,1344,,GA,,13089;13121,low,ambiguous_multi_county_place,place spans 2 counties; FIPS not invented
+1310944,Brookhaven city,0,,200,,GA,,,none,unmatched_place,7-digit not in national_places / no safe county equiv
+13117,Forsyth County,0,,233,13117,GA,Forsyth County,13117,high,county_geoid_validated,validated against 2024 counties gazetteer
+13119,Franklin County,0,,2,13119,GA,Franklin County,13119,high,county_geoid_validated,validated against 2024 counties gazetteer
+1312456,Calhoun city,0,,21,13129,GA,Gordon County,13129,high,place_to_county,national_places → counties gazetteer
+1317328,Cochran city,0,,42,13023,GA,Bleckley County,13023,high,place_to_county,national_places → counties gazetteer
+13227,Pickens County,0,,969,13227,GA,Pickens County,13227,high,county_geoid_validated,validated against 2024 counties gazetteer
+1324376; 13175,Dublin city; Laurens County,1,13175,36,13175,GA,Laurens County,13175,medium,predicted_county_geoid_validated,validated against 2024 counties gazetteer; from predicted_st_fips for multi-city
+1324376; 13175,Dublin city; Laurens County,1,1324376,93,13175,GA,Laurens County,13175,medium,predicted_place_to_county,national_places → counties gazetteer; from predicted_st_fips for multi-city
+1324376; 13175,Dublin city; Laurens County,1,UNKNOWN,40,13175,GA,Laurens County,13175,medium,compound_tokens_agree,all resolvable tokens agree on one county
+1332048,Garden City city,0,,99,13051,GA,Chatham County,13051,high,place_to_county,national_places → counties gazetteer
+1344704,Lake Park city,0,,4,13185,GA,Lowndes County,13185,high,place_to_county,national_places → counties gazetteer
+1345768,Leesburg city,0,,168,13177,GA,Lee County,13177,high,place_to_county,national_places → counties gazetteer
+1351492,Milledgeville city,0,,347,13009,GA,Baldwin County,13009,high,place_to_county,national_places → counties gazetteer
+1378800; 1333980; 1323872,Valdosta city; Gordon city; Douglas city,1,1323872,11,13069,GA,Coffee County,13069,medium,predicted_place_to_county,national_places → counties gazetteer; from predicted_st_fips for multi-city
+1378800; 1333980; 1323872,Valdosta city; Gordon city; Douglas city,1,1333980,14,13319,GA,Wilkinson County,13319,medium,predicted_place_to_county,national_places → counties gazetteer; from predicted_st_fips for multi-city
+1378800; 1333980; 1323872,Valdosta city; Gordon city; Douglas city,1,1378800,78,13185,GA,Lowndes County,13185,medium,predicted_place_to_county,national_places → counties gazetteer; from predicted_st_fips for multi-city
+1378800; 1333980; 1323872,Valdosta city; Gordon city; Douglas city,1,UNKNOWN,224,,,,13069;13185;13319,low,ambiguous_compound,multi-city/compound st_fips; no single county invented; predicted UNKNOWN/empty
+1644200; 16055,Kootenai city; Kootenai County,1,16055,580,16055,ID,Kootenai County,16055,medium,predicted_county_geoid_validated,validated against 2024 counties gazetteer; from predicted_st_fips for multi-city
+1644200; 16055,Kootenai city; Kootenai County,1,UNKNOWN,702,,,,16017;16055,low,ambiguous_compound,multi-city/compound st_fips; no single county invented; predicted UNKNOWN/empty
+1652120,Meridian city,0,,1133,16001,ID,Ada County,16001,high,place_to_county,national_places → counties gazetteer
+1664810,Post Falls city,0,,477,16055,ID,Kootenai County,16055,high,place_to_county,national_places → counties gazetteer
+1682810,Twin Falls city,0,,30,16083,ID,Twin Falls County,16083,high,place_to_county,national_places → counties gazetteer
+1700971,Alpha village,0,,199,17073,IL,Henry County,17073,high,place_to_county,national_places → counties gazetteer
+1703012,Aurora city,0,,137,,IL,,17043;17089;17093;17197,low,ambiguous_multi_county_place,place spans 4 counties; FIPS not invented
+1704013,Bartlett village,0,,486,,IL,,17031;17043;17089,low,ambiguous_multi_county_place,place spans 3 counties; FIPS not invented
+1704078; 17089,Batavia city; Kane County,1,1704078,293,17089,IL,Kane County,17089,medium,compound_tokens_agree,all resolvable tokens agree on one county
+1704078; 17089,Batavia city; Kane County,1,17089,58,17089,IL,Kane County,17089,medium,predicted_county_geoid_validated,validated against 2024 counties gazetteer; from predicted_st_fips for multi-city
+1704078; 17089,Batavia city; Kane County,1,UNKNOWN,134,17089,IL,Kane County,17089,medium,compound_tokens_agree,all resolvable tokens agree on one county
+17091,Kankakee County,0,,11,17091,IL,Kankakee County,17091,high,county_geoid_validated,validated against 2024 counties gazetteer
+1711202,Carlinville city,0,,35,17117,IL,Macoupin County,17117,high,place_to_county,national_places → counties gazetteer
+1712684,Chatham village,0,,228,17167,IL,Sangamon County,17167,high,place_to_county,national_places → counties gazetteer
+1713139,Chester city,0,,59,17157,IL,Randolph County,17157,high,place_to_county,national_places → counties gazetteer
+1714000,Chicago city,0,,316,,IL,,17031;17043,low,ambiguous_multi_county_place,place spans 2 counties; FIPS not invented
+1715833,Columbia city,0,,8,,IL,,17133;17163,low,ambiguous_multi_county_place,place spans 2 counties; FIPS not invented
+1717458,Crest Hill city,0,,241,17197,IL,Will County,17197,high,place_to_county,national_places → counties gazetteer
+1718628,Darien city,0,,350,17043,IL,DuPage County,17043,high,place_to_county,national_places → counties gazetteer
+1719161,DeKalb city,0,,526,17037,IL,DeKalb County,17037,high,place_to_county,national_places → counties gazetteer
+1720292,Dolton village,0,,179,17031,IL,Cook County,17031,high,place_to_county,national_places → counties gazetteer
+1722255,East St. Louis city,0,,32,17163,IL,St. Clair County,17163,high,place_to_county,national_places → counties gazetteer
+1723620,Elmhurst city,0,,695,,IL,,17031;17043,low,ambiguous_multi_county_place,place spans 2 counties; FIPS not invented
+1723945; 17197,Elwood village; Will County,1,17197,1,17197,IL,Will County,17197,medium,predicted_county_geoid_validated,validated against 2024 counties gazetteer; from predicted_st_fips for multi-city
+1723945; 17197,Elwood village; Will County,1,UNKNOWN,9,17197,IL,Will County,17197,medium,compound_tokens_agree,all resolvable tokens agree on one county
+1724582,Evanston city,0,,1054,17031,IL,Cook County,17031,high,place_to_county,national_places → counties gazetteer
+1724608,Evansville village,0,,26,17157,IL,Randolph County,17157,high,place_to_county,national_places → counties gazetteer
+1724764,Fairbury city,0,,7,17105,IL,Livingston County,17105,high,place_to_county,national_places → counties gazetteer
+1726753,Forest City village,0,,69,17125,IL,Mason County,17125,high,place_to_county,national_places → counties gazetteer
+1727884,Freeport city,0,,259,17177,IL,Stephenson County,17177,high,place_to_county,national_places → counties gazetteer
+1728872; 17089,Geneva city; Kane County,1,17089,1,17089,IL,Kane County,17089,medium,predicted_county_geoid_validated,validated against 2024 counties gazetteer; from predicted_st_fips for multi-city
+1728872; 17089,Geneva city; Kane County,1,1728872,3,17089,IL,Kane County,17089,medium,predicted_place_to_county,national_places → counties gazetteer; from predicted_st_fips for multi-city
+1728872; 17089,Geneva city; Kane County,1,UNKNOWN,595,17089,IL,Kane County,17089,medium,compound_tokens_agree,all resolvable tokens agree on one county
+1729652,Glencoe village,0,,92,17031,IL,Cook County,17031,high,place_to_county,national_places → counties gazetteer
+1732499,Hammond village,0,,1681,17147,IL,Piatt County,17147,high,place_to_county,national_places → counties gazetteer
+1734865,Highwood city,0,,164,17097,IL,Lake County,17097,high,place_to_county,national_places → counties gazetteer
+1735398,Hoffman village,0,,351,17027,IL,Clinton County,17027,high,place_to_county,national_places → counties gazetteer
+1738570,Joliet city,0,,805,,IL,,17093;17197,low,ambiguous_multi_county_place,place spans 2 counties; FIPS not invented
+1743939; 17197,Lisle village; Will County,1,1743939,142,17043,IL,DuPage County,17043,medium,predicted_place_to_county,national_places → counties gazetteer; from predicted_st_fips for multi-city
+1743939; 17197,Lisle village; Will County,1,UNKNOWN,256,,,,17043;17197,low,ambiguous_compound,multi-city/compound st_fips; no single county invented; predicted UNKNOWN/empty
+1744225,Lockport city,0,,26,17197,IL,Will County,17197,high,place_to_county,national_places → counties gazetteer
+1745694,McHenry city,0,,220,17111,IL,McHenry County,17111,high,place_to_county,national_places → counties gazetteer
+1746500,Manteno village,0,,187,17091,IL,Kankakee County,17091,high,place_to_county,national_places → counties gazetteer
+1746916,Marion city,0,,285,,IL,,17087;17199,low,ambiguous_multi_county_place,place spans 2 counties; FIPS not invented
+1748892,Midlothian village,0,,182,17031,IL,Cook County,17031,high,place_to_county,national_places → counties gazetteer
+1749945,Monee village,0,,48,17197,IL,Will County,17197,high,place_to_county,national_places → counties gazetteer
+1750244,Monticello city,0,,14,17147,IL,Piatt County,17147,high,place_to_county,national_places → counties gazetteer
+1750530,Morrison city,0,,3,17195,IL,Whiteside County,17195,high,place_to_county,national_places → counties gazetteer
+1750621,Morton village,0,,485,17179,IL,Tazewell County,17179,high,place_to_county,national_places → counties gazetteer
+1751128,Mount Pulaski city,0,,44,17107,IL,Logan County,17107,high,place_to_county,national_places → counties gazetteer
+1751349,Mundelein village,0,,10,17097,IL,Lake County,17097,high,place_to_county,national_places → counties gazetteer
+1752584,New Lenox village,0,,9,17197,IL,Will County,17197,high,place_to_county,national_places → counties gazetteer
+1753663,Northfield village,0,,96,17031,IL,Cook County,17031,high,place_to_county,national_places → counties gazetteer
+1754534,Oak Brook village,0,,571,,IL,,17031;17043,low,ambiguous_multi_county_place,place spans 2 counties; FIPS not invented
+1767769,Sauk Village village,0,,144,,IL,,17031;17197,low,ambiguous_multi_county_place,place spans 2 counties; FIPS not invented
+1772000,Springfield city,0,,548,17167,IL,Sangamon County,17167,high,place_to_county,national_places → counties gazetteer
+1782101,Wilmington city,0,,97,17197,IL,Will County,17197,high,place_to_county,national_places → counties gazetteer
+18035,Delaware County,0,,441,18035,IN,Delaware County,18035,high,county_geoid_validated,validated against 2024 counties gazetteer
+18057,Hamilton County,0,,323,18057,IN,Hamilton County,18057,high,county_geoid_validated,validated against 2024 counties gazetteer
+1809910,Camden town,0,,58,18015,IN,Carroll County,18015,high,place_to_county,national_places → counties gazetteer
+1819486,East Chicago city,0,,393,18089,IN,Lake County,18089,high,place_to_county,national_places → counties gazetteer
+1838358,Jeffersonville city,0,,211,18019,IN,Clark County,18019,high,place_to_county,national_places → counties gazetteer
+19153,Polk County,0,,465,19153,IA,Polk County,19153,high,county_geoid_validated,validated against 2024 counties gazetteer
+1937470,Hudson city,0,,221,19013,IA,Black Hawk County,19013,high,place_to_county,national_places → counties gazetteer
+1938100,Independence city,0,,283,19019,IA,Buchanan County,19019,high,place_to_county,national_places → counties gazetteer
+1954840,Mount Vernon,0,,343,19113,IA,Linn County,19113,high,place_to_county,national_places → counties gazetteer
+1978285,Tipton city,0,,175,19031,IA,Cedar County,19031,high,place_to_county,national_places → counties gazetteer
+1982425,Waterloo city,0,,1152,19013,IA,Black Hawk County,19013,high,place_to_county,national_places → counties gazetteer
+1982875,Waverly city,0,,526,19017,IA,Bremer County,19017,high,place_to_county,national_places → counties gazetteer
+2020000,Edwardsville city,0,,205,20209,KS,Wyandotte County,20209,high,place_to_county,national_places → counties gazetteer
+2033625,Hutchinson city,0,,348,20155,KS,Reno County,20155,high,place_to_county,national_places → counties gazetteer
+2047350,Mission Hills,0,,3,20091,KS,Johnson County,20091,high,place_to_county,national_places → counties gazetteer
+21183,Ohio County,0,,331,21183,KY,Ohio County,21183,high,county_geoid_validated,validated against 2024 counties gazetteer
+2120350,Dayton city,0,,185,21037,KY,Campbell County,21037,high,place_to_county,national_places → counties gazetteer
+2130700,Georgetown city,0,,359,21209,KY,Scott County,21209,high,place_to_county,national_places → counties gazetteer
+2204685,Bastrop city,0,,258,22067,LA,Morehouse Parish,22067,high,place_to_county,national_places → counties gazetteer
+2205000,Baton Rouge city,0,,38,22033,LA,East Baton Rouge Parish,22033,high,place_to_county,national_places → counties gazetteer
+2273640,Sulphur city,0,,3,22019,LA,Calcasieu Parish,22019,high,place_to_county,national_places → counties gazetteer
+2302060,Auburn city,0,,584,23001,ME,Androscoggin County,23001,high,place_to_county,national_places → counties gazetteer
+2323200,Ellsworth city,0,,478,23009,ME,Hancock County,23009,high,place_to_county,national_places → counties gazetteer
+2338425,Lebanon town,0,,90,23031,ME,York County,23031,medium,place_to_county,national_places → counties gazetteer; place GEOID not in 2024 places gaz
+2354560,Oakland town,0,,164,23011,ME,Kennebec County,23011,medium,place_to_county,national_places → counties gazetteer; place GEOID not in 2024 places gaz
+2425575; 2436500; 2449950; 2453875; 2455925; 2476550; 2476725; 2479350; 2483100,Eldersburg CDP; Hampstead town; Manchester town; Mount Airy town; New Windsor town; Sykesville town; Taneytown city; Union Bridge town; Westminster city,1,2436500,108,24013,MD,Carroll County,24013,medium,predicted_place_to_county,national_places → counties gazetteer; from predicted_st_fips for multi-city
+2425575; 2436500; 2449950; 2453875; 2455925; 2476550; 2476725; 2479350; 2483100,Eldersburg CDP; Hampstead town; Manchester town; Mount Airy town; New Windsor town; Sykesville town; Taneytown city; Union Bridge town; Westminster city,1,2449950,138,24013,MD,Carroll County,24013,medium,predicted_place_to_county,national_places → counties gazetteer; from predicted_st_fips for multi-city
+2425575; 2436500; 2449950; 2453875; 2455925; 2476550; 2476725; 2479350; 2483100,Eldersburg CDP; Hampstead town; Manchester town; Mount Airy town; New Windsor town; Sykesville town; Taneytown city; Union Bridge town; Westminster city,1,2453875,76,24013,MD,Carroll County,24013,medium,compound_tokens_agree,all resolvable tokens agree on one county
+2425575; 2436500; 2449950; 2453875; 2455925; 2476550; 2476725; 2479350; 2483100,Eldersburg CDP; Hampstead town; Manchester town; Mount Airy town; New Windsor town; Sykesville town; Taneytown city; Union Bridge town; Westminster city,1,2455925,125,24013,MD,Carroll County,24013,medium,predicted_place_to_county,national_places → counties gazetteer; from predicted_st_fips for multi-city
+2425575; 2436500; 2449950; 2453875; 2455925; 2476550; 2476725; 2479350; 2483100,Eldersburg CDP; Hampstead town; Manchester town; Mount Airy town; New Windsor town; Sykesville town; Taneytown city; Union Bridge town; Westminster city,1,2476550,146,24013,MD,Carroll County,24013,medium,predicted_place_to_county,national_places → counties gazetteer; from predicted_st_fips for multi-city
+2425575; 2436500; 2449950; 2453875; 2455925; 2476550; 2476725; 2479350; 2483100,Eldersburg CDP; Hampstead town; Manchester town; Mount Airy town; New Windsor town; Sykesville town; Taneytown city; Union Bridge town; Westminster city,1,2476725,55,24013,MD,Carroll County,24013,medium,predicted_place_to_county,national_places → counties gazetteer; from predicted_st_fips for multi-city
+2425575; 2436500; 2449950; 2453875; 2455925; 2476550; 2476725; 2479350; 2483100,Eldersburg CDP; Hampstead town; Manchester town; Mount Airy town; New Windsor town; Sykesville town; Taneytown city; Union Bridge town; Westminster city,1,2479350,70,24013,MD,Carroll County,24013,medium,predicted_place_to_county,national_places → counties gazetteer; from predicted_st_fips for multi-city
+2425575; 2436500; 2449950; 2453875; 2455925; 2476550; 2476725; 2479350; 2483100,Eldersburg CDP; Hampstead town; Manchester town; Mount Airy town; New Windsor town; Sykesville town; Taneytown city; Union Bridge town; Westminster city,1,2483100,95,24013,MD,Carroll County,24013,medium,predicted_place_to_county,national_places → counties gazetteer; from predicted_st_fips for multi-city
+2425575; 2436500; 2449950; 2453875; 2455925; 2476550; 2476725; 2479350; 2483100,Eldersburg CDP; Hampstead town; Manchester town; Mount Airy town; New Windsor town; Sykesville town; Taneytown city; Union Bridge town; Westminster city,1,UNKNOWN,645,24013,MD,Carroll County,24013,medium,compound_tokens_agree,all resolvable tokens agree on one county
+2466275,Rising Sun town,0,,156,24015,MD,Cecil County,24015,high,place_to_county,national_places → counties gazetteer
+2501370,Amherst town,0,,380,,MA,,,none,unmatched_place,7-digit not in national_places / no safe county equiv
+2504615,Bedford town,0,,354,25017,MA,Middlesex County,25017,medium,place_to_county,national_places → counties gazetteer; place GEOID not in 2024 places gaz
+2507000,Boston city,0,,1114,25025,MA,Suffolk County,25025,high,place_to_county,national_places → counties gazetteer
+2509000; 25023,Brockton city; Plymouth County,1,25023,11,25023,MA,Plymouth County,25023,medium,predicted_county_geoid_validated,validated against 2024 counties gazetteer; from predicted_st_fips for multi-city
+2509000; 25023,Brockton city; Plymouth County,1,2509000,415,25023,MA,Plymouth County,25023,medium,predicted_place_to_county,national_places → counties gazetteer; from predicted_st_fips for multi-city
+2509000; 25023,Brockton city; Plymouth County,1,UNKNOWN,237,25023,MA,Plymouth County,25023,medium,compound_tokens_agree,all resolvable tokens agree on one county
+2511665,Carver town,0,,212,25023,MA,Plymouth County,25023,medium,place_to_county,national_places → counties gazetteer; place GEOID not in 2024 places gaz
+2515200; 2516670; 2579110,Conway town; Deerfield town; Whately town,1,2515200,5,25011,MA,Franklin County,25011,medium,predicted_place_to_county,national_places → counties gazetteer; place GEOID not in 2024 places gaz; from predicted_st_fips for multi-city
+2515200; 2516670; 2579110,Conway town; Deerfield town; Whately town,1,2516670,29,25011,MA,Franklin County,25011,medium,predicted_place_to_county,national_places → counties gazetteer; place GEOID not in 2024 places gaz; from predicted_st_fips for multi-city
+2515200; 2516670; 2579110,Conway town; Deerfield town; Whately town,1,2579110,2,25011,MA,Franklin County,25011,medium,predicted_place_to_county,national_places → counties gazetteer; place GEOID not in 2024 places gaz; from predicted_st_fips for multi-city
+2515200; 2516670; 2579110,Conway town; Deerfield town; Whately town,1,UNKNOWN,203,25011,MA,Franklin County,25011,medium,compound_tokens_agree,all resolvable tokens agree on one county
+2517405,Dover town,0,,627,25021,MA,Norfolk County,25021,medium,place_to_county,national_places → counties gazetteer; place GEOID not in 2024 places gaz
+2526535,Granby town,0,,121,25015,MA,Hampshire County,25015,medium,place_to_county,national_places → counties gazetteer; place GEOID not in 2024 places gaz
+2527060,Greenfield Town city,0,,497,,MA,,,none,unmatched_place,7-digit not in national_places / no safe county equiv
+2539835,Medford city,0,,357,25017,MA,Middlesex County,25017,high,place_to_county,national_places → counties gazetteer
+2541165,Milford town,0,,469,25027,MA,Worcester County,25027,medium,place_to_county,national_places → counties gazetteer; place GEOID not in 2024 places gaz
+2548955,North Reading town,0,,1112,25017,MA,Middlesex County,25017,medium,place_to_county,national_places → counties gazetteer; place GEOID not in 2024 places gaz
+2555745,Quincy city,0,,848,25021,MA,Norfolk County,25021,high,place_to_county,national_places → counties gazetteer
+2581005,Winthrop Town city,0,,327,25025,MA,Suffolk County,25025,high,place_to_county,national_places → counties gazetteer
+2600980,Albion city,0,,490,26025,MI,Calhoun County,26025,high,place_to_county,national_places → counties gazetteer
+26017,Bay County,0,,431,26017,MI,Bay County,26017,high,county_geoid_validated,validated against 2024 counties gazetteer
+26027,Cass County,0,,20,26027,MI,Cass County,26027,high,county_geoid_validated,validated against 2024 counties gazetteer
+2603000,Ann Arbor City,0,,1741,26161,MI,Washtenaw County,26161,high,place_to_county,national_places → counties gazetteer
+26043,Dickinson County,0,,27,26043,MI,Dickinson County,26043,high,county_geoid_validated,validated against 2024 counties gazetteer
+2607520,Benton Harbor city,0,,12,26021,MI,Berrien County,26021,high,place_to_county,national_places → counties gazetteer
+26081; 2642780,Kent County; Kent City village,1,26081,405,26081,MI,Kent County,26081,medium,predicted_county_geoid_validated,validated against 2024 counties gazetteer; from predicted_st_fips for multi-city
+26101; 2650720,Manistee County; Manistee city,1,26101,16,26101,MI,Manistee County,26101,medium,predicted_county_geoid_validated,validated against 2024 counties gazetteer; from predicted_st_fips for multi-city
+26101; 2650720,Manistee County; Manistee city,1,2650720,536,26101,MI,Manistee County,26101,medium,predicted_place_to_county,national_places → counties gazetteer; from predicted_st_fips for multi-city
+26101; 2650720,Manistee County; Manistee city,1,UNKNOWN,631,26101,MI,Manistee County,26101,medium,compound_tokens_agree,all resolvable tokens agree on one county
+26147,St. Clair County,0,,331,26147,MI,St. Clair County,26147,high,county_geoid_validated,validated against 2024 counties gazetteer
+2618400; 2623820; 2670680,Cottrellville township; East China township; St. Clair city,1,2618400,60,26147,MI,St. Clair County,26147,medium,predicted_place_to_county,national_places → counties gazetteer; place GEOID not in 2024 places gaz; from predicted_st_fips for multi-city
+2618400; 2623820; 2670680,Cottrellville township; East China township; St. Clair city,1,2623820,132,26147,MI,St. Clair County,26147,medium,predicted_place_to_county,national_places → counties gazetteer; place GEOID not in 2024 places gaz; from predicted_st_fips for multi-city
+2618400; 2623820; 2670680,Cottrellville township; East China township; St. Clair city,1,2670680,33,26147,MI,St. Clair County,26147,medium,predicted_place_to_county,national_places → counties gazetteer; from predicted_st_fips for multi-city
+2618400; 2623820; 2670680,Cottrellville township; East China township; St. Clair city,1,UNKNOWN,564,26147,MI,St. Clair County,26147,medium,compound_tokens_agree,all resolvable tokens agree on one county
+2621000,Dearborn city,0,,346,26163,MI,Wayne County,26163,high,place_to_county,national_places → counties gazetteer
+2623380,Dundee village,0,,11,26115,MI,Monroe County,26115,high,place_to_county,national_places → counties gazetteer
+2624290,Eastpointe city,0,,385,26099,MI,Macomb County,26099,high,place_to_county,national_places → counties gazetteer
+2629000,Flint city,0,,384,26049,MI,Genesee County,26049,high,place_to_county,national_places → counties gazetteer
+2631420,Garden City city,0,,538,26163,MI,Wayne County,26163,high,place_to_county,national_places → counties gazetteer
+2632980,Goodrich village,0,,101,26049,MI,Genesee County,26049,high,place_to_county,national_places → counties gazetteer
+2633340,Grand Haven city,0,,171,26139,MI,Ottawa County,26139,high,place_to_county,national_places → counties gazetteer
+2637420,Hazel Park city,0,,140,26125,MI,Oakland County,26125,high,place_to_county,national_places → counties gazetteer
+2638700,Holly village,0,,232,26125,MI,Oakland County,26125,high,place_to_county,national_places → counties gazetteer
+2640680,Inkster city,0,,301,26163,MI,Wayne County,26163,high,place_to_county,national_places → counties gazetteer
+2641420,Jackson city,0,,92,26075,MI,Jackson County,26075,high,place_to_county,national_places → counties gazetteer
+2644480,Lake City city,0,,54,26113,MI,Missaukee County,26113,high,place_to_county,national_places → counties gazetteer
+2646000,Lansing city,0,,239,,MI,,26045;26065,low,ambiguous_multi_county_place,place spans 2 counties; FIPS not invented
+2646320,Lathrup Village city,0,,350,26125,MI,Oakland County,26125,high,place_to_county,national_places → counties gazetteer
+2649000,Livonia city,0,,568,26163,MI,Wayne County,26163,high,place_to_county,national_places → counties gazetteer
+2649540,Lowell city,0,,801,26081,MI,Kent County,26081,high,place_to_county,national_places → counties gazetteer
+2650560,Madison Heights city,0,,269,26125,MI,Oakland County,26125,high,place_to_county,national_places → counties gazetteer
+2651900,Marquette city,0,,503,26103,MI,Marquette County,26103,high,place_to_county,national_places → counties gazetteer
+2652180,Mason city,0,,28,26065,MI,Ingham County,26065,high,place_to_county,national_places → counties gazetteer
+2652960; 2668380; 2603520; 2646900; 2613720; 2657380,Memphis city; Richmond city; Armada village; Lenox township; Casco township; New Haven village,1,2613720,4,26147,MI,St. Clair County,26147,medium,predicted_place_to_county,national_places → counties gazetteer; place GEOID not in 2024 places gaz; from predicted_st_fips for multi-city
+2652960; 2668380; 2603520; 2646900; 2613720; 2657380,Memphis city; Richmond city; Armada village; Lenox township; Casco township; New Haven village,1,2646900,5,26099,MI,Macomb County,26099,medium,predicted_place_to_county,national_places → counties gazetteer; place GEOID not in 2024 places gaz; from predicted_st_fips for multi-city
+2652960; 2668380; 2603520; 2646900; 2613720; 2657380,Memphis city; Richmond city; Armada village; Lenox township; Casco township; New Haven village,1,UNKNOWN,1347,,,,26099;26147,low,ambiguous_compound,multi-city/compound st_fips; no single county invented; predicted UNKNOWN/empty
+2655020,Monroe city,0,,301,26115,MI,Monroe County,26115,high,place_to_county,national_places → counties gazetteer
+2657380,New Haven village,0,,10,26099,MI,Macomb County,26099,high,place_to_county,national_places → counties gazetteer
+2659220,Norway city,0,,291,26043,MI,Dickinson County,26043,high,place_to_county,national_places → counties gazetteer
+2659920,Oak Park city,0,,328,26125,MI,Oakland County,26125,high,place_to_county,national_places → counties gazetteer
+2661220,Ortonville village,0,,411,26125,MI,Oakland County,26125,high,place_to_county,national_places → counties gazetteer
+2669420,Romulus city,0,,501,26163,MI,Wayne County,26163,high,place_to_county,national_places → counties gazetteer
+2669800,Roseville city,0,,331,26099,MI,Macomb County,26099,high,place_to_county,national_places → counties gazetteer
+2670520,Saginaw city,0,,415,26145,MI,Saginaw County,26145,high,place_to_county,national_places → counties gazetteer
+2671140,Saline city,0,,648,26161,MI,Washtenaw County,26161,high,place_to_county,national_places → counties gazetteer
+2674900,Southfield city,0,,208,26125,MI,Oakland County,26125,high,place_to_county,national_places → counties gazetteer
+2680420,Trenton city,0,,2,26163,MI,Wayne County,26163,high,place_to_county,national_places → counties gazetteer
+2683060,Walled Lake city,0,,17,26125,MI,Oakland County,26125,high,place_to_county,national_places → counties gazetteer
+2686000,Westland city,0,,392,26163,MI,Wayne County,26163,high,place_to_county,national_places → counties gazetteer
+2688140,Wixom city,0,,201,26125,MI,Oakland County,26125,high,place_to_county,national_places → counties gazetteer
+2689140,Ypsilanti,0,,229,26161,MI,Washtenaw County,26161,high,place_to_county,national_places → counties gazetteer
+2689160,Ypsilanti township,0,,269,26161,MI,Washtenaw County,26161,medium,place_to_county,national_places → counties gazetteer; place GEOID not in 2024 places gaz
+2700694,Albert Lea city,0,,121,27047,MN,Freeborn County,27047,high,place_to_county,national_places → counties gazetteer
+2704834,Belle Plaine city,0,,165,27139,MN,Scott County,27139,high,place_to_county,national_places → counties gazetteer
+27071,Koochiching County,0,,253,27071,MN,Koochiching County,27071,high,county_geoid_validated,validated against 2024 counties gazetteer
+2707516,Breezy Point city,0,,41,27035,MN,Crow Wing County,27035,high,place_to_county,national_places → counties gazetteer
+2708794,Burnsville city,0,,94,27037,MN,Dakota County,27037,high,place_to_county,national_places → counties gazetteer
+2709730; 27049,Cannon Falls city; Goodhue County,1,27049,3,27049,MN,Goodhue County,27049,medium,predicted_county_geoid_validated,validated against 2024 counties gazetteer; from predicted_st_fips for multi-city
+2709730; 27049,Cannon Falls city; Goodhue County,1,2709730,31,27049,MN,Goodhue County,27049,medium,predicted_place_to_county,national_places → counties gazetteer; from predicted_st_fips for multi-city
+2709730; 27049,Cannon Falls city; Goodhue County,1,UNKNOWN,537,27049,MN,Goodhue County,27049,medium,compound_tokens_agree,all resolvable tokens agree on one county
+2710972,Chaska city,0,,516,27019,MN,Carver County,27019,high,place_to_county,national_places → counties gazetteer
+2712484; 2754268; 2755078,Cold Spring city; Richmond city; Rockville city,1,2712484,131,27145,MN,Stearns County,27145,medium,predicted_place_to_county,national_places → counties gazetteer; from predicted_st_fips for multi-city
+2712484; 2754268; 2755078,Cold Spring city; Richmond city; Rockville city,1,2754268,54,27145,MN,Stearns County,27145,medium,predicted_place_to_county,national_places → counties gazetteer; from predicted_st_fips for multi-city
+2712484; 2754268; 2755078,Cold Spring city; Richmond city; Rockville city,1,2755078,104,27145,MN,Stearns County,27145,medium,predicted_place_to_county,national_places → counties gazetteer; from predicted_st_fips for multi-city
+2712484; 2754268; 2755078,Cold Spring city; Richmond city; Rockville city,1,UNKNOWN,157,27145,MN,Stearns County,27145,medium,compound_tokens_agree,all resolvable tokens agree on one county
+2712700,Columbia Heights city,0,,2,27003,MN,Anoka County,27003,high,place_to_county,national_places → counties gazetteer
+2713168,Corcoran city,0,,844,27053,MN,Hennepin County,27053,high,place_to_county,national_places → counties gazetteer
+2715832,Detroit Lakes city,0,,183,27005,MN,Becker County,27005,high,place_to_county,national_places → counties gazetteer
+2718116,Eden Prairie city,0,,476,27053,MN,Hennepin County,27053,high,place_to_county,national_places → counties gazetteer
+2718188,Edina city,0,,876,27053,MN,Hennepin County,27053,high,place_to_county,national_places → counties gazetteer
+2718662,Elko New Market city,0,,226,27139,MN,Scott County,27139,high,place_to_county,national_places → counties gazetteer
+2719934; 27137,Eveleth city; St. Louis County,1,27137,2,27137,MN,St. Louis County,27137,medium,predicted_county_geoid_validated,validated against 2024 counties gazetteer; from predicted_st_fips for multi-city
+2719934; 27137,Eveleth city; St. Louis County,1,2719934,104,27137,MN,St. Louis County,27137,medium,predicted_place_to_county,national_places → counties gazetteer; from predicted_st_fips for multi-city
+2719934; 27137,Eveleth city; St. Louis County,1,UNKNOWN,93,27137,MN,St. Louis County,27137,medium,compound_tokens_agree,all resolvable tokens agree on one county
+2720222,Fairfax city,0,,222,27129,MN,Renville County,27129,high,place_to_county,national_places → counties gazetteer
+2720906,Fergus Falls city,0,,619,27111,MN,Otter Tail County,27111,high,place_to_county,national_places → counties gazetteer
+2721770,Forest Lake city,0,,652,27163,MN,Washington County,27163,high,place_to_county,national_places → counties gazetteer
+2722814,Fridley city,0,,65,27003,MN,Anoka County,27003,high,place_to_county,national_places → counties gazetteer
+2724992,Grand Marais city,0,,56,27031,MN,Cook County,27031,high,place_to_county,national_places → counties gazetteer
+2725334,Grant city,0,,19,27163,MN,Washington County,27163,high,place_to_county,national_places → counties gazetteer
+2730230,Houston city,0,,8,27055,MN,Houston County,27055,high,place_to_county,national_places → counties gazetteer
+2730284,Howard Lake city,0,,24,27171,MN,Wright County,27171,high,place_to_county,national_places → counties gazetteer
+2732840,Kenyon city,0,,166,27049,MN,Goodhue County,27049,high,place_to_county,national_places → counties gazetteer
+2732966,Kettle River city,0,,25,27017,MN,Carlton County,27017,high,place_to_county,national_places → counties gazetteer
+2737556,Little Falls city,0,,357,27097,MN,Morrison County,27097,high,place_to_county,national_places → counties gazetteer
+2740688,Marshall city,0,,510,27083,MN,Lyon County,27083,high,place_to_county,national_places → counties gazetteer
+2741138,Mayer city,0,,330,27019,MN,Carver County,27019,high,place_to_county,national_places → counties gazetteer
+2741570,Melrose city,0,,126,27145,MN,Stearns County,27145,high,place_to_county,national_places → counties gazetteer
+2743000,Minneapolis city,0,,1217,27053,MN,Hennepin County,27053,high,place_to_county,national_places → counties gazetteer
+2743144,Minnesota City city,0,,6,27169,MN,Winona County,27169,high,place_to_county,national_places → counties gazetteer
+2743306,Minnetrista city,0,,285,27053,MN,Hennepin County,27053,high,place_to_county,national_places → counties gazetteer
+2743810,Montrose city,0,,254,27171,MN,Wright County,27171,high,place_to_county,national_places → counties gazetteer
+2743864,Moorhead city,0,,436,27027,MN,Clay County,27027,high,place_to_county,national_places → counties gazetteer
+2745808,New Prague city,0,,312,,MN,,27079;27139,low,ambiguous_multi_county_place,place spans 2 counties; FIPS not invented
+2746042,New Ulm city,0,,1146,27015,MN,Brown County,27015,high,place_to_county,national_places → counties gazetteer
+2746798,North Branch city,0,,5,27025,MN,Chisago County,27025,high,place_to_county,national_places → counties gazetteer
+2747690,Oak Grove city,0,,3,27003,MN,Anoka County,27003,high,place_to_county,national_places → counties gazetteer
+2749300,Owatonna city,0,,116,27147,MN,Steele County,27147,high,place_to_county,national_places → counties gazetteer
+2750776,Pierz city,0,,146,27097,MN,Morrison County,27097,high,place_to_county,national_places → counties gazetteer
+2757220,St. Louis Park city,0,,204,27053,MN,Hennepin County,27053,high,place_to_county,national_places → counties gazetteer
+2758648,Sauk Centre city,0,,297,27145,MN,Stearns County,27145,high,place_to_county,national_places → counties gazetteer
+2762806,Stewartville city,0,,170,27109,MN,Olmsted County,27109,high,place_to_county,national_places → counties gazetteer
+2765272,Tower city,0,,14,27137,MN,St. Louis County,27137,high,place_to_county,national_places → counties gazetteer
+2770420,Willmar city,0,,545,27067,MN,Kandiyohi County,27067,high,place_to_county,national_places → counties gazetteer
+2771032,Winona city,0,,289,27169,MN,Winona County,27169,high,place_to_county,national_places → counties gazetteer
+28027; 2813820,Coahoma County; Clarksdale city,1,28027,1,28027,MS,Coahoma County,28027,medium,predicted_county_geoid_validated,validated against 2024 counties gazetteer; from predicted_st_fips for multi-city
+28027; 2813820,Coahoma County; Clarksdale city,1,2813820,1,28027,MS,Coahoma County,28027,medium,predicted_place_to_county,national_places → counties gazetteer; from predicted_st_fips for multi-city
+28027; 2813820,Coahoma County; Clarksdale city,1,UNKNOWN,2,28027,MS,Coahoma County,28027,medium,compound_tokens_agree,all resolvable tokens agree on one county
+2803980,Bay St. Louis city,0,,3,28045,MS,Hancock County,28045,high,place_to_county,national_places → counties gazetteer
+2806220,Biloxi city,0,,369,28047,MS,Harrison County,28047,high,place_to_county,national_places → counties gazetteer
+2833700,Horn Lake city,0,,32,28033,MS,DeSoto County,28033,high,place_to_county,national_places → counties gazetteer
+2854840,Oxford city,0,,3,28071,MS,Lafayette County,28071,high,place_to_county,national_places → counties gazetteer
+2870240,Starkville city,0,,196,28105,MS,Oktibbeha County,28105,high,place_to_county,national_places → counties gazetteer
+2902674,Ava city,0,,100,29067,MO,Douglas County,29067,high,place_to_county,national_places → counties gazetteer
+2906652,Blue Springs city,0,,695,29095,MO,Jackson County,29095,high,place_to_county,national_places → counties gazetteer
+2907318,Boonville city,0,,333,29053,MO,Cooper County,29053,high,place_to_county,national_places → counties gazetteer
+2908236,Brentwood city,0,,332,29510,MO,St. Louis city,29510,high,place_to_county,national_places → counties gazetteer
+2908398,Bridgeton city,0,,184,29510,MO,St. Louis city,29510,high,place_to_county,national_places → counties gazetteer
+2909514,Buffalo city,0,,38,29059,MO,Dallas County,29059,high,place_to_county,national_places → counties gazetteer
+2911242,Cape Girardeau city,0,,279,,MO,,29031;29201,low,ambiguous_multi_county_place,place spans 2 counties; FIPS not invented
+2911692,Caruthersville city,0,,10,29155,MO,Pemiscot County,29155,high,place_to_county,national_places → counties gazetteer
+2912898,Centralia city,0,,119,,MO,,29007;29019,low,ambiguous_multi_county_place,place spans 2 counties; FIPS not invented
+2917668,Cuba city,0,,34,29055,MO,Crawford County,29055,high,place_to_county,national_places → counties gazetteer
+29183,St. Charles County,0,,622,29183,MO,St. Charles County,29183,high,county_geoid_validated,validated against 2024 counties gazetteer
+29187; 2956272,St. Francois County; Park Hills city,1,29187,12,29187,MO,St. Francois County,29187,medium,predicted_county_geoid_validated,validated against 2024 counties gazetteer; from predicted_st_fips for multi-city
+29187; 2956272,St. Francois County; Park Hills city,1,2956272,2,29187,MO,St. Francois County,29187,medium,predicted_place_to_county,national_places → counties gazetteer; from predicted_st_fips for multi-city
+29187; 2956272,St. Francois County; Park Hills city,1,UNKNOWN,23,29187,MO,St. Francois County,29187,medium,compound_tokens_agree,all resolvable tokens agree on one county
+29189,St. Louis County,0,,341,29189,MO,St. Louis County,29189,high,county_geoid_validated,validated against 2024 counties gazetteer
+2919252,De Soto city,0,,350,29099,MO,Jefferson County,29099,high,place_to_county,national_places → counties gazetteer
+2921322; 29103,Edina city; Knox County,1,29103,26,29103,MO,Knox County,29103,medium,predicted_county_geoid_validated,validated against 2024 counties gazetteer; from predicted_st_fips for multi-city
+2921322; 29103,Edina city; Knox County,1,2921322,47,29103,MO,Knox County,29103,medium,predicted_place_to_county,national_places → counties gazetteer; from predicted_st_fips for multi-city
+2921322; 29103,Edina city; Knox County,1,UNKNOWN,34,29103,MO,Knox County,29103,medium,compound_tokens_agree,all resolvable tokens agree on one county
+2923986,Ferguson city,0,,2,29510,MO,St. Louis city,29510,high,place_to_county,national_places → counties gazetteer
+2924778,Florissant city,0,,194,29510,MO,St. Louis city,29510,high,place_to_county,national_places → counties gazetteer
+2925192,Forsyth city,0,,5,29213,MO,Taney County,29213,high,place_to_county,national_places → counties gazetteer
+2926182,Fulton city,0,,243,29027,MO,Callaway County,29027,high,place_to_county,national_places → counties gazetteer
+2926434,Garden City city,0,,3,29037,MO,Cass County,29037,high,place_to_county,national_places → counties gazetteer
+2935000,Independence city,0,,540,,MO,,29047;29095,low,ambiguous_multi_county_place,place spans 2 counties; FIPS not invented
+2937000,Jefferson City city,0,,311,,MO,,29027;29051,low,ambiguous_multi_county_place,place spans 2 counties; FIPS not invented
+2938612,Kimberling City city,0,,3,29209,MO,Stone County,29209,high,place_to_county,national_places → counties gazetteer
+2939026,Kirksville city,0,,520,29001,MO,Adair County,29001,high,place_to_county,national_places → counties gazetteer
+2941168,Lebanon city,0,,22,29105,MO,Laclede County,29105,high,place_to_county,national_places → counties gazetteer
+2947648,Mexico city,0,,39,29007,MO,Audrain County,29007,high,place_to_county,national_places → counties gazetteer
+2950402,Mountain Grove city,0,,15,,MO,,29215;29229,low,ambiguous_multi_county_place,place spans 2 counties; FIPS not invented
+2953102,North Kansas City city,0,,414,29047,MO,Clay County,29047,high,place_to_county,national_places → counties gazetteer
+2960788,Raytown city,0,,85,29095,MO,Jackson County,29095,high,place_to_county,national_places → counties gazetteer
+2961238,Republic city,0,,252,,MO,,29043;29077,low,ambiguous_multi_county_place,place spans 2 counties; FIPS not invented
+2962912,Rolla city,0,,272,29161,MO,Phelps County,29161,high,place_to_county,national_places → counties gazetteer
+2963956,St. Ann city,0,,38,29510,MO,St. Louis city,29510,high,place_to_county,national_places → counties gazetteer
+2964180,Ste. Genevieve city,0,,590,29186,MO,Ste. Genevieve County,29186,high,place_to_county,national_places → counties gazetteer
+2965000,St. Louis city,0,,539,29510,MO,St. Louis city,29510,high,place_to_county,national_places → counties gazetteer
+2966800,Seymour city,0,,5,29225,MO,Webster County,29225,high,place_to_county,national_places → counties gazetteer
+2977092,Warrensburg city,0,,195,29101,MO,Johnson County,29101,high,place_to_county,national_places → counties gazetteer
+2977416,Washington city,0,,690,29071,MO,Franklin County,29071,high,place_to_county,national_places → counties gazetteer
+30039; 3057175,Granite County; Philipsburg town,1,30039,3,30039,MT,Granite County,30039,medium,predicted_county_geoid_validated,validated against 2024 counties gazetteer; from predicted_st_fips for multi-city
+30039; 3057175,Granite County; Philipsburg town,1,3057175,1,30039,MT,Granite County,30039,medium,predicted_place_to_county,national_places → counties gazetteer; from predicted_st_fips for multi-city
+30039; 3057175,Granite County; Philipsburg town,1,UNKNOWN,7,30039,MT,Granite County,30039,medium,compound_tokens_agree,all resolvable tokens agree on one county
+30061,Mineral County,0,,124,30061,MT,Mineral County,30061,high,county_geoid_validated,validated against 2024 counties gazetteer
+3042700,Laurel city,0,,31,30111,MT,Yellowstone County,30111,high,place_to_county,national_places → counties gazetteer
+3043450,Libby city,0,,3,30053,MT,Lincoln County,30053,high,place_to_county,national_places → counties gazetteer
+3072625,Superior town,0,,28,30061,MT,Mineral County,30061,high,place_to_county,national_places → counties gazetteer
+3079825,Whitefish city,0,,259,30029,MT,Flathead County,30029,high,place_to_county,national_places → counties gazetteer
+3100730,Alexandria village,0,,29,31169,NE,Thayer County,31169,high,place_to_county,national_places → counties gazetteer
+3103390,Beatrice city,0,,241,31067,NE,Gage County,31067,high,place_to_county,national_places → counties gazetteer
+3103950,Bellevue city,0,,394,31153,NE,Sarpy County,31153,high,place_to_county,national_places → counties gazetteer
+31055; 3137000; 3108360,Douglas County; Omaha city; Center village,1,31055,695,31055,NE,Douglas County,31055,medium,predicted_county_geoid_validated,validated against 2024 counties gazetteer; from predicted_st_fips for multi-city
+31055; 3137000; 3108360,Douglas County; Omaha city; Center village,1,3137000,38,31055,NE,Douglas County,31055,medium,predicted_place_to_county,national_places → counties gazetteer; from predicted_st_fips for multi-city
+31055; 3137000; 3108360,Douglas County; Omaha city; Center village,1,UNKNOWN,718,,,,31055;31107,low,ambiguous_compound,multi-city/compound st_fips; no single county invented; predicted UNKNOWN/empty
+3106295,Bridgeport city,0,,162,31123,NE,Morrill County,31123,high,place_to_county,national_places → counties gazetteer
+3111440,Crofton city,0,,95,31107,NE,Knox County,31107,high,place_to_county,national_places → counties gazetteer
+3134615,Norfolk city,0,,484,31119,NE,Madison County,31119,high,place_to_county,national_places → counties gazetteer
+3135000,North Platte city,0,,130,31111,NE,Lincoln County,31111,high,place_to_county,national_places → counties gazetteer
+3144420,Seward city,0,,493,31159,NE,Seward County,31159,high,place_to_county,national_places → counties gazetteer
+3145295,Sidney city,0,,12,31033,NE,Cheyenne County,31033,high,place_to_county,national_places → counties gazetteer
+32015,Lander County,0,,167,32015,NV,Lander County,32015,high,county_geoid_validated,validated against 2024 counties gazetteer
+3251800,North Las Vegas city,0,,181,32003,NV,Clark County,32003,high,place_to_county,national_places → counties gazetteer
+3260600,Reno city,0,,1019,32031,NV,Washoe County,32031,high,place_to_county,national_places → counties gazetteer
+3307940; 33003; 3358740; 3376100; 3378180,Brookfield town; Carroll County; Ossipee town; Tamworth town; Wakefield town,1,33003,638,33003,NH,Carroll County,33003,medium,predicted_county_geoid_validated,validated against 2024 counties gazetteer; from predicted_st_fips for multi-city
+3307940; 33003; 3358740; 3376100; 3378180,Brookfield town; Carroll County; Ossipee town; Tamworth town; Wakefield town,1,UNKNOWN,75,33003,NH,Carroll County,33003,medium,compound_tokens_agree,all resolvable tokens agree on one county
+3312900,Claremont city,0,,88,33019,NH,Sullivan County,33019,high,place_to_county,national_places → counties gazetteer
+3342260,Litchfield town,0,,830,33011,NH,Hillsborough County,33011,medium,place_to_county,national_places → counties gazetteer; place GEOID not in 2024 places gaz
+3401960,Asbury Park city,0,,673,34025,NJ,Monmouth County,34025,high,place_to_county,national_places → counties gazetteer
+3404930,Belmar borough,0,,216,34025,NJ,Monmouth County,34025,high,place_to_county,national_places → counties gazetteer
+3405590,Bernardsville borough,0,,345,34035,NJ,Somerset County,34035,high,place_to_county,national_places → counties gazetteer
+3406340,Bloomingdale borough,0,,274,34031,NJ,Passaic County,34031,high,place_to_county,national_places → counties gazetteer
+3412610,Chester township,0,,21,34027,NJ,Morris County,34027,medium,place_to_county,national_places → counties gazetteer; place GEOID not in 2024 places gaz
+3418400,Dumont borough,0,,25,34003,NJ,Bergen County,34003,high,place_to_county,national_places → counties gazetteer
+3420020,Edgewater borough,0,,49,34003,NJ,Bergen County,34003,high,place_to_county,national_places → counties gazetteer
+3421300,Elmwood Park borough,0,,59,34003,NJ,Bergen County,34003,high,place_to_county,national_places → counties gazetteer
+3422860,Fanwood borough,0,,104,34039,NJ,Union County,34039,high,place_to_county,national_places → counties gazetteer
+3423700,Flemington borough,0,,7,34019,NJ,Hunterdon County,34019,high,place_to_county,national_places → counties gazetteer
+3424420,Fort Lee borough,0,,3,34003,NJ,Bergen County,34003,high,place_to_county,national_places → counties gazetteer
+3424930,Franklin borough,0,,976,34037,NJ,Sussex County,34037,high,place_to_county,national_places → counties gazetteer
+3425800,Garwood borough,0,,58,34039,NJ,Union County,34039,high,place_to_county,national_places → counties gazetteer
+3426820,Gloucester City city,0,,357,34007,NJ,Camden County,34007,high,place_to_county,national_places → counties gazetteer
+3428680,Hackensack city,0,,424,34003,NJ,Bergen County,34003,high,place_to_county,national_places → counties gazetteer
+3429550; 34027,Hanover township; Morris County,1,3429550,2,34027,NJ,Morris County,34027,medium,predicted_place_to_county,national_places → counties gazetteer; place GEOID not in 2024 places gaz; from predicted_st_fips for multi-city
+3430420,Hasbrouck Heights borough,0,,18,34003,NJ,Bergen County,34003,high,place_to_county,national_places → counties gazetteer
+3430570,Hawthorne borough,0,,244,34031,NJ,Passaic County,34031,high,place_to_county,national_places → counties gazetteer
+3431500,Highlands borough,0,,144,34025,NJ,Monmouth County,34025,high,place_to_county,national_places → counties gazetteer
+3431920,Hillsdale borough,0,,373,34003,NJ,Bergen County,34003,high,place_to_county,national_places → counties gazetteer
+3433300,Howell township,0,,582,34025,NJ,Monmouth County,34025,medium,place_to_county,national_places → counties gazetteer; place GEOID not in 2024 places gaz
+3436000,Jersey City city,0,,850,34017,NJ,Hudson County,34017,high,place_to_county,national_places → counties gazetteer
+3440350,Linden city,0,,206,34039,NJ,Union County,34039,high,place_to_county,national_places → counties gazetteer
+3440440,Lindenwold borough,0,,124,34007,NJ,Camden County,34007,high,place_to_county,national_places → counties gazetteer
+3445990,Middletown township,0,,43,34025,NJ,Monmouth County,34025,medium,place_to_county,national_places → counties gazetteer; place GEOID not in 2024 places gaz
+3446620,Milltown borough,0,,179,34023,NJ,Middlesex County,34023,high,place_to_county,national_places → counties gazetteer
+3447500,Montclair township,0,,534,34013,NJ,Essex County,34013,medium,place_to_county,national_places → counties gazetteer; place GEOID not in 2024 places gaz
+3449920; 3402110; 3467350,Neptune City borough; Atlantic Highlands borough; Shrewsbury borough,1,3467350,2,34025,NJ,Monmouth County,34025,medium,predicted_place_to_county,national_places → counties gazetteer; from predicted_st_fips for multi-city
+3449920; 3402110; 3467350,Neptune City borough; Atlantic Highlands borough; Shrewsbury borough,1,UNKNOWN,60,,,,02110;34025,low,ambiguous_compound,multi-city/compound st_fips; no single county invented; predicted UNKNOWN/empty
+3451210,New Brunswick city,0,,37,34023,NJ,Middlesex County,34023,high,place_to_county,national_places → counties gazetteer
+3451210; 34023,New Brunswick city; Middlesex County,1,34023,531,34023,NJ,Middlesex County,34023,medium,predicted_county_geoid_validated,validated against 2024 counties gazetteer; from predicted_st_fips for multi-city
+3451210; 34023,New Brunswick city; Middlesex County,1,3451210,378,34023,NJ,Middlesex County,34023,medium,predicted_place_to_county,national_places → counties gazetteer; from predicted_st_fips for multi-city
+3451210; 34023,New Brunswick city; Middlesex County,1,UNKNOWN,1897,34023,NJ,Middlesex County,34023,medium,compound_tokens_agree,all resolvable tokens agree on one county
+3452470,North Bergen township,0,,1,34017,NJ,Hudson County,34017,medium,place_to_county,national_places → counties gazetteer; place GEOID not in 2024 places gaz
+3457000,Paterson city,0,,465,34031,NJ,Passaic County,34031,high,place_to_county,national_places → counties gazetteer
+3459190,Plainfield city,0,,27,34039,NJ,Union County,34039,high,place_to_county,national_places → counties gazetteer
+3461980,Raritan borough,0,,14,34035,NJ,Somerset County,34035,high,place_to_county,national_places → counties gazetteer
+3462430,Red Bank borough,0,,193,34025,NJ,Monmouth County,34025,high,place_to_county,national_places → counties gazetteer
+3463000,Ridgewood village,0,,386,34003,NJ,Bergen County,34003,high,place_to_county,national_places → counties gazetteer
+3463150,Ringwood borough,0,,66,34031,NJ,Passaic County,34031,high,place_to_county,national_places → counties gazetteer
+3463360,River Edge borough,0,,40,34003,NJ,Bergen County,34003,high,place_to_county,national_places → counties gazetteer
+3464050; 3413420; 3458770; 3426820; 3402200; 3410000; 3440440; 34007,Rockaway borough; Clementon borough; Pine Hill borough; Gloucester City city; Audubon borough; Camden city; Lindenwold borough; Camden County,1,34007,8,34007,NJ,Camden County,34007,medium,predicted_county_geoid_validated,validated against 2024 counties gazetteer; from predicted_st_fips for multi-city
+3464050; 3413420; 3458770; 3426820; 3402200; 3410000; 3440440; 34007,Rockaway borough; Clementon borough; Pine Hill borough; Gloucester City city; Audubon borough; Camden city; Lindenwold borough; Camden County,1,3410000,10,34007,NJ,Camden County,34007,medium,predicted_place_to_county,national_places → counties gazetteer; from predicted_st_fips for multi-city
+3464050; 3413420; 3458770; 3426820; 3402200; 3410000; 3440440; 34007,Rockaway borough; Clementon borough; Pine Hill borough; Gloucester City city; Audubon borough; Camden city; Lindenwold borough; Camden County,1,3413420,11,34007,NJ,Camden County,34007,medium,predicted_place_to_county,national_places → counties gazetteer; from predicted_st_fips for multi-city
+3464050; 3413420; 3458770; 3426820; 3402200; 3410000; 3440440; 34007,Rockaway borough; Clementon borough; Pine Hill borough; Gloucester City city; Audubon borough; Camden city; Lindenwold borough; Camden County,1,3440440,2,34007,NJ,Camden County,34007,medium,predicted_place_to_county,national_places → counties gazetteer; from predicted_st_fips for multi-city
+3464050; 3413420; 3458770; 3426820; 3402200; 3410000; 3440440; 34007,Rockaway borough; Clementon borough; Pine Hill borough; Gloucester City city; Audubon borough; Camden city; Lindenwold borough; Camden County,1,UNKNOWN,16,,,,34007;34027,low,ambiguous_compound,multi-city/compound st_fips; no single county invented; predicted UNKNOWN/empty
+3471220,Stratford borough,0,,2,34007,NJ,Camden County,34007,high,place_to_county,national_places → counties gazetteer
+3471430,Summit city,0,,204,34039,NJ,Union County,34039,high,place_to_county,national_places → counties gazetteer
+3475740,Vernon township,0,,108,34037,NJ,Sussex County,34037,medium,place_to_county,national_places → counties gazetteer; place GEOID not in 2024 places gaz
+3479460,West Milford township,0,,1,34031,NJ,Passaic County,34031,medium,place_to_county,national_places → counties gazetteer; place GEOID not in 2024 places gaz
+3479800,West Orange township,0,,355,34013,NJ,Essex County,34013,medium,place_to_county,national_places → counties gazetteer; place GEOID not in 2024 places gaz
+3502000,Albuquerque city,0,,465,35001,NM,Bernalillo County,35001,high,place_to_county,national_places → counties gazetteer
+35055,Taos County,0,,280,35055,NM,Taos County,35055,high,county_geoid_validated,validated against 2024 counties gazetteer
+35057,Torrance County,0,,29,35057,NM,Torrance County,35057,high,county_geoid_validated,validated against 2024 counties gazetteer
+3539940,Las Vegas city,0,,404,35047,NM,San Miguel County,35047,high,place_to_county,national_places → counties gazetteer
+3564930,Roswell city,0,,269,35005,NM,Chaves County,35005,high,place_to_county,national_places → counties gazetteer
+3603078,Auburn city,0,,35,36011,NY,Cayuga County,36011,high,place_to_county,national_places → counties gazetteer
+3611759; 3620104; 3627573; 36105; 3642235; 3648175; 3673627; 3675759,Callicoon town; Delaware town; Fremont town; Sullivan County; Liberty town; Monticello village; Thompson town; Tusten town,1,36105,22,36105,NY,Sullivan County,36105,medium,predicted_county_geoid_validated,validated against 2024 counties gazetteer; from predicted_st_fips for multi-city
+3611759; 3620104; 3627573; 36105; 3642235; 3648175; 3673627; 3675759,Callicoon town; Delaware town; Fremont town; Sullivan County; Liberty town; Monticello village; Thompson town; Tusten town,1,UNKNOWN,96,,,,36105;48175,low,ambiguous_compound,multi-city/compound st_fips; no single county invented; predicted UNKNOWN/empty
+3616936,Cold Spring village,0,,45,36079,NY,Putnam County,36079,high,place_to_county,national_places → counties gazetteer
+3621105,Dunkirk city,0,,281,36013,NY,Chautauqua County,36013,high,place_to_county,national_places → counties gazetteer
+3623415,Eden town,0,,264,36029,NY,Erie County,36029,medium,place_to_county,national_places → counties gazetteer; place GEOID not in 2024 places gaz
+3625967,Fishkill village,0,,537,36027,NY,Dutchess County,36027,high,place_to_county,national_places → counties gazetteer
+3629542,Goshen village,0,,618,36071,NY,Orange County,36071,high,place_to_county,national_places → counties gazetteer
+3633139,Hempstead village,0,,95,36059,NY,Nassau County,36059,high,place_to_county,national_places → counties gazetteer
+3639727,Kingston city,0,,396,36111,NY,Ulster County,36111,high,place_to_county,national_places → counties gazetteer
+3643335,Long Beach city,0,,256,36059,NY,Nassau County,36059,high,place_to_county,national_places → counties gazetteer
+3649121,Mount Vernon city,0,,69,36119,NY,Westchester County,36119,high,place_to_county,national_places → counties gazetteer
+3650034,Newburgh city,0,,382,36071,NY,Orange County,36071,high,place_to_county,national_places → counties gazetteer
+3650078,New Castle town,0,,1198,36119,NY,Westchester County,36119,medium,place_to_county,national_places → counties gazetteer; place GEOID not in 2024 places gaz
+3650551,New Paltz village,0,,17,36111,NY,Ulster County,36111,high,place_to_county,national_places → counties gazetteer
+3658574,Plattsburgh city,0,,1269,36019,NY,Clinton County,36019,high,place_to_county,national_places → counties gazetteer
+3659388,Port Jervis city,0,,111,36071,NY,Orange County,36071,high,place_to_county,national_places → counties gazetteer
+3663000,Rochester city,0,,153,36055,NY,Monroe County,36055,high,place_to_county,national_places → counties gazetteer
+3664309,Rye city,0,,356,36119,NY,Westchester County,36119,high,place_to_county,national_places → counties gazetteer
+3665508,Schenectady city,0,,358,36093,NY,Schenectady County,36093,high,place_to_county,national_places → counties gazetteer
+3675583,Tuckahoe village,0,,378,36119,NY,Westchester County,36119,high,place_to_county,national_places → counties gazetteer
+3678971,Webster town,0,,837,36055,NY,Monroe County,36055,medium,place_to_county,national_places → counties gazetteer; place GEOID not in 2024 places gaz
+3700160,Aberdeen Town,0,,121,37125,NC,Moore County,37125,high,place_to_county,national_places → counties gazetteer
+37003,Alexander County,0,,224,37003,NC,Alexander County,37003,high,county_geoid_validated,validated against 2024 counties gazetteer
+37005,Alleghany County,0,,251,37005,NC,Alleghany County,37005,high,county_geoid_validated,validated against 2024 counties gazetteer
+3700500,Ahoskie Town,0,,7,37091,NC,Hertford County,37091,high,place_to_county,national_places → counties gazetteer
+37013,Beaufort County,0,,188,37013,NC,Beaufort County,37013,high,county_geoid_validated,validated against 2024 counties gazetteer
+3701520,Apex Town,0,,475,37183,NC,Wake County,37183,high,place_to_county,national_places → counties gazetteer
+37017,Bladen County,0,,93,37017,NC,Bladen County,37017,high,county_geoid_validated,validated against 2024 counties gazetteer
+3701720,Archdale City,0,,5,,NC,,37081;37151,low,ambiguous_multi_county_place,place spans 2 counties; FIPS not invented
+3702080,Asheboro Town,0,,77,37151,NC,Randolph County,37151,high,place_to_county,national_places → counties gazetteer
+37021,Buncombe County,0,,914,37021,NC,Buncombe County,37021,high,county_geoid_validated,validated against 2024 counties gazetteer
+3702140,Asheville City,0,,782,37021,NC,Buncombe County,37021,high,place_to_county,national_places → counties gazetteer
+3702140,Asheville city,0,,4,37021,NC,Buncombe County,37021,high,place_to_county,national_places → counties gazetteer
+37025,Cabarrus County,0,,514,37025,NC,Cabarrus County,37025,high,county_geoid_validated,validated against 2024 counties gazetteer
+3702840,Ayden Town,0,,15,37147,NC,Pitt County,37147,high,place_to_county,national_places → counties gazetteer
+37045,Cleveland County,0,,80,37045,NC,Cleveland County,37045,high,county_geoid_validated,validated against 2024 counties gazetteer
+3704510,Beech Mountain Town,0,,154,,NC,,37011;37189,low,ambiguous_multi_county_place,place spans 2 counties; FIPS not invented
+3704840,Belmont City,0,,215,37071,NC,Gaston County,37071,high,place_to_county,national_places → counties gazetteer
+3705220,Bessemer City City,0,,24,37071,NC,Gaston County,37071,high,place_to_county,national_places → counties gazetteer
+37055,Dare County,0,,179,37055,NC,Dare County,37055,high,county_geoid_validated,validated against 2024 counties gazetteer
+3706140,Black Mountain Town,0,,125,37021,NC,Buncombe County,37021,high,place_to_county,national_places → counties gazetteer
+37065,Edgecombe County,0,,213,37065,NC,Edgecombe County,37065,high,county_geoid_validated,validated against 2024 counties gazetteer
+3706800,Boiling Springs Town,0,,47,37045,NC,Cleveland County,37045,high,place_to_county,national_places → counties gazetteer
+37073,Gates County,0,,34,37073,NC,Gates County,37073,high,county_geoid_validated,validated against 2024 counties gazetteer
+37075,Graham County,0,,110,37075,NC,Graham County,37075,high,county_geoid_validated,validated against 2024 counties gazetteer
+37075; 3736514; 3723980; 3757020,Graham county; Lake Santeetlah town; Fontana Dam town; Robbinsville town,1,37075,189,37075,NC,Graham County,37075,medium,predicted_county_geoid_validated,validated against 2024 counties gazetteer; from predicted_st_fips for multi-city
+37075; 3736514; 3723980; 3757020,Graham county; Lake Santeetlah town; Fontana Dam town; Robbinsville town,1,UNKNOWN,118,37075,NC,Graham County,37075,medium,compound_tokens_agree,all resolvable tokens agree on one county
+3707720,Brevard City,0,,152,37175,NC,Transylvania County,37175,high,place_to_county,national_places → counties gazetteer
+37087,Haywood County,0,,266,37087,NC,Haywood County,37087,high,county_geoid_validated,validated against 2024 counties gazetteer
+3709060,Burlington city,0,,463,,NC,,37001;37081,low,ambiguous_multi_county_place,place spans 2 counties; FIPS not invented
+3709360,Butner Town,0,,31,37077,NC,Granville County,37077,high,place_to_county,national_places → counties gazetteer
+3709530,Cajah's Mountain town,0,,2,37027,NC,Caldwell County,37027,high,place_to_county,national_places → counties gazetteer
+3710500,Carolina Beach Town,0,,220,37129,NC,New Hanover County,37129,high,place_to_county,national_places → counties gazetteer
+3710620,Carrboro Town,0,,165,37135,NC,Orange County,37135,high,place_to_county,national_places → counties gazetteer
+3710740,Cary Town,0,,369,,NC,,37037;37183,low,ambiguous_multi_county_place,place spans 2 counties; FIPS not invented
+37111,McDowell County,0,,127,37111,NC,McDowell County,37111,high,county_geoid_validated,validated against 2024 counties gazetteer
+37113,Macon County,0,,202,37113,NC,Macon County,37113,high,county_geoid_validated,validated against 2024 counties gazetteer
+37115,Madison County,0,,172,37115,NC,Madison County,37115,high,county_geoid_validated,validated against 2024 counties gazetteer
+3712000,Charlotte city,0,,419,37119,NC,Mecklenburg County,37119,high,place_to_county,national_places → counties gazetteer
+3712340,Cherryville City,0,,43,37071,NC,Gaston County,37071,high,place_to_county,national_places → counties gazetteer
+3712860,Clayton Town,0,,247,,NC,,37101;37183,low,ambiguous_multi_county_place,place spans 2 counties; FIPS not invented
+3712960,Clemmons Village,0,,196,37067,NC,Forsyth County,37067,high,place_to_county,national_places → counties gazetteer
+3713240,Clinton Town,0,,170,37163,NC,Sampson County,37163,high,place_to_county,national_places → counties gazetteer
+37133,Onslow County,0,,207,37133,NC,Onslow County,37133,high,county_geoid_validated,validated against 2024 counties gazetteer
+3714100,Concord City,0,,81,37025,NC,Cabarrus County,37025,high,place_to_county,national_places → counties gazetteer
+3714340,Conover City,0,,16,37035,NC,Catawba County,37035,high,place_to_county,national_places → counties gazetteer
+37147,Pitt County,0,,10,37147,NC,Pitt County,37147,high,county_geoid_validated,validated against 2024 counties gazetteer
+3718060,Duck town,0,,163,37055,NC,Dare County,37055,high,place_to_county,national_places → counties gazetteer
+3719000,Durham city,0,,1000,,NC,,37063;37135;37183,low,ambiguous_multi_county_place,place spans 3 counties; FIPS not invented
+3720080,Eden City,0,,22,37157,NC,Rockingham County,37157,high,place_to_county,national_places → counties gazetteer
+3720120,Edenton town,0,,241,37041,NC,Chowan County,37041,high,place_to_county,national_places → counties gazetteer
+3722820,Farmville Town,0,,89,37147,NC,Pitt County,37147,high,place_to_county,national_places → counties gazetteer
+3722920; 37051,Fayetteville city; Cumberland County,1,37051,5,37051,NC,Cumberland County,37051,medium,predicted_county_geoid_validated,validated against 2024 counties gazetteer; from predicted_st_fips for multi-city
+3722920; 37051,Fayetteville city; Cumberland County,1,3722920,305,37051,NC,Cumberland County,37051,medium,predicted_place_to_county,national_places → counties gazetteer; from predicted_st_fips for multi-city
+3722920; 37051,Fayetteville city; Cumberland County,1,UNKNOWN,97,37051,NC,Cumberland County,37051,medium,compound_tokens_agree,all resolvable tokens agree on one county
+3723760,Fletcher Town,0,,1,37089,NC,Henderson County,37089,high,place_to_county,national_places → counties gazetteer
+3724640,Franklin town,0,,14,37113,NC,Macon County,37113,high,place_to_county,national_places → counties gazetteer
+3725300,Fuquay-Varina Town,0,,211,37183,NC,Wake County,37183,high,place_to_county,national_places → counties gazetteer
+3725480,Garner town,0,,299,37183,NC,Wake County,37183,high,place_to_county,national_places → counties gazetteer
+3726880,Goldsboro city,0,,400,37191,NC,Wayne County,37191,high,place_to_county,national_places → counties gazetteer
+3727280,Graham city,0,,211,37001,NC,Alamance County,37001,high,place_to_county,national_places → counties gazetteer
+3728000,Greensboro City,0,,251,37081,NC,Guilford County,37081,high,place_to_county,national_places → counties gazetteer
+3728080,Greenville City,0,,279,37147,NC,Pitt County,37147,high,place_to_county,national_places → counties gazetteer
+3730720,Hendersonville City,0,,156,37089,NC,Henderson County,37089,high,place_to_county,national_places → counties gazetteer
+3731060,Hickory City,0,,58,,NC,,37023;37027;37035,low,ambiguous_multi_county_place,place spans 3 counties; FIPS not invented
+3731400,High Point City,0,,294,,NC,,37057;37067;37081;37151,low,ambiguous_multi_county_place,place spans 4 counties; FIPS not invented
+3731620,Hillsborough Town,0,,44,37135,NC,Orange County,37135,high,place_to_county,national_places → counties gazetteer
+3732260,Holly Springs town,0,,123,37183,NC,Wake County,37183,high,place_to_county,national_places → counties gazetteer
+3732640,Hope Mills Town,0,,249,37051,NC,Cumberland County,37051,high,place_to_county,national_places → counties gazetteer
+3733120,Huntersville Town,0,,204,37119,NC,Mecklenburg County,37119,high,place_to_county,national_places → counties gazetteer
+3733560,Indian Trail Town,0,,396,37179,NC,Union County,37179,high,place_to_county,national_places → counties gazetteer
+3734200; 37133,Jacksonville city; Onslow County,1,37133,13,37133,NC,Onslow County,37133,medium,predicted_county_geoid_validated,validated against 2024 counties gazetteer; from predicted_st_fips for multi-city
+3734200; 37133,Jacksonville city; Onslow County,1,3734200,247,37133,NC,Onslow County,37133,medium,predicted_place_to_county,national_places → counties gazetteer; from predicted_st_fips for multi-city
+3734200; 37133,Jacksonville city; Onslow County,1,UNKNOWN,184,37133,NC,Onslow County,37133,medium,compound_tokens_agree,all resolvable tokens agree on one county
+3735600,Kernersville Town,0,,84,,NC,,37067;37081,low,ambiguous_multi_county_place,place spans 2 counties; FIPS not invented
+3735720,Kill Devil Hills town,0,,244,37055,NC,Dare County,37055,high,place_to_county,national_places → counties gazetteer
+3735760,King City,0,,26,,NC,,37067;37169,low,ambiguous_multi_county_place,place spans 2 counties; FIPS not invented
+3736060,Kitty Hawk town,0,,152,37055,NC,Dare County,37055,high,place_to_county,national_places → counties gazetteer
+3736500,Lake Lure town,0,,219,37161,NC,Rutherford County,37161,high,place_to_county,national_places → counties gazetteer
+3737680,Leland Town,0,,4,37019,NC,Brunswick County,37019,high,place_to_county,national_places → counties gazetteer
+3737760,Lenoir city,0,,183,37027,NC,Caldwell County,37027,high,place_to_county,national_places → counties gazetteer
+3738040,Lewisville town,0,,135,37067,NC,Forsyth County,37067,high,place_to_county,national_places → counties gazetteer
+3738320,Lincolnton Town,0,,100,37109,NC,Lincoln County,37109,high,place_to_county,national_places → counties gazetteer
+3741720,Marvin Village,0,,424,37179,NC,Union County,37179,high,place_to_county,national_places → counties gazetteer
+3741960,Matthews Town,0,,99,37119,NC,Mecklenburg County,37119,high,place_to_county,national_places → counties gazetteer
+3742240,Mebane City,0,,156,,NC,,37001;37135,low,ambiguous_multi_county_place,place spans 2 counties; FIPS not invented
+3743260,Mills River Town,0,,151,37089,NC,Henderson County,37089,high,place_to_county,national_places → counties gazetteer
+3743480,Mint Hill Town,0,,76,,NC,,37119;37179,low,ambiguous_multi_county_place,place spans 2 counties; FIPS not invented
+3743720,Mocksville Town,0,,19,37059,NC,Davie County,37059,high,place_to_county,national_places → counties gazetteer
+3743920,Monroe City,0,,197,37179,NC,Union County,37179,high,place_to_county,national_places → counties gazetteer
+3744220,Mooresville Town,0,,19,37097,NC,Iredell County,37097,high,place_to_county,national_places → counties gazetteer
+3744400; 37023,Morganton city; Burke County,1,37023,4,37023,NC,Burke County,37023,medium,predicted_county_geoid_validated,validated against 2024 counties gazetteer; from predicted_st_fips for multi-city
+3744400; 37023,Morganton city; Burke County,1,3744400,156,37023,NC,Burke County,37023,medium,predicted_place_to_county,national_places → counties gazetteer; from predicted_st_fips for multi-city
+3744400; 37023,Morganton city; Burke County,1,UNKNOWN,83,37023,NC,Burke County,37023,medium,compound_tokens_agree,all resolvable tokens agree on one county
+3744960,Mount Holly City,0,,141,37071,NC,Gaston County,37071,high,place_to_county,national_places → counties gazetteer
+3745100,Mount Olive Town,0,,4,,NC,,37061;37191,low,ambiguous_multi_county_place,place spans 2 counties; FIPS not invented
+3745880,Nags Head town,0,,355,37055,NC,Dare County,37055,high,place_to_county,national_places → counties gazetteer
+3746000,Nashville town,0,,226,37127,NC,Nash County,37127,high,place_to_county,national_places → counties gazetteer
+3746340,New Bern city,0,,453,37049,NC,Craven County,37049,high,place_to_county,national_places → counties gazetteer
+3747000,Newton City,0,,58,37035,NC,Catawba County,37035,high,place_to_county,national_places → counties gazetteer
+3748345,Oak Island town,0,,209,37019,NC,Brunswick County,37019,high,place_to_county,national_places → counties gazetteer
+3748480,Oak Ridge Town,0,,91,37081,NC,Guilford County,37081,high,place_to_county,national_places → counties gazetteer
+3749800,Oxford City,0,,48,37077,NC,Granville County,37077,high,place_to_county,national_places → counties gazetteer
+3751940,Pinehurst Village,0,,136,37125,NC,Moore County,37125,high,place_to_county,national_places → counties gazetteer
+3752660,Pittsboro town,0,,18,37037,NC,Chatham County,37037,high,place_to_county,national_places → counties gazetteer
+3755000,Raleigh City,0,,1067,,NC,,37063;37183,low,ambiguous_multi_county_place,place spans 2 counties; FIPS not invented
+3755040,Ramseur town,0,,32,37151,NC,Randolph County,37151,high,place_to_county,national_places → counties gazetteer
+3755900,Reidsville City,0,,117,37157,NC,Rockingham County,37157,high,place_to_county,national_places → counties gazetteer
+3756900,Roanoke Rapids City,0,,57,37083,NC,Halifax County,37083,high,place_to_county,national_places → counties gazetteer
+3757500,Rocky Mount City,0,,190,,NC,,37065;37127,low,ambiguous_multi_county_place,place spans 2 counties; FIPS not invented
+3758160,Roxboro City,0,,32,37145,NC,Person County,37145,high,place_to_county,national_places → counties gazetteer
+3758860,Salisbury city,0,,149,37159,NC,Rowan County,37159,high,place_to_county,national_places → counties gazetteer
+3760505,Seven Devils Town,0,,12,,NC,,37011;37189,low,ambiguous_multi_county_place,place spans 2 counties; FIPS not invented
+3761860,Siler City Town,0,,115,37037,NC,Chatham County,37037,high,place_to_county,national_places → counties gazetteer
+3762520,Smithfield Town,0,,116,37101,NC,Johnston County,37101,high,place_to_county,national_places → counties gazetteer
+3762520,Smithfield town,0,,89,37101,NC,Johnston County,37101,high,place_to_county,national_places → counties gazetteer
+3763120,Southern Pines Town,0,,124,37125,NC,Moore County,37125,high,place_to_county,national_places → counties gazetteer
+3763680,Sparta town,0,,6,37005,NC,Alleghany County,37005,high,place_to_county,national_places → counties gazetteer
+3764180,Spring Lake Town,0,,212,37051,NC,Cumberland County,37051,high,place_to_county,national_places → counties gazetteer
+3764420,Stallings Town,0,,175,,NC,,37119;37179,low,ambiguous_multi_county_place,place spans 2 counties; FIPS not invented
+3764740,Statesville City,0,,149,37097,NC,Iredell County,37097,high,place_to_county,national_places → counties gazetteer
+3765040,Stokesdale Town,0,,129,37081,NC,Guilford County,37081,high,place_to_county,national_places → counties gazetteer
+3765900,Sunset Beach town,0,,373,37019,NC,Brunswick County,37019,high,place_to_county,national_places → counties gazetteer
+3766040,Surf City town,0,,166,,NC,,37133;37141,low,ambiguous_multi_county_place,place spans 2 counties; FIPS not invented
+3768400,Trinity City,0,,104,37151,NC,Randolph County,37151,high,place_to_county,national_places → counties gazetteer
+3769520,Valdese Town,0,,67,37023,NC,Burke County,37023,high,place_to_county,national_places → counties gazetteer
+3771460,Waxhaw town,0,,317,37179,NC,Union County,37179,high,place_to_county,national_places → counties gazetteer
+3771500,Waynesville Town,0,,53,37087,NC,Haywood County,37087,high,place_to_county,national_places → counties gazetteer
+3771680,Weddington Town,0,,69,,NC,,37119;37179,low,ambiguous_multi_county_place,place spans 2 counties; FIPS not invented
+3771860,Wendell Town,0,,209,37183,NC,Wake County,37183,high,place_to_county,national_places → counties gazetteer
+3771940,Wesley Chapel Village,0,,57,37179,NC,Union County,37179,high,place_to_county,national_places → counties gazetteer
+3771940,Wesley Chapel village,0,,20,37179,NC,Union County,37179,high,place_to_county,national_places → counties gazetteer
+3774440,Wilmington City,0,,310,37129,NC,New Hanover County,37129,high,place_to_county,national_places → counties gazetteer
+3775000,Winston-Salem city,0,,787,37067,NC,Forsyth County,37067,high,place_to_county,national_places → counties gazetteer
+3775060,Winterville Town,0,,148,37147,NC,Pitt County,37147,high,place_to_county,national_places → counties gazetteer
+3776220,Zebulon Town,0,,163,,NC,,37101;37183,low,ambiguous_multi_county_place,place spans 2 counties; FIPS not invented
+3825700,Fargo city,0,,709,38017,ND,Cass County,38017,high,place_to_county,national_places → counties gazetteer
+3901000,Akron city,0,,976,39153,OH,Summit County,39153,high,place_to_county,national_places → counties gazetteer
+3901672,Amberley village,0,,116,39061,OH,Hamilton County,39061,high,place_to_county,national_places → counties gazetteer
+3901742,Amelia village,0,,15,39025,OH,Clermont County,39025,high,place_to_county,national_places → counties gazetteer
+3901798,Amherst city,0,,118,39093,OH,Lorain County,39093,high,place_to_county,national_places → counties gazetteer
+39021; 1712385,Champaign County; Champaign city,1,39021,69,39021,OH,Champaign County,39021,medium,predicted_county_geoid_validated,validated against 2024 counties gazetteer; from predicted_st_fips for multi-city
+39021; 1712385,Champaign County; Champaign city,1,UNKNOWN,14,,,,17019;39021,low,ambiguous_compound,multi-city/compound st_fips; no single county invented; predicted UNKNOWN/empty
+3902736,Athens city,0,,1660,39009,OH,Athens County,39009,high,place_to_county,national_places → counties gazetteer
+3903086,Aurora city,0,,29,39133,OH,Portage County,39133,high,place_to_county,national_places → counties gazetteer
+3903828,Barberton city,0,,8,39153,OH,Summit County,39153,high,place_to_county,national_places → counties gazetteer
+3904458,Beach City village,0,,59,39151,OH,Stark County,39151,high,place_to_county,national_places → counties gazetteer
+3904720,Beavercreek city,0,,378,39057,OH,Greene County,39057,high,place_to_county,national_places → counties gazetteer
+39055,Geauga County,0,,42,39055,OH,Geauga County,39055,high,county_geoid_validated,validated against 2024 counties gazetteer
+3906194,Bettsville village,0,,29,39147,OH,Seneca County,39147,high,place_to_county,national_places → counties gazetteer
+3907972,Bowling Green city,0,,70,39173,OH,Wood County,39173,high,place_to_county,national_places → counties gazetteer
+3909246,Brooklyn city,0,,238,39035,OH,Cuyahoga County,39035,high,place_to_county,national_places → counties gazetteer
+3909288,Brook Park city,0,,52,39035,OH,Cuyahoga County,39035,high,place_to_county,national_places → counties gazetteer
+3909792,Bryan city,0,,374,39171,OH,Williams County,39171,high,place_to_county,national_places → counties gazetteer
+3909890,Buckeye Lake village,0,,3,,OH,,39045;39089,low,ambiguous_multi_county_place,place spans 2 counties; FIPS not invented
+3910030,Bucyrus city,0,,370,39033,OH,Crawford County,39033,high,place_to_county,national_places → counties gazetteer
+3911304,Canal Fulton city,0,,13,39151,OH,Stark County,39151,high,place_to_county,national_places → counties gazetteer
+3913190,Centerville city,0,,68,,OH,,39057;39113,low,ambiguous_multi_county_place,place spans 2 counties; FIPS not invented
+39139,Richland County,0,,13,39139,OH,Richland County,39139,high,county_geoid_validated,validated against 2024 counties gazetteer
+3914184,Chillicothe city,0,,114,39141,OH,Ross County,39141,high,place_to_county,national_places → counties gazetteer
+3914226,Chilo village,0,,82,39025,OH,Clermont County,39025,high,place_to_county,national_places → counties gazetteer
+3915644,Clayton city,0,,4,39113,OH,Montgomery County,39113,high,place_to_county,national_places → counties gazetteer
+3916014,Cleveland Heights city,0,,800,39035,OH,Cuyahoga County,39035,high,place_to_county,national_places → counties gazetteer
+3918000,Columbus city,0,,854,,OH,,39041;39045;39049,low,ambiguous_multi_county_place,place spans 3 counties; FIPS not invented
+3921308,Defiance city,0,,193,39039,OH,Defiance County,39039,high,place_to_county,national_places → counties gazetteer
+3922694,Dublin city,0,,370,,OH,,39041;39049;39159,low,ambiguous_multi_county_place,place spans 3 counties; FIPS not invented
+3923380,East Cleveland city,0,,660,39035,OH,Cuyahoga County,39035,high,place_to_county,national_places → counties gazetteer
+3923618,Eastlake city,0,,11,39085,OH,Lake County,39085,high,place_to_county,national_places → counties gazetteer
+3927706,Forest Park city,0,,1178,39061,OH,Hamilton County,39061,high,place_to_county,national_places → counties gazetteer
+3931860,Green city,0,,10,39153,OH,Summit County,39153,high,place_to_county,national_places → counties gazetteer
+3934748,Heath city,0,,203,39089,OH,Licking County,39089,high,place_to_county,national_places → counties gazetteer
+3935098,Hicksville village,0,,400,39039,OH,Defiance County,39039,high,place_to_county,national_places → counties gazetteer
+3936610,Huber Heights city,0,,13,,OH,,39057;39109;39113,low,ambiguous_multi_county_place,place spans 3 counties; FIPS not invented
+3939872,Kent city,0,,258,39133,OH,Portage County,39133,high,place_to_county,national_places → counties gazetteer
+3941664,Lakewood city,0,,164,39035,OH,Cuyahoga County,39035,high,place_to_county,national_places → counties gazetteer
+3943554,Lima city,0,,121,39003,OH,Allen County,39003,high,place_to_county,national_places → counties gazetteer
+3944912; 3911360; 39099,Lordstown village; Canfield city; Mahoning County,1,39099,69,39099,OH,Mahoning County,39099,medium,predicted_county_geoid_validated,validated against 2024 counties gazetteer; from predicted_st_fips for multi-city
+3944912; 3911360; 39099,Lordstown village; Canfield city; Mahoning County,1,3911360,58,39099,OH,Mahoning County,39099,medium,predicted_place_to_county,national_places → counties gazetteer; from predicted_st_fips for multi-city
+3944912; 3911360; 39099,Lordstown village; Canfield city; Mahoning County,1,3944912,23,39155,OH,Trumbull County,39155,medium,predicted_place_to_county,national_places → counties gazetteer; from predicted_st_fips for multi-city
+3944912; 3911360; 39099,Lordstown village; Canfield city; Mahoning County,1,UNKNOWN,295,,,,39099;39155,low,ambiguous_compound,multi-city/compound st_fips; no single county invented; predicted UNKNOWN/empty
+3945976,Macedonia city,0,,461,39153,OH,Summit County,39153,high,place_to_county,national_places → counties gazetteer
+3948790,Medina city,0,,334,39103,OH,Medina County,39103,high,place_to_county,national_places → counties gazetteer
+3949056,Mentor city,0,,319,39085,OH,Lake County,39085,high,place_to_county,national_places → counties gazetteer
+3949840,Middletown city,0,,420,,OH,,39017;39165,low,ambiguous_multi_county_place,place spans 2 counties; FIPS not invented
+3950904,Mingo Junction village,0,,47,39081,OH,Jefferson County,39081,high,place_to_county,national_places → counties gazetteer
+3953550,Napoleon city,0,,167,39069,OH,Henry County,39069,high,place_to_county,national_places → counties gazetteer
+3954446,New Concord village,0,,12,39119,OH,Muskingum County,39119,high,place_to_county,national_places → counties gazetteer
+3955188; 39135,New Paris village; Preble County,1,39135,22,39135,OH,Preble County,39135,medium,predicted_county_geoid_validated,validated against 2024 counties gazetteer; from predicted_st_fips for multi-city
+3955188; 39135,New Paris village; Preble County,1,3955188,21,39135,OH,Preble County,39135,medium,predicted_place_to_county,national_places → counties gazetteer; from predicted_st_fips for multi-city
+3955188; 39135,New Paris village; Preble County,1,UNKNOWN,63,39135,OH,Preble County,39135,medium,compound_tokens_agree,all resolvable tokens agree on one county
+3956294,North Canton city,0,,247,39151,OH,Stark County,39151,high,place_to_county,national_places → counties gazetteer
+3958604,Orange village,0,,169,39035,OH,Cuyahoga County,39035,high,place_to_county,national_places → counties gazetteer
+3963030,Plain City village,0,,38,,OH,,39097;39159,low,ambiguous_multi_county_place,place spans 2 counties; FIPS not invented
+3964108; 39155,Portage village; Trumbull County,1,39155,12,39155,OH,Trumbull County,39155,medium,predicted_county_geoid_validated,validated against 2024 counties gazetteer; from predicted_st_fips for multi-city
+3964108; 39155,Portage village; Trumbull County,1,UNKNOWN,282,,,,39155;39173,low,ambiguous_compound,multi-city/compound st_fips; no single county invented; predicted UNKNOWN/empty
+3964150,Port Clinton city,0,,260,39123,OH,Ottawa County,39123,high,place_to_county,national_places → counties gazetteer
+3966152,Reminderville village,0,,98,39153,OH,Summit County,39153,high,place_to_county,national_places → counties gazetteer
+3966824,Richmond village,0,,387,39081,OH,Jefferson County,39081,high,place_to_county,national_places → counties gazetteer
+3969680,St. Marys city,0,,354,39011,OH,Auglaize County,39011,high,place_to_county,national_places → counties gazetteer
+3971416,Seven Hills city,0,,390,39035,OH,Cuyahoga County,39035,high,place_to_county,national_places → counties gazetteer
+3974608,Steubenville city,0,,126,39081,OH,Jefferson County,39081,high,place_to_county,national_places → counties gazetteer
+3974944,Stow city,0,,139,39153,OH,Summit County,39153,high,place_to_county,national_places → counties gazetteer
+3975602; 42097,Sunbury village; Northumberland County,1,42097,11,42097,PA,Northumberland County,42097,medium,predicted_county_geoid_validated,validated against 2024 counties gazetteer; from predicted_st_fips for multi-city
+3975602; 42097,Sunbury village; Northumberland County,1,UNKNOWN,377,,,,39041;42097,low,ambiguous_compound,multi-city/compound st_fips; no single county invented; predicted UNKNOWN/empty
+3977588,Troy city,0,,20,39109,OH,Miami County,39109,high,place_to_county,national_places → counties gazetteer
+3978050,Twinsburg city,0,,574,39153,OH,Summit County,39153,high,place_to_county,national_places → counties gazetteer
+3978932,University Heights city,0,,232,39035,OH,Cuyahoga County,39035,high,place_to_county,national_places → counties gazetteer
+3979492,Vandalia city,0,,263,39113,OH,Montgomery County,39113,high,place_to_county,national_places → counties gazetteer
+3981928,Wauseon city,0,,261,39051,OH,Fulton County,39051,high,place_to_county,national_places → counties gazetteer
+3982390,Waynesfield village,0,,80,39011,OH,Auglaize County,39011,high,place_to_county,national_places → counties gazetteer
+3983902,West Milton village,0,,173,39109,OH,Miami County,39109,high,place_to_county,national_places → counties gazetteer
+3984742,Whitehall city,0,,222,39049,OH,Franklin County,39049,high,place_to_county,national_places → counties gazetteer
+3985036,Wickliffe city,0,,67,39085,OH,Lake County,39085,high,place_to_county,national_places → counties gazetteer
+3986184,Wintersville village,0,,135,39081,OH,Jefferson County,39081,high,place_to_county,national_places → counties gazetteer
+3986772,Xenia city,0,,204,39057,OH,Greene County,39057,high,place_to_county,national_places → counties gazetteer
+3986940,Yellow Springs village,0,,5,39057,OH,Greene County,39057,high,place_to_county,national_places → counties gazetteer
+4004450,Bartlesville city,0,,174,,OK,,40113;40147,low,ambiguous_multi_county_place,place spans 2 counties; FIPS not invented
+40053,Grant County,0,,110,40053,OK,Grant County,40053,high,county_geoid_validated,validated against 2024 counties gazetteer
+4005700,Bethany city,0,,83,40109,OK,Oklahoma County,40109,high,place_to_county,national_places → counties gazetteer
+4006400,Bixby city,0,,24,,OK,,40143;40145,low,ambiguous_multi_county_place,place spans 2 counties; FIPS not invented
+40131,Rogers County,0,,29,40131,OK,Rogers County,40131,high,county_geoid_validated,validated against 2024 counties gazetteer
+4023700,El Reno city,0,,77,40017,OK,Canadian County,40017,high,place_to_county,national_places → counties gazetteer
+4023950,Enid city,0,,394,40047,OK,Garfield County,40047,high,place_to_county,national_places → counties gazetteer
+4027850; 40151; 4001800,Freedom town; Woods County; Alva city,1,4001800,181,40151,OK,Woods County,40151,medium,predicted_place_to_county,national_places → counties gazetteer; from predicted_st_fips for multi-city
+4027850; 40151; 4001800,Freedom town; Woods County; Alva city,1,40151,490,40151,OK,Woods County,40151,medium,predicted_county_geoid_validated,validated against 2024 counties gazetteer; from predicted_st_fips for multi-city
+4027850; 40151; 4001800,Freedom town; Woods County; Alva city,1,4027850,10,40151,OK,Woods County,40151,medium,predicted_place_to_county,national_places → counties gazetteer; from predicted_st_fips for multi-city
+4027850; 40151; 4001800,Freedom town; Woods County; Alva city,1,UNKNOWN,985,40151,OK,Woods County,40151,medium,compound_tokens_agree,all resolvable tokens agree on one county
+4029100,Geronimo town,0,,2,40031,OK,Comanche County,40031,high,place_to_county,national_places → counties gazetteer
+4031700,Guthrie city,0,,969,40083,OK,Logan County,40083,high,place_to_county,national_places → counties gazetteer
+4031700; 40083,Guthrie city; Logan County,1,40083,260,40083,OK,Logan County,40083,medium,predicted_county_geoid_validated,validated against 2024 counties gazetteer; from predicted_st_fips for multi-city
+4031700; 40083,Guthrie city; Logan County,1,4031700,154,40083,OK,Logan County,40083,medium,predicted_place_to_county,national_places → counties gazetteer; from predicted_st_fips for multi-city
+4031700; 40083,Guthrie city; Logan County,1,UNKNOWN,251,40083,OK,Logan County,40083,medium,compound_tokens_agree,all resolvable tokens agree on one county
+4044800,McAlester city,0,,231,40121,OK,Pittsburg County,40121,high,place_to_county,national_places → counties gazetteer
+4048000,Miami city,0,,79,40115,OK,Ottawa County,40115,high,place_to_county,national_places → counties gazetteer
+4049200,Moore city,0,,348,40027,OK,Cleveland County,40027,high,place_to_county,national_places → counties gazetteer
+4052500,Norman city,0,,516,40027,OK,Cleveland County,40027,high,place_to_county,national_places → counties gazetteer
+4055000,Oklahoma City city,0,,1754,,OK,,40017;40027;40109;40125,low,ambiguous_multi_county_place,place spans 4 counties; FIPS not invented
+4066350,Seminole city,0,,13,40133,OK,Seminole County,40133,high,place_to_county,national_places → counties gazetteer
+4070300,Stillwater city,0,,784,40119,OK,Payne County,40119,high,place_to_county,national_places → counties gazetteer
+4101000,Albany city,0,,538,,OR,,41003;41043,low,ambiguous_multi_county_place,place spans 2 counties; FIPS not invented
+41015,Curry County,0,,243,41015,OR,Curry County,41015,high,county_geoid_validated,validated against 2024 counties gazetteer
+41059; 4175650,Umatilla County; Umatilla city,1,41059,247,41059,OR,Umatilla County,41059,medium,predicted_county_geoid_validated,validated against 2024 counties gazetteer; from predicted_st_fips for multi-city
+41071; 4184250,Yamhill County; Yamhill city,1,41071,144,41071,OR,Yamhill County,41071,medium,predicted_county_geoid_validated,validated against 2024 counties gazetteer; from predicted_st_fips for multi-city
+41071; 4184250,Yamhill County; Yamhill city,1,UNKNOWN,176,41071,OR,Yamhill County,41071,medium,compound_tokens_agree,all resolvable tokens agree on one county
+4110750,Canby city,0,,107,41005,OR,Clackamas County,41005,high,place_to_county,national_places → counties gazetteer
+4111600,Cascade Locks city,0,,51,41027,OR,Hood River County,41027,high,place_to_county,national_places → counties gazetteer
+4118850,Depoe Bay city,0,,149,41041,OR,Lincoln County,41041,high,place_to_county,national_places → counties gazetteer
+4121150,Dunes City city,0,,160,41039,OR,Lane County,41039,high,place_to_county,national_places → counties gazetteer
+4123850,Eugene city,0,,2010,41039,OR,Lane County,41039,high,place_to_county,national_places → counties gazetteer
+4129000,Gladstone city,0,,370,41005,OR,Clackamas County,41005,high,place_to_county,national_places → counties gazetteer
+4134100,Hillsboro city,0,,195,41067,OR,Washington County,41067,high,place_to_county,national_places → counties gazetteer
+4140700; 41037,Lakeview town; Lake County,1,41037,569,41037,OR,Lake County,41037,medium,predicted_county_geoid_validated,validated against 2024 counties gazetteer; from predicted_st_fips for multi-city
+4140700; 41037,Lakeview town; Lake County,1,4140700,262,41037,OR,Lake County,41037,medium,predicted_place_to_county,national_places → counties gazetteer; from predicted_st_fips for multi-city
+4140700; 41037,Lakeview town; Lake County,1,UNKNOWN,60,41037,OR,Lake County,41037,medium,compound_tokens_agree,all resolvable tokens agree on one county
+4141650,Lebanon city,0,,301,41043,OR,Linn County,41043,high,place_to_county,national_places → counties gazetteer
+4142600,Lincoln City city,0,,737,41041,OR,Lincoln County,41041,high,place_to_county,national_places → counties gazetteer
+4145000,McMinnville city,0,,363,41071,OR,Yamhill County,41071,high,place_to_county,national_places → counties gazetteer
+4149450,Molalla city,0,,84,41005,OR,Clackamas County,41005,high,place_to_county,national_places → counties gazetteer
+4154100,Oakridge city,0,,103,41039,OR,Lane County,41039,high,place_to_county,national_places → counties gazetteer
+4157500,Phoenix city,0,,37,41029,OR,Jackson County,41029,high,place_to_county,national_places → counties gazetteer
+4159000,Portland city,0,,276,,OR,,41005;41051;41067,low,ambiguous_multi_county_place,place spans 3 counties; FIPS not invented
+4164900; 41047,Salem city; Marion County,1,41047,624,41047,OR,Marion County,41047,medium,predicted_county_geoid_validated,validated against 2024 counties gazetteer; from predicted_st_fips for multi-city
+4164900; 41047,Salem city; Marion County,1,4164900,480,41047,OR,Marion County,41047,medium,compound_tokens_agree,all resolvable tokens agree on one county
+4164900; 41047,Salem city; Marion County,1,UNKNOWN,525,41047,OR,Marion County,41047,medium,compound_tokens_agree,all resolvable tokens agree on one county
+4170200,Stayton city,0,,255,41047,OR,Marion County,41047,high,place_to_county,national_places → counties gazetteer
+42019,Butler County,0,,68,42019,PA,Butler County,42019,high,county_geoid_validated,validated against 2024 counties gazetteer
+42049,Erie County,0,,300,42049,PA,Erie County,42049,high,county_geoid_validated,validated against 2024 counties gazetteer
+42051; 4243128,Fayette County; Liberty borough,1,42051,26,42051,PA,Fayette County,42051,medium,predicted_county_geoid_validated,validated against 2024 counties gazetteer; from predicted_st_fips for multi-city
+42051; 4243128,Fayette County; Liberty borough,1,UNKNOWN,39,,,,42051;42117,low,ambiguous_compound,multi-city/compound st_fips; no single county invented; predicted UNKNOWN/empty
+4205288,Belle Vernon borough,0,,128,42051,PA,Fayette County,42051,high,place_to_county,national_places → counties gazetteer
+4205312,Bellevue borough,0,,35,42003,PA,Allegheny County,42003,high,place_to_county,national_places → counties gazetteer
+4207000,Blawnox borough,0,,63,42003,PA,Allegheny County,42003,high,place_to_county,national_places → counties gazetteer
+42075,Lebanon County,0,,208,42075,PA,Lebanon County,42075,high,county_geoid_validated,validated against 2024 counties gazetteer
+42079,Luzerne County,0,,293,42079,PA,Luzerne County,42079,high,county_geoid_validated,validated against 2024 counties gazetteer
+4208760,Bristol borough,0,,361,42017,PA,Bucks County,42017,high,place_to_county,national_places → counties gazetteer
+42103,Pike County,0,,6,42103,PA,Pike County,42103,high,county_geoid_validated,validated against 2024 counties gazetteer
+42115,Susquehanna County,0,,254,42115,PA,Susquehanna County,42115,high,county_geoid_validated,validated against 2024 counties gazetteer
+42115; 4250736,Susquehanna County; Montrose borough,1,42115,93,42115,PA,Susquehanna County,42115,medium,predicted_county_geoid_validated,validated against 2024 counties gazetteer; from predicted_st_fips for multi-city
+42115; 4250736,Susquehanna County; Montrose borough,1,4250736,2,42115,PA,Susquehanna County,42115,medium,predicted_place_to_county,national_places → counties gazetteer; from predicted_st_fips for multi-city
+42115; 4250736,Susquehanna County; Montrose borough,1,UNKNOWN,44,42115,PA,Susquehanna County,42115,medium,compound_tokens_agree,all resolvable tokens agree on one county
+42123,Warren County,0,,19,42123,PA,Warren County,42123,high,county_geoid_validated,validated against 2024 counties gazetteer
+4218152; 4215432,Darby borough; Colwyn borough,1,4215432,37,42045,PA,Delaware County,42045,medium,predicted_place_to_county,national_places → counties gazetteer; from predicted_st_fips for multi-city
+4218152; 4215432,Darby borough; Colwyn borough,1,4218152,120,42045,PA,Delaware County,42045,medium,predicted_place_to_county,national_places → counties gazetteer; from predicted_st_fips for multi-city
+4218152; 4215432,Darby borough; Colwyn borough,1,UNKNOWN,214,42045,PA,Delaware County,42045,medium,compound_tokens_agree,all resolvable tokens agree on one county
+4221648,Easton city,0,,75,42095,PA,Northampton County,42095,high,place_to_county,national_places → counties gazetteer
+4222992,Elizabeth borough,0,,398,42003,PA,Allegheny County,42003,high,place_to_county,national_places → counties gazetteer
+4223000,Elizabeth township,0,,31,42003,PA,Allegheny County,42003,medium,place_to_county,national_places → counties gazetteer; place GEOID not in 2024 places gaz
+4226408,Folcroft borough,0,,30,42045,PA,Delaware County,42045,high,place_to_county,national_places → counties gazetteer
+4231328,Greenville borough,0,,5,42085,PA,Mercer County,42085,high,place_to_county,national_places → counties gazetteer
+4235408,Homer City borough,0,,13,42063,PA,Indiana County,42063,high,place_to_county,national_places → counties gazetteer
+4238000,Jenkintown borough,0,,18,42091,PA,Montgomery County,42091,high,place_to_county,national_places → counties gazetteer
+4241216,Lancaster city,0,,414,42071,PA,Lancaster County,42071,high,place_to_county,national_places → counties gazetteer
+4245072; 4262416,Lower Pottsgrove township; Pottstown borough,1,4262416,24,42091,PA,Montgomery County,42091,medium,predicted_place_to_county,national_places → counties gazetteer; from predicted_st_fips for multi-city
+4245072; 4262416,Lower Pottsgrove township; Pottstown borough,1,UNKNOWN,212,42091,PA,Montgomery County,42091,medium,compound_tokens_agree,all resolvable tokens agree on one county
+4246488,Madison borough,0,,139,42129,PA,Westmoreland County,42129,high,place_to_county,national_places → counties gazetteer
+4249128,Middletown borough,0,,31,42043,PA,Dauphin County,42043,high,place_to_county,national_places → counties gazetteer
+4250320,Monaca borough,0,,17,42007,PA,Beaver County,42007,high,place_to_county,national_places → counties gazetteer
+4252320,Munhall borough,0,,36,42003,PA,Allegheny County,42003,high,place_to_county,national_places → counties gazetteer
+4253368,New Castle city,0,,316,42073,PA,Lawrence County,42073,high,place_to_county,national_places → counties gazetteer
+4254656,Norristown borough,0,,168,42091,PA,Montgomery County,42091,high,place_to_county,national_places → counties gazetteer
+4254680,North Abington township,0,,215,42069,PA,Lackawanna County,42069,medium,place_to_county,national_places → counties gazetteer; place GEOID not in 2024 places gaz
+4255488,North Versailles township,0,,5,42003,PA,Allegheny County,42003,medium,place_to_county,national_places → counties gazetteer; place GEOID not in 2024 places gaz
+4257480,Oxford borough,0,,15,42029,PA,Chester County,42029,high,place_to_county,national_places → counties gazetteer
+4258872,Penn borough,0,,22,42129,PA,Westmoreland County,42129,high,place_to_county,national_places → counties gazetteer
+4260120,Phoenixville borough,0,,85,42029,PA,Chester County,42029,high,place_to_county,national_places → counties gazetteer
+4262920,Punxsutawney borough,0,,10,42065,PA,Jefferson County,42065,high,place_to_county,national_places → counties gazetteer
+4276032,Tamaqua borough,0,,21,42107,PA,Schuylkill County,42107,high,place_to_county,national_places → counties gazetteer
+4276184,Taylor borough,0,,2119,42069,PA,Lackawanna County,42069,high,place_to_county,national_places → counties gazetteer
+4276904; 42121,Titusville city; Venango County,1,42121,7,42121,PA,Venango County,42121,medium,predicted_county_geoid_validated,validated against 2024 counties gazetteer; from predicted_st_fips for multi-city
+4276904; 42121,Titusville city; Venango County,1,4276904,45,42039,PA,Crawford County,42039,medium,predicted_place_to_county,national_places → counties gazetteer; from predicted_st_fips for multi-city
+4276904; 42121,Titusville city; Venango County,1,UNKNOWN,57,,,,42039;42121,low,ambiguous_compound,multi-city/compound st_fips; no single county invented; predicted UNKNOWN/empty
+4280032,Verona borough,0,,77,42003,PA,Allegheny County,42003,high,place_to_county,national_places → counties gazetteer
+4285152,Wilkes-Barre city,0,,252,42079,PA,Luzerne County,42079,high,place_to_county,national_places → counties gazetteer
+4286968,Yeadon borough,0,,9,42045,PA,Delaware County,42045,high,place_to_county,national_places → counties gazetteer
+4414140,Central Falls city,0,,58,44007,RI,Providence County,44007,high,place_to_county,national_places → counties gazetteer
+4452480,North Smithfield town,0,,1114,44007,RI,Providence County,44007,medium,place_to_county,national_places → counties gazetteer; place GEOID not in 2024 places gaz
+4480780,Woonsocket city,0,,766,44007,RI,Providence County,44007,high,place_to_county,national_places → counties gazetteer
+4500550,Aiken city,0,,515,45003,SC,Aiken County,45003,high,place_to_county,national_places → counties gazetteer
+45007,Anderson County,0,,13,45007,SC,Anderson County,45007,high,county_geoid_validated,validated against 2024 counties gazetteer
+4501360,Anderson city,0,,320,45007,SC,Anderson County,45007,high,place_to_county,national_places → counties gazetteer
+45015,Berkeley County,0,,369,45015,SC,Berkeley County,45015,high,county_geoid_validated,validated against 2024 counties gazetteer
+45017,Calhoun County,0,,133,45017,SC,Calhoun County,45017,high,county_geoid_validated,validated against 2024 counties gazetteer
+45023,Chester County,0,,134,45023,SC,Chester County,45023,high,county_geoid_validated,validated against 2024 counties gazetteer
+45033,Dillon County,0,,229,45033,SC,Dillon County,45033,high,county_geoid_validated,validated against 2024 counties gazetteer
+45039,Fairfield County,0,,268,45039,SC,Fairfield County,45039,high,county_geoid_validated,validated against 2024 counties gazetteer
+4504300,Batesburg-Leesville town,0,,223,,SC,,45063;45081,low,ambiguous_multi_county_place,place spans 2 counties; FIPS not invented
+45059,Laurens County,0,,43,45059,SC,Laurens County,45059,high,county_geoid_validated,validated against 2024 counties gazetteer
+45091,York County,0,,505,45091,SC,York County,45091,high,county_geoid_validated,validated against 2024 counties gazetteer
+4512655,Cayce city,0,,4,,SC,,45063;45079,low,ambiguous_multi_county_place,place spans 2 counties; FIPS not invented
+4513330,Charleston city,0,,583,,SC,,45015;45019,low,ambiguous_multi_county_place,place spans 2 counties; FIPS not invented
+4530490,Great Falls town,0,,7,45023,SC,Chester County,45023,high,place_to_county,national_places → counties gazetteer
+4538095,Kershaw town,0,,221,45057,SC,Lancaster County,45057,high,place_to_county,national_places → counties gazetteer
+4545083,Spartanburg County,0,,25,45083,SC,Spartanburg County,45083,medium,county_label_placefp_as_county,county-labeled row; placefp validated as county GEOID
+4548535,Mount Pleasant town,0,,215,45019,SC,Charleston County,45019,high,place_to_county,national_places → counties gazetteer
+4549570,Newberry city,0,,6,45071,SC,Newberry County,45071,high,place_to_county,national_places → counties gazetteer
+4550695,North Augusta city,0,,19,,SC,,45003;45037,low,ambiguous_multi_county_place,place spans 2 counties; FIPS not invented
+4550875,North Charleston city,0,,209,,SC,,45015;45019;45035,low,ambiguous_multi_county_place,place spans 3 counties; FIPS not invented
+4553080,Orangeburg city,0,,135,45075,SC,Orangeburg County,45075,high,place_to_county,national_places → counties gazetteer
+4571417,Tega Cay city,0,,182,45091,SC,York County,45091,high,place_to_county,national_places → counties gazetteer
+4600700,Alcester city,0,,112,46127,SD,Union County,46127,high,place_to_county,national_places → counties gazetteer
+4604980,Beresford city,0,,267,,SD,,46083;46127,low,ambiguous_multi_county_place,place spans 2 counties; FIPS not invented
+4606840,Brandon city,0,,387,46099,SD,Minnehaha County,46099,high,place_to_county,national_places → counties gazetteer
+46103,Pennington County,0,,714,46103,SD,Pennington County,46103,high,county_geoid_validated,validated against 2024 counties gazetteer
+4615980,Dell Rapids city,0,,77,46099,SD,Minnehaha County,46099,high,place_to_county,national_places → counties gazetteer
+4618700,Elkton city,0,,12,46011,SD,Brookings County,46011,high,place_to_county,national_places → counties gazetteer
+4627540,Hartford city,0,,276,46099,SD,Minnehaha County,46099,high,place_to_county,national_places → counties gazetteer
+4630220,Hot Springs city,0,,348,46047,SD,Fall River County,46047,high,place_to_county,national_places → counties gazetteer
+4636380,Lennox city,0,,12,46083,SD,Lincoln County,46083,high,place_to_county,national_places → counties gazetteer
+4643100,Mitchell city,0,,706,46035,SD,Davison County,46035,high,place_to_county,national_places → counties gazetteer
+4659020,Sioux Falls city,0,,2318,,SD,,46083;46099,low,ambiguous_multi_county_place,place spans 2 counties; FIPS not invented
+4700640,Algood city,0,,166,47141,TN,Putnam County,47141,high,place_to_county,national_places → counties gazetteer
+47009,Blount County,0,,553,47009,TN,Blount County,47009,high,county_geoid_validated,validated against 2024 counties gazetteer
+4708540,Bristol city,0,,205,47163,TN,Sullivan County,47163,high,place_to_county,national_places → counties gazetteer
+47089,Jefferson County,0,,6,47089,TN,Jefferson County,47089,high,county_geoid_validated,validated against 2024 counties gazetteer
+4711360,Caryville town,0,,75,47013,TN,Campbell County,47013,high,place_to_county,national_places → counties gazetteer
+4715160,Clarksville city,0,,16,47125,TN,Montgomery County,47125,high,place_to_county,national_places → counties gazetteer
+4716920,Cookeville city,0,,445,47141,TN,Putnam County,47141,high,place_to_county,national_places → counties gazetteer
+47179,Washington County,0,,178,47179,TN,Washington County,47179,high,county_geoid_validated,validated against 2024 counties gazetteer
+47187,Williamson County,0,,736,47187,TN,Williamson County,47187,high,county_geoid_validated,validated against 2024 counties gazetteer
+47189,Wilson County,0,,212,47189,TN,Wilson County,47189,high,county_geoid_validated,validated against 2024 counties gazetteer
+4727740,Franklin city,0,,1340,47187,TN,Williamson County,47187,high,place_to_county,national_places → counties gazetteer
+4728960,Germantown city,0,,203,47157,TN,Shelby County,47157,high,place_to_county,national_places → counties gazetteer
+4737640; 47087,Jackson city; Jackson County,1,4737640,2,47113,TN,Madison County,47113,medium,predicted_place_to_county,national_places → counties gazetteer; from predicted_st_fips for multi-city
+4737640; 47087,Jackson city; Jackson County,1,UNKNOWN,88,,,,47087;47113,low,ambiguous_compound,multi-city/compound st_fips; no single county invented; predicted UNKNOWN/empty
+4738320,Johnson City city,0,,356,,TN,,47019;47163;47179,low,ambiguous_multi_county_place,place spans 3 counties; FIPS not invented
+4741520,Lebanon city,0,,21,47189,TN,Wilson County,47189,high,place_to_county,national_places → counties gazetteer
+4743140; 47133,Livingston town; Overton County,1,47133,329,47133,TN,Overton County,47133,medium,predicted_county_geoid_validated,validated against 2024 counties gazetteer; from predicted_st_fips for multi-city
+4743140; 47133,Livingston town; Overton County,1,UNKNOWN,161,47133,TN,Overton County,47133,medium,compound_tokens_agree,all resolvable tokens agree on one county
+4752006,Nashville-Davidson metropolitan government (balance),0,,4735,47037,TN,Davidson County,47037,high,place_to_county,national_places → counties gazetteer
+4753000,Newport city,0,,213,47029,TN,Cocke County,47029,high,place_to_county,national_places → counties gazetteer
+4763140,Ridgetop city,0,,182,,TN,,47037;47147,low,ambiguous_multi_county_place,place spans 2 counties; FIPS not invented
+4769900,South Fulton city,0,,440,47131,TN,Obion County,47131,high,place_to_county,national_places → counties gazetteer
+4779420,Westmoreland town,0,,85,47165,TN,Sumner County,47165,high,place_to_county,national_places → counties gazetteer
+48029,Bexar County,0,,122,48029,TX,Bexar County,48029,high,county_geoid_validated,validated against 2024 counties gazetteer
+4804408; 48433,Aspermont town; Stonewall County,1,48433,14,48433,TX,Stonewall County,48433,medium,predicted_county_geoid_validated,validated against 2024 counties gazetteer; from predicted_st_fips for multi-city
+4804408; 48433,Aspermont town; Stonewall County,1,UNKNOWN,34,48433,TX,Stonewall County,48433,medium,compound_tokens_agree,all resolvable tokens agree on one county
+4804600,Aubrey city,0,,9,48121,TX,Denton County,48121,high,place_to_county,national_places → counties gazetteer
+4805000,Austin city,0,,55,,TX,,48209;48453;48491,low,ambiguous_multi_county_place,place spans 3 counties; FIPS not invented
+4805456,Ballinger city,0,,146,48399,TX,Runnels County,48399,high,place_to_county,national_places → counties gazetteer
+4809868,Brackettville city,0,,8,48271,TX,Kinney County,48271,high,place_to_county,national_places → counties gazetteer
+4812988; 48127,Carrizo Springs city; Dimmit County,1,48127,3,48127,TX,Dimmit County,48127,medium,predicted_county_geoid_validated,validated against 2024 counties gazetteer; from predicted_st_fips for multi-city
+4812988; 48127,Carrizo Springs city; Dimmit County,1,4812988,20,48127,TX,Dimmit County,48127,medium,predicted_place_to_county,national_places → counties gazetteer; from predicted_st_fips for multi-city
+4812988; 48127,Carrizo Springs city; Dimmit County,1,UNKNOWN,11,48127,TX,Dimmit County,48127,medium,compound_tokens_agree,all resolvable tokens agree on one county
+4813024,Carrollton city,0,,72,,TX,,48085;48113;48121,low,ambiguous_multi_county_place,place spans 3 counties; FIPS not invented
+4813276,Castle Hills city,0,,476,48029,TX,Bexar County,48029,high,place_to_county,national_places → counties gazetteer
+48141,El Paso County,0,,567,48141,TX,El Paso County,48141,high,county_geoid_validated,validated against 2024 counties gazetteer
+4815820,Coffee City town,0,,46,48213,TX,Henderson County,48213,high,place_to_county,national_places → counties gazetteer
+4817744,Crockett city,0,,127,48225,TX,Houston County,48225,high,place_to_county,national_places → counties gazetteer
+4819000,Dallas city,0,,14,,TX,,48085;48113;48121;48257;48397,low,ambiguous_multi_county_place,place spans 5 counties; FIPS not invented
+4819084,Dalworthington Gardens city,0,,10,48439,TX,Tarrant County,48439,high,place_to_county,national_places → counties gazetteer
+4819900,Denison city,0,,541,48181,TX,Grayson County,48181,high,place_to_county,national_places → counties gazetteer
+48201,Harris County,0,,3,48201,TX,Harris County,48201,high,county_geoid_validated,validated against 2024 counties gazetteer
+4820344,Dickinson city,0,,13,48167,TX,Galveston County,48167,high,place_to_county,national_places → counties gazetteer
+4824000,El Paso city,0,,1033,48141,TX,El Paso County,48141,high,place_to_county,national_places → counties gazetteer
+4824768,Euless city,0,,124,48439,TX,Tarrant County,48439,high,place_to_county,national_places → counties gazetteer
+4825452,Farmers Branch city,0,,546,48113,TX,Dallas County,48113,high,place_to_county,national_places → counties gazetteer
+4826160; 48493,Floresville city; Wilson County,1,4826160,528,48493,TX,Wilson County,48493,medium,predicted_place_to_county,national_places → counties gazetteer; from predicted_st_fips for multi-city
+4826160; 48493,Floresville city; Wilson County,1,48493,455,48493,TX,Wilson County,48493,medium,predicted_county_geoid_validated,validated against 2024 counties gazetteer; from predicted_st_fips for multi-city
+4826160; 48493,Floresville city; Wilson County,1,UNKNOWN,436,48493,TX,Wilson County,48493,medium,compound_tokens_agree,all resolvable tokens agree on one county
+4827648,Friendswood city,0,,447,,TX,,48167;48201,low,ambiguous_multi_county_place,place spans 2 counties; FIPS not invented
+4827876,Fulshear city,0,,18,48157,TX,Fort Bend County,48157,high,place_to_county,national_places → counties gazetteer
+4830416; 48221,Granbury city; Hood County,1,48221,62,48221,TX,Hood County,48221,medium,predicted_county_geoid_validated,validated against 2024 counties gazetteer; from predicted_st_fips for multi-city
+4830416; 48221,Granbury city; Hood County,1,4830416,519,48221,TX,Hood County,48221,medium,predicted_place_to_county,national_places → counties gazetteer; from predicted_st_fips for multi-city
+4830416; 48221,Granbury city; Hood County,1,UNKNOWN,88,48221,TX,Hood County,48221,medium,compound_tokens_agree,all resolvable tokens agree on one county
+4831328,Groves city,0,,160,48245,TX,Jefferson County,48245,high,place_to_county,national_places → counties gazetteer
+4833848; 34023,Highland Village city; Middlesex County,1,34023,4,34023,NJ,Middlesex County,34023,medium,predicted_county_geoid_validated,validated against 2024 counties gazetteer; from predicted_st_fips for multi-city
+4833848; 34023,Highland Village city; Middlesex County,1,UNKNOWN,509,,,,34023;48121,low,ambiguous_compound,multi-city/compound st_fips; no single county invented; predicted UNKNOWN/empty
+4835000,Houston city,0,,24,,TX,,48157;48201;48339,low,ambiguous_multi_county_place,place spans 3 counties; FIPS not invented
+48375,Potter County,0,,204,48375,TX,Potter County,48375,high,county_geoid_validated,validated against 2024 counties gazetteer
+4839040,Kerrville city,0,,8,48265,TX,Kerr County,48265,high,place_to_county,national_places → counties gazetteer
+4839148,Killeen city,0,,32,48027,TX,Bell County,48027,high,place_to_county,national_places → counties gazetteer
+4840472,Lake City town,0,,414,48409,TX,San Patricio County,48409,high,place_to_county,national_places → counties gazetteer
+4840756,Lakeside City town,0,,9,48009,TX,Archer County,48009,high,place_to_county,national_places → counties gazetteer
+4841464,Laredo city,0,,743,48479,TX,Webb County,48479,high,place_to_county,national_places → counties gazetteer
+48449; 4872392,Titus County; Texas City city,1,48449,439,48449,TX,Titus County,48449,medium,predicted_county_geoid_validated,validated against 2024 counties gazetteer; from predicted_st_fips for multi-city
+4845000,Lubbock city,0,,20,48303,TX,Lubbock County,48303,high,place_to_county,national_places → counties gazetteer
+4845072,Lufkin city,0,,23,48005,TX,Angelina County,48005,high,place_to_county,national_places → counties gazetteer
+4846740,Marlin city,0,,10,48145,TX,Falls County,48145,high,place_to_county,national_places → counties gazetteer
+4847988,North Miami city,0,,1071,48393,TX,Roberts County,48393,high,place_to_county,national_places → counties gazetteer
+4848096,Midlothian city,0,,14,48139,TX,Ellis County,48139,high,place_to_county,national_places → counties gazetteer
+4848408,Milford town,0,,32,48139,TX,Ellis County,48139,high,place_to_county,national_places → counties gazetteer
+4848684,Mineral Wells city,0,,12,,TX,,48363;48367,low,ambiguous_multi_county_place,place spans 2 counties; FIPS not invented
+4848768,Mission city,0,,258,48215,TX,Hidalgo County,48215,high,place_to_county,national_places → counties gazetteer
+4848804,Missouri City city,0,,194,,TX,,48157;48201,low,ambiguous_multi_county_place,place spans 2 counties; FIPS not invented
+4849968,Muleshoe city,0,,191,48017,TX,Bailey County,48017,high,place_to_county,national_places → counties gazetteer
+4853388,Odessa city,0,,550,,TX,,48135;48329,low,ambiguous_multi_county_place,place spans 2 counties; FIPS not invented
+4856384,Pearsall city,0,,9,48163,TX,Frio County,48163,high,place_to_county,national_places → counties gazetteer
+4857200,Pharr city,0,,703,48215,TX,Hidalgo County,48215,high,place_to_county,national_places → counties gazetteer
+4858280,Pleasanton city,0,,5,48013,TX,Atascosa County,48013,high,place_to_county,national_places → counties gazetteer
+4859576,Princeton city,0,,262,48085,TX,Collin County,48085,high,place_to_county,national_places → counties gazetteer
+4863044,Roman Forest town,0,,17,48339,TX,Montgomery County,48339,high,place_to_county,national_places → counties gazetteer
+4863200; 48425; 4829876,Rose City city; Somervell County; Glen Rose city,1,4829876,7,48425,TX,Somervell County,48425,medium,predicted_place_to_county,national_places → counties gazetteer; from predicted_st_fips for multi-city
+4863200; 48425; 4829876,Rose City city; Somervell County; Glen Rose city,1,48425,392,48425,TX,Somervell County,48425,medium,predicted_county_geoid_validated,validated against 2024 counties gazetteer; from predicted_st_fips for multi-city
+4863200; 48425; 4829876,Rose City city; Somervell County; Glen Rose city,1,UNKNOWN,123,,,,48361;48425,low,ambiguous_compound,multi-city/compound st_fips; no single county invented; predicted UNKNOWN/empty
+4866128,Schertz city,0,,443,,TX,,48029;48091;48187,low,ambiguous_multi_county_place,place spans 3 counties; FIPS not invented
+4867400,Shenandoah city,0,,197,48339,TX,Montgomery County,48339,high,place_to_county,national_places → counties gazetteer
+4868636,Socorro city,0,,516,48141,TX,El Paso County,48141,high,place_to_county,national_places → counties gazetteer
+4870208,Stephenville city,0,,304,48143,TX,Erath County,48143,high,place_to_county,national_places → counties gazetteer
+4872392,Texas City city,0,,70,,TX,,48071;48167,low,ambiguous_multi_county_place,place spans 2 counties; FIPS not invented
+4873710,Trophy Club town,0,,19,,TX,,48121;48439,low,ambiguous_multi_county_place,place spans 2 counties; FIPS not invented
+4873724,Troup city,0,,26,,TX,,48073;48423,low,ambiguous_multi_county_place,place spans 2 counties; FIPS not invented
+4874924,Van Alstyne city,0,,178,,TX,,48085;48181,low,ambiguous_multi_county_place,place spans 2 counties; FIPS not invented
+4875236,Venus town,0,,4,,TX,,48139;48251,low,ambiguous_multi_county_place,place spans 2 counties; FIPS not invented
+4875428,Victoria city,0,,518,48469,TX,Victoria County,48469,high,place_to_county,national_places → counties gazetteer
+4879000,Wichita Falls city,0,,308,48485,TX,Wichita County,48485,high,place_to_county,national_places → counties gazetteer
+4879672,Windcrest city,0,,4,48029,TX,Bexar County,48029,high,place_to_county,national_places → counties gazetteer
+4901905,Apple Valley town,0,,123,49053,UT,Washington County,49053,high,place_to_county,national_places → counties gazetteer
+49029,Morgan County,0,,342,49029,UT,Morgan County,49029,high,county_geoid_validated,validated against 2024 counties gazetteer
+49049,Utah County,0,,595,49049,UT,Utah County,49049,high,county_geoid_validated,validated against 2024 counties gazetteer
+4911320,Cedar City city,0,,511,49021,UT,Iron County,49021,high,place_to_county,national_places → counties gazetteer
+4911980,Centerville city,0,,464,49011,UT,Davis County,49011,high,place_to_county,national_places → counties gazetteer
+4918140,Daniel town,0,,45,49051,UT,Wasatch County,49051,high,place_to_county,national_places → counties gazetteer
+4922370,Elk Ridge city,0,,112,49049,UT,Utah County,49049,high,place_to_county,national_places → counties gazetteer
+4934970,Herriman city,0,,660,49035,UT,Salt Lake County,49035,high,place_to_county,national_places → counties gazetteer
+4935190,Highland city,0,,42,49049,UT,Utah County,49049,high,place_to_county,national_places → counties gazetteer
+4944100,Leeds town,0,,32,49053,UT,Washington County,49053,high,place_to_county,national_places → counties gazetteer
+4957300,Orem city,0,,643,49049,UT,Utah County,49049,high,place_to_county,national_places → counties gazetteer
+4958730,Payson city,0,,144,49049,UT,Utah County,49049,high,place_to_county,national_places → counties gazetteer
+4959390,Perry city,0,,403,49003,UT,Box Elder County,49003,high,place_to_county,national_places → counties gazetteer
+4960930,Pleasant Grove city,0,,405,49049,UT,Utah County,49049,high,place_to_county,national_places → counties gazetteer
+4960930; 49049,Pleasant Grove city; Utah County,1,49049,1,49049,UT,Utah County,49049,medium,predicted_county_geoid_validated,validated against 2024 counties gazetteer; from predicted_st_fips for multi-city
+4960930; 49049,Pleasant Grove city; Utah County,1,4960930,25,49049,UT,Utah County,49049,medium,predicted_place_to_county,national_places → counties gazetteer; from predicted_st_fips for multi-city
+4960930; 49049,Pleasant Grove city; Utah County,1,UNKNOWN,9,49049,UT,Utah County,49049,medium,compound_tokens_agree,all resolvable tokens agree on one county
+4962470,Provo city,0,,390,49049,UT,Utah County,49049,high,place_to_county,national_places → counties gazetteer
+4964010,Riverdale city,0,,296,49057,UT,Weber County,49057,high,place_to_county,national_places → counties gazetteer
+4965110,Roy city,0,,329,49057,UT,Weber County,49057,high,place_to_county,national_places → counties gazetteer
+4981960,Washington city,0,,528,49053,UT,Washington County,49053,high,place_to_county,national_places → counties gazetteer
+4982950,West Jordan city,0,,490,49035,UT,Salt Lake County,49035,high,place_to_county,national_places → counties gazetteer
+4983470,West Valley City city,0,,797,49035,UT,Salt Lake County,49035,high,place_to_county,national_places → counties gazetteer
+5010675; 5024175; 5024400; 5084475; 5085150; 50007,Burlington city; Essex town; Essex Junction village; Williston town; Winooski city; Chittenden County,1,50007,78,50007,VT,Chittenden County,50007,medium,predicted_county_geoid_validated,validated against 2024 counties gazetteer; from predicted_st_fips for multi-city
+5010675; 5024175; 5024400; 5084475; 5085150; 50007,Burlington city; Essex town; Essex Junction village; Williston town; Winooski city; Chittenden County,1,5010675,587,50007,VT,Chittenden County,50007,medium,predicted_place_to_county,national_places → counties gazetteer; from predicted_st_fips for multi-city
+5010675; 5024175; 5024400; 5084475; 5085150; 50007,Burlington city; Essex town; Essex Junction village; Williston town; Winooski city; Chittenden County,1,5024175,29,50007,VT,Chittenden County,50007,medium,predicted_place_to_county,national_places → counties gazetteer; place GEOID not in 2024 places gaz; from predicted_st_fips for multi-city
+5010675; 5024175; 5024400; 5084475; 5085150; 50007,Burlington city; Essex town; Essex Junction village; Williston town; Winooski city; Chittenden County,1,5024400,1,50007,VT,Chittenden County,50007,medium,predicted_place_to_county,national_places → counties gazetteer; from predicted_st_fips for multi-city
+5010675; 5024175; 5024400; 5084475; 5085150; 50007,Burlington city; Essex town; Essex Junction village; Williston town; Winooski city; Chittenden County,1,5084475,1,50007,VT,Chittenden County,50007,medium,predicted_place_to_county,national_places → counties gazetteer; place GEOID not in 2024 places gaz; from predicted_st_fips for multi-city
+5010675; 5024175; 5024400; 5084475; 5085150; 50007,Burlington city; Essex town; Essex Junction village; Williston town; Winooski city; Chittenden County,1,5085150,234,50007,VT,Chittenden County,50007,medium,predicted_place_to_county,national_places → counties gazetteer; from predicted_st_fips for multi-city
+5010675; 5024175; 5024400; 5084475; 5085150; 50007,Burlington city; Essex town; Essex Junction village; Williston town; Winooski city; Chittenden County,1,UNKNOWN,761,50007,VT,Chittenden County,50007,medium,compound_tokens_agree,all resolvable tokens agree on one county
+5010675; 5085150; 5013300; 5084475,Burlington city; Winooski city; Charlotte town; Williston town,1,5010675,1,50007,VT,Chittenden County,50007,medium,predicted_place_to_county,national_places → counties gazetteer; from predicted_st_fips for multi-city
+5010675; 5085150; 5013300; 5084475,Burlington city; Winooski city; Charlotte town; Williston town,1,UNKNOWN,953,50007,VT,Chittenden County,50007,medium,compound_tokens_agree,all resolvable tokens agree on one county
+5100148,Abingdon town,0,,350,51191,VA,Washington County,51191,high,place_to_county,national_places → counties gazetteer
+5101000,Alexandria city,0,,28,51510,VA,Alexandria city,51510,high,place_to_county,national_places → counties gazetteer
+51035,Carroll County,0,,262,51035,VA,Carroll County,51035,high,county_geoid_validated,validated against 2024 counties gazetteer
+5109816,Bristol city,0,,275,51520,VA,Bristol city,51520,high,place_to_county,national_places → counties gazetteer
+51121,Montgomery County,0,,296,51121,VA,Montgomery County,51121,high,county_geoid_validated,validated against 2024 counties gazetteer
+5112808,Cape Charles town,0,,57,51131,VA,Northampton County,51131,high,place_to_county,national_places → counties gazetteer
+51137,Orange County,0,,254,51137,VA,Orange County,51137,high,county_geoid_validated,validated against 2024 counties gazetteer
+51143,Pittsylvania County,0,,480,51143,VA,Pittsylvania County,51143,high,county_geoid_validated,validated against 2024 counties gazetteer
+51157,Rappahannock County,0,,32,51157,VA,Rappahannock County,51157,high,county_geoid_validated,validated against 2024 counties gazetteer
+51171; 5187712,Shenandoah County; Woodstock town,1,51171,7,51171,VA,Shenandoah County,51171,medium,predicted_county_geoid_validated,validated against 2024 counties gazetteer; from predicted_st_fips for multi-city
+51171; 5187712,Shenandoah County; Woodstock town,1,5187712,4,51171,VA,Shenandoah County,51171,medium,predicted_place_to_county,national_places → counties gazetteer; from predicted_st_fips for multi-city
+5120160,Crewe town,0,,38,51135,VA,Nottoway County,51135,high,place_to_county,national_places → counties gazetteer
+5121344,Danville city,0,,189,51590,VA,Danville city,51590,high,place_to_county,national_places → counties gazetteer
+5138424,Hopewell city,0,,283,51670,VA,Hopewell city,51670,high,place_to_county,national_places → counties gazetteer
+5147672,Lynchburg city,0,,480,51680,VA,Lynchburg city,51680,high,place_to_county,national_places → counties gazetteer
+5151650,Hampton city,0,,194,51650,VA,Hampton city,51650,medium,county_equiv_geoid,independent-city / county-equivalent GEOID match by name
+5151710,Norfolk city,0,,180,51710,VA,Norfolk city,51710,medium,county_equiv_geoid,independent-city / county-equivalent GEOID match by name
+5151730,Petersburg city,0,,9,51730,VA,Petersburg city,51730,medium,county_equiv_geoid,independent-city / county-equivalent GEOID match by name
+5157000,Norfolk city,0,,1109,51710,VA,Norfolk city,51710,high,place_to_county,national_places → counties gazetteer
+5163768,Poquoson city,0,,660,51735,VA,Poquoson city,51735,high,place_to_county,national_places → counties gazetteer
+5164000,Portsmouth city,0,,901,51740,VA,Portsmouth city,51740,high,place_to_county,national_places → counties gazetteer
+5177792,Tazewell town,0,,133,51185,VA,Tazewell County,51185,high,place_to_county,national_places → counties gazetteer
+5183680,Waynesboro city,0,,291,51820,VA,Waynesboro city,51820,high,place_to_county,national_places → counties gazetteer
+5186784,Windsor town,0,,42,51093,VA,Isle of Wight County,51093,high,place_to_county,national_places → counties gazetteer
+5303180,Auburn city,0,,453,,WA,,53033;53053,low,ambiguous_multi_county_place,place spans 2 counties; FIPS not invented
+53047,Okanogan County,0,,42,53047,WA,Okanogan County,53047,high,county_geoid_validated,validated against 2024 counties gazetteer
+53073,Whatcom County,0,,273,53073,WA,Whatcom County,53073,high,county_geoid_validated,validated against 2024 counties gazetteer
+5307380,Bothell city,0,,755,,WA,,53033;53061,low,ambiguous_multi_county_place,place spans 2 counties; FIPS not invented
+5313855,College Place city,0,,653,53071,WA,Walla Walla County,53071,high,place_to_county,national_places → counties gazetteer
+5323515,Federal Way city,0,,443,53033,WA,King County,53033,high,place_to_county,national_places → counties gazetteer
+5327365,Gold Bar city,0,,65,53061,WA,Snohomish County,53061,high,place_to_county,national_places → counties gazetteer
+5333805,Issaquah city,0,,1293,53033,WA,King County,53033,high,place_to_county,national_places → counties gazetteer
+5336745,Lacey city,0,,548,53067,WA,Thurston County,53067,high,place_to_county,national_places → counties gazetteer
+5350360,Oak Harbor city,0,,597,53029,WA,Island County,53029,high,place_to_county,national_places → counties gazetteer
+5352495,Pacific city,0,,486,,WA,,53033;53053,low,ambiguous_multi_county_place,place spans 2 counties; FIPS not invented
+5355365,Port Angeles city,0,,80,53009,WA,Clallam County,53009,high,place_to_county,national_places → counties gazetteer
+5357745,Renton city,0,,402,53033,WA,King County,53033,high,place_to_county,national_places → counties gazetteer
+5363210,Sedro-Woolley city,0,,418,53057,WA,Skagit County,53057,high,place_to_county,national_places → counties gazetteer
+5365170,Snohomish city,0,,5,53061,WA,Snohomish County,53061,high,place_to_county,national_places → counties gazetteer
+5365205,Snoqualmie city,0,,439,53033,WA,King County,53033,high,place_to_county,national_places → counties gazetteer
+5367000,Spokane,0,,1381,53063,WA,Spokane County,53063,high,place_to_county,national_places → counties gazetteer
+5367000,Spokane city,0,,12,53063,WA,Spokane County,53063,high,place_to_county,national_places → counties gazetteer
+5373780,Vader city,0,,282,53041,WA,Lewis County,53041,high,place_to_county,national_places → counties gazetteer
+5380010,Yakima city,0,,114,53077,WA,Yakima County,53077,high,place_to_county,national_places → counties gazetteer
+5404276,Barboursville village,0,,8,54011,WV,Cabell County,54011,high,place_to_county,national_places → counties gazetteer
+5422564,Dunbar city,0,,196,54039,WV,Kanawha County,54039,high,place_to_county,national_places → counties gazetteer
+5443492,Keyser city,0,,2,54057,WV,Mineral County,54057,high,place_to_county,national_places → counties gazetteer
+5455756,Morgantown city,0,,202,54061,WV,Monongalia County,54061,high,place_to_county,national_places → counties gazetteer
+5501725,Amery city,0,,28,55095,WI,Polk County,55095,high,place_to_county,national_places → counties gazetteer
+55025; 5548000,Dane County; Madison city,1,55025,3,55025,WI,Dane County,55025,medium,predicted_county_geoid_validated,validated against 2024 counties gazetteer; from predicted_st_fips for multi-city
+55025; 5548000,Dane County; Madison city,1,5548000,6,55025,WI,Dane County,55025,medium,predicted_place_to_county,national_places → counties gazetteer; from predicted_st_fips for multi-city
+55025; 5548000,Dane County; Madison city,1,UNKNOWN,790,55025,WI,Dane County,55025,medium,compound_tokens_agree,all resolvable tokens agree on one county
+5506500,Beloit city,0,,398,55105,WI,Rock County,55105,high,place_to_county,national_places → counties gazetteer
+55141; 5555875,Wood County; Nekoosa city,1,55141,95,55141,WI,Wood County,55141,medium,predicted_county_geoid_validated,validated against 2024 counties gazetteer; from predicted_st_fips for multi-city
+55141; 5555875,Wood County; Nekoosa city,1,5555875,10,55141,WI,Wood County,55141,medium,predicted_place_to_county,national_places → counties gazetteer; from predicted_st_fips for multi-city
+55141; 5555875,Wood County; Nekoosa city,1,UNKNOWN,1064,55141,WI,Wood County,55141,medium,compound_tokens_agree,all resolvable tokens agree on one county
+5516450,Columbus city,0,,15,,WI,,55021;55027,low,ambiguous_multi_county_place,place spans 2 counties; FIPS not invented
+5522300; 55035,Eau Claire city; Eau Claire County,1,55035,91,55035,WI,Eau Claire County,55035,medium,predicted_county_geoid_validated,validated against 2024 counties gazetteer; from predicted_st_fips for multi-city
+5522300; 55035,Eau Claire city; Eau Claire County,1,5522300,209,55035,WI,Eau Claire County,55035,medium,compound_tokens_agree,all resolvable tokens agree on one county
+5522300; 55035,Eau Claire city; Eau Claire County,1,UNKNOWN,276,55035,WI,Eau Claire County,55035,medium,compound_tokens_agree,all resolvable tokens agree on one county
+5527775; 5519000; 5586400,Fremont town; Dayton town; Weyauwega city,1,5519000,14,55103,WI,Richland County,55103,medium,predicted_place_to_county,national_places → counties gazetteer; place GEOID not in 2024 places gaz; from predicted_st_fips for multi-city
+5527775; 5519000; 5586400,Fremont town; Dayton town; Weyauwega city,1,5527775,15,55019,WI,Clark County,55019,medium,predicted_place_to_county,national_places → counties gazetteer; place GEOID not in 2024 places gaz; from predicted_st_fips for multi-city
+5527775; 5519000; 5586400,Fremont town; Dayton town; Weyauwega city,1,5586400,1,55135,WI,Waupaca County,55135,medium,predicted_place_to_county,national_places → counties gazetteer; from predicted_st_fips for multi-city
+5527775; 5519000; 5586400,Fremont town; Dayton town; Weyauwega city,1,UNKNOWN,92,,,,55019;55103;55135,low,ambiguous_compound,multi-city/compound st_fips; no single county invented; predicted UNKNOWN/empty
+5537900,Jefferson city,0,,112,55055,WI,Jefferson County,55055,high,place_to_county,national_places → counties gazetteer
+5541675,Lake Mills city,0,,782,55055,WI,Jefferson County,55055,high,place_to_county,national_places → counties gazetteer
+5551150,Mequon city,0,,50,55089,WI,Ozaukee County,55089,high,place_to_county,national_places → counties gazetteer
+5552200,Milton city,0,,316,55105,WI,Rock County,55105,high,place_to_county,national_places → counties gazetteer
+5560200,Oregon village,0,,630,55025,WI,Dane County,55025,high,place_to_county,national_places → counties gazetteer
+5560500; 55139,Oshkosh city; Winnebago County,1,55139,47,55139,WI,Winnebago County,55139,medium,predicted_county_geoid_validated,validated against 2024 counties gazetteer; from predicted_st_fips for multi-city
+5560500; 55139,Oshkosh city; Winnebago County,1,5560500,6,55139,WI,Winnebago County,55139,medium,predicted_place_to_county,national_places → counties gazetteer; from predicted_st_fips for multi-city
+5560500; 55139,Oshkosh city; Winnebago County,1,UNKNOWN,767,55139,WI,Winnebago County,55139,medium,compound_tokens_agree,all resolvable tokens agree on one county
+5563250,Platteville city,0,,348,55043,WI,Grant County,55043,high,place_to_county,national_places → counties gazetteer
+5578600,Sun Prairie city,0,,84,55025,WI,Dane County,55025,high,place_to_county,national_places → counties gazetteer
+5584475,Wausau city,0,,1055,55073,WI,Marathon County,55073,high,place_to_county,national_places → counties gazetteer
+5585350,West Bend city,0,,31,55131,WI,Washington County,55131,high,place_to_county,national_places → counties gazetteer
+5586400,Weyauwega city,0,,85,55135,WI,Waupaca County,55135,high,place_to_county,national_places → counties gazetteer
+5613150,Casper city,0,,576,56025,WY,Natrona County,56025,high,place_to_county,national_places → counties gazetteer
+5645050,Laramie city,0,,200,56001,WY,Albany County,56001,high,place_to_county,national_places → counties gazetteer
+5666220,Riverton city,0,,405,56013,WY,Fremont County,56013,high,place_to_county,national_places → counties gazetteer
