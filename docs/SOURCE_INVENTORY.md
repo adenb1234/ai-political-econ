@@ -28,6 +28,8 @@ Phase priority from working spec: **A → B → E** first, then **G**, then **F*
 | **B** Open States | **blocked** (optional) | `documented_only` | `not started` | **Yes — free API key** (defer vs LegiScan) |
 | **E** CCC phase 3 | **already-have-raw** (+ transform v0) | `downloaded`; events/panel/QA on disk | `partial` → matched rows OK | None for access |
 | **F** Arctic Shift | **ready** (documented; no dump) | `documented_only` | `not started` | Torrent size / disk budget |
+| **F** Google Trends | **ready** (pilot) | `documented_only` | `not started` (DMA→county hard) | Rate limits / crosswalk |
+| **D** Local media RSS/HTML | policy only | none yet | `not started` | Legal/ToS per site; curate feeds first |
 | **G** EIA-861 | **already-have-raw** | `downloaded` | `partial` (utility→county TBD) | None |
 | **G** LBNL / ISO / registries | **ready** (document-only) | `documented_only` | `partial` / `not started` | Hand-curation for opposition lists |
 | geo Census gazetteer | **already-have-raw** | `downloaded` | `ready` (spine helper) | None |
@@ -124,13 +126,16 @@ Phase priority from working spec: **A → B → E** first, then **G**, then **F*
 
 | Field | Detail |
 |-------|--------|
-| **Free status** | **ready** to pilot state-level pulls with backoff; no raw yet |
-| **Free access path** | https://trends.google.com/trends/ — no paid API. Prefer polite browser export / community clients with strict backoff. |
-| **License / ToS** | Google ToS; relative index; aggressive scraping can get blocked. |
-| **Raw / manifest** | **documented only** — no Trends raw / no dedicated manifest yet. |
-| **Geo / FIPS** | Hard — DMA/state native; county needs explicit crosswalk. |
-| **Next free step** | Tiny keyword list + state-level monthly pilot; store under `data/raw/trends/` + add `google_trends.json`. |
-| **Blockers** | Rate limits / DMA→county design. **No paid Trends API.** |
+| **Layer** | F (adjunct) |
+| **Free status** | **ready** to pilot state-level pulls with polite backoff; no raw yet |
+| **Free access path** | https://trends.google.com/trends/ — **no paid API**. Free clients: browser export or community libraries (e.g. `pytrends`) with **strict backoff**. Prefer DMA/metro or state series first; never hammer endpoints. |
+| **License / ToS** | Google Terms of Service; Trends is a **relative** index (not absolute volume); scraping aggressively can get blocked — stay polite. |
+| **On-disk / manifest** | **`documented_only`.** No Trends raw under `data/raw/` yet; no dedicated manifest file in scaffold. |
+| **FIPS × month** | **`not started` / hard.** Native geography is often DMA or state, not county. County panel needs an explicit DMA→county crosswalk before spine join — treat as **partial at best** even after pulls. |
+| **Next free ingest step** | Draft a tiny keyword list (AI / data center / local power) + state-level monthly pull script with sleep/backoff; store CSV under `data/raw/trends/` (gitignored) and add `data/manifests/google_trends.json`. |
+| **Blockers** | Rate limits / ToS risk if impolite; DMA→county crosswalk design. **No paid Trends API.** |
+
+**Live check (2026-09-16 PT):** Trends homepage **200**.
 
 ---
 
@@ -149,7 +154,7 @@ Phase priority from working spec: **A → B → E** first, then **G**, then **F*
 | **Next free step** | Map service-territory fields onto Census county FIPS via `src/geo/fips.py`. |
 | **Blockers** | None for access. |
 
-**Live check (2026-09-16 PT):** portal **200**; 2024 zip **200**.
+**Live check (2026-09-16 PT):** portal HEAD **503** / GET **200** (treat as up); 2024 zip HEAD **200**.
 
 ### LBNL Queued Up (current edition)
 
@@ -167,21 +172,71 @@ Phase priority from working spec: **A → B → E** first, then **G**, then **F*
 
 ### Major ISO / RTO open queue portals
 
-Indexed in `project_ledger_sources.json`. Landing pages checked **200** on 2026-09-16 PT: PJM, MISO, CAISO, ERCOT, NYISO, ISO-NE, SPP. Schemas differ; **no national data-center permit registry exists** (spec failure mode G). Next: pick one ISO, document exact open CSV/XLSX URL + columns in a dedicated manifest before fetching.
+| Field | Detail |
+|-------|--------|
+| **Layer** | G |
+| **Free access path** | Per-ISO public landing pages (schemas differ). Indexed in `project_ledger_sources.json`. |
+| **License / ToS** | Per-ISO terms; free viewing / sometimes free registration for downloads — read each portal before bulk pull. |
+| **On-disk / manifest** | **`documented_only`.** No per-ISO raw pulls in scaffold. |
+| **FIPS × month** | **`not started`.** Need project lat/long or county fields + queue status dates; coverage incomplete for data-center **load**. |
+| **Next free ingest step** | Pick **one** ISO (recommend PJM or MISO); document the exact open CSV/XLSX download URL + column dictionary in a dedicated manifest **before** fetching. |
+| **Blockers** | Engineering time / heterogeneous schemas. Some downloads may require free registration (not verified beyond landing-page HTTP status). |
 
-### Opposition registries (hand-curated)
+Public entry pages re-checked with curl HEAD/GET on **2026-09-16 PT** (UA `ai-backlash-tracker-inventory/0.1`):
 
-No free bulk national API. Public pointers (datacenterwatch.org etc.) are for hand curation — cite pages; prefer owned curated table with `county_fips` + `month`. **Zero fabricated rows.**
+| ISO/RTO | Public page | HTTP | Notes |
+|---------|-------------|------|-------|
+| **PJM** | https://www.pjm.com/planning/services-requests/interconnection-queues.aspx | **200** | Also `…/service-requests/planning-queues` **200** |
+| **MISO** | https://www.misoenergy.org/planning/generator-interconnection/ | **200** | Generator interconnection hub |
+| **CAISO** | https://www.caiso.com/planning/Pages/GeneratorInterconnection/Default.aspx | **200** | Lowercase `/pages/generatorinterconnection` → **404**; use PascalCase path |
+| **ERCOT** | https://www.ercot.com/gridinfo/resource | **200** | Resource / grid info (queue extracts vary by product) |
+| **NYISO** | https://www.nyiso.com/interconnections | **200** | Interconnections portal |
+| **ISO-NE** | https://www.iso-ne.com/system-planning/interconnection-service/ | **200** | Interconnection service |
+| **SPP** | https://www.spp.org/engineering/generator-interconnection/ | **200** | Generator interconnection |
+
+**Coverage caveat:** **no national data-center permit registry exists** (WORKING_SPEC failure mode G). Generation interconnection queues ≠ load / data-center permits.
+
+### Opposition registries / Data Center Watch–style sources (hand-curated)
+
+| Field | Detail |
+|-------|--------|
+| **Layer** | G (cross-ref E) |
+| **Free access path** | No free bulk national API. Public editorial/watch pointers verified reachable: https://www.datacenterwatch.org/ (**200**), https://datacenterwatch.org/ (**200**). Trade press example (not a registry): https://www.datacenterknowledge.com/ (**200**). Treat as **pointers for hand curation**, not scrapable ground truth. |
+| **License / ToS** | Site ToS; no redistribution of full site databases assumed. Cite pages; prefer link + date + county annotation in a curated table we own. |
+| **On-disk / manifest** | **`documented_only` / hand-curated.** No invented opposition counts. Future curated CSV under something like `data/curated/opposition_registry.csv` (**not** created in this commit). |
+| **FIPS × month** | **`not started`.** Curators must assign `county_fips` + `month` (first public opposition signal / hearing / lawsuit filing, etc.) per WORKING_SPEC event rules. |
+| **Next free ingest step** | Define a 5–10 column curated schema (project name, county_fips, state, month, stance, source_url, access_date) and add empty template + README — **zero fabricated rows**. |
+| **Blockers (Aden)** | Decide which watch/list sources are in-scope for citation; confirm no ToS scrape of login walls. |
 
 ---
 
-## D — News (notes; not free-backbone priority this phase)
+## D — News (Media Cloud free; local RSS/HTML; NewsBank excluded)
 
-| Source | Status | Blocker |
-|--------|--------|---------|
-| Media Cloud free research API | `documented_only` (`media_cloud.json`, `MC_API_KEY` absent) | Aden free account / key; weekly quota |
-| Local RSS/HTML | policy only — no feed list yet | Legal/ToS per site; curate feeds first |
-| NewsBank Access World News | **paid — excluded from free backbone** | Keep excluded |
+### Media Cloud (free research tier)
+
+| Field | Detail |
+|-------|--------|
+| **Layer** | D |
+| **Free access path** | https://www.mediacloud.org/ — free research account + API key (`MC_API_KEY`). Python: `pip install mediacloud`. Notes: `data/raw/media_cloud/ACCESS.md`; fetcher `src/ingest/media_cloud.py`. |
+| **License / ToS** | Media Cloud terms; attribution as required. Default weekly quota — confirm current FAQ before probing. |
+| **On-disk / manifest** | **`documented_only`.** Manifest `media_cloud.json`, `api_key_present` false. **NewsBank Access World News = paid — excluded from free backbone.** |
+| **FIPS × month** | **`not started`.** Geocoding local outlets → county is non-trivial; start with state aggregates or known local-source lists. |
+| **Next free ingest step** | Aden creates free Media Cloud account, sets `MC_API_KEY`, run a single keyword probe for one state-month (stay under quota). |
+| **Blockers (Aden)** | **No `MC_API_KEY`.** Thinner free D series possible; dense local-paper D still gated on paid NewsBank if that density is required. |
+
+**Live check (2026-09-16 PT):** mediacloud.org **200**.
+
+### Local media RSS / HTML (policy only)
+
+| Field | Detail |
+|-------|--------|
+| **Layer** | D |
+| **Free access path** | Per-outlet public RSS feeds or openly linked HTML article indexes. **No scraping behind login walls, paywalls, or ToS-prohibited bots.** Prefer robots.txt-respecting feed URLs Aden or volunteers list. |
+| **License / ToS** | Copyright remains with publisher; store URLs + metadata + short quotes under fair-use judgment — not full-text corpora in git. |
+| **On-disk / manifest** | **Policy only** — no feed list committed yet. |
+| **FIPS × month** | **`not started`.** Each outlet needs a home-county (or multi-county) assignment table. |
+| **Next free ingest step** | Build a curated `local_media_feeds.json` (outlet, rss_url, state, primary_county_fips, license_note) with **zero** automated crawl until list exists. |
+| **Blockers** | Legal/ToS per site; labor to curate feeds. |
 
 ---
 
@@ -222,8 +277,11 @@ Pew, Gallup, AP-NORC national AI/tech series and ballot measures: **cite release
 | D1 | No `MC_API_KEY` | Free Media Cloud account for thinner layer D |
 | D2 | NewsBank | Keep **excluded** (paid/institutional) |
 | F1 | Arctic Shift torrent size (multi-GB/TB) | Approve selective dump + disk budget before mirror |
+| F2 | Google Trends DMA→county | Accept state/DMA grain for early F, or fund crosswalk design |
 | G1 | No national DC permit registry | Accept hand-built ledger coverage (spec failure mode G) |
+| G2 | Opposition registries | Approve curated schema + which sites may be cited (no login-wall scrapes) |
 | Ops | GitHub remote missing | Local `.git` only (`git remote` empty) — create private remote when ready; **do not push from this agent** |
+| Ops | Dirty worktree on other paths | Leave other agents’ uncommitted `data/manifests/*` + `src/ingest/census_fips.py` unstaged |
 
 ---
 
@@ -239,6 +297,6 @@ Pew, Gallup, AP-NORC national AI/tech series and ballot measures: **cite release
 
 **Verified on disk 2026-09-16 PT (ls sizes + sha256sum where checked):** CCC CSV 47,231,658 bytes / sha256 matches manifest; LocalView codebook 6,387 / sha256 matches; EIA zip 4,568,208 / sha256 matches; Census txt 647,830 / sha256 matches; LegiScan/Open States/Arctic Shift raw empty or ACCESS-only; CCC processed events/panel/QA present as above.
 
-**Verified live with curl 2026-09-16 PT:** LBNL Queued Up portal + 2026 XLSX; EIA; CCC; LocalView DOI/codebook/meta; LegiScan (**403**); Open States docs; Arctic Shift; Media Cloud; Census zip; major ISO landing pages; datacenterwatch.org.
+**Verified live with curl 2026-09-16 PT (this pass):** LBNL Queued Up portal + 2026 publication page + XLSX HEAD **200** (`content-length` 15571236); EIA portal HEAD **503**/GET **200**, zip **200**; LegiScan datasets + API **403**; Open States docs **200**; Arctic Shift repo + download_links **200**; Google Trends **200**; Media Cloud **200**; Census gazetteer zip **200**; CCC project page **200** / Dataverse datafile HEAD **403** (file already on disk; range GET pattern works for LocalView meta **206**); PJM/MISO/CAISO(PascalCase)/ERCOT/NYISO/ISO-NE/SPP landing pages **200** (CAISO lowercase path **404**); datacenterwatch.org + datacenterknowledge.com **200**.
 
 **Reconciled from:** `SOURCES.md`, `data/manifests/*.json`, on-disk `data/raw/**` / `data/processed/**`, and draft inventory formerly at `/workspace/ai-backlash-free-data/docs/SOURCE_INVENTORY.md`.
