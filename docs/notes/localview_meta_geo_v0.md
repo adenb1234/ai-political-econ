@@ -44,4 +44,34 @@ There is **no dedicated `county_fips` or `county` column**. County FIPS can occu
 
 **Confidence policy:** multi-city / compound `st_fips`, `predicted_st_fips=UNKNOWN`/empty, and multi-county places leave `county_fips` empty (candidates may appear in `all_county_fips`). No FIPS invented.
 
-**Next:** attach crosswalk to meta for spine `county_fips`; parse `meeting_date` → `YYYY-MM`; human-review ambiguous keys. Still do **not** download transcript tarballs.
+## Meta spine v0 (implemented 2026-09-16 PT)
+
+**Code:** `src/transform/localview_meta_spine.py` · **Make:** `make spine-localview`
+
+**Inputs:**
+
+- `data/raw/localview/meta_localview.parquet`
+- `data/processed/crosswalks/localview_place_to_county_v0.csv`
+
+**Join key:** `(st_fips, place_names, multiple_cities, predicted_st_fips)` ↔ crosswalk `(st_fips_raw, …)` (many-to-one).
+
+**Outputs:**
+
+- `data/processed/localview/meta_spine_v0.parquet` — audit fields + `county_fips` / `state` / `county_name` / `all_county_fips` / `confidence` / `method` + `month` (`YYYY-MM`)
+- `data/processed/qa/localview_meta_spine_v0_qa.json`
+
+**QA (real counts from this build):**
+
+| Metric | Value |
+|--------|------:|
+| Meta rows | 301,659 |
+| Rows with `county_fips` | 266,458 (88.33%) |
+| Rows with `month` | 281,074 (93.18%) |
+| `meeting_date` parse fail (null/unparseable) | 20,585 (6.82%) |
+| Spine-ready (`county_fips` ∧ `month`) | 248,645 (82.43%) |
+| Rows unjoined to crosswalk | 0 |
+
+**Policy:** no invented FIPS; ambiguous multi-county / compound keys keep empty `county_fips` (candidates in `all_county_fips`). Empty `month` only when `meeting_date` is null/unparseable.
+
+**Next:** human-review ambiguous/multi-county keys; optional `county_fips × month` meeting-count panel once ambiguity policy is set. Still do **not** download transcript tarballs.
+

@@ -25,7 +25,7 @@ The required layer status is one of `ready`, `blocked`, or `already-have-raw`. W
 
 | Layer | Free status | Verified on-disk / manifest state | FIPS × month | Aden / paid blocker? |
 |-------|-------------|-----------------------------------|--------------|----------------------|
-| **A** Deliberation | **already-have-raw** | LocalView codebook + metadata downloaded; place→county crosswalk v0 on disk; transcripts deferred | `partial` (county ready; month TBD) | None for free access |
+| **A** Deliberation | **already-have-raw** | LocalView codebook + metadata downloaded; place→county crosswalk v0 + meta spine v0 on disk; transcripts deferred | `partial` (county + month on spine; ambiguous keys remain) | None for free access |
 | **B** Legislation | **blocked** | LegiScan raw empty; Open States documented only | `not started` | **Yes — free LegiScan bulk drop/key; optional Open States key** |
 | **E** Mobilization | **already-have-raw** | CCC phase 3 downloaded; versioned transform outputs on disk | `partial` → matched rows checked | None for access |
 | **F** Vernacular | **ready** | Arctic Shift and Google Trends documented only; no raw dumps | `not started` | Dump size, rate limits, and geo crosswalk |
@@ -39,13 +39,14 @@ Supplemental free options (Google Trends, hand-curated opposition registries, Me
 
 | Field | Detail |
 |-------|--------|
-| **Free status** | **already-have-raw** (codebook + meta + place→county crosswalk v0) |
+| **Free status** | **already-have-raw** (codebook + meta + place→county crosswalk v0 + meta spine v0) |
 | **Free access path** | Dataset DOI [10.7910/DVN/NJTBEM](https://doi.org/10.7910/DVN/NJTBEM). Codebook: `https://dataverse.harvard.edu/api/access/datafile/14077924`. Meta parquet (~35 MB): `https://dataverse.harvard.edu/api/access/datafile/14233652`. Transcripts: datafile ids `14233653`–`14233655` (~2 GB × 2 + ~1 GB). Replication code DOI [10.7910/DVN/KHUXIN](https://doi.org/10.7910/DVN/KHUXIN). |
 | **License / ToS** | Harvard Dataverse / LocalView terms; cite DOI. Meeting-recording places skew larger / richer / more urban. |
 | **Raw on disk** | **yes:** `data/raw/localview/codebook.md` (6,387 bytes; sha256 `f175fb1f…ec2f`) and `data/raw/localview/meta_localview.parquet` (35,339,621 bytes; sha256 `a7eccd0b…25f5` per `localview_meta.json`). Transcript tarballs remain deferred. |
 | **Manifests** | `localview.json` (`meta_downloaded`), `localview_codebook.json`, `localview_meta.json` |
-| **Geo / FIPS** | **`partial`.** Place/state→county FIPS crosswalk **v0 shipped** (`make crosswalk-localview` → `data/processed/crosswalks/localview_place_to_county_v0.csv` + QA JSON). Meeting-date → `YYYY-MM` still TBD. See `docs/notes/localview_meta_geo_v0.md`. |
-| **Next free step** | Join crosswalk onto meta for spine keys; derive `month` from `meeting_date`; review ambiguous/multi-county keys. Do **not** pull transcript tarballs. |
+| **Processed (v0)** | Crosswalk: `data/processed/crosswalks/localview_place_to_county_v0.csv`. **Meta spine:** `data/processed/localview/meta_spine_v0.parquet` (`make spine-localview` → join + `month`); QA `data/processed/qa/localview_meta_spine_v0_qa.json`. Transform: `src/transform/localview_meta_spine.py`. |
+| **Geo / FIPS** | **`partial`.** Place→county crosswalk v0 + meta spine v0 shipped. Spine QA (2026-09-16 PT): 301,659 meta rows; 266,458 with `county_fips` (88.33%); 281,074 with `month` (93.18%); 248,645 spine-ready (82.43%); 20,585 `meeting_date` null/parse-fail. See `docs/notes/localview_meta_geo_v0.md`. |
+| **Next free step** | Human-review ambiguous/multi-county place keys (`all_county_fips` / low confidence); optional panel rollup of meeting counts by `county_fips × month` once ambiguity policy is set. Do **not** pull transcript tarballs. |
 | **Blockers** | None for free access. Transcript size (~5+ GB) is an ops choice, not a paywall. |
 
 **Live check (2026-09-16 PT):** DOI `202`; codebook GET `200` / range `206`; meta HEAD `403` but range GET `206` — treat meta URL as reachable.

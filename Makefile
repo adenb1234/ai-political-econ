@@ -2,7 +2,7 @@
 PYTHON ?= $(shell if [ -x "$(CURDIR)/.venv/bin/python" ]; then echo "$(CURDIR)/.venv/bin/python"; else echo python3; fi)
 export PYTHONPATH := $(CURDIR)
 
-.PHONY: help fetch-census fetch-census-places fetch-ccc fetch-eia fetch-lbnl fetch-localview fetch-docs fetch-all fips-summary crosswalk-localview manifests transform-ccc
+.PHONY: help fetch-census fetch-census-places fetch-ccc fetch-eia fetch-lbnl fetch-localview fetch-docs fetch-all fips-summary crosswalk-localview spine-localview manifests transform-ccc
 
 help:
 	@echo "Targets:"
@@ -16,6 +16,7 @@ help:
 	@echo "  make fetch-all             All of the above"
 	@echo "  make transform-ccc         CCC CSV → AI-related events + mobilization panel"
 	@echo "  make crosswalk-localview   LocalView meta → county FIPS crosswalk v0"
+	@echo "  make spine-localview       LocalView meta + crosswalk → county_fips + month spine v0"
 	@echo "  make fips-summary          Summarize local FIPS table"
 	@echo "  make manifests             Refresh documentation manifests only"
 
@@ -51,6 +52,9 @@ transform-ccc:
 
 crosswalk-localview: fetch-census fetch-census-places
 	$(PYTHON) -m src.transform.localview_geo
+
+spine-localview:
+	$(PYTHON) -m src.transform.localview_meta_spine
 
 fips-summary:
 	$(PYTHON) -m src.geo.fips --summary
