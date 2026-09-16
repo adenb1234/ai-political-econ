@@ -1,0 +1,16 @@
+{
+  "source_id": "lbnl_queued_up_2026",
+  "url": "https://emp.lbl.gov/sites/default/files/2026-05/LBNL_Ix_Queue_Data_File_thru2025.xlsx",
+  "path": "data/raw/lbnl/LBNL_Ix_Queue_Data_File_thru2025.xlsx",
+  "bytes": 15571236,
+  "sha256": "794582d3281c6a305e9615fcfec3fae9dc85be2165216d33760b677e976a08b6",
+  "status": "downloaded",
+  "notes": "LBNL Queued Up 2026 edition (through 2025). Generation and storage interconnection queues only \u2014 not load interconnection or data-center permit counts. Do not derive DC proposed/approved/denied tallies from this workbook.",
+  "license_note": "CC BY 4.0 (Lawrence Berkeley National Laboratory / EMP)",
+  "layer": "G",
+  "portal": "https://emp.lbl.gov/queues",
+  "access_date_pt": "2026-09-16",
+  "content_scope": "generation_storage_interconnection_queues",
+  "not_in_scope": "data_center_permit_counts",
+  "recorded_at_utc": "2026-09-16T16:36:33.443000+00:00"
+}

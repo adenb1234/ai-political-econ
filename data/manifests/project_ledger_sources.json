@@ -1,7 +1,7 @@
 {
   "source_id": "project_ledger_sources",
   "layer": "G",
-  "status": "index",
+  "status": "index_with_downloads",
   "sources": [
     {
       "name": "EIA-861",
@@ -13,7 +13,12 @@
       "name": "LBNL Queued Up",
       "url": "https://emp.lbl.gov/queues",
       "access": "free XLSX editions; check current publication page",
-      "notes": "Generation/storage interconnection \u2014 not load/data-center permits"
+      "notes": "Generation/storage interconnection \u2014 not load/data-center permits. Downloaded 2026-09-16 PT (CC BY 4.0).",
+      "status": "downloaded",
+      "fetcher": "src/ingest/lbnl_queued_up.py",
+      "local_path": "data/raw/lbnl/LBNL_Ix_Queue_Data_File_thru2025.xlsx",
+      "manifest": "data/manifests/lbnl_queued_up_2026.json",
+      "xlsx_url": "https://emp.lbl.gov/sites/default/files/2026-05/LBNL_Ix_Queue_Data_File_thru2025.xlsx"
     },
     {
       "name": "ISO/RTO queues",
@@ -34,5 +39,5 @@
     }
   ],
   "notes": "Denominator layer. Never invent proposed/approved/denied counts.",
-  "recorded_at_utc": "2026-09-16T16:14:14.351220+00:00"
+  "recorded_at_utc": "2026-09-16T16:37:27.645074+00:00"
 }
