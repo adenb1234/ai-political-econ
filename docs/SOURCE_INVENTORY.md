@@ -23,7 +23,7 @@ Phase priority from working spec: **A → B → E** first, then **G**, then **F*
 
 | Layer | Free status | On-disk / manifest detail | FIPS × month | Aden / paid blocker? |
 |-------|-------------|---------------------------|--------------|----------------------|
-| **A** LocalView | **ready** (partial raw) | codebook `downloaded`; meta/transcripts `documented_only` | `partial` | None (transcript size is ops) |
+| **A** LocalView | **ready** (partial raw) | codebook + metadata `downloaded`; transcript tarballs deferred | `partial` | None (transcript size is ops) |
 | **B** LegiScan | **blocked** | `blocked` / `documented_only`; raw empty | `not started` | **Yes — free account bulk drop or free API key** |
 | **B** Open States | **blocked** (optional) | `documented_only` | `not started` | **Yes — free API key** (defer vs LegiScan) |
 | **E** CCC phase 3 | **already-have-raw** (+ transform v0) | `downloaded`; events/panel/QA on disk | `partial` → matched rows OK | None for access |
@@ -38,17 +38,17 @@ Phase priority from working spec: **A → B → E** first, then **G**, then **F*
 
 ---
 
-## A — LocalView (deliberation) — **ready** (partial raw)
+## A — LocalView (deliberation) — **ready** (metadata raw)
 
 | Field | Detail |
 |-------|--------|
-| **Free status** | **ready** for next free pull; codebook already on disk |
+| **Free status** | **ready** for geo crosswalk; codebook and metadata are on disk |
 | **Free access path** | Dataset DOI [10.7910/DVN/NJTBEM](https://doi.org/10.7910/DVN/NJTBEM). Codebook: `https://dataverse.harvard.edu/api/access/datafile/14077924`. Meta parquet (~35 MB): `https://dataverse.harvard.edu/api/access/datafile/14233652`. Transcripts: datafile ids `14233653`–`14233655` (~2 GB × 2 + ~1 GB). Replication code DOI [10.7910/DVN/KHUXIN](https://doi.org/10.7910/DVN/KHUXIN). |
 | **License / ToS** | Harvard Dataverse / LocalView terms; cite DOI. Meeting-recording places skew larger / richer / more urban. |
-| **Raw on disk** | **yes (sample):** `data/raw/localview/codebook.md` (6,387 bytes; sha256 `f175fb1f…ec2f` per `localview_codebook.json`). Meta parquet + transcript tarballs **not** mirrored (by design). |
-| **Manifests** | `localview.json` (`codebook_downloaded`), `localview_codebook.json` |
+| **Raw on disk** | **yes:** `data/raw/localview/codebook.md` (6,387 bytes; sha256 `f175fb1f…ec2f`) and `data/raw/localview/meta_localview.parquet` (35,339,621 bytes; sha256 `a7eccd0b…25f5` per `localview_meta.json`). Transcript tarballs remain deferred. |
+| **Manifests** | `localview.json`, `localview_codebook.json`, `localview_meta.json` (`downloaded`) |
 | **Geo / FIPS** | **`partial`.** Codebook documents `st_fips` / place names; county FIPS crosswalk + meeting-date → `YYYY-MM` still TBD. |
-| **Next free step** | From tracker root: `python -m src.ingest.localview --include-meta` → land `meta_localview.parquet` only (do **not** pull transcript tarballs). |
+| **Next free step** | Inspect metadata geo fields and design the place/state-to-county-FIPS crosswalk; do **not** pull transcript tarballs. |
 | **Blockers** | None for free access. Transcript size (~5+ GB) is an ops choice, not a paywall. |
 
 **Live check (2026-09-16 PT):** DOI `202`; codebook GET `200` / range `206`; meta HEAD `403` but range GET `206` — treat meta URL as reachable.
@@ -260,7 +260,7 @@ Pew, Gallup, AP-NORC national AI/tech series and ballot measures: **cite release
 
 ## Exact next free ingest actions (priority A→B→E)
 
-1. **A:** `python -m src.ingest.localview --include-meta` (meta parquet only; no transcript tarballs).
+1. **A:** Inspect the downloaded LocalView metadata for the place/state-to-county-FIPS crosswalk (no transcript tarballs).
 2. **E:** Already past raw + `ccc_rules_v0` transform; optional phase-2 CCC backfill later.
 3. **G:** Download LBNL Queued Up 2026 XLSX (URL above) + manifest.
 4. **B:** Unblock only after Aden free LegiScan drop or free API key.
@@ -295,7 +295,7 @@ Pew, Gallup, AP-NORC national AI/tech series and ballot measures: **cite release
 
 ## Verification log
 
-**Verified on disk 2026-09-16 PT (ls sizes + sha256sum where checked):** CCC CSV 47,231,658 bytes / sha256 matches manifest; LocalView codebook 6,387 / sha256 matches; EIA zip 4,568,208 / sha256 matches; Census txt 647,830 / sha256 matches; LegiScan/Open States/Arctic Shift raw empty or ACCESS-only; CCC processed events/panel/QA present as above.
+**Verified on disk 2026-09-16 PT (ls sizes + sha256sum where checked):** CCC CSV 47,231,658 bytes / sha256 matches manifest; LocalView codebook 6,387 plus metadata parquet 35,339,621 bytes / sha256 matches manifests; EIA zip 4,568,208 / sha256 matches; Census txt 647,830 / sha256 matches; LegiScan/Open States/Arctic Shift raw empty or ACCESS-only; CCC processed events/panel/QA present as above.
 
 **Verified live with curl 2026-09-16 PT (this pass):** LBNL Queued Up portal + 2026 publication page + XLSX HEAD **200** (`content-length` 15571236); EIA portal HEAD **503**/GET **200**, zip **200**; LegiScan datasets + API **403**; Open States docs **200**; Arctic Shift repo + download_links **200**; Google Trends **200**; Media Cloud **200**; Census gazetteer zip **200**; CCC project page **200** / Dataverse datafile HEAD **403** (file already on disk; range GET pattern works for LocalView meta **206**); PJM/MISO/CAISO(PascalCase)/ERCOT/NYISO/ISO-NE/SPP landing pages **200** (CAISO lowercase path **404**); datacenterwatch.org + datacenterknowledge.com **200**.
 
