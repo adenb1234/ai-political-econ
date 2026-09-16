@@ -1,7 +1,7 @@
 PYTHON ?= python3
 export PYTHONPATH := $(CURDIR)
 
-.PHONY: help fetch-census fetch-ccc fetch-eia fetch-localview fetch-docs fetch-all fips-summary manifests
+.PHONY: help fetch-census fetch-ccc fetch-eia fetch-localview fetch-docs fetch-all fips-summary manifests transform-ccc
 
 help:
 	@echo "Targets:"
@@ -11,6 +11,7 @@ help:
 	@echo "  make fetch-localview  Download LocalView codebook"
 	@echo "  make fetch-docs       Write manifests for key-gated / huge sources"
 	@echo "  make fetch-all        All of the above"
+	@echo "  make transform-ccc    CCC CSV → AI-related events + mobilization panel"
 	@echo "  make fips-summary     Summarize local FIPS table"
 	@echo "  make manifests        Refresh documentation manifests only"
 
@@ -34,6 +35,9 @@ fetch-docs:
 	$(PYTHON) -m src.ingest.project_ledger
 
 fetch-all: fetch-census fetch-ccc fetch-eia fetch-localview fetch-docs
+
+transform-ccc:
+	$(PYTHON) -m src.transform.ccc_to_events
 
 fips-summary:
 	$(PYTHON) -m src.geo.fips --summary

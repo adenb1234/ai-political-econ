@@ -22,6 +22,8 @@ Refresh cadence targets match [`WORKING_SPEC.md`](WORKING_SPEC.md).
 
 Filter downstream for AI / data-center / energy-related claims via `claims_*` / `issue_tags_*` / `organizations` — do not invent filters here.
 
+**Transform (2026-09-16 PT):** `make transform-ccc` → `src/transform/ccc_to_events.py`; keyword rules `docs/filters/ccc_ai_keywords_v0.md` (`ccc_rules_v0`).
+
 ---
 
 ## B — Legislation (LegiScan / Open States)
