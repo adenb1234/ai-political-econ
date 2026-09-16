@@ -2,7 +2,7 @@
 PYTHON ?= $(shell if [ -x "$(CURDIR)/.venv/bin/python" ]; then echo "$(CURDIR)/.venv/bin/python"; else echo python3; fi)
 export PYTHONPATH := $(CURDIR)
 
-.PHONY: help fetch-census fetch-census-places fetch-ccc fetch-eia fetch-lbnl fetch-localview fetch-docs fetch-all fips-summary crosswalk-localview spine-localview manifests transform-ccc
+.PHONY: help fetch-census fetch-census-places fetch-ccc fetch-eia fetch-lbnl fetch-localview fetch-localview-meta fetch-docs fetch-all fips-summary crosswalk-localview spine-localview manifests transform-ccc
 
 help:
 	@echo "Targets:"
@@ -12,6 +12,7 @@ help:
 	@echo "  make fetch-eia             Download EIA-861 2024 zip"
 	@echo "  make fetch-lbnl            Download LBNL Queued Up 2026 XLSX"
 	@echo "  make fetch-localview       Download LocalView codebook"
+	@echo "  make fetch-localview-meta  Codebook + meta + county/month spine v0"
 	@echo "  make fetch-docs            Write manifests for key-gated / huge sources"
 	@echo "  make fetch-all             All of the above"
 	@echo "  make transform-ccc         CCC CSV → AI-related events + mobilization panel"
@@ -37,6 +38,9 @@ fetch-lbnl:
 
 fetch-localview:
 	$(PYTHON) -m src.ingest.localview
+
+fetch-localview-meta:
+	$(PYTHON) -m src.ingest.localview --include-meta
 
 fetch-docs:
 	$(PYTHON) -m src.ingest.legiscan

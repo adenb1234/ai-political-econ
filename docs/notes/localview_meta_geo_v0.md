@@ -46,7 +46,7 @@ There is **no dedicated `county_fips` or `county` column**. County FIPS can occu
 
 ## Meta spine v0 (implemented 2026-09-16 PT)
 
-**Code:** `src/transform/localview_meta_spine.py` · **Make:** `make spine-localview`
+**Code:** `src/transform/localview_meta_spine.py` · **Entrypoint:** `python -m src.ingest.localview --include-meta` (also `make fetch-localview-meta` / `make spine-localview`)
 
 **Inputs:**
 
