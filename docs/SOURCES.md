@@ -3,6 +3,8 @@
 Policy: backbone uses **no paid APIs**. Keys are optional enrichment only.  
 Refresh cadence targets match [`WORKING_SPEC.md`](WORKING_SPEC.md).
 
+**Operational matrix:** free-source status, FIPS×month readiness, next ingest steps, and blockers live in [`SOURCE_INVENTORY.md`](SOURCE_INVENTORY.md) (access date 2026-09-16 PT).
+
 ---
 
 ## E — Crowd Counting Consortium (mobilization)
