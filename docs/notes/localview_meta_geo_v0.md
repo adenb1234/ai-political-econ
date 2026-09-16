@@ -14,3 +14,34 @@ There is **no dedicated `county_fips` or `county` column**. County FIPS can occu
 1. Preserve the raw `st_fips`, `place_names`, `multiple_cities`, and `predicted_st_fips` values; tokenize semicolon-delimited values without collapsing multi-coverage records.
 2. Validate 5-digit county identifiers against an official Census county FIPS table. For 7-digit place identifiers, join state+place FIPS to an official Census place-to-county relationship (Gazetteer/TIGER-derived), retaining one-to-many relationships for places spanning counties.
 3. Use county/place labels, `multiple_cities`, and non-empty `predicted_st_fips` to flag ambiguous cases for review; record the crosswalk source/version and confidence. The crosswalk should only add geography mappings to existing LocalView metadata—do not manufacture empirical event rows.
+
+## Crosswalk v0 (implemented 2026-09-16 PT)
+
+**Code:** `src/transform/localview_geo.py` · **Make:** `make crosswalk-localview`
+
+**Inputs (free Census bulk):**
+
+- Counties gazetteer `data/raw/census/2024_Gaz_counties_national.txt` — validate 5-digit county GEOIDs
+- Places gazetteer `data/raw/census/2024_Gaz_place_national.txt` — validate 7-digit place GEOIDs
+- `data/raw/census/national_places.txt` — place GEOID → county *name(s)* (multi-county as comma lists)
+
+**Outputs:**
+
+- `data/processed/crosswalks/localview_place_to_county_v0.csv`
+- `data/processed/qa/localview_place_to_county_v0_qa.json`
+
+**QA (real counts from this build):**
+
+| Metric | Value |
+|--------|------:|
+| Meta rows | 301,659 |
+| Distinct `st_fips` raw | 989 |
+| Unique place keys `(st_fips, place_names, multiple_cities, predicted_st_fips)` | 1,150 |
+| Keys matched to a single `county_fips` | 1,033 (89.83%) |
+| Keys ambiguous / low confidence | 110 (9.57%) |
+| Keys unmatched (`none`) | 7 |
+| Meta rows with matched county | 266,458 (88.33%) |
+
+**Confidence policy:** multi-city / compound `st_fips`, `predicted_st_fips=UNKNOWN`/empty, and multi-county places leave `county_fips` empty (candidates may appear in `all_county_fips`). No FIPS invented.
+
+**Next:** attach crosswalk to meta for spine `county_fips`; parse `meeting_date` → `YYYY-MM`; human-review ambiguous keys. Still do **not** download transcript tarballs.
