@@ -1,0 +1,113 @@
+st_fips_raw,place_names,multiple_cities,predicted_st_fips,n_meta_rows,county_fips,state,county_name,all_county_fips,confidence,method,notes
+0102320,Argo town,0,,68,,AL,,01073;01115,low,ambiguous_multi_county_place,place spans 2 counties; FIPS not invented
+0107000,Birmingham city,0,,588,,AL,,01073;01117,low,ambiguous_multi_county_place,place spans 2 counties; FIPS not invented
+01071;0138152,Jackson County; Jackson city,1,UNKNOWN,11,,,,01025;01071,low,ambiguous_compound,multi-city/compound st_fips; no single county invented; predicted UNKNOWN/empty
+0132848;0182992;01093;0104852;0109424;0132224;0132560;0146768,Hamilton city; Winfield city; Marion County; Bear Creek town; Brilliant town; Guin city; Hackleburg town; Marion city,1,0182992,36,,,,01093;01105,low,ambiguous_compound,multi-city/compound st_fips; no single county invented
+0132848;0182992;01093;0104852;0109424;0132224;0132560;0146768,Hamilton city; Winfield city; Marion County; Bear Creek town; Brilliant town; Guin city; Hackleburg town; Marion city,1,UNKNOWN,45,,,,01093;01105,low,ambiguous_compound,multi-city/compound st_fips; no single county invented; predicted UNKNOWN/empty
+0135896,Hoover city,0,,93,,AL,,01073;01117,low,ambiguous_multi_county_place,place spans 2 counties; FIPS not invented
+0137000,Huntsville city,0,,175,,AL,,01083;01089,low,ambiguous_multi_county_place,place spans 2 counties; FIPS not invented
+0141968,Leeds city,0,,33,,AL,,01073;01117;01115,low,ambiguous_multi_county_place,place spans 3 counties; FIPS not invented
+0169240,Semmes city,0,,63,,AL,,,none,unmatched_place,7-digit not in national_places / no safe county equiv
+0402830,Apache Junction city,0,,580,,AZ,,04013;04021,low,ambiguous_multi_county_place,place spans 2 counties; FIPS not invented
+0566080,Springdale city,0,,442,,AR,,05007;05143,low,ambiguous_multi_county_place,place spans 2 counties; FIPS not invented
+0661068;06077,Riverbank city; San Joaquin County,1,UNKNOWN,116,,,,06077;06099,low,ambiguous_compound,multi-city/compound st_fips; no single county invented; predicted UNKNOWN/empty
+0804935,Basalt town,0,,290,,CO,,08037;08097,low,ambiguous_multi_county_place,place spans 2 counties; FIPS not invented
+0845970,Longmont city,0,,86,,CO,,08013;08123,low,ambiguous_multi_county_place,place spans 2 counties; FIPS not invented
+0854330,Northglenn city,0,,250,,CO,,08001;08123,low,ambiguous_multi_county_place,place spans 2 counties; FIPS not invented
+0877290,Thornton city,0,,141,,CO,,08001;08123,low,ambiguous_multi_county_place,place spans 2 counties; FIPS not invented
+1304000,Atlanta,0,,1344,,GA,,13089;13121,low,ambiguous_multi_county_place,place spans 2 counties; FIPS not invented
+1310944,Brookhaven city,0,,200,,GA,,,none,unmatched_place,7-digit not in national_places / no safe county equiv
+1378800; 1333980; 1323872,Valdosta city; Gordon city; Douglas city,1,UNKNOWN,224,,,,13069;13185;13319,low,ambiguous_compound,multi-city/compound st_fips; no single county invented; predicted UNKNOWN/empty
+1644200; 16055,Kootenai city; Kootenai County,1,UNKNOWN,702,,,,16017;16055,low,ambiguous_compound,multi-city/compound st_fips; no single county invented; predicted UNKNOWN/empty
+1703012,Aurora city,0,,137,,IL,,17043;17089;17093;17197,low,ambiguous_multi_county_place,place spans 4 counties; FIPS not invented
+1704013,Bartlett village,0,,486,,IL,,17031;17043;17089,low,ambiguous_multi_county_place,place spans 3 counties; FIPS not invented
+1714000,Chicago city,0,,316,,IL,,17031;17043,low,ambiguous_multi_county_place,place spans 2 counties; FIPS not invented
+1715833,Columbia city,0,,8,,IL,,17133;17163,low,ambiguous_multi_county_place,place spans 2 counties; FIPS not invented
+1723620,Elmhurst city,0,,695,,IL,,17031;17043,low,ambiguous_multi_county_place,place spans 2 counties; FIPS not invented
+1738570,Joliet city,0,,805,,IL,,17093;17197,low,ambiguous_multi_county_place,place spans 2 counties; FIPS not invented
+1743939; 17197,Lisle village; Will County,1,UNKNOWN,256,,,,17043;17197,low,ambiguous_compound,multi-city/compound st_fips; no single county invented; predicted UNKNOWN/empty
+1746916,Marion city,0,,285,,IL,,17087;17199,low,ambiguous_multi_county_place,place spans 2 counties; FIPS not invented
+1754534,Oak Brook village,0,,571,,IL,,17031;17043,low,ambiguous_multi_county_place,place spans 2 counties; FIPS not invented
+1767769,Sauk Village village,0,,144,,IL,,17031;17197,low,ambiguous_multi_county_place,place spans 2 counties; FIPS not invented
+2646000,Lansing city,0,,239,,MI,,26045;26065,low,ambiguous_multi_county_place,place spans 2 counties; FIPS not invented
+2652960; 2668380; 2603520; 2646900; 2613720; 2657380,Memphis city; Richmond city; Armada village; Lenox township; Casco township; New Haven village,1,UNKNOWN,1347,,,,26099;26147,low,ambiguous_compound,multi-city/compound st_fips; no single county invented; predicted UNKNOWN/empty
+2745808,New Prague city,0,,312,,MN,,27079;27139,low,ambiguous_multi_county_place,place spans 2 counties; FIPS not invented
+2911242,Cape Girardeau city,0,,279,,MO,,29031;29201,low,ambiguous_multi_county_place,place spans 2 counties; FIPS not invented
+2912898,Centralia city,0,,119,,MO,,29007;29019,low,ambiguous_multi_county_place,place spans 2 counties; FIPS not invented
+2935000,Independence city,0,,540,,MO,,29047;29095,low,ambiguous_multi_county_place,place spans 2 counties; FIPS not invented
+2937000,Jefferson City city,0,,311,,MO,,29027;29051,low,ambiguous_multi_county_place,place spans 2 counties; FIPS not invented
+2950402,Mountain Grove city,0,,15,,MO,,29215;29229,low,ambiguous_multi_county_place,place spans 2 counties; FIPS not invented
+2961238,Republic city,0,,252,,MO,,29043;29077,low,ambiguous_multi_county_place,place spans 2 counties; FIPS not invented
+31055; 3137000; 3108360,Douglas County; Omaha city; Center village,1,UNKNOWN,718,,,,31055;31107,low,ambiguous_compound,multi-city/compound st_fips; no single county invented; predicted UNKNOWN/empty
+3449920; 3402110; 3467350,Neptune City borough; Atlantic Highlands borough; Shrewsbury borough,1,UNKNOWN,60,,,,02110;34025,low,ambiguous_compound,multi-city/compound st_fips; no single county invented; predicted UNKNOWN/empty
+3464050; 3413420; 3458770; 3426820; 3402200; 3410000; 3440440; 34007,Rockaway borough; Clementon borough; Pine Hill borough; Gloucester City city; Audubon borough; Camden city; Lindenwold borough; Camden County,1,UNKNOWN,16,,,,34007;34027,low,ambiguous_compound,multi-city/compound st_fips; no single county invented; predicted UNKNOWN/empty
+3611759; 3620104; 3627573; 36105; 3642235; 3648175; 3673627; 3675759,Callicoon town; Delaware town; Fremont town; Sullivan County; Liberty town; Monticello village; Thompson town; Tusten town,1,UNKNOWN,96,,,,36105;48175,low,ambiguous_compound,multi-city/compound st_fips; no single county invented; predicted UNKNOWN/empty
+3701720,Archdale City,0,,5,,NC,,37081;37151,low,ambiguous_multi_county_place,place spans 2 counties; FIPS not invented
+3704510,Beech Mountain Town,0,,154,,NC,,37011;37189,low,ambiguous_multi_county_place,place spans 2 counties; FIPS not invented
+3709060,Burlington city,0,,463,,NC,,37001;37081,low,ambiguous_multi_county_place,place spans 2 counties; FIPS not invented
+3710740,Cary Town,0,,369,,NC,,37037;37183,low,ambiguous_multi_county_place,place spans 2 counties; FIPS not invented
+3712860,Clayton Town,0,,247,,NC,,37101;37183,low,ambiguous_multi_county_place,place spans 2 counties; FIPS not invented
+3719000,Durham city,0,,1000,,NC,,37063;37135;37183,low,ambiguous_multi_county_place,place spans 3 counties; FIPS not invented
+3731060,Hickory City,0,,58,,NC,,37023;37027;37035,low,ambiguous_multi_county_place,place spans 3 counties; FIPS not invented
+3731400,High Point City,0,,294,,NC,,37057;37067;37081;37151,low,ambiguous_multi_county_place,place spans 4 counties; FIPS not invented
+3735600,Kernersville Town,0,,84,,NC,,37067;37081,low,ambiguous_multi_county_place,place spans 2 counties; FIPS not invented
+3735760,King City,0,,26,,NC,,37067;37169,low,ambiguous_multi_county_place,place spans 2 counties; FIPS not invented
+3742240,Mebane City,0,,156,,NC,,37001;37135,low,ambiguous_multi_county_place,place spans 2 counties; FIPS not invented
+3743480,Mint Hill Town,0,,76,,NC,,37119;37179,low,ambiguous_multi_county_place,place spans 2 counties; FIPS not invented
+3745100,Mount Olive Town,0,,4,,NC,,37061;37191,low,ambiguous_multi_county_place,place spans 2 counties; FIPS not invented
+3755000,Raleigh City,0,,1067,,NC,,37063;37183,low,ambiguous_multi_county_place,place spans 2 counties; FIPS not invented
+3757500,Rocky Mount City,0,,190,,NC,,37065;37127,low,ambiguous_multi_county_place,place spans 2 counties; FIPS not invented
+3760505,Seven Devils Town,0,,12,,NC,,37011;37189,low,ambiguous_multi_county_place,place spans 2 counties; FIPS not invented
+3764420,Stallings Town,0,,175,,NC,,37119;37179,low,ambiguous_multi_county_place,place spans 2 counties; FIPS not invented
+3766040,Surf City town,0,,166,,NC,,37133;37141,low,ambiguous_multi_county_place,place spans 2 counties; FIPS not invented
+3771680,Weddington Town,0,,69,,NC,,37119;37179,low,ambiguous_multi_county_place,place spans 2 counties; FIPS not invented
+3776220,Zebulon Town,0,,163,,NC,,37101;37183,low,ambiguous_multi_county_place,place spans 2 counties; FIPS not invented
+39021; 1712385,Champaign County; Champaign city,1,UNKNOWN,14,,,,17019;39021,low,ambiguous_compound,multi-city/compound st_fips; no single county invented; predicted UNKNOWN/empty
+3909890,Buckeye Lake village,0,,3,,OH,,39045;39089,low,ambiguous_multi_county_place,place spans 2 counties; FIPS not invented
+3913190,Centerville city,0,,68,,OH,,39057;39113,low,ambiguous_multi_county_place,place spans 2 counties; FIPS not invented
+3918000,Columbus city,0,,854,,OH,,39041;39045;39049,low,ambiguous_multi_county_place,place spans 3 counties; FIPS not invented
+3922694,Dublin city,0,,370,,OH,,39041;39049;39159,low,ambiguous_multi_county_place,place spans 3 counties; FIPS not invented
+3936610,Huber Heights city,0,,13,,OH,,39057;39109;39113,low,ambiguous_multi_county_place,place spans 3 counties; FIPS not invented
+3944912; 3911360; 39099,Lordstown village; Canfield city; Mahoning County,1,UNKNOWN,295,,,,39099;39155,low,ambiguous_compound,multi-city/compound st_fips; no single county invented; predicted UNKNOWN/empty
+3949840,Middletown city,0,,420,,OH,,39017;39165,low,ambiguous_multi_county_place,place spans 2 counties; FIPS not invented
+3963030,Plain City village,0,,38,,OH,,39097;39159,low,ambiguous_multi_county_place,place spans 2 counties; FIPS not invented
+3964108; 39155,Portage village; Trumbull County,1,UNKNOWN,282,,,,39155;39173,low,ambiguous_compound,multi-city/compound st_fips; no single county invented; predicted UNKNOWN/empty
+3975602; 42097,Sunbury village; Northumberland County,1,UNKNOWN,377,,,,39041;42097,low,ambiguous_compound,multi-city/compound st_fips; no single county invented; predicted UNKNOWN/empty
+4004450,Bartlesville city,0,,174,,OK,,40113;40147,low,ambiguous_multi_county_place,place spans 2 counties; FIPS not invented
+4006400,Bixby city,0,,24,,OK,,40143;40145,low,ambiguous_multi_county_place,place spans 2 counties; FIPS not invented
+4055000,Oklahoma City city,0,,1754,,OK,,40017;40027;40109;40125,low,ambiguous_multi_county_place,place spans 4 counties; FIPS not invented
+4101000,Albany city,0,,538,,OR,,41003;41043,low,ambiguous_multi_county_place,place spans 2 counties; FIPS not invented
+4159000,Portland city,0,,276,,OR,,41005;41051;41067,low,ambiguous_multi_county_place,place spans 3 counties; FIPS not invented
+42051; 4243128,Fayette County; Liberty borough,1,UNKNOWN,39,,,,42051;42117,low,ambiguous_compound,multi-city/compound st_fips; no single county invented; predicted UNKNOWN/empty
+4276904; 42121,Titusville city; Venango County,1,UNKNOWN,57,,,,42039;42121,low,ambiguous_compound,multi-city/compound st_fips; no single county invented; predicted UNKNOWN/empty
+4504300,Batesburg-Leesville town,0,,223,,SC,,45063;45081,low,ambiguous_multi_county_place,place spans 2 counties; FIPS not invented
+4512655,Cayce city,0,,4,,SC,,45063;45079,low,ambiguous_multi_county_place,place spans 2 counties; FIPS not invented
+4513330,Charleston city,0,,583,,SC,,45015;45019,low,ambiguous_multi_county_place,place spans 2 counties; FIPS not invented
+4550695,North Augusta city,0,,19,,SC,,45003;45037,low,ambiguous_multi_county_place,place spans 2 counties; FIPS not invented
+4550875,North Charleston city,0,,209,,SC,,45015;45019;45035,low,ambiguous_multi_county_place,place spans 3 counties; FIPS not invented
+4604980,Beresford city,0,,267,,SD,,46083;46127,low,ambiguous_multi_county_place,place spans 2 counties; FIPS not invented
+4659020,Sioux Falls city,0,,2318,,SD,,46083;46099,low,ambiguous_multi_county_place,place spans 2 counties; FIPS not invented
+4737640; 47087,Jackson city; Jackson County,1,UNKNOWN,88,,,,47087;47113,low,ambiguous_compound,multi-city/compound st_fips; no single county invented; predicted UNKNOWN/empty
+4738320,Johnson City city,0,,356,,TN,,47019;47163;47179,low,ambiguous_multi_county_place,place spans 3 counties; FIPS not invented
+4763140,Ridgetop city,0,,182,,TN,,47037;47147,low,ambiguous_multi_county_place,place spans 2 counties; FIPS not invented
+4805000,Austin city,0,,55,,TX,,48209;48453;48491,low,ambiguous_multi_county_place,place spans 3 counties; FIPS not invented
+4813024,Carrollton city,0,,72,,TX,,48085;48113;48121,low,ambiguous_multi_county_place,place spans 3 counties; FIPS not invented
+4819000,Dallas city,0,,14,,TX,,48085;48113;48121;48257;48397,low,ambiguous_multi_county_place,place spans 5 counties; FIPS not invented
+4827648,Friendswood city,0,,447,,TX,,48167;48201,low,ambiguous_multi_county_place,place spans 2 counties; FIPS not invented
+4833848; 34023,Highland Village city; Middlesex County,1,UNKNOWN,509,,,,34023;48121,low,ambiguous_compound,multi-city/compound st_fips; no single county invented; predicted UNKNOWN/empty
+4835000,Houston city,0,,24,,TX,,48157;48201;48339,low,ambiguous_multi_county_place,place spans 3 counties; FIPS not invented
+4848684,Mineral Wells city,0,,12,,TX,,48363;48367,low,ambiguous_multi_county_place,place spans 2 counties; FIPS not invented
+4848804,Missouri City city,0,,194,,TX,,48157;48201,low,ambiguous_multi_county_place,place spans 2 counties; FIPS not invented
+4853388,Odessa city,0,,550,,TX,,48135;48329,low,ambiguous_multi_county_place,place spans 2 counties; FIPS not invented
+4863200; 48425; 4829876,Rose City city; Somervell County; Glen Rose city,1,UNKNOWN,123,,,,48361;48425,low,ambiguous_compound,multi-city/compound st_fips; no single county invented; predicted UNKNOWN/empty
+4866128,Schertz city,0,,443,,TX,,48029;48091;48187,low,ambiguous_multi_county_place,place spans 3 counties; FIPS not invented
+4872392,Texas City city,0,,70,,TX,,48071;48167,low,ambiguous_multi_county_place,place spans 2 counties; FIPS not invented
+4873710,Trophy Club town,0,,19,,TX,,48121;48439,low,ambiguous_multi_county_place,place spans 2 counties; FIPS not invented
+4873724,Troup city,0,,26,,TX,,48073;48423,low,ambiguous_multi_county_place,place spans 2 counties; FIPS not invented
+4874924,Van Alstyne city,0,,178,,TX,,48085;48181,low,ambiguous_multi_county_place,place spans 2 counties; FIPS not invented
+4875236,Venus town,0,,4,,TX,,48139;48251,low,ambiguous_multi_county_place,place spans 2 counties; FIPS not invented
+5303180,Auburn city,0,,453,,WA,,53033;53053,low,ambiguous_multi_county_place,place spans 2 counties; FIPS not invented
+5307380,Bothell city,0,,755,,WA,,53033;53061,low,ambiguous_multi_county_place,place spans 2 counties; FIPS not invented
+5352495,Pacific city,0,,486,,WA,,53033;53053,low,ambiguous_multi_county_place,place spans 2 counties; FIPS not invented
+5516450,Columbus city,0,,15,,WI,,55021;55027,low,ambiguous_multi_county_place,place spans 2 counties; FIPS not invented
+5527775; 5519000; 5586400,Fremont town; Dayton town; Weyauwega city,1,UNKNOWN,92,,,,55019;55103;55135,low,ambiguous_compound,multi-city/compound st_fips; no single county invented; predicted UNKNOWN/empty

@@ -1,6 +1,6 @@
 {
   "spine_version": "localview_meta_spine_v0",
-  "built_at_utc": "2026-09-16T18:18:37.239991+00:00",
+  "built_at_utc": "2026-09-16T18:29:37.273269+00:00",
   "access_date_pt": "2026-09-16",
   "meta_path": "data/raw/localview/meta_localview.parquet",
   "crosswalk_path": "data/processed/crosswalks/localview_place_to_county_v0.csv",
@@ -13,29 +13,29 @@
   ],
   "meta_rows": 301659,
   "crosswalk_keys": 1150,
-  "rows_matched_county": 266458,
+  "rows_matched_county": 269001,
   "rows_ambiguous": 32395,
-  "rows_unmatched": 2806,
-  "rows_with_county_fips": 266458,
-  "rows_with_county_fips_share": 0.8833,
+  "rows_unmatched": 263,
+  "rows_with_county_fips": 269001,
+  "rows_with_county_fips_share": 0.8917,
   "month_parse_success": 281074,
   "month_parse_fail": 20585,
   "rows_with_month": 281074,
   "rows_with_month_share": 0.9318,
   "meeting_date_parse_fail": 20585,
   "meeting_date_parse_fail_share": 0.0682,
-  "spine_ready_rows": 248645,
-  "spine_ready_share": 0.8243,
+  "spine_ready_rows": 251070,
+  "spine_ready_share": 0.8323,
   "rows_unjoined_to_crosswalk": 0,
   "confidence_counts_among_county_matched": {
     "high": 220305,
-    "medium": 46153
+    "medium": 48696
   },
   "confidence_counts_all_rows": {
     "high": 220305,
-    "medium": 46153,
+    "medium": 48696,
     "low": 32395,
-    "none": 2806
+    "none": 263
   },
   "output_parquet": "data/processed/localview/meta_spine_v0.parquet",
   "notes": "Spine-ready = non-empty county_fips AND non-empty month (YYYY-MM). county_fips comes only from crosswalk v0 (no invented FIPS). meeting_date null/unparseable \u2192 empty month and counted in parse_fail. No transcript tarballs; no empirical event rows invented.",

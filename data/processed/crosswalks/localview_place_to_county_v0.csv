@@ -188,9 +188,9 @@ st_fips_raw,place_names,multiple_cities,predicted_st_fips,n_meta_rows,county_fip
 0878610; 08071,Trinidad city; Las Animas County,1,0878610,403,08071,CO,Las Animas County,08071,medium,predicted_place_to_county,national_places → counties gazetteer; from predicted_st_fips for multi-city
 0878610; 08071,Trinidad city; Las Animas County,1,UNKNOWN,227,08071,CO,Las Animas County,08071,medium,compound_tokens_agree,all resolvable tokens agree on one county
 0884770,Wiggins town,0,,208,08087,CO,Morgan County,08087,high,place_to_county,national_places → counties gazetteer
-0918430,Danbury city,0,,82,,CT,,,none,unmatched_county_name,county names not resolved: ['Fairfield County']
-0952630,New Milford town,0,,290,,CT,,,none,unmatched_county_name,county names not resolved: ['Litchfield County']
-0955990,Norwalk city,0,,1294,,CT,,,none,unmatched_county_name,county names not resolved: ['Fairfield County']
+0918430,Danbury city,0,,82,09190,CT,Western Connecticut Planning Region,09190,medium,ct_town_to_planning_region,CT legacy county names obsolete in 2024 gaz; mapped via town→Western Connecticut Planning Region (CT Data Collaborative / Census COG)
+0952630,New Milford town,0,,290,09190,CT,Western Connecticut Planning Region,09190,medium,ct_town_to_planning_region,CT legacy county names obsolete in 2024 gaz; mapped via town→Western Connecticut Planning Region (CT Data Collaborative / Census COG)
+0955990,Norwalk city,0,,1294,09190,CT,Western Connecticut Planning Region,09190,medium,ct_town_to_planning_region,CT legacy county names obsolete in 2024 gaz; mapped via town→Western Connecticut Planning Region (CT Data Collaborative / Census COG)
 1129,Washington County,0,,354,01129,AL,Washington County,01129,high,county_geoid_validated,validated against 2024 counties gazetteer
 12021,Collier County,0,,7,12021,FL,Collier County,12021,high,county_geoid_validated,validated against 2024 counties gazetteer
 1209550,Bunnell city,0,,78,12035,FL,Flagler County,12035,high,place_to_county,national_places → counties gazetteer
@@ -313,7 +313,7 @@ st_fips_raw,place_names,multiple_cities,predicted_st_fips,n_meta_rows,county_fip
 2425575; 2436500; 2449950; 2453875; 2455925; 2476550; 2476725; 2479350; 2483100,Eldersburg CDP; Hampstead town; Manchester town; Mount Airy town; New Windsor town; Sykesville town; Taneytown city; Union Bridge town; Westminster city,1,2483100,95,24013,MD,Carroll County,24013,medium,predicted_place_to_county,national_places → counties gazetteer; from predicted_st_fips for multi-city
 2425575; 2436500; 2449950; 2453875; 2455925; 2476550; 2476725; 2479350; 2483100,Eldersburg CDP; Hampstead town; Manchester town; Mount Airy town; New Windsor town; Sykesville town; Taneytown city; Union Bridge town; Westminster city,1,UNKNOWN,645,24013,MD,Carroll County,24013,medium,compound_tokens_agree,all resolvable tokens agree on one county
 2466275,Rising Sun town,0,,156,24015,MD,Cecil County,24015,high,place_to_county,national_places → counties gazetteer
-2501370,Amherst town,0,,380,,MA,,,none,unmatched_place,7-digit not in national_places / no safe county equiv
+2501370,Amherst town,0,,380,25015,MA,Hampshire County,25015,medium,place_name_alias_to_county,GEOID absent/stale in national_places; unique same-state name alias → 2501325 Amherst town
 2504615,Bedford town,0,,354,25017,MA,Middlesex County,25017,medium,place_to_county,national_places → counties gazetteer; place GEOID not in 2024 places gaz
 2507000,Boston city,0,,1114,25025,MA,Suffolk County,25025,high,place_to_county,national_places → counties gazetteer
 2509000; 25023,Brockton city; Plymouth County,1,25023,11,25023,MA,Plymouth County,25023,medium,predicted_county_geoid_validated,validated against 2024 counties gazetteer; from predicted_st_fips for multi-city
@@ -326,7 +326,7 @@ st_fips_raw,place_names,multiple_cities,predicted_st_fips,n_meta_rows,county_fip
 2515200; 2516670; 2579110,Conway town; Deerfield town; Whately town,1,UNKNOWN,203,25011,MA,Franklin County,25011,medium,compound_tokens_agree,all resolvable tokens agree on one county
 2517405,Dover town,0,,627,25021,MA,Norfolk County,25021,medium,place_to_county,national_places → counties gazetteer; place GEOID not in 2024 places gaz
 2526535,Granby town,0,,121,25015,MA,Hampshire County,25015,medium,place_to_county,national_places → counties gazetteer; place GEOID not in 2024 places gaz
-2527060,Greenfield Town city,0,,497,,MA,,,none,unmatched_place,7-digit not in national_places / no safe county equiv
+2527060,Greenfield Town city,0,,497,25011,MA,Franklin County,25011,medium,place_name_alias_to_county,GEOID absent/stale in national_places; unique same-state name alias → 2527100 Greenfield Town city
 2539835,Medford city,0,,357,25017,MA,Middlesex County,25017,high,place_to_county,national_places → counties gazetteer
 2541165,Milford town,0,,469,25027,MA,Worcester County,25027,medium,place_to_county,national_places → counties gazetteer; place GEOID not in 2024 places gaz
 2548955,North Reading town,0,,1112,25017,MA,Middlesex County,25017,medium,place_to_county,national_places → counties gazetteer; place GEOID not in 2024 places gaz

@@ -44,9 +44,9 @@ Supplemental free options (Google Trends, hand-curated opposition registries, Me
 | **License / ToS** | Harvard Dataverse / LocalView terms; cite DOI. Meeting-recording places skew larger / richer / more urban. |
 | **Raw on disk** | **yes:** `data/raw/localview/codebook.md` (6,387 bytes; sha256 `f175fb1f…ec2f`) and `data/raw/localview/meta_localview.parquet` (35,339,621 bytes; sha256 `a7eccd0b…25f5` per `localview_meta.json`). Transcript tarballs remain deferred. |
 | **Manifests** | `localview.json` (`meta_downloaded`), `localview_codebook.json`, `localview_meta.json` |
-| **Processed (v0)** | Crosswalk: `data/processed/crosswalks/localview_place_to_county_v0.csv`. **Meta spine:** `data/processed/localview/meta_spine_v0.parquet` (QA `…/localview_meta_spine_v0_qa.json`). **Entrypoint:** `python -m src.ingest.localview --include-meta` (or `make fetch-localview-meta`) fetches meta and builds crosswalk+spine; or `make crosswalk-localview` / `make spine-localview`. Transforms: `src/transform/localview_geo.py`, `localview_meta_spine.py`. |
-| **Geo / FIPS** | **`partial`.** Place→county crosswalk v0 + meta spine v0 shipped. Spine QA (2026-09-16 PT): 301,659 meta rows; matched county 266,458 (88.33%); ambiguous 32,395; unmatched 2,806; month ok 281,074 / fail 20,585; spine-ready 248,645 (82.43%). See `docs/notes/localview_meta_geo_v0.md`. |
-| **Next free step** | Human-review ambiguous/multi-county place keys (`all_county_fips` / low confidence); optional panel rollup of meeting counts by `county_fips × month` once ambiguity policy is set. Do **not** pull transcript tarballs. |
+| **Processed (v0)** | Crosswalk: `data/processed/crosswalks/localview_place_to_county_v0.csv` (+ residuals CSV). **Meta spine:** `data/processed/localview/meta_spine_v0.parquet` (QA `…/localview_meta_spine_v0_qa.json`). **Entrypoint:** `python -m src.ingest.localview --include-meta` (or `make fetch-localview-meta`) fetches meta and builds crosswalk+spine; or `make crosswalk-localview` / `make spine-localview`. Transforms: `src/transform/localview_geo.py`, `localview_meta_spine.py`. |
+| **Geo / FIPS** | **`partial`.** Place→county crosswalk v0 + meta spine v0 shipped (CT town→planning-region COG + place-name alias fallbacks). Spine QA (2026-09-16 PT): 301,659 meta rows; matched county 269,001 (89.17%); ambiguous 32,395; unmatched 263; month ok 281,074 / fail 20,585; spine-ready 251,070 (83.23%). Residuals: `data/processed/crosswalks/localview_place_to_county_v0_residuals.csv`. See `docs/notes/localview_meta_geo_v0.md`. |
+| **Next free step** | Human-review 110 ambiguous/multi-county keys; optional Census 2024 place-county relationship for Semmes AL / Brookhaven GA (263 unmatched meta rows). Optional panel rollup of meeting counts by `county_fips × month` once ambiguity policy is set. Do **not** pull transcript tarballs. |
 | **Blockers** | None for free access. Transcript size (~5+ GB) is an ops choice, not a paywall. |
 
 **Live check (2026-09-16 PT):** DOI `202`; codebook GET `200` / range `206`; meta HEAD `403` but range GET `206` — treat meta URL as reachable.
@@ -243,9 +243,9 @@ Public entry pages re-checked with curl HEAD/GET on **2026-09-16 PT** (UA `ai-ba
 
 | Field | Detail |
 |-------|--------|
-| **Free access** | Counties: `…/2024_Gaz_counties_national.zip`. Places: `…/2024_Gaz_place_national.zip`. Place→county names: `https://www2.census.gov/geo/docs/reference/codes/files/national_places.txt`. Public domain. |
-| **Raw on disk** | Counties TXT (647,830 bytes; sha256 `0a121d13…4451`) + Places TXT (6,499,209 bytes) + `national_places.txt` (2,803,570 bytes). |
-| **Manifests** | `census_gaz_counties_2024.json`, `census_gaz_places_2024.json`, `census_national_places.json` |
+| **Free access** | Counties: `…/2024_Gaz_counties_national.zip`. Places: `…/2024_Gaz_place_national.zip`. Place→county names: `https://www2.census.gov/geo/docs/reference/codes/files/national_places.txt`. CT town→2022 planning-region COGs: [CT Data Collaborative](https://github.com/CT-Data-Collaborative/ct-town-to-planning-region) (MIT; derived from Census TIGER). Public domain Census + MIT CT table. |
+| **Raw on disk** | Counties TXT (647,830 bytes; sha256 `0a121d13…4451`) + Places TXT (6,499,209 bytes) + `national_places.txt` (2,803,570 bytes) + `ct_town_to_planning_region.csv` (11,988 bytes; access 2026-09-16 PT). |
+| **Manifests** | `census_gaz_counties_2024.json`, `census_gaz_places_2024.json`, `census_national_places.json`, `census_ct_town_to_planning_region.json` |
 | **Helpers** | `src/geo/fips.py`; LocalView join `src/transform/localview_geo.py` (`make crosswalk-localview`) |
 | **FIPS × month** | **`ready`** for county universe / USPS↔GEOID joins (month not in gazetteer). Place→county for LocalView v0 on disk. |
 
@@ -259,7 +259,7 @@ Pew, Gallup, AP-NORC national AI/tech series and ballot measures: **cite release
 
 ## Exact next free ingest actions (priority A→B→E)
 
-1. **A:** Meta spine v0 landed (`make spine-localview`; 248,645 spine-ready). **Next:** human-review ambiguous/multi-county keys; optional `county_fips × month` meeting-count panel. No transcript tarballs.
+1. **A:** Meta spine v0 landed (`python -m src.ingest.localview --include-meta`; 251,070 spine-ready / 83.23%). **Next:** human-review ambiguous/multi-county keys (32,395 rows; 110 place keys) + 2 residual unmatched places (Semmes AL, Brookhaven GA); optional `county_fips × month` meeting-count panel. No transcript tarballs.
 2. **E:** Already past raw + `ccc_rules_v0` transform; optional phase-2 CCC backfill later.
 3. **G:** LBNL Queued Up XLSX on disk — design generation/storage queue → county×month transform (not DC permits). Optionally pick one ISO next.
 4. **B:** Unblock only after Aden free LegiScan drop or free API key.
@@ -293,7 +293,7 @@ Pew, Gallup, AP-NORC national AI/tech series and ballot measures: **cite release
 
 ## Verification log
 
-**Verified on disk 2026-09-16 PT (ls sizes + sha256sum where checked):** CCC CSV 47,231,658 bytes / sha256 matches manifest; LocalView codebook 6,387 plus metadata parquet 35,339,621 bytes / sha256 matches manifests; EIA zip 4,568,208 / sha256 matches; Census txt 647,830 / sha256 matches; LegiScan/Open States/Arctic Shift raw empty or ACCESS-only; CCC processed events/panel/QA present as above. **Later same day PT:** Census places gaz + `national_places.txt` downloaded; LocalView place→county crosswalk v0 QA (1,150 keys; 1,033 matched / 0.8983; meta-row match 0.8833); LocalView meta spine v0 (`data/processed/localview/meta_spine_v0.parquet`) QA: matched 266,458 / ambiguous 32,395 / unmatched 2,806; month ok 281,074 / fail 20,585; spine-ready 248,645; LBNL Queued Up XLSX 15,571,236 bytes / sha256 `794582d3…08b6`.
+**Verified on disk 2026-09-16 PT (ls sizes + sha256sum where checked):** CCC CSV 47,231,658 bytes / sha256 matches manifest; LocalView codebook 6,387 plus metadata parquet 35,339,621 bytes / sha256 matches manifests; EIA zip 4,568,208 / sha256 matches; Census txt 647,830 / sha256 matches; LegiScan/Open States/Arctic Shift raw empty or ACCESS-only; CCC processed events/panel/QA present as above. **Later same day PT:** Census places gaz + `national_places.txt` downloaded; LocalView place→county crosswalk v0 QA (1,150 keys; 1,038 matched / 0.9026; meta-row match 0.8917; unmatched keys 2 / 263 rows); LocalView meta spine v0 (`data/processed/localview/meta_spine_v0.parquet`) QA: matched 269,001 / ambiguous 32,395 / unmatched 263; month ok 281,074 / fail 20,585; spine-ready 251,070; CT town→COG CSV 11,988 bytes / sha256 `4592692e…11a9`; LBNL Queued Up XLSX 15,571,236 bytes / sha256 `794582d3…08b6`. **Still later 2026-09-16 PT:** CT town→COG CSV + name-alias fallbacks rebuilt crosswalk (keys matched 1,038 / 0.9026; meta-row match 269,001 / 0.8917; unmatched keys 2); spine-ready 251,070 / 0.8323; residuals CSV on disk.
 
 **Verified live with curl 2026-09-16 PT (this pass):** LBNL Queued Up portal + 2026 publication page + XLSX HEAD **200** (`content-length` 15571236); EIA portal HEAD **503**/GET **200**, zip **200**; LegiScan datasets + API **403**; Open States docs **200**; Arctic Shift repo + download_links **200**; Google Trends **200**; Media Cloud **200**; Census gazetteer zip **200**; CCC project page **200** / Dataverse datafile HEAD **403** (file already on disk; range GET pattern works for LocalView meta **206**); PJM/MISO/CAISO(PascalCase)/ERCOT/NYISO/ISO-NE/SPP landing pages **200** (CAISO lowercase path **404**); datacenterwatch.org + datacenterknowledge.com **200**.
 

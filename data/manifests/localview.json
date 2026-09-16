@@ -32,7 +32,8 @@
   "meta_accessed_at_utc": "2026-09-16T16:37:23+00:00",
   "geo_crosswalk": "data/processed/crosswalks/localview_place_to_county_v0.csv",
   "geo_crosswalk_qa": "data/processed/qa/localview_place_to_county_v0_qa.json",
+  "geo_crosswalk_residuals": "data/processed/crosswalks/localview_place_to_county_v0_residuals.csv",
   "meta_spine": "data/processed/localview/meta_spine_v0.parquet",
   "meta_spine_qa": "data/processed/qa/localview_meta_spine_v0_qa.json",
-  "recorded_at_utc": "2026-09-16T18:18:37.389986+00:00"
+  "recorded_at_utc": "2026-09-16T18:29:37.467502+00:00"
 }
