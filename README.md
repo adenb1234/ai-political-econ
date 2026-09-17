@@ -1,99 +1,169 @@
-# AI Backlash Tracker
+# AI Political Economy / Backlash Tracker
 
-**Owner:** Aden Barton / Economics team  
-**Status:** free-data pipeline scaffold (no paid APIs)
+**Repo:** [adenb1234/ai-political-econ](https://github.com/adenb1234/ai-political-econ) (private)  
+**Status:** free-data backbone in progress · schema freeze `taxonomy_v0.1`  
+**Not this:** a national sentiment heat map, a single “AI hate index,” or a paid-API product
 
-## Thesis
+## What this is for
 
-Public disapproval of AI is already high and well measured. The constraint is that every number in circulation is a *numerator* — projects blocked, groups formed, bills introduced, protests held — scattered across incompatible sources, with no denominators, no consistent geography, and no fixed release cadence.
+Scattered *numerators* (protests, bills, moratoria, meeting fights) dominate the AI-backlash conversation. Almost nobody publishes them with **denominators**, **shared geography**, and a **fixed cadence**.
 
-This repo collates organized AI opposition evidence in the US into a common schema, keyed to **county FIPS + state** and **month**, published on a fixed cadence, with inputs open. The plumbing is the moat, not the estimator.
+This project builds a **county × month** evidence spine for organized US AI / data-center political economy:
 
-**This is not** a sentiment map, a forecast, or a single headline number.
+| People should be able to see… | Example exhibit |
+|---|---|
+| Where formal local conflict shows up | Meetings, ordinances, moratoria by county-month |
+| Where statutes move | AI / data-center bills introduced → enacted |
+| Where people organize in public | Protests, groups, ballot fights |
+| How loud the local press is | Story counts / framing (free Media Cloud first) |
+| What share of *proposed* load faces friction | Opposition ÷ projects / MW at risk |
+| What the fight is *about* | Shared grievance tags (power, water, fiscal, land, labor, privacy…) |
 
-Full product thinking lives in [`docs/WORKING_SPEC.md`](docs/WORKING_SPEC.md).
+**Spine keys:** `county_fips` (5-digit) · `state` (USPS) · `month` (`YYYY-MM`).  
+Two tables: `events` (one discrete thing) and `panel` (place × month). Details: [`docs/WORKING_SPEC.md`](docs/WORKING_SPEC.md), [`docs/TAXONOMY.md`](docs/TAXONOMY.md).
 
-## Data layers (spine)
+---
 
-| Code | Layer | Free backbone |
-|------|-------|---------------|
-| A | Deliberation | LocalView (Dataverse) |
-| B | Legislation | LegiScan free bulk / Open States |
-| C | Ordinances & moratoria | Manual / ordinance text |
-| D | News | Media Cloud (free, key); NewsBank = paid, do not depend |
-| E | Mobilization | Crowd Counting Consortium (Dataverse) |
-| F | Vernacular | Arctic Shift Reddit dumps / Trends |
-| G | Project ledger (denominators) | EIA-861, LBNL queues, ISO docks |
-| H | Calibration | Pew / Gallup / AP-NORC / ballots |
+## Priority order (build sequence)
+
+Freeze priority for free work: **A → B → E → G → F → D(thin) → C**.  
+Paid NewsBank / heavy LLM labeling sit **after** a live free demo (BlueDot ~$1.5k ask is for labeling the free spine, not NewsBank).
+
+| Priority | Layer | Role in the product |
+|---:|---|---|
+| 1 | **A** Deliberation | Earliest *formal* local signal (meetings) |
+| 2 | **B** Legislation | Statewide rule-making & preemption |
+| 3 | **E** Mobilization | Street / campaign capacity |
+| 4 | **G** Project ledger | **Denominators** (without this, every rate is fake) |
+| 5 | **C** Ordinances & moratoria | Binding local pauses / bans (high value; partly covered by open third-party inventories) |
+| 6 | **F** Vernacular | Unprompted talk (Reddit / Trends) — noisy, still useful for salience |
+| 7 | **D** News | Local salience / framing (Media Cloud free → NewsBank only if funded) |
+| 8 | **H** Calibration | Surveys / ballots that keep us honest |
+
+---
+
+## Data sources → what they exhibit
+
+Scan date: **2026-09-16 PT**. Honest about free vs key vs paid, and what’s on disk in this repo. Fresh pass covered academic dumps, open trackers, grid/water/PUC sources, ballot measures, and news APIs — not only the original A–H list.
+
+### Core layers (A–H)
+
+| ID | Source | What it exhibits (the “so what”) | Access | On disk now? |
+|---|---|---|---|---|
+| **A1** | **LocalView** meeting meta (+ optional transcripts) — Harvard Dataverse | Places where AI / data-center / power / water fights enter *official* local agendas and public comment | Free (transcripts multi-GB; deferred) | **Yes** — codebook + meta; place→county crosswalk v0; meta spine v0 (~83% spine-ready) |
+| **B1** | **LegiScan** bulk / free API | Introduction, sponsors, text, votes for state + federal AI / DC / energy bills → conversion funnel | Free account / key (bulk portal login-gated from this box) | **Blocked** — needs Aden free ZIP or `LEGISCAN_API_KEY` |
+| **B2** | **Open States** | Committee detail beyond LegiScan | Free key | Documented only |
+| **B3** | **NCSL AI Legislation Database** + **Zenodo US State AI Legislation Corpus** (~2.5k bills 2019–2026) | Curated / classified AI bill universe for validation against LegiScan pulls | Free browse / Zenodo dump | Not ingested yet (strong B complement) |
+| **B4** | **CAID / DU State AI Policy Tracker** | Live state AI bill dashboard cross-walked to NCSL | Free web; bulk via Plural heritage | Not ingested |
+| **C1** | **Moratorium Nation** (`mjbommar/moratorium-data-2026`) | Local *pauses* on data centers / related infra (jurisdiction, status, dates, legal fields) | Free GitHub CSV/JSON | **Not yet** — high-priority add for layer C |
+| **C2** | **AI GridWatch** open data (moratoria + community actions, projects, facilities, state profiles) | Broader “pushback actions,” project outcomes, facility registry — CC BY 4.0 downloads | Free CSV/JSON | **Not yet** — high-priority add |
+| **C3** | Hand / Legistar–Granicus scrapers | Ordinance text & template diffusion when inventories miss a town | Sweat / ToS-limited | Not started |
+| **D1** | **Media Cloud** | Local/national story volume & source sets on AI / data centers (thin free news layer) | Free research key + weekly quota | Documented; needs `MC_API_KEY` |
+| **D2** | Local RSS / HTML + GridWatch story archive | Headline chronologies without NewsBank | Free / messy | Partial (external) |
+| **D3** | **NewsBank Access World News** | Dense local-paper corpus (BBD-style) | **Paid / institutional (~mid 4–5 figures/yr)** | **Excluded** from free backbone |
+| **E1** | **Crowd Counting Consortium (CCC)** phase 2/3 | Protest / rally events; filter to AI / data-center / grid claims | Free Dataverse | **Yes** — phase 3 raw + AI-related events/panel v0 |
+| **E2** | Opposition group registries (e.g. Data Center Opposition report FB census; Humans First action lists) | Organized *capacity*, not just event counts | Mostly manual / report-derived | Not structured here yet |
+| **F1** | **Arctic Shift** Reddit dumps | Unprompted local talk in city/topic subs (backfill) | Free torrents (large) | Documented only — no dump pulled |
+| **F2** | Reddit official API | Ongoing vernacular after dumps | Free OAuth (rate limits) | Not wired |
+| **F3** | Google Trends (DMA / state) | Relative salience, not absolute opinion | Free; polite scrape / export | Not started |
+| **G1** | **EIA-861** | Utility sales / territory context for rate & load fights | Public domain | **Yes** — raw zip |
+| **G2** | **LBNL Queued Up** interconnection workbook | Generation/storage *supply* queues (context — **not** load/DC permits) | Free CC BY | **Yes** — 2026 XLSX; transforms thin |
+| **G3** | ISO/RTO + utility **load** interconnection / large-load tariffs; FERC large-load dockets | True demand-side denominator where published | Patchwork public dockets | Documented; hand work |
+| **G4** | Facility / project inventories (GridWatch projects, ATLAS / open DC maps, operator disclosures) | Proposed / operating sites to pair with opposition | Mixed free | Not merged |
+| **G5** | **USGS** county water-use / thermoelectric reanalysis | Water-stress context (not DC-specific withdrawals) | Free | Not ingested |
+| **G6** | **RateBase** / state PUC dockets | Rate cases & large-load tariff fights (who pays) | Some open datasets; else docket scraping | Not started |
+| **H1** | Pew / Gallup / AP-NORC / Reuters–Ipsos | National attitude baselines so local spikes aren’t over-read | Usually free summaries; microdata varies | Notes only |
+| **H2** | **Ballotpedia** data-center ballot measures; state/local election returns | Revealed preference when voters face AI/DC questions | Free pages; manual harvest | Not ingested |
+
+### Additional free / near-free candidates (from expanded scan)
+
+Worth ingesting after A/B/E/G — not yet on disk unless noted.
+
+| Source | What it exhibits | Access |
+|---|---|---|
+| **Legistar / Granicus / CivicPlus** open meeting portals | Agendas, minutes, ordinance attachments where LocalView coverage is thin | Free per city; scrape politely |
+| **Senate LDA / House lobby disclosures** | Who is lobbying on AI / data-center / energy bills (pressure, not opinion) | Free bulk downloads |
+| **Cornell ILR Labor Action Tracker** | Strikes / labor actions that mention AI, automation, warehouses, utilities | Free research DB |
+| **EPA EIS / NEPA documents** | Formal environmental review friction for large loads / generation tied to DC buildout | Free |
+| **OpenPUC / state PUC dockets** (and RateBase where open) | Rate cases, large-load tariffs, cost-shift fights | Mixed free dockets |
+| **Common Crawl News / local RSS** | Backup local-news text when Media Cloud quota binds | Free / messy |
+| **ACS / BLS QCEW** | Socioeconomic denominators (income, employment, utility-adjacent employment) for panel controls | Free |
+| **Data Center Watch / opposition reports** | Hand-built group & campaign tallies (cite as curated, not census) | Report PDFs; manual |
+
+### Geo helpers (required plumbing)
+
+| Source | Exhibits | Status |
+|---|---|---|
+| Census Gazetteer counties / places; place-by-county 2020; CT town→planning region | Place → `county_fips` for LocalView & others | **On disk**; powers crosswalk v0 |
+
+---
+
+## What a v0 public panel should show (target exhibits)
+
+Once A+E+G(+C inventories) join cleanly:
+
+1. **County-month event counts** by layer (meetings · protests · bills touching the county’s state · moratoria)  
+2. **Grievance mix** (taxonomy tags) — power/grid cost, water, land/aesthetics, tax abatement, jobs, schools, safety/control, privacy, IP  
+3. **Funnel sketch** — projects or MW mentioned vs delayed/blocked/opposed (only where denominators exist; never fake them)  
+4. **State fact sheets** — pending bills, active moratoria, recent mobilizations  
+
+If we cannot support an exhibit with a documented source row, we **don’t ship the number**.
+
+---
+
+## What’s actually done vs open (free only)
+
+**In good shape locally + on `main`:** LocalView meta geo spine (A), CCC AI-related v0 (E), EIA + LBNL raw (G), Census geo helpers.  
+**Blocked on Aden (still free):** LegiScan bulk ZIP or free API key (B).  
+**Not pulled yet (free but high leverage):** Moratorium Nation + AI GridWatch inventories (**C** — next free wins), Media Cloud key (D thin), Arctic Shift dumps (F, heavy).  
+**Paid / later:** NewsBank; dense LLM transcript labeling beyond BlueDot ~$1.5k pilot.
+
+Operational matrix: [`docs/SOURCE_INVENTORY.md`](docs/SOURCE_INVENTORY.md) · URL notes: [`docs/SOURCES.md`](docs/SOURCES.md).
+
+---
 
 ## Free-source policy
 
-1. **No paid API required for the backbone.** NewsBank is optional enrichment for layer D only.
-2. Prefer bulk / dump downloads over rate-limited APIs when both exist.
-3. Every shipped series must crosswalk to **county FIPS** (5-digit) and **state**, and aggregate to **month**.
-4. Document ToS / license / attribution in `data/manifests/`. Do not invent empirical rows.
-5. Pin classifier / prompt versions when LLM enrichment is added later.
+1. No paid API required for the backbone. NewsBank is optional D enrichment only.  
+2. Prefer bulk / dump downloads over rate-limited APIs.  
+3. Every shipped series crosswalks to county FIPS + state + month.  
+4. Manifests under `data/manifests/` record URL, license, bytes, blockers — **no invented empirical rows**.  
+5. Pin classifier / prompt versions when LLM enrichment is added.
 
-## Geography + time keys
-
-- `county_fips`: 5-digit string (state+county), Census GEOID
-- `state`: USPS 2-letter
-- `month`: `YYYY-MM`
-
-Helpers: [`src/geo/fips.py`](src/geo/fips.py) over Census Gazetteer counties.
-
-## Schema
-
-Two tables; everything else is a view.
-
-- `events` — one row per discrete thing (bill, meeting mention, protest, permit, ordinance)
-- `panel` — one row per place × month (counts, denominators, shares)
-
-SQL: [`schema/events.sql`](schema/events.sql), [`schema/panel.sql`](schema/panel.sql)  
-Python types: [`src/schema/types.py`](src/schema/types.py)  
-Grievance taxonomy: [`docs/TAXONOMY.md`](docs/TAXONOMY.md)
+---
 
 ## Repo layout
 
 ```
-ai-backlash-tracker/
-├── README.md
-├── docs/           WORKING_SPEC, SOURCES, SOURCE_INVENTORY, TAXONOMY
-├── schema/         SQL DDL
-├── src/geo/        FIPS helpers
-├── src/ingest/     layer fetchers (real free downloads where possible)
-├── src/schema/     Python dataclasses / TypedDicts
-├── data/raw/       downloaded inputs (gitignored when large)
-├── data/manifests/ source metadata JSON
-├── data/processed/ derived outputs
-├── scripts/        one-shot bootstrap helpers
+ai-political-econ/
+├── README.md                 ← you are here (source → exhibit map)
+├── docs/                     WORKING_SPEC, SOURCES, SOURCE_INVENTORY, TAXONOMY
+├── schema/                   events.sql, panel.sql
+├── src/                      ingest, geo, transform
+├── data/raw/                 bulk inputs (large files gitignored)
+├── data/manifests/           source metadata
+├── data/processed/           crosswalks, spines, QA JSON
 ├── Makefile
-└── pyproject.toml / requirements.txt
+└── pyproject.toml
 ```
 
 ## How to run
 
 ```bash
-# optional venv
 python3 -m venv .venv && source .venv/bin/activate
 pip install -r requirements.txt
-
-# (re)fetch free datasets that need no credentials
-make fetch-census   # Census county FIPS gazetteer
-make fetch-ccc      # Crowd Counting Consortium phase 3 CSV
-make fetch-eia      # EIA-861 annual zip
-make fetch-all
-
-# sanity-check FIPS table
+make fetch-all          # free pulls that need no credentials
 python -m src.geo.fips --summary
 ```
 
-Individual ingest modules under `src/ingest/` can also be run as scripts (see each file’s docstring).
+---
 
-## What was downloaded in this scaffold
+## Funding note (short)
 
-See [`data/manifests/`](data/manifests/) for SHA256, URL, license notes, and blockers. Real free pulls include Census county FIPS, CCC phase-3 CSV, EIA-861 2024, and LocalView codebook. Large LocalView transcript tarballs and Arctic Shift dumps are documented but not mirrored here.
+BlueDot Rapid ask locked at **~$1.5k**: ~$900 cheap/mid LLM labeling of LocalView meta + gold QA, ~$400 compute/storage, ~$200 contingency. Next raise (Manifund / TAIF) only after free demo exists — denser labeling + optional NewsBank, not more scaffold.
+
+---
 
 ## License / attribution
 
-Upstream data remain under their original licenses (Census public domain; CCC / LocalView via Harvard Dataverse terms; EIA public domain). Cite sources when publishing derivatives.
+Upstream data stay under their licenses (Census / EIA public domain; CCC & LocalView via Harvard Dataverse; LBNL CC BY; GridWatch CC BY 4.0; etc.). Cite sources on every public derivative.
