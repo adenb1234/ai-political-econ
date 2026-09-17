@@ -2,7 +2,7 @@
 PYTHON ?= $(shell if [ -x "$(CURDIR)/.venv/bin/python" ]; then echo "$(CURDIR)/.venv/bin/python"; else echo python3; fi)
 export PYTHONPATH := $(CURDIR)
 
-.PHONY: help fetch-census fetch-census-places fetch-ccc fetch-eia fetch-lbnl fetch-localview fetch-localview-meta fetch-docs fetch-all fips-summary crosswalk-localview spine-localview manifests transform-ccc
+.PHONY: help fetch-census fetch-census-places fetch-ccc fetch-eia fetch-lbnl fetch-localview fetch-localview-meta fetch-docs fetch-all fips-summary crosswalk-localview spine-localview manifests transform-ccc transform-lbnl transform-eia transform-g
 
 help:
 	@echo "Targets:"
@@ -16,6 +16,9 @@ help:
 	@echo "  make fetch-docs            Write manifests for key-gated / huge sources"
 	@echo "  make fetch-all             All of the above"
 	@echo "  make transform-ccc         CCC CSV → AI-related events + mobilization panel"
+	@echo "  make transform-lbnl        LBNL Queued Up → county/state × month ix-queue activity (NOT DC permits)"
+	@echo "  make transform-eia         EIA-861 → utility→county crosswalk + utility/state stub"
+	@echo "  make transform-g          transform-lbnl + transform-eia"
 	@echo "  make crosswalk-localview   LocalView meta → county FIPS crosswalk v0"
 	@echo "  make spine-localview       LocalView meta + crosswalk → county_fips + month spine v0"
 	@echo "  make fips-summary          Summarize local FIPS table"
@@ -53,6 +56,14 @@ fetch-all: fetch-census fetch-census-places fetch-ccc fetch-eia fetch-lbnl fetch
 
 transform-ccc:
 	$(PYTHON) -m src.transform.ccc_to_events
+
+transform-lbnl:
+	$(PYTHON) -m src.transform.lbnl_queue_to_panel
+
+transform-eia:
+	$(PYTHON) -m src.transform.eia_861_to_coverage
+
+transform-g: transform-lbnl transform-eia
 
 crosswalk-localview: fetch-census fetch-census-places
 	$(PYTHON) -m src.transform.localview_geo
