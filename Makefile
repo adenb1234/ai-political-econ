@@ -2,13 +2,14 @@
 PYTHON ?= $(shell if [ -x "$(CURDIR)/.venv/bin/python" ]; then echo "$(CURDIR)/.venv/bin/python"; else echo python3; fi)
 export PYTHONPATH := $(CURDIR)
 
-.PHONY: help fetch-census fetch-census-places fetch-ccc fetch-eia fetch-lbnl fetch-localview fetch-localview-meta fetch-docs fetch-all fips-summary crosswalk-localview spine-localview manifests transform-ccc
+.PHONY: help fetch-census fetch-census-places fetch-ccc fetch-labor-action fetch-eia fetch-lbnl fetch-localview fetch-localview-meta fetch-docs fetch-all fips-summary crosswalk-localview spine-localview manifests transform-ccc transform-labor-action
 
 help:
 	@echo "Targets:"
 	@echo "  make fetch-census          Download Census county FIPS gazetteer"
 	@echo "  make fetch-census-places   Download Census places gaz + national_places + place_by_county_2020 + CT town→COG"
 	@echo "  make fetch-ccc             Download CCC phase-3 public CSV"
+	@echo "  make fetch-labor-action    Download LAT Pages JSON (+ Zenodo XLSX)"
 	@echo "  make fetch-eia             Download EIA-861 2024 zip"
 	@echo "  make fetch-lbnl            Download LBNL Queued Up 2026 XLSX"
 	@echo "  make fetch-localview       Download LocalView codebook"
@@ -16,6 +17,7 @@ help:
 	@echo "  make fetch-docs            Write manifests for key-gated / huge sources"
 	@echo "  make fetch-all             All of the above"
 	@echo "  make transform-ccc         CCC CSV → AI-related events + mobilization panel"
+	@echo "  make transform-labor-action LAT JSON → AI/tech/data-center events stub"
 	@echo "  make crosswalk-localview   LocalView meta → county FIPS crosswalk v0"
 	@echo "  make spine-localview       LocalView meta + crosswalk → county_fips + month spine v0"
 	@echo "  make fips-summary          Summarize local FIPS table"
@@ -29,6 +31,13 @@ fetch-census-places:
 
 fetch-ccc:
 	$(PYTHON) -m src.ingest.ccc
+
+fetch-labor-action:
+	$(PYTHON) -m src.ingest.labor_action_tracker
+
+transform-labor-action:
+	$(PYTHON) -m src.transform.labor_action_to_events
+
 
 fetch-eia:
 	$(PYTHON) -m src.ingest.eia_861
@@ -49,7 +58,7 @@ fetch-docs:
 	$(PYTHON) -m src.ingest.media_cloud
 	$(PYTHON) -m src.ingest.project_ledger
 
-fetch-all: fetch-census fetch-census-places fetch-ccc fetch-eia fetch-lbnl fetch-localview fetch-docs
+fetch-all: fetch-census fetch-census-places fetch-ccc fetch-labor-action fetch-eia fetch-lbnl fetch-localview fetch-docs
 
 transform-ccc:
 	$(PYTHON) -m src.transform.ccc_to_events

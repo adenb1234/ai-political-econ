@@ -52,3 +52,7 @@ data/processed/**
 
 # Jupyter
 .ipynb_checkpoints/
+
+# Raw JSON dumps (e.g. labor_actions.json ~5MB)
+data/raw/**/*.json
+!data/raw/**/ACCESS.md

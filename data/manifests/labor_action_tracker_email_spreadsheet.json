@@ -1,0 +1,12 @@
+{
+  "source_id": "labor_action_tracker_email_spreadsheet",
+  "layer": "E",
+  "url": "https://www.ilr.cornell.edu/faculty-and-research/labor-action-tracker",
+  "status": "documented_only",
+  "access": "blocked",
+  "blocker": "Official spreadsheet requires emailing Johnnie Kallas (jkallas@illinois.edu). Not fetched by free automated ingest.",
+  "notes": "Prefer public Pages labor_actions.json. Do not invent rows. Human email request is optional enrichment only.",
+  "contact": "jkallas@illinois.edu",
+  "local_access_note": "data/raw/labor_action/ACCESS.md",
+  "recorded_at_utc": "2026-09-17T04:29:58.468947+00:00"
+}

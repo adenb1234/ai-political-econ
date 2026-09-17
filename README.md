@@ -88,7 +88,7 @@ Ingest after A/B/E/G spine work — **none on disk yet** unless noted. Prefer na
 | **EPA EIS DB** (+ EDGI scraper); **BLM NEPA register** | NEPA friction (land/water/noise) for large projects | Free |
 | **USGS NWIS / water-use**; state eWRIMS-style rights DBs | Hydro context vs legal water rights (keep distinct) | Free / heterogeneous state portals |
 | **FERC eLibrary** | Transmission / large-load rate proceedings | Free browse; awkward bulk |
-| **Cornell–ILR Labor Action Tracker**; **BLS Work Stoppages** | Strikes / labor protests (filter AI/tech/warehouse); coarse large stoppages | Free Zenodo / USG XLSX |
+| **Cornell–Illinois Labor Action Tracker** (Pages JSON + Zenodo); **BLS Work Stoppages** | Strikes / labor protests (filter AI/tech/warehouse); coarse large stoppages | **LAT on disk** (`make fetch-labor-action`); BLS free USG XLSX |
 | **Ballotpedia** AI ed guidance + ballot-measure topics; **MEDSL / SOS returns** | School AI policy stance; revealed preference on AI/DC measures | Free web / academic |
 | **Senate LDA.gov API/XML**; OpenSecrets (edu license); state lobby DBs; FEC bulk | Lobbying & money pressure on AI / DC / utilities | Free (OpenSecrets: account + attribution) |
 | **CourtListener / RECAP** | Lawsuits opposing DCs/AI (stay off paid PACER) | Free mirror |

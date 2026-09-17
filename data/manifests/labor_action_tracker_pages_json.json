@@ -1,0 +1,22 @@
+{
+  "source_id": "labor_action_tracker_pages_json",
+  "layer": "E",
+  "url": "https://striketracker.ilr.cornell.edu/labor_actions.json",
+  "path": "data/raw/labor_action/labor_actions.json",
+  "bytes": 5023196,
+  "sha256": "8e741ee2dc8100ce06ee608972a807510406c6b08194b3c8f72f45f5eddea1a9",
+  "status": "downloaded",
+  "notes": "Cornell\u2013Illinois Labor Action Tracker live Pages JSON (StrikeSiteTracker build). Manual LAT methodology; strikes ~comprehensive from 2021; protests not complete. Map pins = locations, not unique actions.",
+  "license_note": "Cite LAT (Cornell ILR & Illinois LER); site terms apply",
+  "project_page": "https://www.ilr.cornell.edu/faculty-and-research/labor-action-tracker",
+  "map_site": "https://striketracker.ilr.cornell.edu/",
+  "github_repo": "https://github.com/ilrWebServices/StrikeSiteTracker",
+  "n_actions": 4997,
+  "n_locations": 6863,
+  "action_type_counts": {
+    "Protest": 3031,
+    "Strike": 1953,
+    "(blank)": 13
+  },
+  "recorded_at_utc": "2026-09-17T04:29:58.528605+00:00"
+}

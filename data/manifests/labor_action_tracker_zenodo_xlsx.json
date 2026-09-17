@@ -1,0 +1,13 @@
+{
+  "source_id": "labor_action_tracker_zenodo_xlsx",
+  "layer": "E",
+  "url": "https://zenodo.org/api/records/16457619/files/Labor-prod.xlsx/content",
+  "doi": "10.5281/zenodo.16457619",
+  "path": "data/raw/labor_action/Labor-prod.xlsx",
+  "bytes": 1405972,
+  "sha256": "0c154a38baac83397fc2793fb72e3d31de423132396540af5f75d0ddeb941802",
+  "status": "downloaded",
+  "notes": "Zenodo CC-BY-4.0 snapshot file Labor-prod.xlsx (third-party packaging of LAT; prefer Pages JSON for live refresh).",
+  "license_note": "CC BY 4.0 (Zenodo record); cite LAT + DOI",
+  "recorded_at_utc": "2026-09-17T04:29:58.530274+00:00"
+}

@@ -27,7 +27,7 @@ The required layer status is one of `ready`, `blocked`, or `already-have-raw`. W
 |-------|-------------|-----------------------------------|--------------|----------------------|
 | **A** Deliberation | **already-have-raw** | LocalView codebook + metadata downloaded; place→county crosswalk v0 + meta spine v0 on disk; transcripts deferred | `partial` (county + month on spine; unmatched keys 0; ambiguous keys remain) | None for free access |
 | **B** Legislation | **blocked** | LegiScan raw empty; Open States documented only | `not started` | **Yes — free LegiScan bulk drop/key; optional Open States key** |
-| **E** Mobilization | **already-have-raw** | CCC phase 3 downloaded; versioned transform outputs on disk | `partial` → matched rows checked | None for access |
+| **E** Mobilization | **already-have-raw** | CCC phase 3 + LAT Pages JSON/Zenodo on disk; transforms v0 | `partial` (CCC FIPS OK; LAT state/month only, FIPS blank) | LAT email spreadsheet optional |
 | **F** Vernacular | **ready** | Arctic Shift and Google Trends documented only; no raw dumps | `not started` | Dump size, rate limits, and geo crosswalk |
 | **G** Project ledger | **already-have-raw** | EIA-861 + LBNL Queued Up 2026 XLSX downloaded; ISO/registries documented only | `partial` / `not started` | No access blocker; hand-curation and schema work remain |
 
@@ -43,7 +43,7 @@ Supplemental free options (Google Trends, hand-curated opposition registries, Me
 | **Free access path** | Dataset DOI [10.7910/DVN/NJTBEM](https://doi.org/10.7910/DVN/NJTBEM). Codebook: `https://dataverse.harvard.edu/api/access/datafile/14077924`. Meta parquet (~35 MB): `https://dataverse.harvard.edu/api/access/datafile/14233652`. Transcripts: datafile ids `14233653`–`14233655` (~2 GB × 2 + ~1 GB). Replication code DOI [10.7910/DVN/KHUXIN](https://doi.org/10.7910/DVN/KHUXIN). |
 | **License / ToS** | Harvard Dataverse / LocalView terms; cite DOI. Meeting-recording places skew larger / richer / more urban. |
 | **Raw on disk** | **yes:** `data/raw/localview/codebook.md` (6,387 bytes; sha256 `f175fb1f…ec2f`) and `data/raw/localview/meta_localview.parquet` (35,339,621 bytes; sha256 `a7eccd0b…25f5` per `localview_meta.json`). Transcript tarballs remain deferred. |
-| **Manifests** | `localview.json` (`meta_downloaded`), `localview_codebook.json`, `localview_meta.json` |
+| **Manifests** | `labor_action_tracker_pages_json.json` (`downloaded`); `labor_action_tracker_zenodo_xlsx.json` (`downloaded`); `labor_action_tracker_email_spreadsheet.json` (`documented_only` / `blocked`) |
 | **Processed (v0)** | Crosswalk: `data/processed/crosswalks/localview_place_to_county_v0.csv` (+ residuals CSV). **Meta spine:** `data/processed/localview/meta_spine_v0.parquet` (QA `…/localview_meta_spine_v0_qa.json`). **Entrypoint:** `python -m src.ingest.localview --include-meta` (or `make fetch-localview-meta`) fetches meta and builds crosswalk+spine; or `make crosswalk-localview` / `make spine-localview`. Transforms: `src/transform/localview_geo.py`, `localview_meta_spine.py`. |
 | **Geo / FIPS** | **`partial`.** Place→county crosswalk v0 + meta spine v0 shipped (CT town→COG + name-alias + ANSI 2020 place_by_county fallbacks). Spine QA (2026-09-16 PT): 301,659 meta rows; matched county 269,264 (89.26%); ambiguous 32,395; unmatched 0; month ok 281,074 / fail 20,585; spine-ready 251,210 (83.28%). Residuals (ambiguous only): `data/processed/crosswalks/localview_place_to_county_v0_residuals.csv`. See `docs/notes/localview_meta_geo_v0.md`. |
 | **Next free step** | Human-review 110 ambiguous/multi-county keys (32,395 meta rows). Optional panel rollup of meeting counts by `county_fips × month` once ambiguity policy is set. Do **not** pull transcript tarballs. |
@@ -105,6 +105,25 @@ Supplemental free options (Google Trends, hand-curated opposition registries, Me
 
 ---
 
+
+## E complement — Cornell–Illinois Labor Action Tracker — **already-have-raw** (+ transform stub v0)
+
+| Field | Detail |
+|-------|--------|
+| **Free status** | **already-have-raw** (Pages JSON + Zenodo XLSX); email spreadsheet **documented_only / blocked** |
+| **Free access path** | Live JSON: `https://striketracker.ilr.cornell.edu/labor_actions.json` (StrikeSiteTracker GitHub Pages). Project: https://www.ilr.cornell.edu/faculty-and-research/labor-action-tracker · Map: https://striketracker.ilr.cornell.edu/ · Zenodo CC BY 4.0 snapshot DOI [10.5281/zenodo.16457619](https://doi.org/10.5281/zenodo.16457619) (`Labor-prod.xlsx`). |
+| **License / ToS** | Cite LAT (Cornell ILR & Illinois LER); Zenodo file CC BY 4.0. Official spreadsheet requires email to Johnnie Kallas (`jkallas@illinois.edu`) — **not** auto-fetched. |
+| **Raw on disk** | **yes:** `data/raw/labor_action/labor_actions.json` (5,023,196 bytes; sha256 `8e741ee2…ea1a9`; **4,997 actions / 6,863 locations** per manifest) + `Labor-prod.xlsx` (1,405,972 bytes). Notes: `data/raw/labor_action/ACCESS.md`. |
+| **Manifests** | `labor_action_tracker_pages_json.json` (`downloaded`); `labor_action_tracker_zenodo_xlsx.json` (`downloaded`); `labor_action_tracker_email_spreadsheet.json` (`documented_only` / `blocked`) |
+| **Processed (v0 stub)** | `data/processed/events/lat_ai_related_v0.csv` + `.jsonl` (**40** keyword-matched actions → **71** location-rows); panel header-only (`lat_mobilization_counts_v0.csv`); QA `data/processed/qa/lat_ai_related_v0_qa.json`. Filter: `docs/filters/lat_ai_keywords_v0.md` (`lat_rules_v0`). Entrypoints: `make fetch-labor-action` / `make transform-labor-action`. |
+| **Geo / FIPS** | **`partial` / blank FIPS.** State (USPS from location State name) + `event_month` from `Start_date` filled; **county_fips left blank** (LAT exposes City/State/Zip/lat/lon only — no invented FIPS). Match rate 40/4997 actions ≈ 0.80%. |
+| **Coverage honesty** | Manual LAT methodology. Strikes relatively comprehensive from ~2021; **labor protests are not a complete count**. Map pins = locations (multi-site actions expand). Complement to CCC, not a replacement. |
+| **Next free step** | Optional zip/place→county crosswalk for FIPS; optional human email for official spreadsheet; do not invent AI matches or FIPS. |
+| **Blockers** | Email-gated official spreadsheet only (JSON path is free). |
+
+**Live check (2026-09-16 PT):** Pages `labor_actions.json` GET **200** (`content-length` 5023196); Zenodo XLSX GET **200**; project page **200**.
+
+---
 ## F — Vernacular (Arctic Shift / Reddit) — **ready** (documented; no dump)
 
 | Field | Detail |
@@ -260,7 +279,7 @@ Pew, Gallup, AP-NORC national AI/tech series and ballot measures: **cite release
 ## Exact next free ingest actions (priority A→B→E)
 
 1. **A:** Meta spine v0 landed (`python -m src.ingest.localview --include-meta`; 251,210 spine-ready / 83.28%; unmatched county keys 0). **Next:** human-review ambiguous/multi-county keys (32,395 rows; 110 place keys); optional `county_fips × month` meeting-count panel. No transcript tarballs.
-2. **E:** Already past raw + `ccc_rules_v0` transform; optional phase-2 CCC backfill later.
+2. **E:** CCC raw + `ccc_rules_v0` done; LAT Pages JSON + `lat_rules_v0` stub done (40/4997 action matches; FIPS blank). Optional: CCC phase-2 backfill; LAT zip→county crosswalk.
 3. **G:** LBNL Queued Up XLSX on disk — design generation/storage queue → county×month transform (not DC permits). Optionally pick one ISO next.
 4. **B:** Unblock only after Aden free LegiScan drop or free API key.
 5. **F/D:** Defer Arctic Shift torrents / Media Cloud until keys + disk plan exist.
@@ -298,3 +317,5 @@ Pew, Gallup, AP-NORC national AI/tech series and ballot measures: **cite release
 **Verified live with curl 2026-09-16 PT (this pass):** LBNL Queued Up portal + 2026 publication page + XLSX HEAD **200** (`content-length` 15571236); EIA portal HEAD **503**/GET **200**, zip **200**; LegiScan datasets + API **403**; Open States docs **200**; Arctic Shift repo + download_links **200**; Google Trends **200**; Media Cloud **200**; Census gazetteer zip **200**; CCC project page **200** / Dataverse datafile HEAD **403** (file already on disk; range GET pattern works for LocalView meta **206**); PJM/MISO/CAISO(PascalCase)/ERCOT/NYISO/ISO-NE/SPP landing pages **200** (CAISO lowercase path **404**); datacenterwatch.org + datacenterknowledge.com **200**.
 
 **Reconciled from:** `SOURCES.md`, `data/manifests/*.json`, on-disk `data/raw/**` / `data/processed/**`, and draft inventory formerly at `/workspace/ai-backlash-free-data/docs/SOURCE_INVENTORY.md`.
+
+**Later 2026-09-16 PT (LAT E complement):** Pages `labor_actions.json` 5,023,196 bytes / sha256 `8e741ee2…ea1a9` / 4,997 actions / 6,863 locations; Zenodo `Labor-prod.xlsx` 1,405,972 bytes; email spreadsheet documented_only/blocked; `lat_rules_v0` → 40 matched actions / 71 event location-rows; county_fips blank (honest).
