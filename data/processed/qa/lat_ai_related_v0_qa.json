@@ -1,0 +1,361 @@
+{
+  "filter_version": "lat_rules_v0",
+  "classifier_version": "taxonomy_v0.1+lat_rules_v0",
+  "raw_path": "data/raw/labor_action/labor_actions.json",
+  "total_actions": 4997,
+  "matched_actions": 40,
+  "match_rate_actions": 0.008005,
+  "event_rows_written": 71,
+  "location_rows_from_matches": 71,
+  "skipped_bad_date": 0,
+  "skipped_bad_state": 0,
+  "missing_fips_among_events": 71,
+  "missing_fips_note": "LAT locations expose City/State/Zip/lat/lon only \u2014 county_fips left blank; no invented FIPS. Panel CSV header-only until a zip/place\u2192county crosswalk ships.",
+  "rule_hit_counts": {
+    "ai_word": 37,
+    "agi": 1,
+    "data_center": 3,
+    "automation": 1
+  },
+  "zero_keyword_matches": false,
+  "zero_matches_note": null,
+  "coverage_caveat": "LAT is manual; strikes relatively comprehensive from ~2021; labor protests are not a complete count. Complement to CCC, not a replacement.",
+  "outputs": {
+    "events_csv": "data/processed/events/lat_ai_related_v0.csv",
+    "events_jsonl": "data/processed/events/lat_ai_related_v0.jsonl",
+    "panel_csv": "data/processed/panel/lat_mobilization_counts_v0.csv"
+  },
+  "sample_flags": [
+    {
+      "action_id": "3225",
+      "source_record_id": "lat:3225:loc:4339",
+      "rule_hits": [
+        "ai_word"
+      ],
+      "city": "New York",
+      "state": "NY",
+      "county_fips": null,
+      "missing_fips": true
+    },
+    {
+      "action_id": "3551",
+      "source_record_id": "lat:3551:loc:4794",
+      "rule_hits": [
+        "ai_word"
+      ],
+      "city": "Jersey City",
+      "state": "NJ",
+      "county_fips": null,
+      "missing_fips": true
+    },
+    {
+      "action_id": "3619",
+      "source_record_id": "lat:3619:loc:4911",
+      "rule_hits": [
+        "ai_word"
+      ],
+      "city": "Port Charlotte",
+      "state": "FL",
+      "county_fips": null,
+      "missing_fips": true
+    },
+    {
+      "action_id": "3619",
+      "source_record_id": "lat:3619:loc:4912",
+      "rule_hits": [
+        "ai_word"
+      ],
+      "city": "Corpus Christi",
+      "state": "TX",
+      "county_fips": null,
+      "missing_fips": true
+    },
+    {
+      "action_id": "3619",
+      "source_record_id": "lat:3619:loc:4913",
+      "rule_hits": [
+        "ai_word"
+      ],
+      "city": "Oakland",
+      "state": "CA",
+      "county_fips": null,
+      "missing_fips": true
+    },
+    {
+      "action_id": "3684",
+      "source_record_id": "lat:3684:loc:5009",
+      "rule_hits": [
+        "ai_word"
+      ],
+      "city": "Riverhead",
+      "state": "NY",
+      "county_fips": null,
+      "missing_fips": true
+    },
+    {
+      "action_id": "3930",
+      "source_record_id": "lat:3930:loc:5379",
+      "rule_hits": [
+        "ai_word"
+      ],
+      "city": "Toledo",
+      "state": "OH",
+      "county_fips": null,
+      "missing_fips": true
+    },
+    {
+      "action_id": "3930",
+      "source_record_id": "lat:3930:loc:5380",
+      "rule_hits": [
+        "ai_word"
+      ],
+      "city": "Rochester",
+      "state": "MN",
+      "county_fips": null,
+      "missing_fips": true
+    },
+    {
+      "action_id": "3930",
+      "source_record_id": "lat:3930:loc:5381",
+      "rule_hits": [
+        "ai_word"
+      ],
+      "city": "Albuquerque",
+      "state": "NM",
+      "county_fips": null,
+      "missing_fips": true
+    },
+    {
+      "action_id": "4005",
+      "source_record_id": "lat:4005:loc:5500",
+      "rule_hits": [
+        "ai_word"
+      ],
+      "city": "Ithaca",
+      "state": "NY",
+      "county_fips": null,
+      "missing_fips": true
+    },
+    {
+      "action_id": "4006",
+      "source_record_id": "lat:4006:loc:5501",
+      "rule_hits": [
+        "ai_word"
+      ],
+      "city": "Ithaca",
+      "state": "NY",
+      "county_fips": null,
+      "missing_fips": true
+    },
+    {
+      "action_id": "4024",
+      "source_record_id": "lat:4024:loc:5540",
+      "rule_hits": [
+        "ai_word"
+      ],
+      "city": "Santa Monica",
+      "state": "CA",
+      "county_fips": null,
+      "missing_fips": true
+    },
+    {
+      "action_id": "4055",
+      "source_record_id": "lat:4055:loc:5571",
+      "rule_hits": [
+        "ai_word"
+      ],
+      "city": "Boston",
+      "state": "MA",
+      "county_fips": null,
+      "missing_fips": true
+    },
+    {
+      "action_id": "4065",
+      "source_record_id": "lat:4065:loc:5581",
+      "rule_hits": [
+        "ai_word"
+      ],
+      "city": "Davie",
+      "state": "FL",
+      "county_fips": null,
+      "missing_fips": true
+    },
+    {
+      "action_id": "4207",
+      "source_record_id": "lat:4207:loc:5784",
+      "rule_hits": [
+        "ai_word"
+      ],
+      "city": "San Francisco",
+      "state": "CA",
+      "county_fips": null,
+      "missing_fips": true
+    },
+    {
+      "action_id": "4251",
+      "source_record_id": "lat:4251:loc:5858",
+      "rule_hits": [
+        "ai_word"
+      ],
+      "city": "Honolulu",
+      "state": "HI",
+      "county_fips": null,
+      "missing_fips": true
+    },
+    {
+      "action_id": "4251",
+      "source_record_id": "lat:4251:loc:5859",
+      "rule_hits": [
+        "ai_word"
+      ],
+      "city": "Lahaina",
+      "state": "HI",
+      "county_fips": null,
+      "missing_fips": true
+    },
+    {
+      "action_id": "4265",
+      "source_record_id": "lat:4265:loc:5880",
+      "rule_hits": [
+        "agi"
+      ],
+      "city": "Newark",
+      "state": "NJ",
+      "county_fips": null,
+      "missing_fips": true
+    },
+    {
+      "action_id": "4265",
+      "source_record_id": "lat:4265:loc:5881",
+      "rule_hits": [
+        "agi"
+      ],
+      "city": "Jamaica",
+      "state": "NY",
+      "county_fips": null,
+      "missing_fips": true
+    },
+    {
+      "action_id": "4265",
+      "source_record_id": "lat:4265:loc:5882",
+      "rule_hits": [
+        "agi"
+      ],
+      "city": "Orlando",
+      "state": "FL",
+      "county_fips": null,
+      "missing_fips": true
+    },
+    {
+      "action_id": "4376",
+      "source_record_id": "lat:4376:loc:6024",
+      "rule_hits": [
+        "ai_word"
+      ],
+      "city": "Wytheville",
+      "state": "VA",
+      "county_fips": null,
+      "missing_fips": true
+    },
+    {
+      "action_id": "4385",
+      "source_record_id": "lat:4385:loc:6035",
+      "rule_hits": [
+        "ai_word"
+      ],
+      "city": "Los Angeles",
+      "state": "CA",
+      "county_fips": null,
+      "missing_fips": true
+    },
+    {
+      "action_id": "4385",
+      "source_record_id": "lat:4385:loc:6036",
+      "rule_hits": [
+        "ai_word"
+      ],
+      "city": "Sacramento",
+      "state": "CA",
+      "county_fips": null,
+      "missing_fips": true
+    },
+    {
+      "action_id": "4385",
+      "source_record_id": "lat:4385:loc:6037",
+      "rule_hits": [
+        "ai_word"
+      ],
+      "city": "Roseville",
+      "state": "CA",
+      "county_fips": null,
+      "missing_fips": true
+    },
+    {
+      "action_id": "4385",
+      "source_record_id": "lat:4385:loc:6038",
+      "rule_hits": [
+        "ai_word"
+      ],
+      "city": "Vacaville",
+      "state": "CA",
+      "county_fips": null,
+      "missing_fips": true
+    },
+    {
+      "action_id": "4385",
+      "source_record_id": "lat:4385:loc:6039",
+      "rule_hits": [
+        "ai_word"
+      ],
+      "city": "Fresno",
+      "state": "CA",
+      "county_fips": null,
+      "missing_fips": true
+    },
+    {
+      "action_id": "4443",
+      "source_record_id": "lat:4443:loc:6119",
+      "rule_hits": [
+        "ai_word"
+      ],
+      "city": "Baltimore",
+      "state": "MD",
+      "county_fips": null,
+      "missing_fips": true
+    },
+    {
+      "action_id": "4628",
+      "source_record_id": "lat:4628:loc:6429",
+      "rule_hits": [
+        "ai_word"
+      ],
+      "city": "Whiting",
+      "state": "IN",
+      "county_fips": null,
+      "missing_fips": true
+    },
+    {
+      "action_id": "4703",
+      "source_record_id": "lat:4703:loc:6530",
+      "rule_hits": [
+        "ai_word"
+      ],
+      "city": "Oakland",
+      "state": "CA",
+      "county_fips": null,
+      "missing_fips": true
+    },
+    {
+      "action_id": "4703",
+      "source_record_id": "lat:4703:loc:6531",
+      "rule_hits": [
+        "ai_word"
+      ],
+      "city": "Sacramento",
+      "state": "CA",
+      "county_fips": null,
+      "missing_fips": true
+    }
+  ],
+  "recorded_at_utc": "2026-09-17T04:29:58.621442+00:00"
+}
