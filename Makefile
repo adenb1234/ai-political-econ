@@ -2,7 +2,7 @@
 PYTHON ?= $(shell if [ -x "$(CURDIR)/.venv/bin/python" ]; then echo "$(CURDIR)/.venv/bin/python"; else echo python3; fi)
 export PYTHONPATH := $(CURDIR)
 
-.PHONY: help fetch-census fetch-census-places fetch-ccc fetch-eia fetch-lbnl fetch-localview fetch-localview-meta fetch-docs fetch-all fips-summary crosswalk-localview spine-localview manifests transform-ccc
+.PHONY: help fetch-census fetch-census-places fetch-ccc fetch-eia fetch-lbnl fetch-localview fetch-localview-meta fetch-senate-lda fetch-docs fetch-all fips-summary crosswalk-localview spine-localview manifests transform-ccc
 
 help:
 	@echo "Targets:"
@@ -11,6 +11,7 @@ help:
 	@echo "  make fetch-ccc             Download CCC phase-3 public CSV"
 	@echo "  make fetch-eia             Download EIA-861 2024 zip"
 	@echo "  make fetch-lbnl            Download LBNL Queued Up 2026 XLSX"
+	@echo "  make fetch-senate-lda      Senate LDA API sample (AI/DC/semi/utility seeds)"
 	@echo "  make fetch-localview       Download LocalView codebook"
 	@echo "  make fetch-localview-meta  Codebook + meta + county/month spine v0"
 	@echo "  make fetch-docs            Write manifests for key-gated / huge sources"
@@ -36,6 +37,9 @@ fetch-eia:
 fetch-lbnl:
 	$(PYTHON) -m src.ingest.lbnl_queued_up
 
+fetch-senate-lda:
+	$(PYTHON) -m src.ingest.senate_lda
+
 fetch-localview:
 	$(PYTHON) -m src.ingest.localview
 
@@ -49,7 +53,7 @@ fetch-docs:
 	$(PYTHON) -m src.ingest.media_cloud
 	$(PYTHON) -m src.ingest.project_ledger
 
-fetch-all: fetch-census fetch-census-places fetch-ccc fetch-eia fetch-lbnl fetch-localview fetch-docs
+fetch-all: fetch-census fetch-census-places fetch-ccc fetch-eia fetch-lbnl fetch-localview fetch-senate-lda fetch-docs
 
 transform-ccc:
 	$(PYTHON) -m src.transform.ccc_to_events
