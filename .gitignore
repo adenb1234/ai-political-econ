@@ -29,6 +29,9 @@ data/raw/**/*.xlsx
 data/raw/**/*.xls
 data/raw/**/*.pdf
 data/raw/**/*.docx
+data/raw/**/*.json
+data/raw/**/*.jsonl
+data/raw/**/*.json.gz
 # Allow small documentation samples under raw
 !data/raw/**/ACCESS.md
 !data/raw/**/codebook.md
