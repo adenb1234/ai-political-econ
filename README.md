@@ -26,7 +26,7 @@ Two tables: `events` (one discrete thing) and `panel` (place × month). Details:
 
 ## Priority order (build sequence)
 
-Freeze priority for free work: **A → B → E → G → F → D(thin) → C**.  
+Freeze priority for free work: **A → B → E → G → C(inventories) → F → D(thin) → H**.  
 Paid NewsBank / heavy LLM labeling sit **after** a live free demo (BlueDot ~$1.5k ask is for labeling the free spine, not NewsBank).
 
 | Priority | Layer | Role in the product |
@@ -75,20 +75,26 @@ Scan date: **2026-09-16 PT**. Honest about free vs key vs paid, and what’s on 
 | **H1** | Pew / Gallup / AP-NORC / Reuters–Ipsos | National attitude baselines so local spikes aren’t over-read | Usually free summaries; microdata varies | Notes only |
 | **H2** | **Ballotpedia** data-center ballot measures; state/local election returns | Revealed preference when voters face AI/DC questions | Free pages; manual harvest | Not ingested |
 
-### Additional free / near-free candidates (from expanded scan)
+### Additional free / near-free candidates (expanded scan 2026-09-16/17)
 
-Worth ingesting after A/B/E/G — not yet on disk unless noted.
+Ingest after A/B/E/G spine work — **none on disk yet** unless noted. Prefer native free portals; skip freemium PUC wrappers.
 
 | Source | What it exhibits | Access |
 |---|---|---|
-| **Legistar / Granicus / CivicPlus** open meeting portals | Agendas, minutes, ordinance attachments where LocalView coverage is thin | Free per city; scrape politely |
-| **Senate LDA / House lobby disclosures** | Who is lobbying on AI / data-center / energy bills (pressure, not opinion) | Free bulk downloads |
-| **Cornell ILR Labor Action Tracker** | Strikes / labor actions that mention AI, automation, warehouses, utilities | Free research DB |
-| **EPA EIS / NEPA documents** | Formal environmental review friction for large loads / generation tied to DC buildout | Free |
-| **OpenPUC / state PUC dockets** (and RateBase where open) | Rate cases, large-load tariffs, cost-shift fights | Mixed free dockets |
-| **Common Crawl News / local RSS** | Backup local-news text when Media Cloud quota binds | Free / messy |
-| **ACS / BLS QCEW** | Socioeconomic denominators (income, employment, utility-adjacent employment) for panel controls | Free |
-| **Data Center Watch / opposition reports** | Hand-built group & campaign tallies (cite as curated, not census) | Report PDFs; manual |
+| **Moratorium Nation** + **AI GridWatch** open CSVs | Local/state DC (and related) pauses, pushback, project outcomes | Free GitHub / CC BY 4.0 — **next C ingest** |
+| **Legistar Web API** / Granicus / CivicPlus | Matters, ordinances, attachments where LocalView is thin | Free per client; rate politely |
+| **Municode / eCode360 / clerk PDFs** | Codified zoning (permanent rules, not pauses) | Free browse; bulk often ToS-grey |
+| **OpenPUC scrapers** + **OpenMPSC** + native PUC portals | Rate cases, large-load tariffs, intervenor fights | Free OSS / no-auth MI API / state HTML-PDF |
+| **EPA EIS DB** (+ EDGI scraper); **BLM NEPA register** | NEPA friction (land/water/noise) for large projects | Free |
+| **USGS NWIS / water-use**; state eWRIMS-style rights DBs | Hydro context vs legal water rights (keep distinct) | Free / heterogeneous state portals |
+| **FERC eLibrary** | Transmission / large-load rate proceedings | Free browse; awkward bulk |
+| **Cornell–ILR Labor Action Tracker**; **BLS Work Stoppages** | Strikes / labor protests (filter AI/tech/warehouse); coarse large stoppages | Free Zenodo / USG XLSX |
+| **Ballotpedia** AI ed guidance + ballot-measure topics; **MEDSL / SOS returns** | School AI policy stance; revealed preference on AI/DC measures | Free web / academic |
+| **Senate LDA.gov API/XML**; OpenSecrets (edu license); state lobby DBs; FEC bulk | Lobbying & money pressure on AI / DC / utilities | Free (OpenSecrets: account + attribution) |
+| **CourtListener / RECAP** | Lawsuits opposing DCs/AI (stay off paid PACER) | Free mirror |
+| **Common Crawl CC-NEWS**; **GDELT 2.0**; curated local RSS | Salience/framing at scale when Media Cloud quota binds | Free; heavy ops |
+| **ACS / BLS QCEW**; city open zoning/parcel portals | Socioeconomic + siting controls for the panel | Free |
+| **LocalView school-board slice** | School-board AI fights inside existing meta | Meta already on disk |
 
 ### Geo helpers (required plumbing)
 
