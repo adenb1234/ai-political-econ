@@ -28,7 +28,7 @@ The required layer status is one of `ready`, `blocked`, or `already-have-raw`. W
 | **A** Deliberation | **already-have-raw** | LocalView codebook + metadata downloaded; place→county crosswalk v0 + meta spine v0 on disk; transcripts deferred | `partial` (county + month on spine; unmatched keys 0; ambiguous keys remain) | None for free access |
 | **B** Legislation | **blocked** | LegiScan raw empty; Open States documented only | `not started` | **Yes — free LegiScan bulk drop/key; optional Open States key** |
 | **E** Mobilization | **already-have-raw** | CCC phase 3 downloaded; versioned transform outputs on disk | `partial` → matched rows checked | None for access |
-| **F** Vernacular | **ready** | Arctic Shift and Google Trends documented only; no raw dumps | `not started` | Dump size, rate limits, and geo crosswalk |
+| **F** Vernacular | **ready** | Arctic Shift documented only; Trends **state×month pilot landed** (real pytrends series; intermittent 429) | state grain; county blank | Dump size; rate limits; DMA→county deferred |
 | **G** Project ledger | **already-have-raw** | EIA-861 + LBNL Queued Up 2026 XLSX downloaded; ISO/registries documented only | `partial` / `not started` | No access blocker; hand-curation and schema work remain |
 
 Supplemental free options (Google Trends, hand-curated opposition registries, Media Cloud, and local RSS/HTML) are documented below without claiming unverified downloads. Census is a verified geography helper, not one of the five study layers.
@@ -120,20 +120,20 @@ Supplemental free options (Google Trends, hand-curated opposition registries, Me
 
 **Live check (2026-09-16 PT):** repo **200**; `download_links.md` **200**.
 
-### Google Trends (free complement; documented)
+### Google Trends (free complement; state×month pilot **landed**)
 
 | Field | Detail |
 |-------|--------|
 | **Layer** | F (adjunct) |
-| **Free status** | **ready** to pilot state-level pulls with polite backoff; no raw yet |
-| **Free access path** | https://trends.google.com/trends/ — **no paid API**. Free clients: browser export or community libraries (e.g. `pytrends`) with **strict backoff**. Prefer DMA/metro or state series first; never hammer endpoints. |
+| **Free status** | **ready** — live pytrends pulls work with strict backoff; intermittent **429** (retry once + sleep). **No paid API.** |
+| **Free access path** | https://trends.google.com/trends/ — community `pytrends` only. Keywords ≤5 in [`filters/google_trends_keywords_v0.md`](filters/google_trends_keywords_v0.md) (`trends_keywords_v0`: data center, ChatGPT, artificial intelligence). `make fetch-google-trends` → `src/ingest/google_trends.py` (default `--probe-only`; drop flag for full pilot). |
 | **License / ToS** | Google Terms of Service; Trends is a **relative** index (not absolute volume); scraping aggressively can get blocked — stay polite. |
-| **On-disk / manifest** | **`documented_only`.** No Trends raw under `data/raw/` yet; no dedicated manifest file in scaffold. |
-| **FIPS × month** | **`not started` / hard.** Native geography is often DMA or state, not county. County panel needs an explicit DMA→county crosswalk before spine join — treat as **partial at best** even after pulls. |
-| **Next free ingest step** | Draft a tiny keyword list (AI / data center / local power) + state-level monthly pull script with sleep/backoff; store CSV under `data/raw/trends/` (gitignored) and add `data/manifests/google_trends.json`. |
-| **Blockers** | Rate limits / ToS risk if impolite; DMA→county crosswalk design. **No paid Trends API.** |
+| **On-disk / manifest** | **`downloaded`** when rows land. `data/manifests/google_trends.json`; `data/raw/trends/ACCESS.md` + `google_trends_state_month_v0.csv` (gitignored); QA `data/processed/qa/google_trends_state_month_v0_qa.json`. **No invented interest numbers** on failure. |
+| **FIPS × month** | **State×month** (weekly→monthly mean). **`county_fips` always blank.** DMA→county **deferred**. |
+| **Next free ingest step** | Expand beyond pilot states (`--all-states`) only with long `--sleep`; design DMA→county later if county spine needed. |
+| **Blockers** | Intermittent Google **429**; DMA→county still deferred. **No paid Trends API.** |
 
-**Live check (2026-09-16 PT):** Trends homepage **200**.
+**Live check (2026-09-16 PT):** Trends homepage **200**; pytrends initially **429**, then full pilot **downloaded**: 540 state×month rows (CA/TX/VA/NY/GA × 3 keywords × 36 months 2023-01..2025-12); sha256 `09fdbd5d…563f`; `county_fips` blank.
 
 ---
 
@@ -263,7 +263,7 @@ Pew, Gallup, AP-NORC national AI/tech series and ballot measures: **cite release
 2. **E:** Already past raw + `ccc_rules_v0` transform; optional phase-2 CCC backfill later.
 3. **G:** LBNL Queued Up XLSX on disk — design generation/storage queue → county×month transform (not DC permits). Optionally pick one ISO next.
 4. **B:** Unblock only after Aden free LegiScan drop or free API key.
-5. **F/D:** Defer Arctic Shift torrents / Media Cloud until keys + disk plan exist.
+5. **F/D:** Trends state×month pilot on `ingest/f-trends` (real series + backoff); defer Arctic Shift torrents / Media Cloud until keys + disk plan exist.
 
 ---
 
@@ -276,7 +276,7 @@ Pew, Gallup, AP-NORC national AI/tech series and ballot measures: **cite release
 | D1 | No `MC_API_KEY` | Free Media Cloud account for thinner layer D |
 | D2 | NewsBank | Keep **excluded** (paid/institutional) |
 | F1 | Arctic Shift torrent size (multi-GB/TB) | Approve selective dump + disk budget before mirror |
-| F2 | Google Trends DMA→county | Accept state/DMA grain for early F, or fund crosswalk design |
+| F2 | Google Trends DMA→county; intermittent 429 | Accept state grain for early F; keep long backoff; fund crosswalk only if county spine required |
 | G1 | No national DC permit registry | Accept hand-built ledger coverage (spec failure mode G) |
 | G2 | Opposition registries | Approve curated schema + which sites may be cited (no login-wall scrapes) |
 | Ops | GitHub remote missing | Local `.git` only (`git remote` empty) — create private remote when ready; **do not push from this agent** |
@@ -294,6 +294,8 @@ Pew, Gallup, AP-NORC national AI/tech series and ballot measures: **cite release
 ## Verification log
 
 **Verified on disk 2026-09-16 PT (ls sizes + sha256sum where checked):** CCC CSV 47,231,658 bytes / sha256 matches manifest; LocalView codebook 6,387 plus metadata parquet 35,339,621 bytes / sha256 matches manifests; EIA zip 4,568,208 / sha256 matches; Census txt 647,830 / sha256 matches; LegiScan/Open States/Arctic Shift raw empty or ACCESS-only; CCC processed events/panel/QA present as above. **Later same day PT:** Census places gaz + `national_places.txt` downloaded; LocalView place→county crosswalk v0 QA (1,150 keys; 1,038 matched / 0.9026; meta-row match 0.8917; unmatched keys 2 / 263 rows); LocalView meta spine v0 (`data/processed/localview/meta_spine_v0.parquet`) QA: matched 269,001 / ambiguous 32,395 / unmatched 263; month ok 281,074 / fail 20,585; spine-ready 251,070; CT town→COG CSV 11,988 bytes / sha256 `4592692e…11a9`; LBNL Queued Up XLSX 15,571,236 bytes / sha256 `794582d3…08b6`. **Still later 2026-09-16 PT:** CT town→COG CSV + name-alias fallbacks rebuilt crosswalk (keys matched 1,038 / 0.9026; meta-row match 269,001 / 0.8917; unmatched keys 2); spine-ready 251,070 / 0.8323; residuals CSV on disk. **Same day PT (place_by_county_2020):** ANSI `national_place_by_county2020.txt` 2,736,928 / sha256 `9996494d…06ec6`; Semmes AL + Brookhaven GA matched; crosswalk keys 1,040 / 0.9043; meta matched 269,264 / 0.8926; unmatched keys **0**; spine-ready 251,210 / 0.8328.
+
+**Trends pilot (2026-09-16 PT, `ingest/f-trends`):** homepage GET **200**; pytrends initially **429**, then **540 real state×month rows** (5 pilot states × 3 keywords; manifest `downloaded`); **no invented index numbers**.
 
 **Verified live with curl 2026-09-16 PT (this pass):** LBNL Queued Up portal + 2026 publication page + XLSX HEAD **200** (`content-length` 15571236); EIA portal HEAD **503**/GET **200**, zip **200**; LegiScan datasets + API **403**; Open States docs **200**; Arctic Shift repo + download_links **200**; Google Trends **200**; Media Cloud **200**; Census gazetteer zip **200**; CCC project page **200** / Dataverse datafile HEAD **403** (file already on disk; range GET pattern works for LocalView meta **206**); PJM/MISO/CAISO(PascalCase)/ERCOT/NYISO/ISO-NE/SPP landing pages **200** (CAISO lowercase path **404**); datacenterwatch.org + datacenterknowledge.com **200**.
 

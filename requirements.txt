@@ -3,3 +3,4 @@
 pyarrow>=14.0.0  # LocalView meta parquet + geo crosswalk
 pandas>=2.0.0    # LocalView geo crosswalk grouping
 # openpyxl       # optional, only if inspecting xlsx ledgers by hand
+# pytrends      # optional, layer F Google Trends free pilot (make fetch-google-trends)

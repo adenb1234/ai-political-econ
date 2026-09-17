@@ -65,7 +65,7 @@ Scan date: **2026-09-16 PT**. Honest about free vs key vs paid, and what’s on 
 | **E2** | Opposition group registries (e.g. Data Center Opposition report FB census; Humans First action lists) | Organized *capacity*, not just event counts | Mostly manual / report-derived | Not structured here yet |
 | **F1** | **Arctic Shift** Reddit dumps | Unprompted local talk in city/topic subs (backfill) | Free torrents (large) | Documented only — no dump pulled |
 | **F2** | Reddit official API | Ongoing vernacular after dumps | Free OAuth (rate limits) | Not wired |
-| **F3** | Google Trends (DMA / state) | Relative salience, not absolute opinion | Free; polite scrape / export | Not started |
+| **F3** | Google Trends (state×month pilot) | Relative salience, not absolute opinion | Free `pytrends`; polite backoff; **no paid API** | **Pilot landed** (real series; intermittent 429); `county_fips` blank; DMA→county deferred |
 | **G1** | **EIA-861** | Utility sales / territory context for rate & load fights | Public domain | **Yes** — raw zip |
 | **G2** | **LBNL Queued Up** interconnection workbook | Generation/storage *supply* queues (context — **not** load/DC permits) | Free CC BY | **Yes** — 2026 XLSX; transforms thin |
 | **G3** | ISO/RTO + utility **load** interconnection / large-load tariffs; FERC large-load dockets | True demand-side denominator where published | Patchwork public dockets | Documented; hand work |
