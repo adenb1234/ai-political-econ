@@ -1,0 +1,14 @@
+{
+  "source_id": "moratorium_nation_state_legislation",
+  "url": "https://raw.githubusercontent.com/mjbommar/moratorium-data-2026/main/data/state_legislation.csv",
+  "path": "data/raw/moratorium_nation/state_legislation.csv",
+  "bytes": 241688,
+  "sha256": "01b6def1c452388ffe134266d0dc0e91a729b2e4bfb483afdfc451bdbb75d847",
+  "status": "downloaded",
+  "notes": "Moratorium Nation state legislation companion CSV (CC BY 4.0). Layer C adjunct / B overlap.",
+  "license_note": "CC BY 4.0 (mjbommar / Moratorium Nation)",
+  "layer": "C",
+  "portal": "https://mjbommar.github.io/moratorium-data-2026/",
+  "access_date_pt": "2026-09-16",
+  "recorded_at_utc": "2026-09-17T04:17:53.658875+00:00"
+}

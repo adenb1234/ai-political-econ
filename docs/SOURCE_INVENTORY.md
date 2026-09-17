@@ -15,7 +15,7 @@
 
 Live URL checks used polite `curl` HEAD/GET from this box on **2026-09-16 PT**. Do not treat a 403 as “source gone” when login/Cloudflare is known.
 
-Phase priority from working spec: **A → B → E** first, then **G**, then **F**. Layers C/D/H are notes-only for this free backbone (NewsBank **paid — excluded**).
+Phase priority from working spec: **A → B → E** first, then **C** (moratoria inventories), then **G**, then **F**. Layer D/H remain thinner; NewsBank **paid — excluded**.
 
 ---
 
@@ -27,11 +27,12 @@ The required layer status is one of `ready`, `blocked`, or `already-have-raw`. W
 |-------|-------------|-----------------------------------|--------------|----------------------|
 | **A** Deliberation | **already-have-raw** | LocalView codebook + metadata downloaded; place→county crosswalk v0 + meta spine v0 on disk; transcripts deferred | `partial` (county + month on spine; unmatched keys 0; ambiguous keys remain) | None for free access |
 | **B** Legislation | **blocked** | LegiScan raw empty; Open States documented only | `not started` | **Yes — free LegiScan bulk drop/key; optional Open States key** |
+| **C** Ordinances & moratoria | **already-have-raw** | Moratorium Nation inventory + state_legislation CSVs; AI GridWatch moratoriums (+ projects adjunct); place→county stubs v0 | `partial` (stub crosswalks; unmatched/ambiguous blank) | None for free access |
 | **E** Mobilization | **already-have-raw** | CCC phase 3 downloaded; versioned transform outputs on disk | `partial` → matched rows checked | None for access |
 | **F** Vernacular | **ready** | Arctic Shift and Google Trends documented only; no raw dumps | `not started` | Dump size, rate limits, and geo crosswalk |
 | **G** Project ledger | **already-have-raw** | EIA-861 + LBNL Queued Up 2026 XLSX downloaded; ISO/registries documented only | `partial` / `not started` | No access blocker; hand-curation and schema work remain |
 
-Supplemental free options (Google Trends, hand-curated opposition registries, Media Cloud, and local RSS/HTML) are documented below without claiming unverified downloads. Census is a verified geography helper, not one of the five study layers.
+Supplemental free options (Google Trends, hand-curated opposition registries, Media Cloud, and local RSS/HTML) are documented below. Layer **C** now has verified free CSV downloads (Moratorium Nation + AI GridWatch). Census is a verified geography helper, not one of the five study layers.
 
 ---
 
@@ -86,6 +87,40 @@ Supplemental free options (Google Trends, hand-curated opposition registries, Me
 **Live check (2026-09-16 PT):** docs site **200**.
 
 ---
+
+## C — Ordinances & moratoria — **already-have-raw** (inventories + geo stubs)
+
+### Moratorium Nation (local inventory + state legislation)
+
+| Field | Detail |
+|-------|--------|
+| **Free status** | **already-have-raw** |
+| **Free access path** | Site https://mjbommar.github.io/moratorium-data-2026/ · data index https://mjbommar.github.io/moratorium-data-2026/data/index.html · GitHub https://github.com/mjbommar/moratorium-data-2026 · inventory CSV `https://raw.githubusercontent.com/mjbommar/moratorium-data-2026/main/data/moratorium_inventory.csv` · state legislation `…/state_legislation.csv` |
+| **License / ToS** | **CC BY 4.0** — attribute Moratorium Nation / mjbommar. |
+| **Raw on disk** | **yes:** `data/raw/moratorium_nation/moratorium_inventory.csv` (554,384 bytes; sha256 `21348081…f7d5`; 533 rows) + `state_legislation.csv` (241,688 bytes; sha256 `01b6def1…`; 440 rows). Access date PT **2026-09-16**. |
+| **Manifests** | `moratorium_nation_inventory.json`, `moratorium_nation_state_legislation.json` (`downloaded`) |
+| **Processed (v0)** | Place→county stub: `data/processed/crosswalks/moratorium_nation_place_to_county_v0.csv` (+ residuals). QA rolled into `data/processed/qa/c_moratoria_geo_stub_v0_qa.json`. Entrypoint: `make fetch-moratorium-nation` / `make transform-c-moratoria`. Note: `docs/notes/c_moratoria_geo_v0.md`. |
+| **Geo / FIPS** | **`partial`.** Stub match rate **0.6979** (372 / 533) via Census county gazetteer + `national_place_by_county2020.txt`. Unmatched/ambiguous → blank `county_fips` (no invented FIPS). Month from `date_enacted_iso` when day/month precision exists (490 parseable). |
+| **Next free step** | Human-review residuals (140 unmatched + ambiguous); optional sector filter to `data_center`; do **not** invent panel ordinance counts until geo policy settled. Dedup vs AI GridWatch later. |
+| **Blockers** | None for free access. |
+
+**Live check (2026-09-16 PT):** GitHub raw inventory + state_legislation **200**.
+
+### AI GridWatch open data (moratorium tracker + projects adjunct)
+
+| Field | Detail |
+|-------|--------|
+| **Free status** | **already-have-raw** (moratoriums); projects CSV downloaded as **G adjunct** only |
+| **Free access path** | https://aigridwatch.com/open-data · CSV `https://aigridwatch.com/data/moratoriums.csv` · projects `https://aigridwatch.com/data/projects.csv` |
+| **License / ToS** | **CC BY 4.0** — attribute AI GridWatch. |
+| **Raw on disk** | **yes:** `data/raw/ai_gridwatch/moratoriums.csv` (590,438 bytes; sha256 `a5667446…`; 853 rows) + `projects.csv` (132,996 bytes; sha256 `30dc6016…`; 279 rows). Access date PT **2026-09-16**. |
+| **Manifests** | `ai_gridwatch_moratoriums.json`, `ai_gridwatch_projects.json` (`downloaded`) |
+| **Processed (v0)** | Place→county stub: `data/processed/crosswalks/ai_gridwatch_place_to_county_v0.csv` (+ residuals). Shared QA `c_moratoria_geo_stub_v0_qa.json`. `make fetch-ai-gridwatch` / `make transform-c-moratoria`. |
+| **Geo / FIPS** | **`partial`.** Stub match rate **0.7714** (658 / 853). State-only / unmatched / ambiguous left blank. Month from `date` when parseable (808). |
+| **Next free step** | Review residuals; use `effective_status` (not raw `status`) for “in force”; collate overlap with Moratorium Nation before any panel rollup. Projects CSV is **not** a national permit registry — do not invent proposed/approved/denied DC tallies. |
+| **Blockers** | None for free access. |
+
+**Live check (2026-09-16 PT):** `aigridwatch.com/data/moratoriums.csv` + `projects.csv` **200** (`text/csv`).
 
 ## E — Crowd Counting Consortium (mobilization) — **already-have-raw** (+ transform v0)
 
@@ -257,13 +292,14 @@ Pew, Gallup, AP-NORC national AI/tech series and ballot measures: **cite release
 
 ---
 
-## Exact next free ingest actions (priority A→B→E)
+## Exact next free ingest actions (priority A→B→E, then C→G)
 
 1. **A:** Meta spine v0 landed (`python -m src.ingest.localview --include-meta`; 251,210 spine-ready / 83.28%; unmatched county keys 0). **Next:** human-review ambiguous/multi-county keys (32,395 rows; 110 place keys); optional `county_fips × month` meeting-count panel. No transcript tarballs.
 2. **E:** Already past raw + `ccc_rules_v0` transform; optional phase-2 CCC backfill later.
-3. **G:** LBNL Queued Up XLSX on disk — design generation/storage queue → county×month transform (not DC permits). Optionally pick one ISO next.
-4. **B:** Unblock only after Aden free LegiScan drop or free API key.
-5. **F/D:** Defer Arctic Shift torrents / Media Cloud until keys + disk plan exist.
+3. **C:** Moratorium Nation + AI GridWatch CSVs on disk; place→county stubs v0 shipped (`make transform-c-moratoria`). **Next:** residual review + optional dedupe across trackers; no invented ordinance panel counts yet.
+4. **G:** EIA-861 + LBNL Queued Up XLSX on disk — resume generation/storage queue → county×month transform (not DC permits) after C stubs land. Optionally pick one ISO next.
+5. **B:** Unblock only after Aden free LegiScan drop or free API key.
+6. **F/D:** Defer Arctic Shift torrents / Media Cloud until keys + disk plan exist.
 
 ---
 
@@ -293,8 +329,8 @@ Pew, Gallup, AP-NORC national AI/tech series and ballot measures: **cite release
 
 ## Verification log
 
-**Verified on disk 2026-09-16 PT (ls sizes + sha256sum where checked):** CCC CSV 47,231,658 bytes / sha256 matches manifest; LocalView codebook 6,387 plus metadata parquet 35,339,621 bytes / sha256 matches manifests; EIA zip 4,568,208 / sha256 matches; Census txt 647,830 / sha256 matches; LegiScan/Open States/Arctic Shift raw empty or ACCESS-only; CCC processed events/panel/QA present as above. **Later same day PT:** Census places gaz + `national_places.txt` downloaded; LocalView place→county crosswalk v0 QA (1,150 keys; 1,038 matched / 0.9026; meta-row match 0.8917; unmatched keys 2 / 263 rows); LocalView meta spine v0 (`data/processed/localview/meta_spine_v0.parquet`) QA: matched 269,001 / ambiguous 32,395 / unmatched 263; month ok 281,074 / fail 20,585; spine-ready 251,070; CT town→COG CSV 11,988 bytes / sha256 `4592692e…11a9`; LBNL Queued Up XLSX 15,571,236 bytes / sha256 `794582d3…08b6`. **Still later 2026-09-16 PT:** CT town→COG CSV + name-alias fallbacks rebuilt crosswalk (keys matched 1,038 / 0.9026; meta-row match 269,001 / 0.8917; unmatched keys 2); spine-ready 251,070 / 0.8323; residuals CSV on disk. **Same day PT (place_by_county_2020):** ANSI `national_place_by_county2020.txt` 2,736,928 / sha256 `9996494d…06ec6`; Semmes AL + Brookhaven GA matched; crosswalk keys 1,040 / 0.9043; meta matched 269,264 / 0.8926; unmatched keys **0**; spine-ready 251,210 / 0.8328.
+**Verified on disk 2026-09-16 PT (ls sizes + sha256sum where checked):** CCC CSV 47,231,658 bytes / sha256 matches manifest; LocalView codebook 6,387 plus metadata parquet 35,339,621 bytes / sha256 matches manifests; EIA zip 4,568,208 / sha256 matches; Census txt 647,830 / sha256 matches; LegiScan/Open States/Arctic Shift raw empty or ACCESS-only; CCC processed events/panel/QA present as above. **Later same day PT:** Census places gaz + `national_places.txt` downloaded; LocalView place→county crosswalk v0 QA (1,150 keys; 1,038 matched / 0.9026; meta-row match 0.8917; unmatched keys 2 / 263 rows); LocalView meta spine v0 (`data/processed/localview/meta_spine_v0.parquet`) QA: matched 269,001 / ambiguous 32,395 / unmatched 263; month ok 281,074 / fail 20,585; spine-ready 251,070; CT town→COG CSV 11,988 bytes / sha256 `4592692e…11a9`; LBNL Queued Up XLSX 15,571,236 bytes / sha256 `794582d3…08b6`. **Still later 2026-09-16 PT:** CT town→COG CSV + name-alias fallbacks rebuilt crosswalk (keys matched 1,038 / 0.9026; meta-row match 269,001 / 0.8917; unmatched keys 2); spine-ready 251,070 / 0.8323; residuals CSV on disk. **Same day PT (place_by_county_2020):** ANSI `national_place_by_county2020.txt` 2,736,928 / sha256 `9996494d…06ec6`; Semmes AL + Brookhaven GA matched; crosswalk keys 1,040 / 0.9043; meta matched 269,264 / 0.8926; unmatched keys **0**; spine-ready 251,210 / 0.8328. **Same evening PT (layer C):** Moratorium Nation inventory 554,384 / sha256 `21348081…` (533 rows) + state_legislation 241,688; AI GridWatch moratoriums 590,438 / sha256 `a5667446…` (853 rows) + projects 132,996; place→county stubs MN matched 372/533 (0.6979), GW 658/853 (0.7714); QA `c_moratoria_geo_stub_v0_qa.json`.
 
-**Verified live with curl 2026-09-16 PT (this pass):** LBNL Queued Up portal + 2026 publication page + XLSX HEAD **200** (`content-length` 15571236); EIA portal HEAD **503**/GET **200**, zip **200**; LegiScan datasets + API **403**; Open States docs **200**; Arctic Shift repo + download_links **200**; Google Trends **200**; Media Cloud **200**; Census gazetteer zip **200**; CCC project page **200** / Dataverse datafile HEAD **403** (file already on disk; range GET pattern works for LocalView meta **206**); PJM/MISO/CAISO(PascalCase)/ERCOT/NYISO/ISO-NE/SPP landing pages **200** (CAISO lowercase path **404**); datacenterwatch.org + datacenterknowledge.com **200**.
+**Verified live with curl 2026-09-16 PT (this pass):** LBNL Queued Up portal + 2026 publication page + XLSX HEAD **200** (`content-length` 15571236); EIA portal HEAD **503**/GET **200**, zip **200**; LegiScan datasets + API **403**; Open States docs **200**; Arctic Shift repo + download_links **200**; Google Trends **200**; Media Cloud **200**; Census gazetteer zip **200**; CCC project page **200** / Dataverse datafile HEAD **403** (file already on disk; range GET pattern works for LocalView meta **206**); PJM/MISO/CAISO(PascalCase)/ERCOT/NYISO/ISO-NE/SPP landing pages **200** (CAISO lowercase path **404**); datacenterwatch.org + datacenterknowledge.com **200**. Moratorium Nation GitHub raw CSVs **200**; AI GridWatch `/data/moratoriums.csv` + `/data/projects.csv` **200**.
 
 **Reconciled from:** `SOURCES.md`, `data/manifests/*.json`, on-disk `data/raw/**` / `data/processed/**`, and draft inventory formerly at `/workspace/ai-backlash-free-data/docs/SOURCE_INVENTORY.md`.
