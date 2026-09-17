@@ -2,7 +2,7 @@
 PYTHON ?= $(shell if [ -x "$(CURDIR)/.venv/bin/python" ]; then echo "$(CURDIR)/.venv/bin/python"; else echo python3; fi)
 export PYTHONPATH := $(CURDIR)
 
-.PHONY: help fetch-census fetch-census-places fetch-ccc fetch-eia fetch-lbnl fetch-localview fetch-localview-meta fetch-docs fetch-all fips-summary crosswalk-localview spine-localview manifests transform-ccc
+.PHONY: help fetch-census fetch-census-places fetch-ccc fetch-eia fetch-lbnl fetch-localview fetch-localview-meta fetch-google-trends fetch-docs fetch-all fips-summary crosswalk-localview spine-localview manifests transform-ccc
 
 help:
 	@echo "Targets:"
@@ -13,6 +13,7 @@ help:
 	@echo "  make fetch-lbnl            Download LBNL Queued Up 2026 XLSX"
 	@echo "  make fetch-localview       Download LocalView codebook"
 	@echo "  make fetch-localview-meta  Codebook + meta + county/month spine v0"
+	@echo "  make fetch-google-trends   Google Trends state×month pilot (pytrends; free)"
 	@echo "  make fetch-docs            Write manifests for key-gated / huge sources"
 	@echo "  make fetch-all             All of the above"
 	@echo "  make transform-ccc         CCC CSV → AI-related events + mobilization panel"
@@ -42,6 +43,9 @@ fetch-localview:
 fetch-localview-meta:
 	$(PYTHON) -m src.ingest.localview --include-meta
 
+fetch-google-trends:
+	$(PYTHON) -m src.ingest.google_trends --probe-only
+
 fetch-docs:
 	$(PYTHON) -m src.ingest.legiscan
 	$(PYTHON) -m src.ingest.openstates
@@ -49,7 +53,7 @@ fetch-docs:
 	$(PYTHON) -m src.ingest.media_cloud
 	$(PYTHON) -m src.ingest.project_ledger
 
-fetch-all: fetch-census fetch-census-places fetch-ccc fetch-eia fetch-lbnl fetch-localview fetch-docs
+fetch-all: fetch-census fetch-census-places fetch-ccc fetch-eia fetch-lbnl fetch-localview fetch-google-trends fetch-docs
 
 transform-ccc:
 	$(PYTHON) -m src.transform.ccc_to_events

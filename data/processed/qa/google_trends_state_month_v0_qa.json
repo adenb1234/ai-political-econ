@@ -1,0 +1,55 @@
+{
+  "source_id": "google_trends",
+  "layer": "F",
+  "filter_version": "trends_keywords_v0",
+  "filter_doc": "docs/filters/google_trends_keywords_v0.md",
+  "status": "downloaded",
+  "blocker": null,
+  "homepage_http": 200,
+  "trends_home": "https://trends.google.com/trends/",
+  "paid_api": false,
+  "client": "pytrends (optional free community library)",
+  "keywords": [
+    "data center",
+    "ChatGPT",
+    "artificial intelligence"
+  ],
+  "states_requested": [
+    "CA",
+    "TX",
+    "VA",
+    "NY",
+    "GA"
+  ],
+  "timeframe": "2023-01-01 2025-12-31",
+  "sleep_s": 25.0,
+  "backoff_s": 90.0,
+  "probe_only": false,
+  "calls_attempted": 16,
+  "calls_ok": 15,
+  "n_rows": 540,
+  "by_state": {
+    "CA": 108,
+    "TX": 108,
+    "VA": 108,
+    "NY": 108,
+    "GA": 108
+  },
+  "by_keyword": {
+    "data center": 180,
+    "ChatGPT": 180,
+    "artificial intelligence": 180
+  },
+  "geo": {
+    "grain": "state_month",
+    "county_fips": "always_blank",
+    "dma_to_county": "deferred",
+    "note": "Native Trends geography is DMA/metro or state. County panel requires an explicit DMA\u2192county crosswalk \u2014 not shipped."
+  },
+  "raw_csv": "data/raw/trends/google_trends_state_month_v0.csv",
+  "raw_bytes": 61089,
+  "raw_sha256": "09fdbd5df76360b342e3284946df84441c60ef356ed522b13ba046f56da0563f",
+  "access_note": "data/raw/trends/ACCESS.md",
+  "invented_values": false,
+  "recorded_at_utc": "2026-09-17T05:02:26.811708+00:00"
+}
