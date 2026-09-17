@@ -1,0 +1,854 @@
+source,id,state,locality,level,status,effective_status,date,date_precision,month,county_fips,match_kind,candidate_fips,transform_version,geo_policy
+ai_gridwatch,denver-co,CO,Denver,Local,Enacted,Enacted,2026-05-21,day,2026-05,08031,place,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,baltimore-city-md,MD,Baltimore City,Local,Enacted,Enacted,2026-06-16,day,2026-06,24510,place,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,reno-nv,NV,Reno,Local,Enacted,Enacted,2026-06-01,day,2026-06,32031,place,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,dubuque-county-ia,IA,Dubuque County,Local,Enacted,Enacted,2026-05-26,day,2026-05,19061,county,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,bloomington-il,IL,Bloomington,Local,Enacted,Enacted,2026-05-26,day,2026-05,17113,place,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,iron-county-ut,UT,Iron County,Local,Enacted,Enacted,2026-05-26,day,2026-05,49021,county,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,manitowoc-county-wi,WI,Manitowoc County,Local,Enacted,Enacted,2026-04-29,day,2026-04,55071,county,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,smithfield-ri,RI,Smithfield,Local,Enacted,Enacted,2026-06-04,day,2026-06,,unmatched,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,meridian-township-mi,MI,Meridian Township,Local,Enacted,Enacted,2026-05-19,day,2026-05,,unmatched,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,washington-township-macomb-co-mi,MI,Washington Township (Macomb Co.),Local,Enacted,Enacted,2026-05-01,month,2026-05,,unmatched,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,hill-county-tx,TX,Hill County,Local,Rescinded,Rescinded,2026-06-04,day,2026-06,48217,county,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,dekalb-county-ga,GA,DeKalb County,Local,Enacted,Enacted,2026-07-07,day,2026-07,13089,county,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,lysander-onondaga-co-ny,NY,Lysander (Onondaga Co.),Local,Enacted,Enacted,2026-05-07,day,2026-05,,unmatched,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,perth-fulton-co-ny,NY,Perth (Fulton Co.),Local,Enacted,Enacted,2026-06-04,day,2026-06,,unmatched,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,tonawanda-erie-co-ny,NY,Tonawanda (Erie Co.),Local,Enacted,Enacted,2026-08-03,day,2026-08,36029,place,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,newfield-tompkins-co-ny,NY,Newfield (Tompkins Co.),Local,Enacted,Enacted,2026-07-09,day,2026-07,36109,place,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,groton-ct,CT,Groton,Local,Enacted,Expired,2022-06-21,day,2022-06,09011,place,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,peculiar-mo,MO,Peculiar,Local,Enacted,Enacted,2024-10-01,month,2024-10,29037,place,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,bangor-me,ME,Bangor,Local,Enacted,Enacted,2026-04-13,day,2026-04,23019,place,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,gates-county-nc,NC,Gates County,Local,Enacted,Enacted,2025-12-17,day,2025-12,37073,county,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,brevard-nc,NC,Brevard,Local,Enacted,Expired,2026-03-01,month,2026-03,37175,place,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,clay-county-nc,NC,Clay County,Local,Enacted,Enacted,2026-01-08,day,2026-01,37043,county,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,canton-nc,NC,Canton,Local,Enacted,Enacted,2026-02-11,day,2026-02,37087,place,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,chatham-county-nc,NC,Chatham County,Local,Enacted,Enacted,2026-02-11,day,2026-02,37037,county,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,kings-mountain-nc,NC,Kings Mountain,Local,Enacted,Enacted,2026-02-24,day,2026-02,,ambiguous_place,37045|37071,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,durham-county-nc,NC,Durham County,Local,Enacted,Enacted,2026-08-24,day,2026-08,37063,county,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,whiteville-nc,NC,Whiteville,Local,Enacted,Enacted,2026-08-25,day,2026-08,37047,place,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,edgecombe-county-nc,NC,Edgecombe County,Local,Enacted,Enacted,2026-08-03,day,2026-08,37065,county,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,boone-nc,NC,Boone,Local,Enacted,Enacted,2026-03-23,day,2026-03,37189,place,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,apex-nc,NC,Apex,Local,Enacted,Enacted,2026-04-15,day,2026-04,37183,place,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,orange-county-nc,NC,Orange County,Local,Enacted,Enacted,2026-04-21,day,2026-04,37135,county,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,rowan-county-nc,NC,Rowan County,Local,Enacted,Enacted,2026-04-20,day,2026-04,37159,county,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,swain-county-nc,NC,Swain County,Local,Enacted,Enacted,2026-04-21,day,2026-04,37173,county,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,watauga-county-nc,NC,Watauga County,Local,Enacted,Enacted,2026-04-21,day,2026-04,37189,county,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,madison-county-nc,NC,Madison County,Local,Enacted,Expired,2023-06-01,month,2023-06,37115,county,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,clyde-nc,NC,Clyde,Local,Enacted,Enacted,2026-01-14,day,2026-01,37087,place,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,rockford-il,IL,Rockford,Local,Enacted,Enacted,2026-08-03,day,2026-08,,ambiguous_place,17141|17201,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,flagler-county-fl,FL,Flagler County,Local,Enacted,Enacted,2026-08-03,day,2026-08,12035,county,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,lakeland-fl,FL,Lakeland,Local,Enacted,Enacted,2026-08-03,day,2026-08,12105,place,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,pasco-county-fl,FL,Pasco County,Local,Enacted,Enacted,2026-07-14,day,2026-07,12101,county,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,manatee-county-fl,FL,Manatee County,Local,Enacted,Enacted,2026-07-28,day,2026-07,12081,county,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,athens-oh,OH,Athens,Local,Enacted,Enacted,2026-08-04,day,2026-08,39009,place,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,nashville-tn,TN,Nashville,Local,Enacted,Enacted,2026-07-21,day,2026-07,,unmatched,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,san-marcos-tx,TX,San Marcos,Local,Enacted,Enacted,2026-06-16,day,2026-06,,ambiguous_place,48055|48187|48209,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,hays-county-tx,TX,Hays County,Local,Enacted,Enacted,2026-01-01,year,2026-01,48209,county,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,prince-george-s-county-md,MD,Prince George's County,Local,Enacted,Enacted,2026-07-07,day,2026-07,24033,county,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,baltimore-county-md,MD,Baltimore County,Local,Enacted,Enacted,2026-02-01,month,2026-02,,ambiguous_county,24005|24510,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,imperial-county-ca,CA,Imperial County,Local,Enacted,Enacted,2026-06-16,day,2026-06,06025,county,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,desert-hot-springs-ca,CA,Desert Hot Springs,Local,Enacted,Enacted,2026-06-17,day,2026-06,06065,place,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,lochbuie-co,CO,Lochbuie,Local,Enacted,Enacted,2026-07-21,day,2026-07,,ambiguous_place,08001|08123,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,broomfield-co,CO,Broomfield,Local,Enacted,Enacted,2026-07-07,day,2026-07,08014,place,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,spokane-wa,WA,Spokane,Local,Enacted,Enacted,2026-06-23,day,2026-06,53063,place,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,sierra-county-nm,NM,Sierra County,Local,Enacted,Enacted,2026-07-22,day,2026-07,35051,county,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,linn-county-ia,IA,Linn County,Local,Enacted,Enacted,2026-07-01,day,2026-07,19113,county,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,london-ky,KY,London,Local,Enacted,Enacted,2026-08-03,day,2026-08,21125,place,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,logan-county-ky,KY,Logan County,Local,Enacted,Enacted,2026-07-30,day,2026-07,21141,county,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,paulding-county-ga,GA,Paulding County,Local,Enacted,Enacted,2026-07-28,day,2026-07,13223,county,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,cherokee-county-ga,GA,Cherokee County,Local,Enacted,Enacted,2026-07-22,day,2026-07,13057,county,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,dougherty-county-ga,GA,Dougherty County,Local,Enacted,Enacted,2026-07-20,day,2026-07,13095,county,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,walker-county-ga,GA,Walker County,Local,Enacted,Enacted,2026-08-07,day,2026-08,13295,county,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,augusta-ga,GA,Augusta,Local,Enacted,Enacted,2026-07-21,day,2026-07,,unmatched,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,monroe-township-gloucester-co-nj,NJ,Monroe Township (Gloucester Co.),Local,Enacted,Enacted,2026-04-22,day,2026-04,,unmatched,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,phillipsburg-nj,NJ,Phillipsburg,Local,Enacted,Enacted,2026-04-01,month,2026-04,34041,place,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,warren-nj,NJ,Warren,Local,Enacted,Enacted,2026-06-23,day,2026-06,34041,county_name,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,holly-springs-nc,NC,Holly Springs,Local,Enacted,Enacted,2026-06-16,day,2026-06,37183,place,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,gordon-county-ga,GA,Gordon County,Local,Enacted,Enacted,2026-05-01,month,2026-05,13129,county,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,carroll-county-ga,GA,Carroll County,Local,Enacted,Enacted,2026-03-03,day,2026-03,13045,county,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,montgomery-county-md,MD,Montgomery County,Local,Enacted,Enacted,2026-07-28,day,2026-07,24031,county,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,sarasota-county-fl,FL,Sarasota County,Local,Enacted,Enacted,2026-07-08,day,2026-07,12115,county,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,merrillville-in,IN,Merrillville,Local,Enacted,Enacted,2026-06-01,day,2026-06,18089,place,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,vienna-township-trumbull-co-oh,OH,Vienna Township (Trumbull Co.),Local,Enacted,Enacted,2026-08-01,month,2026-08,,unmatched,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,boardman-oh,OH,Boardman,Local,Enacted,Enacted,2026-04-28,day,2026-04,,unmatched,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,la-crosse-county-wi,WI,La Crosse County,Local,Enacted,Enacted,2026-06-18,day,2026-06,55063,county,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,morris-ct,CT,Morris,Local,Enacted,Enacted,2026-05-20,day,2026-05,,unmatched,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,charlotte-nc,NC,Charlotte,Local,Enacted,Enacted,2026-06-08,day,2026-06,37119,place,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,durham-nc,NC,Durham,Local,Enacted,Enacted,2026-06-15,day,2026-06,,ambiguous_place,37063|37135|37183,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,harnett-county-nc,NC,Harnett County,Local,Enacted,Enacted,2026-05-05,day,2026-05,37085,county,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,cumberland-county-nc,NC,Cumberland County,Local,Enacted,Enacted,2026-06-16,day,2026-06,37051,county,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,fayetteville-nc,NC,Fayetteville,Local,Rejected,Rejected,2026-08-10,day,2026-08,37051,place,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,seattle-wa,WA,Seattle,Local,Enacted,Enacted,2026-06-09,day,2026-06,53033,place,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,indianapolis-marion-county-in,IN,Indianapolis (Marion County),Local,Enacted,Enacted,2026-08-19,day,2026-08,18097,place,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,pulaski-county-ar,AR,Pulaski County,Local,Rejected,Rejected,2026-07-28,day,2026-07,05119,county,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,st-lawrence-county-ny,NY,St. Lawrence County,Local,Proposed,Proposed,2026-06-01,day,2026-06,36089,county,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,mohawk-montgomery-co-ny,NY,Mohawk (Montgomery Co.),Local,Enacted,Enacted,2026-08-13,day,2026-08,36043,place,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,salem-or,OR,Salem,Local,Proposed,Proposed,2026-08-03,day,2026-08,,ambiguous_place,41047|41053,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,jersey-city-nj,NJ,Jersey City,Local,Enacted,Enacted,2026-08-19,day,2026-08,34017,place,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,howell-township-nj,NJ,Howell Township,Local,Enacted,Enacted,2026-08-18,day,2026-08,,unmatched,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,andover-township-nj,NJ,Andover Township,Local,Enacted,Enacted,2026-05-28,day,2026-05,34037,place,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,la-crosse-wi,WI,La Crosse,Local,Enacted,Enacted,2026-08-14,day,2026-08,55063,place,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,yakima-county-wa,WA,Yakima County,Local,Enacted,Enacted,2026-08-12,day,2026-08,53077,county,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,greensboro-nc,NC,Greensboro,Local,Enacted,Enacted,2026-08-18,day,2026-08,37081,place,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,new-haven-ct,CT,New Haven,Local,Proposed,Proposed,2026-07-06,day,2026-07,09009,place,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,henderson-nv,NV,Henderson,Local,Rejected,Rejected,2026-07-28,day,2026-07,32003,place,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,cheyenne-wy,WY,Cheyenne,Local,Rejected,Rejected,2026-05-27,day,2026-05,56021,place,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,new-york-statewide-ny,NY,New York (statewide),State,Enacted,Enacted,2026-07-14,day,2026-07,,state_only,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,new-york-s10642-a11560-ny,NY,New York (S10642/A11560),State,Proposed,Proposed,2026-06-04,day,2026-06,,ambiguous_place,36005|36047|36061|36081|36085,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,texas-abbott-directive-tx,TX,Texas (Abbott directive),State,Enacted,Enacted,2026-08-03,day,2026-08,,ambiguous_place,48071|48167,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,oregon-statewide-or,OR,Oregon (statewide),State,Proposed,Proposed,2026-08-04,day,2026-08,,state_only,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,georgia-hb-1012-ga,GA,Georgia (HB 1012),State,Rejected,Rejected,2026-01-01,year,2026-01,,unmatched,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,maine-statewide-me,ME,Maine (statewide),State,Vetoed,Vetoed,2026-04-24,day,2026-04,,state_only,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,ohio-ballot-measure-oh,OH,Ohio (ballot measure),State,Rejected,Rejected,2026-07-01,day,2026-07,39161,place,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,bell-county-ky,KY,Bell County,Local,Enacted,Enacted,2026-07-02,day,2026-07,21013,county,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,citrus-county-fl,FL,Citrus County,Local,Enacted,Enacted,2026-05-26,day,2026-05,12017,county,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,little-rock-ar,AR,Little Rock,Local,Rejected,Rejected,2026-08-04,day,2026-08,05119,place,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,coachella-ca,CA,Coachella,Local,Enacted,Enacted,2026-08-26,day,2026-08,06065,place,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,aurora-co,CO,Aurora,Local,Rejected,Rejected,2026-08-10,day,2026-08,,ambiguous_place,08001|08005|08035,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,desoto-county-fl,FL,DeSoto County,Local,Enacted,Enacted,2026-07-29,day,2026-07,12027,county,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,snohomish-county-wa,WA,Snohomish County,Local,Enacted,Enacted,2026-06-24,day,2026-06,53061,county,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,taylor-county-fl,FL,Taylor County,Local,Rejected,Rejected,2026-07-07,day,2026-07,12123,county,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,clinton-ia,IA,Clinton,Local,Rejected,Rejected,2026-06-09,day,2026-06,19045,place,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,cave-city-ky,KY,Cave City,Local,Enacted,Enacted,2026-05-20,day,2026-05,21009,place,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,sanford-me,ME,Sanford,Local,Enacted,Enacted,2026-08-05,day,2026-08,23031,place,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,socorro-county-nm,NM,Socorro County,Local,Enacted,Enacted,2026-06-09,day,2026-06,35053,county,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,nye-county-nv,NV,Nye County,Local,Enacted,Enacted,2026-06-02,day,2026-06,32023,county,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,farmville-nc,NC,Farmville,Local,Enacted,Enacted,2026-08-03,day,2026-08,37147,place,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,summit-nj,NJ,Summit,Local,Enacted,Enacted,2026-06-16,day,2026-06,34039,place,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,newberry-county-sc,SC,Newberry County,Local,Enacted,Enacted,2026-07-16,day,2026-07,45071,county,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,colleton-county-sc,SC,Colleton County,Local,Enacted,Enacted,2026-07-07,day,2026-07,45029,county,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,dodge-county-wi,WI,Dodge County,Local,Enacted,Enacted,2026-08-10,day,2026-08,55027,county,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,salix-ia,IA,Salix,Local,Rejected,Rejected,2026-08-21,day,2026-08,19193,place,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,hogansville-ga,GA,Hogansville,Local,Enacted,Expired,2026-05-01,month,2026-05,13285,place,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,jeffersonville-in,IN,Jeffersonville,Local,Enacted,Enacted,2026-08-04,day,2026-08,18019,place,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,palm-beach-county-fl,FL,Palm Beach County,Local,Enacted,Enacted,2026-07-01,month,2026-07,12099,county,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,escambia-county-fl,FL,Escambia County,Local,Enacted,Enacted,2026-08-01,month,2026-08,12033,county,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,santa-rosa-county-fl,FL,Santa Rosa County,Local,Enacted,Enacted,2026-07-23,day,2026-07,12113,county,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,warrick-county-in,IN,Warrick County,Local,Enacted,Enacted,2026-08-11,day,2026-08,18173,county,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,islip-ny,NY,Islip,Local,Enacted,Enacted,2026-08-12,day,2026-08,36103,place,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,brookhaven-ny,NY,Brookhaven,Local,Enacted,Enacted,2026-07-17,day,2026-07,36103,place,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,waxhaw-nc,NC,Waxhaw,Local,Enacted,Enacted,2026-08-11,day,2026-08,37179,place,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,cobb-county-ga,GA,Cobb County,Local,Enacted,Enacted,2026-08-01,month,2026-08,13067,county,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,rochester-hills-mi,MI,Rochester Hills,Local,Enacted,Enacted,2026-08-01,month,2026-08,26125,place,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,independence-county-ar,AR,Independence County,Local,Enacted,Enacted,2026-08-11,day,2026-08,05063,county,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,russellville-ar,AR,Russellville,Local,Enacted,Enacted,2026-07-01,month,2026-07,05115,place,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,union-county-ar,AR,Union County,Local,Enacted,Enacted,2026-06-30,day,2026-06,05139,county,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,carroll-county-ar,AR,Carroll County,Local,Enacted,Enacted,2026-06-16,day,2026-06,05015,county,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,ridgely-md,MD,Ridgely,Local,Enacted,Enacted,2026-08-01,month,2026-08,24011,place,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,monterey-park-ca,CA,Monterey Park,Local,Enacted,Enacted,2026-06-02,day,2026-06,06037,place,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,cherry-hill-nj,NJ,Cherry Hill,Local,Enacted,Enacted,2026-07-28,day,2026-07,,unmatched,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,medford-nj,NJ,Medford,Local,Enacted,Enacted,2026-06-25,day,2026-06,,unmatched,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,mansfield-township-burlington-co-nj,NJ,Mansfield Township (Burlington Co.),Local,Enacted,Enacted,2026-07-15,day,2026-07,,unmatched,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,chesterfield-nj,NJ,Chesterfield,Local,Enacted,Enacted,2026-07-01,month,2026-07,,unmatched,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,berkeley-heights-nj,NJ,Berkeley Heights,Local,Enacted,Enacted,2026-07-01,month,2026-07,,unmatched,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,louisville-ky,KY,Louisville,Local,Enacted,Enacted,2026-08-13,day,2026-08,21111,place,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,statesville-nc,NC,Statesville,Local,Proposed,Proposed,2026-08-01,month,2026-08,37097,place,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,fort-worth-tx,TX,Fort Worth,Local,Proposed,Proposed,2026-08-11,day,2026-08,,ambiguous_place,48121|48251|48367|48439|48497,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,knox-county-tn,TN,Knox County,Local,Enacted,Enacted,2026-06-22,day,2026-06,47093,county,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,knoxville-tn,TN,Knoxville,Local,Enacted,Enacted,2026-07-08,day,2026-07,47093,place,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,massillon-oh,OH,Massillon,Local,Enacted,Expired,2026-04-01,month,2026-04,39151,place,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,lavon-tx,TX,Lavon,Local,Enacted,Enacted,2026-08-07,day,2026-08,48085,place,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,san-antonio-tx,TX,San Antonio,Local,Rejected,Rejected,2026-08-26,day,2026-08,,ambiguous_place,48029|48091|48325,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,columbia-county-ga,GA,Columbia County,Local,Proposed,Proposed,2026-08-01,month,2026-08,13073,county,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,denton-tx,TX,Denton,Local,Proposed,Proposed,2026-08-05,day,2026-08,48121,place,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,marshalltown-ia,IA,Marshalltown,Local,Enacted,Enacted,2026-08-24,day,2026-08,19127,place,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,east-brunswick-nj,NJ,East Brunswick,Local,Enacted,Enacted,2026-08-25,day,2026-08,,unmatched,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,loudoun-county-va,VA,Loudoun County,Local,Proposed,Proposed,2026-07-22,day,2026-07,51107,county,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,oklahoma-city-ok,OK,Oklahoma City,Local,Enacted,Enacted,2026-04-22,day,2026-04,,ambiguous_place,40017|40027|40109|40125,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,boone-county-in,IN,Boone County,Local,Enacted,Enacted,2026-06-16,day,2026-06,18011,county,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,grant-county-in,IN,Grant County,Local,Enacted,Enacted,2026-03-16,day,2026-03,18053,county,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,fayette-county-in,IN,Fayette County,Local,Enacted,Enacted,2026-05-18,day,2026-05,18041,county,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,starke-county-in,IN,Starke County,Local,Enacted,Enacted,2025-12-15,day,2025-12,18149,county,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,marshall-county-in,IN,Marshall County,Local,Enacted,Enacted,2026-04-20,day,2026-04,18099,county,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,cass-county-in,IN,Cass County,Local,Enacted,Enacted,2026-04-21,day,2026-04,18017,county,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,johnson-city-tn,TN,Johnson City,Local,Enacted,Enacted,2026-05-22,day,2026-05,,ambiguous_place,47019|47163|47179,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,mcminnville-tn,TN,McMinnville,Local,Enacted,Enacted,2026-06-03,day,2026-06,47177,place,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,athens-clarke-county-ga,GA,Athens-Clarke County,Local,Enacted,Enacted,2026-03-01,month,2026-03,,unmatched,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,palmetto-ga,GA,Palmetto,Local,Enacted,Enacted,2026-03-01,month,2026-03,,ambiguous_place,13077|13121,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,hall-county-ga,GA,Hall County,Local,Enacted,Expired,2026-02-26,day,2026-02,13139,county,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,coweta-county-ga,GA,Coweta County,Local,Enacted,Enacted,2026-06-01,month,2026-06,13077,county,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,jackson-county-mo,MO,Jackson County,Local,Enacted,Enacted,2026-06-22,day,2026-06,29095,county,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,springfield-mo,MO,Springfield,Local,Enacted,Enacted,2026-06-29,day,2026-06,,ambiguous_place,29043|29077,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,inver-grove-heights-mn,MN,Inver Grove Heights,Local,Enacted,Enacted,2026-06-26,day,2026-06,27037,place,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,flint-mi,MI,Flint,Local,Enacted,Enacted,2026-06-08,day,2026-06,26049,place,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,ypsilanti-ycua-mi,MI,Ypsilanti (YCUA),Local,Enacted,Enacted,2026-04-22,day,2026-04,26161,place,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,birmingham-al,AL,Birmingham,Local,Enacted,Expired,2026-03-03,day,2026-03,,ambiguous_place,01073|01117,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,homewood-al,AL,Homewood,Local,Enacted,Enacted,2026-06-22,day,2026-06,01073,place,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,waterford-township-camden-co-nj,NJ,Waterford Township (Camden Co.),Local,Enacted,Enacted,2026-04-01,month,2026-04,,unmatched,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,plainfield-nj,NJ,Plainfield,Local,Enacted,Enacted,2026-08-10,day,2026-08,34039,place,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,north-plainfield-nj,NJ,North Plainfield,Local,Enacted,Enacted,2026-07-13,day,2026-07,34035,place,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,leeds-al,AL,Leeds,Local,Enacted,Enacted,2026-06-03,day,2026-06,,ambiguous_place,01073|01115|01117,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,springville-al,AL,Springville,Local,Enacted,Enacted,2026-07-06,day,2026-07,01115,place,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,cullman-al,AL,Cullman,Local,Enacted,Enacted,2026-06-24,day,2026-06,01043,place,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,fort-payne-al,AL,Fort Payne,Local,Enacted,Enacted,2026-06-16,day,2026-06,01049,place,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,pinson-al,AL,Pinson,Local,Enacted,Enacted,2026-08-07,day,2026-08,01073,place,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,fairfield-al,AL,Fairfield,Local,Enacted,Enacted,2026-07-01,month,2026-07,01073,place,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,city-of-st-charles-mo,MO,City of St. Charles,Local,Enacted,Enacted,2026-05-19,day,2026-05,,unmatched,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,st-charles-county-mo,MO,St. Charles County,Local,Enacted,Enacted,2026-07-13,day,2026-07,29183,county,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,columbia-mo,MO,Columbia,Local,Enacted,Enacted,2026-05-01,month,2026-05,29019,place,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,minneapolis-mn,MN,Minneapolis,Local,Enacted,Enacted,2026-05-22,day,2026-05,27053,place,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,eagan-mn,MN,Eagan,Local,Enacted,Enacted,2026-02-01,month,2026-02,27037,place,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,carver-mn,MN,Carver,Local,Enacted,Enacted,2026-04-06,day,2026-04,27019,place,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,wright-county-mn,MN,Wright County,Local,Enacted,Enacted,2026-05-19,day,2026-05,27171,county,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,washington-county-mn,MN,Washington County,Local,Enacted,Enacted,2026-07-01,month,2026-07,27163,county,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,wixom-mi,MI,Wixom,Local,Enacted,Expired,2026-03-24,day,2026-03,26125,place,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,saline-mi,MI,Saline,Local,Enacted,Enacted,2026-01-12,day,2026-01,26161,place,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,grand-blanc-township-mi,MI,Grand Blanc Township,Local,Enacted,Enacted,2026-01-21,day,2026-01,26049,place,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,manchester-township-mi,MI,Manchester Township,Local,Enacted,Enacted,2025-10-14,day,2025-10,26161,place,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,armada-township-mi,MI,Armada Township,Local,Enacted,Expired,2026-01-14,day,2026-01,26099,place,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,green-charter-township-mi,MI,Green Charter Township,Local,Enacted,Enacted,2025-12-09,day,2025-12,,unmatched,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,pittsfield-township-mi,MI,Pittsfield Township,Local,Enacted,Expired,2025-11-18,day,2025-11,,unmatched,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,howell-township-mi,MI,Howell Township,Local,Enacted,Expired,2025-11-20,day,2025-11,26093,place,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,northville-mi,MI,Northville,Local,Enacted,Enacted,2026-01-06,day,2026-01,,ambiguous_place,26125|26163,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,pontiac-mi,MI,Pontiac,Local,Enacted,Expired,2026-01-21,day,2026-01,26125,place,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,saginaw-mi,MI,Saginaw,Local,Enacted,Expired,2026-01-13,day,2026-01,26145,place,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,sterling-heights-mi,MI,Sterling Heights,Local,Enacted,Enacted,2026-02-04,day,2026-02,26099,place,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,south-lyon-mi,MI,South Lyon,Local,Enacted,Enacted,2026-02-10,day,2026-02,26125,place,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,taylor-mi,MI,Taylor,Local,Enacted,Enacted,2026-01-01,month,2026-01,26163,place,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,tyrone-township-mi,MI,Tyrone Township,Local,Enacted,Expired,2025-12-02,day,2025-12,,unmatched,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,dundee-township-mi,MI,Dundee Township,Local,Enacted,Enacted,2025-10-01,month,2025-10,26115,place,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,sylvan-township-mi,MI,Sylvan Township,Local,Enacted,Expired,2026-01-22,day,2026-01,,unmatched,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,lodi-township-mi,MI,Lodi Township,Local,Enacted,Expired,2026-02-03,day,2026-02,,unmatched,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,york-township-mi,MI,York Township,Local,Enacted,Expired,2026-02-12,day,2026-02,,unmatched,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,hayes-township-mi,MI,Hayes Township,Local,Enacted,Expired,2026-02-10,day,2026-02,,unmatched,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,springfield-township-mi,MI,Springfield Township,Local,Enacted,Enacted,2025-12-01,month,2025-12,26025,place,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,village-of-romeo-mi,MI,Village of Romeo,Local,Enacted,Enacted,2026-01-26,day,2026-01,,unmatched,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,solon-township-mi,MI,Solon Township,Local,Enacted,Enacted,2026-02-01,month,2026-02,,unmatched,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,big-rapids-township-mi,MI,Big Rapids Township,Local,Enacted,Enacted,2026-02-23,day,2026-02,26107,place,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,lenox-township-mi,MI,Lenox Township,Local,Enacted,Expired,2026-02-02,day,2026-02,,unmatched,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,daviess-county-ky,KY,Daviess County,Local,Enacted,Enacted,2026-05-28,day,2026-05,21059,county,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,lexington-fayette-county-ky,KY,Lexington (Fayette County),Local,Enacted,Enacted,2026-06-09,day,2026-06,,unmatched,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,allen-county-ky,KY,Allen County,Local,Enacted,Enacted,2026-06-10,day,2026-06,21003,county,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,mercer-county-ky,KY,Mercer County,Local,Enacted,Enacted,2026-08-01,month,2026-08,21167,county,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,jessamine-county-ky,KY,Jessamine County,Local,Enacted,Enacted,2026-08-04,day,2026-08,21113,county,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,johnson-county-ia,IA,Johnson County,Local,Enacted,Enacted,2025-11-06,day,2025-11,19103,county,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,woodbury-county-ia,IA,Woodbury County,Local,Enacted,Enacted,2026-06-23,day,2026-06,19193,county,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,plymouth-county-ia,IA,Plymouth County,Local,Enacted,Enacted,2026-06-16,day,2026-06,19149,county,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,sioux-county-ia,IA,Sioux County,Local,Enacted,Enacted,2026-06-16,day,2026-06,19167,county,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,ida-county-ia,IA,Ida County,Local,Enacted,Enacted,2026-06-01,month,2026-06,19093,county,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,madison-county-ia,IA,Madison County,Local,Enacted,Enacted,2026-07-22,day,2026-07,19121,county,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,shelby-county-ia,IA,Shelby County,Local,Enacted,Enacted,2026-01-01,year,2026-01,19165,county,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,clarke-county-ia,IA,Clarke County,Local,Enacted,Enacted,2026-01-01,year,2026-01,19039,county,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,olyphant-pa,PA,Olyphant,Local,Enacted,Enacted,2025-01-01,year,2025-01,42069,place,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,east-whiteland-township-pa,PA,East Whiteland Township,Local,Enacted,Enacted,2026-03-01,month,2026-03,,unmatched,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,pennsylvania-pa,PA,Pennsylvania,State,Proposed,Proposed,2026-07-12,day,2026-07,,unmatched,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,lordstown-oh,OH,Lordstown,Local,Enacted,Enacted,2026-01-01,month,2026-01,39155,place,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,ravenna-oh,OH,Ravenna,Local,Enacted,Enacted,2026-04-20,day,2026-04,39133,place,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,boardman-township-oh,OH,Boardman Township,Local,Enacted,Enacted,2026-04-28,day,2026-04,,unmatched,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,painesville-township-oh,OH,Painesville Township,Local,Enacted,Enacted,2026-05-01,month,2026-05,39085,place,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,weathersfield-township-oh,OH,Weathersfield Township,Local,Enacted,Enacted,2026-01-01,year,2026-01,,unmatched,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,twinsburg-oh,OH,Twinsburg,Local,Enacted,Enacted,2026-01-01,year,2026-01,39153,place,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,south-bloomfield-oh,OH,South Bloomfield,Local,Enacted,Enacted,2026-01-01,year,2026-01,39129,place,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,ohio-tax-exemptions-oh,OH,Ohio (tax exemptions),State,Enacted,Enacted,2025-01-01,year,2025-01,39161,place,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,madison-wi,WI,Madison,Local,Enacted,Enacted,2026-01-13,day,2026-01,55025,place,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,town-of-cassville-wi,WI,Town of Cassville,Local,Enacted,Enacted,2026-04-01,month,2026-04,,unmatched,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,dane-county-wi,WI,Dane County,Local,Enacted,Enacted,2026-06-04,day,2026-06,55025,county,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,village-of-wrightstown-wi,WI,Village of Wrightstown,Local,Enacted,Enacted,2026-06-16,day,2026-06,,unmatched,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,superior-wi,WI,Superior,Local,Enacted,Enacted,2026-06-17,day,2026-06,55031,place,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,wisconsin-wi,WI,Wisconsin,State,Proposed,Proposed,2026-02-26,day,2026-02,,unmatched,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,aurora-il,IL,Aurora,Local,Enacted,Expired,2025-09-25,day,2025-09,,ambiguous_place,17043|17089|17093|17197,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,mattoon-il,IL,Mattoon,Local,Enacted,Enacted,2026-09-01,day,2026-09,17029,place,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,champaign-county-il,IL,Champaign County,Local,Enacted,Enacted,2026-04-23,day,2026-04,17019,county,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,normal-il,IL,Normal,Local,Enacted,Enacted,2026-05-19,day,2026-05,17113,place,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,lake-county-il,IL,Lake County,Local,Enacted,Enacted,2026-09-08,day,2026-09,17097,county,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,illinois-tax-incentives-il,IL,Illinois (tax incentives),State,Enacted,Enacted,2026-07-01,day,2026-07,17161,place,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,dearborn-county-in,IN,Dearborn County,Local,Enacted,Enacted,2026-02-25,day,2026-02,18029,county,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,putnam-county-in,IN,Putnam County,Local,Enacted,Enacted,2025-11-17,day,2025-11,18133,county,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,white-county-in,IN,White County,Local,Enacted,Enacted,2025-10-20,day,2025-10,18181,county,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,pulaski-county-in,IN,Pulaski County,Local,Enacted,Enacted,2026-02-02,day,2026-02,18131,county,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,fulton-county-in,IN,Fulton County,Local,Enacted,Enacted,2026-03-02,day,2026-03,18049,county,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,miami-county-in,IN,Miami County,Local,Enacted,Enacted,2026-05-04,day,2026-05,18103,county,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,new-albany-in,IN,New Albany,Local,Enacted,Enacted,2026-07-16,day,2026-07,18043,place,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,federal-way-wa,WA,Federal Way,Local,Enacted,Enacted,2026-07-07,day,2026-07,53033,place,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,burien-wa,WA,Burien,Local,Enacted,Enacted,2026-06-29,day,2026-06,53033,place,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,marysville-wa,WA,Marysville,Local,Enacted,Enacted,2026-07-14,day,2026-07,53061,place,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,skagit-county-wa,WA,Skagit County,Local,Enacted,Enacted,2026-06-01,day,2026-06,53057,county,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,pasco-wa,WA,Pasco,Local,Enacted,Enacted,2026-07-20,day,2026-07,53021,place,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,cle-elum-wa,WA,Cle Elum,Local,Enacted,Enacted,2026-07-31,day,2026-07,53037,place,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,renton-wa,WA,Renton,Local,Enacted,Enacted,2026-08-17,day,2026-08,53033,place,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,kittitas-county-wa,WA,Kittitas County,Local,Enacted,Enacted,2026-08-12,day,2026-08,53037,county,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,arizona-tax-incentives-az,AZ,Arizona (tax incentives),State,Enacted,Enacted,2026-07-01,day,2026-07,,ambiguous_place,04015|04021,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,pima-county-az,AZ,Pima County,County,Proposed,Proposed,2026-08-11,day,2026-08,04019,county,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,oregon-enterprise-zone-tax-or,OR,Oregon (enterprise zone tax),State,Enacted,Enacted,2026-06-05,day,2026-06,41005,place,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,chesapeake-va,VA,Chesapeake,Local,Enacted,Enacted,2026-07-01,month,2026-07,51550,place,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,front-royal-va,VA,Front Royal,Local,Enacted,Enacted,2026-07-06,day,2026-07,51187,place,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,suffolk-va,VA,Suffolk,Local,Proposed,Proposed,2026-06-17,day,2026-06,51800,place,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,harford-county-md,MD,Harford County,Local,Enacted,Enacted,2026-06-10,day,2026-06,24025,county,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,howard-county-md,MD,Howard County,Local,Enacted,Enacted,2026-06-01,day,2026-06,24027,county,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,carroll-county-md,MD,Carroll County,Local,Enacted,Enacted,2026-02-19,day,2026-02,24013,county,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,queen-anne-s-county-md,MD,Queen Anne's County,Local,Enacted,Enacted,2026-07-29,day,2026-07,24035,county,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,caroline-county-md,MD,Caroline County,Local,Enacted,Enacted,2026-07-01,month,2026-07,24011,county,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,dorchester-county-md,MD,Dorchester County,Local,Enacted,Enacted,2026-06-01,month,2026-06,24019,county,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,talbot-county-md,MD,Talbot County,Local,Proposed,Proposed,2026-09-08,day,2026-09,24041,county,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,asheville-nc,NC,Asheville,Local,Enacted,Enacted,2026-06-17,day,2026-06,37021,place,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,wendell-nc,NC,Wendell,Local,Enacted,Enacted,2026-01-01,year,2026-01,37183,place,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,spartanburg-county-sc,SC,Spartanburg County,Local,Enacted,Enacted,2026-06-22,day,2026-06,45083,county,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,york-county-sc,SC,York County,Local,Enacted,Enacted,2026-07-13,day,2026-07,45091,county,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,santa-fe-county-nm,NM,Santa Fe County,Local,Enacted,Enacted,2026-07-02,day,2026-07,35049,county,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,east-fishkill-ny,NY,East Fishkill,Local,Enacted,Enacted,2026-06-25,day,2026-06,,unmatched,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,davie-county-nc,NC,Davie County,Local,Enacted,Enacted,2026-07-07,day,2026-07,37059,county,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,nicholasville-ky,KY,Nicholasville,Local,Enacted,Enacted,2026-08-01,month,2026-08,21113,place,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,plain-city-oh,OH,Plain City,Local,Proposed,Proposed,2026-08-10,day,2026-08,,ambiguous_place,39097|39159,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,jefferson-county-ia,IA,Jefferson County,Local,Enacted,Enacted,2026-08-11,day,2026-08,19101,county,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,bellevue-wi,WI,Bellevue,Local,Enacted,Enacted,2026-08-12,day,2026-08,55009,place,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,chippewa-county-wi,WI,Chippewa County,Local,Enacted,Enacted,2026-08-11,day,2026-08,55017,county,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,shawnee-county-ks,KS,Shawnee County,Local,Enacted,Enacted,2026-08-13,day,2026-08,20177,county,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,sedgwick-county-ks,KS,Sedgwick County,Local,Enacted,Enacted,2026-01-15,day,2026-01,20173,county,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,mount-vernon-wa,WA,Mount Vernon,Local,Enacted,Enacted,2026-08-12,day,2026-08,53057,place,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,hillsboro-or,OR,Hillsboro,Local,Enacted,Enacted,2026-07-27,day,2026-07,41067,place,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,red-bank-nj,NJ,Red Bank,Local,Enacted,Enacted,2026-06-11,day,2026-06,34025,place,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,asbury-park-nj,NJ,Asbury Park,Local,Enacted,Enacted,2026-06-10,day,2026-06,34025,place,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,jackson-ms,MS,Jackson,Local,Enacted,Enacted,2026-07-14,day,2026-07,,ambiguous_place,28049|28089|28121,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,eastport-me,ME,Eastport,Local,Enacted,Enacted,2026-08-12,day,2026-08,23029,place,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,tulare-county-ca,CA,Tulare County,County,Enacted,Enacted,2026-08-18,day,2026-08,06107,county,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,larimer-county-co,CO,Larimer County,Local,Enacted,Enacted,2026-01-27,day,2026-01,08069,county,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,boulder-county-co,CO,Boulder County,Local,Enacted,Enacted,2026-06-02,day,2026-06,08013,county,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,anderson-county-tn,TN,Anderson County,Local,Enacted,Enacted,2026-06-15,day,2026-06,47001,county,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,lake-county-fl,FL,Lake County,Local,Enacted,Enacted,2026-09-08,day,2026-09,12069,county,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,fayetteville-ga,GA,Fayetteville,Local,Enacted,Enacted,2026-03-05,day,2026-03,13113,place,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,atlanta-ga,GA,Atlanta,Local,Enacted,Enacted,2024-09-03,day,2024-09,,ambiguous_place,13089|13121,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,new-jersey-fair-share-act-nj,NJ,New Jersey (Fair Share Act),State,Enacted,Enacted,2026-07-07,day,2026-07,,unmatched,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,virginia-data-center-power-tax-va,VA,Virginia (data center power tax),State,Enacted,Enacted,2026-06-30,day,2026-06,,unmatched,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,vermont-s-205-vt,VT,Vermont (S.205),State,Rejected,Rejected,2026-01-01,year,2026-01,,unmatched,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,oklahoma-sb-1488-ok,OK,Oklahoma (SB 1488),State,Rejected,Rejected,2026-05-14,day,2026-05,,ambiguous_place,40017|40027|40109|40125,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,washington-county-md,MD,Washington County,Local,Enacted,Enacted,2026-06-30,day,2026-06,24043,county,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,washington-county-fl,FL,Washington County,Local,Enacted,Enacted,2026-08-20,day,2026-08,12133,county,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,alamance-county-nc,NC,Alamance County,Local,Enacted,Enacted,2026-08-17,day,2026-08,37001,county,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,anderson-county-sc,SC,Anderson County,Local,Enacted,Enacted,2026-08-20,day,2026-08,45007,county,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,howard-county-in,IN,Howard County,Local,Enacted,Enacted,2026-08-18,day,2026-08,18067,county,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,hastings-mn,MN,Hastings,Local,Enacted,Enacted,2026-08-17,day,2026-08,,ambiguous_place,27037|27163,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,carter-county-tn,TN,Carter County,Local,Enacted,Enacted,2026-08-17,day,2026-08,47019,county,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,yadkin-county-nc,NC,Yadkin County,Local,Enacted,Enacted,2026-08-17,day,2026-08,37197,county,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,east-lansing-mi,MI,East Lansing,Local,Enacted,Enacted,2026-08-11,day,2026-08,,ambiguous_place,26037|26065,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,woodford-county-il,IL,Woodford County,Local,Enacted,Enacted,2026-08-18,day,2026-08,17203,county,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,memphis-tn,TN,Memphis,Local,Proposed,Proposed,2026-08-18,day,2026-08,47157,place,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,lubbock-tx,TX,Lubbock,Local,Proposed,Proposed,2026-08-03,day,2026-08,48303,place,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,virginia-beach-va,VA,Virginia Beach,Local,Enacted,Enacted,2026-08-18,day,2026-08,51810,place,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,fairfax-county-va,VA,Fairfax County,Local,Enacted,Enacted,2024-09-10,day,2024-09,,ambiguous_county,51059|51600,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,stafford-county-va,VA,Stafford County,Local,Enacted,Enacted,2025-10-21,day,2025-10,51179,county,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,spotsylvania-county-va,VA,Spotsylvania County,Local,Enacted,Enacted,2026-08-11,day,2026-08,51177,county,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,culpeper-county-va,VA,Culpeper County,Local,Enacted,Enacted,2025-09-02,day,2025-09,51047,county,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,fluvanna-county-va,VA,Fluvanna County,Local,Enacted,Expired,2025-09-01,month,2025-09,51065,county,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,virginia-statewide-pause-request-va,VA,Virginia (statewide pause request),State,Rejected,Rejected,2026-08-11,day,2026-08,,state_only,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,virginia-dominion-gs-5-large-load-rate-class-va,VA,Virginia (Dominion GS-5 large-load rate class),State,Enacted,Enacted,2025-11-25,day,2025-11,,unmatched,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,virginia-2026-general-assembly-package-va,VA,Virginia (2026 General Assembly package),State,Enacted,Enacted,2026-03-01,month,2026-03,,unmatched,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,lyon-county-ks,KS,Lyon County,Local,Enacted,Enacted,2026-07-23,day,2026-07,20111,county,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,emporia-ks,KS,Emporia,Local,Proposed,Proposed,2026-08-20,day,2026-08,20111,place,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,lyon-county-ky,KY,Lyon County,Local,Enacted,Enacted,2026-08-01,month,2026-08,21143,county,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,seward-county-ne,NE,Seward County,Local,Enacted,Enacted,2026-06-30,day,2026-06,31159,county,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,luther-ok,OK,Luther,Local,Enacted,Enacted,2026-06-17,day,2026-06,40109,place,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,stokes-county-nc,NC,Stokes County,Local,Rejected,Rejected,2026-07-01,month,2026-07,37169,county,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,avon-lake-oh,OH,Avon Lake,Local,Enacted,Enacted,2026-06-22,day,2026-06,39093,place,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,grafton-oh,OH,Grafton,Local,Enacted,Enacted,2026-05-19,day,2026-05,39093,place,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,hubbard-oh,OH,Hubbard,Local,Enacted,Enacted,2026-06-01,day,2026-06,39155,place,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,howland-township-oh,OH,Howland Township,Local,Enacted,Enacted,2026-06-10,day,2026-06,,unmatched,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,braceville-township-oh,OH,Braceville Township,Local,Enacted,Enacted,2026-06-02,day,2026-06,,unmatched,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,avon-oh,OH,Avon,Local,Enacted,Enacted,2026-04-13,day,2026-04,39093,place,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,berea-oh,OH,Berea,Local,Enacted,Enacted,2026-06-15,day,2026-06,39035,place,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,blanchester-oh,OH,Blanchester,Local,Enacted,Enacted,2026-03-12,day,2026-03,,ambiguous_place,39027|39165,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,butler-county-oh,OH,Butler County,Local,Enacted,Enacted,2026-06-16,day,2026-06,39017,county,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,canton-township-oh,OH,Canton Township,Local,Enacted,Enacted,2026-04-09,day,2026-04,39151,place,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,cincinnati-oh,OH,Cincinnati,Local,Enacted,Enacted,2026-02-11,day,2026-02,39061,place,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,cleveland-oh,OH,Cleveland,Local,Enacted,Enacted,2026-07-15,day,2026-07,39035,place,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,cortland-oh,OH,Cortland,Local,Enacted,Enacted,2026-06-02,day,2026-06,39155,place,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,defiance-oh,OH,Defiance,Local,Enacted,Enacted,2026-09-01,month,2026-09,39039,place,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,findlay-oh,OH,Findlay,Local,Enacted,Enacted,2026-04-22,day,2026-04,39063,place,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,girard-oh,OH,Girard,Local,Enacted,Enacted,2026-07-13,day,2026-07,39155,place,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,grove-city-oh,OH,Grove City,Local,Enacted,Enacted,2026-06-01,day,2026-06,39049,place,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,jackson-township-franklin-co-oh,OH,Jackson Township (Franklin Co.),Local,Enacted,Enacted,2026-05-12,day,2026-05,39079,place,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,jerome-township-oh,OH,Jerome Township,Local,Enacted,Expired,2025-09-03,day,2025-09,,unmatched,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,kent-oh,OH,Kent,Local,Enacted,Enacted,2026-04-15,day,2026-04,39133,place,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,lake-township-wood-co-oh,OH,Lake Township (Wood Co.),Local,Enacted,Enacted,2026-03-03,day,2026-03,39085,county_name,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,maumee-oh,OH,Maumee,Local,Enacted,Enacted,2026-02-02,day,2026-02,39095,place,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,monclova-township-oh,OH,Monclova Township,Local,Enacted,Enacted,2026-02-17,day,2026-02,,unmatched,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,montgomery-township-ashland-co-oh,OH,Montgomery Township (Ashland Co.),Local,Enacted,Enacted,2026-06-18,day,2026-06,39061,place,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,mount-orab-oh,OH,Mount Orab,Local,Enacted,Expired,2026-03-03,day,2026-03,39015,place,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,new-carlisle-oh,OH,New Carlisle,Local,Enacted,Enacted,2026-02-17,day,2026-02,39023,place,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,norton-oh,OH,Norton,Local,Enacted,Enacted,2025-12-01,day,2025-12,,ambiguous_place,39153|39169,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,pierce-township-oh,OH,Pierce Township,Local,Enacted,Enacted,2026-02-11,day,2026-02,,unmatched,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,plain-township-stark-co-oh,OH,Plain Township (Stark Co.),Local,Enacted,Enacted,2026-03-24,day,2026-03,,ambiguous_place,39097|39159,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,providence-township-oh,OH,Providence Township,Local,Enacted,Enacted,2026-04-15,day,2026-04,,unmatched,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,richfield-township-oh,OH,Richfield Township,Local,Enacted,Enacted,2026-02-17,day,2026-02,39153,place,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,scioto-township-oh,OH,Scioto Township,Local,Enacted,Enacted,2026-03-06,day,2026-03,39145,county_name,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,shawnee-township-oh,OH,Shawnee Township,Local,Enacted,Enacted,2026-06-09,day,2026-06,,ambiguous_place,39061|39127,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,sprigg-township-oh,OH,Sprigg Township,Local,Enacted,Enacted,2026-02-24,day,2026-02,,unmatched,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,springfield-oh,OH,Springfield,Local,Enacted,Enacted,2026-07-14,day,2026-07,39023,place,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,st-marys-oh,OH,St. Marys,Local,Enacted,Enacted,2026-06-22,day,2026-06,39011,place,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,tallmadge-oh,OH,Tallmadge,Local,Enacted,Enacted,2026-04-13,day,2026-04,,ambiguous_place,39133|39153,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,tiffin-oh,OH,Tiffin,Local,Enacted,Enacted,2026-04-20,day,2026-04,39147,place,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,vermilion-oh,OH,Vermilion,Local,Enacted,Enacted,2026-04-20,day,2026-04,,ambiguous_place,39043|39093,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,washington-township-butler-co-oh,OH,Washington Township (Butler Co.),Local,Enacted,Enacted,2026-04-21,day,2026-04,39167,county_name,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,waterville-oh,OH,Waterville,Local,Enacted,Expired,2025-12-08,day,2025-12,39095,place,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,waterville-township-oh,OH,Waterville Township,Local,Enacted,Enacted,2025-12-17,day,2025-12,39095,place,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,williamsburg-oh,OH,Williamsburg,Local,Enacted,Enacted,2026-03-13,day,2026-03,39025,place,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,yellow-springs-oh,OH,Yellow Springs,Local,Enacted,Enacted,2026-05-18,day,2026-05,39057,place,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,archbold-oh,OH,Archbold,Local,Enacted,Enacted,2026-04-07,day,2026-04,39051,place,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,ashville-oh,OH,Ashville,Local,Enacted,Enacted,2025-12-22,day,2025-12,39129,place,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,indio-ca,CA,Indio,Local,Enacted,Enacted,2026-06-03,day,2026-06,06065,place,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,neosho-mo,MO,Neosho,Local,Enacted,Enacted,2026-07-07,day,2026-07,29145,place,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,camdenton-mo,MO,Camdenton,Local,Enacted,Enacted,2026-05-05,day,2026-05,29029,place,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,calvert-county-md,MD,Calvert County,Local,Enacted,Enacted,2026-08-18,day,2026-08,24009,county,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,carlton-county-mn,MN,Carlton County,Local,Enacted,Enacted,2026-08-24,day,2026-08,27017,county,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,emmet-county-ia,IA,Emmet County,Local,Enacted,Enacted,2026-08-25,day,2026-08,19063,county,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,palm-springs-ca,CA,Palm Springs,Local,Enacted,Enacted,2026-08-26,day,2026-08,06065,place,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,bloomingdale-ga,GA,Bloomingdale,Local,Enacted,Enacted,2026-08-01,month,2026-08,13051,place,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,millville-nj,NJ,Millville,Local,Enacted,Enacted,2026-05-19,day,2026-05,34011,place,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,bayonne-nj,NJ,Bayonne,Local,Enacted,Enacted,2026-08-12,day,2026-08,34017,place,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,north-brunswick-nj,NJ,North Brunswick,Local,Enacted,Enacted,2026-08-25,day,2026-08,,unmatched,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,stafford-township-nj,NJ,Stafford Township,Local,Enacted,Enacted,2026-08-25,day,2026-08,,unmatched,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,pemberton-township-nj,NJ,Pemberton Township,Local,Enacted,Enacted,2026-02-01,month,2026-02,34005,place,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,harrison-township-nj,NJ,Harrison Township,Local,Enacted,Enacted,2026-05-01,month,2026-05,34017,place,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,logan-township-nj,NJ,Logan Township,Local,Enacted,Enacted,2026-05-01,month,2026-05,,unmatched,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,east-greenwich-township-nj,NJ,East Greenwich Township,Local,Enacted,Enacted,2026-01-01,year,2026-01,,unmatched,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,mantua-township-nj,NJ,Mantua Township,Local,Enacted,Enacted,2026-05-11,day,2026-05,,unmatched,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,alpha-nj,NJ,Alpha,Local,Enacted,Enacted,2026-08-01,month,2026-08,34041,place,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,bass-river-township-nj,NJ,Bass River Township,Local,Enacted,Enacted,2026-08-01,month,2026-08,,unmatched,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,berkeley-township-nj,NJ,Berkeley Township,Local,Enacted,Enacted,2026-08-01,month,2026-08,,unmatched,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,bernards-township-nj,NJ,Bernards Township,Local,Enacted,Enacted,2026-06-24,day,2026-06,,unmatched,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,carneys-point-nj,NJ,Carneys Point,Local,Enacted,Enacted,2026-08-01,month,2026-08,34033,place,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,cinnaminson-nj,NJ,Cinnaminson,Local,Enacted,Enacted,2026-08-01,month,2026-08,,unmatched,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,deerfield-township-nj,NJ,Deerfield Township,Local,Enacted,Enacted,2026-08-01,month,2026-08,,unmatched,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,delanco-nj,NJ,Delanco,Local,Enacted,Enacted,2026-08-01,month,2026-08,,unmatched,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,delaware-township-nj,NJ,Delaware Township,Local,Enacted,Enacted,2026-08-01,month,2026-08,34041,place,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,downe-township-nj,NJ,Downe Township,Local,Enacted,Enacted,2026-08-01,month,2026-08,,unmatched,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,east-rutherford-nj,NJ,East Rutherford,Local,Enacted,Enacted,2026-08-01,month,2026-08,34003,place,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,edgewater-park-nj,NJ,Edgewater Park,Local,Enacted,Enacted,2026-08-01,month,2026-08,,unmatched,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,elsinboro-nj,NJ,Elsinboro,Local,Enacted,Enacted,2026-08-01,month,2026-08,,unmatched,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,frelinghuysen-township-nj,NJ,Frelinghuysen Township,Local,Enacted,Enacted,2026-08-01,month,2026-08,,unmatched,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,green-township-nj,NJ,Green Township,Local,Enacted,Enacted,2026-08-01,month,2026-08,34027,place,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,hainesport-nj,NJ,Hainesport,Local,Enacted,Enacted,2026-08-01,month,2026-08,,unmatched,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,holmdel-nj,NJ,Holmdel,Local,Enacted,Enacted,2026-08-11,day,2026-08,,unmatched,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,jackson-township-nj,NJ,Jackson Township,Local,Enacted,Enacted,2026-08-27,day,2026-08,,unmatched,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,kingwood-township-nj,NJ,Kingwood Township,Local,Enacted,Enacted,2026-08-01,month,2026-08,,unmatched,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,knowlton-township-nj,NJ,Knowlton Township,Local,Enacted,Enacted,2026-08-01,month,2026-08,,unmatched,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,lebanon-township-nj,NJ,Lebanon Township,Local,Enacted,Enacted,2026-08-01,month,2026-08,34019,place,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,liberty-township-nj,NJ,Liberty Township,Local,Enacted,Enacted,2026-08-01,month,2026-08,,unmatched,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,madison-nj,NJ,Madison,Local,Enacted,Enacted,2026-06-09,day,2026-06,34027,place,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,mannington-township-nj,NJ,Mannington Township,Local,Enacted,Enacted,2026-08-01,month,2026-08,,unmatched,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,montgomery-township-nj,NJ,Montgomery Township,Local,Enacted,Enacted,2026-06-18,day,2026-06,,unmatched,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,neptune-township-nj,NJ,Neptune Township,Local,Enacted,Enacted,2026-07-13,day,2026-07,34025,place,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,north-hanover-township-nj,NJ,North Hanover Township,Local,Enacted,Enacted,2026-08-01,month,2026-08,,unmatched,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,old-bridge-nj,NJ,Old Bridge,Local,Enacted,Enacted,2026-01-01,year,2026-01,34023,place,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,oldmans-township-nj,NJ,Oldmans Township,Local,Enacted,Enacted,2026-08-01,month,2026-08,,unmatched,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,pennsville-nj,NJ,Pennsville,Local,Enacted,Enacted,2026-07-02,day,2026-07,34033,place,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,pilesgrove-township-nj,NJ,Pilesgrove Township,Local,Enacted,Enacted,2026-08-01,month,2026-08,,unmatched,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,pittsgrove-township-nj,NJ,Pittsgrove Township,Local,Enacted,Enacted,2026-01-01,year,2026-01,,unmatched,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,plumsted-township-nj,NJ,Plumsted Township,Local,Enacted,Enacted,2026-08-01,month,2026-08,,unmatched,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,quinton-township-nj,NJ,Quinton Township,Local,Enacted,Enacted,2026-05-01,month,2026-05,34033,place,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,upper-pittsgrove-township-nj,NJ,Upper Pittsgrove Township,Local,Enacted,Enacted,2026-08-01,month,2026-08,,unmatched,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,vernon-township-nj,NJ,Vernon Township,Local,Enacted,Enacted,2026-08-01,month,2026-08,,unmatched,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,washington-nj,NJ,Washington,Local,Enacted,Enacted,2026-08-01,month,2026-08,34041,place,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,winslow-township-nj,NJ,Winslow Township,Local,Enacted,Enacted,2026-05-26,day,2026-05,,unmatched,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,woodstown-nj,NJ,Woodstown,Local,Enacted,Enacted,2026-08-01,month,2026-08,34033,place,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,st-croix-county-wi,WI,St. Croix County,Local,Enacted,Enacted,2026-09-01,day,2026-09,55109,county,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,garfield-township-mi,MI,Garfield Township,Local,Enacted,Enacted,2026-08-25,day,2026-08,,unmatched,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,woodland-park-co,CO,Woodland Park,Local,Enacted,Enacted,2026-07-16,day,2026-07,08119,place,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,zephyrhills-fl,FL,Zephyrhills,Local,Enacted,Enacted,2026-06-22,day,2026-06,12101,place,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,monument-co,CO,Monument,Local,Enacted,Enacted,2026-07-20,day,2026-07,08041,place,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,cache-county-ut,UT,Cache County,Local,Enacted,Enacted,2026-06-23,day,2026-06,49005,county,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,box-elder-county-ut,UT,Box Elder County,Local,Enacted,Enacted,2026-06-10,day,2026-06,49003,county,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,logan-ut,UT,Logan,Local,Enacted,Enacted,2026-06-30,day,2026-06,49005,place,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,grand-county-ut,UT,Grand County,Local,Enacted,Enacted,2026-07-07,day,2026-07,49019,county,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,wayne-county-ut,UT,Wayne County,Local,Enacted,Enacted,2026-07-21,day,2026-07,49055,county,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,humboldt-county-nv,NV,Humboldt County,Local,Enacted,Enacted,2026-07-06,day,2026-07,32013,county,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,white-pine-county-nv,NV,White Pine County,Local,Enacted,Enacted,2026-07-22,day,2026-07,32033,county,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,austin-tx,TX,Austin,Local,Proposed,Proposed,2026-08-27,day,2026-08,,ambiguous_place,48021|48209|48453|48491,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,harlingen-tx,TX,Harlingen,Local,Enacted,Enacted,2026-05-01,month,2026-05,48061,place,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,tulsa-ok,OK,Tulsa,Local,Enacted,Enacted,2026-03-25,day,2026-03,,ambiguous_place,40113|40131|40143|40145,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,broken-arrow-ok,OK,Broken Arrow,Local,Enacted,Enacted,2026-06-15,day,2026-06,,ambiguous_place,40143|40145,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,edmond-ok,OK,Edmond,Local,Enacted,Enacted,2026-06-08,day,2026-06,40109,place,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,norman-ok,OK,Norman,Local,Enacted,Enacted,2026-06-23,day,2026-06,40027,place,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,colfax-county-nm,NM,Colfax County,Local,Proposed,Proposed,2026-07-21,day,2026-07,35007,county,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,mount-pleasant-sc,SC,Mount Pleasant,Local,Proposed,Proposed,,,,45019,place,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,lowndes-county-ga,GA,Lowndes County,County,Enacted,Enacted,2026-01-01,year,2026-01,13185,county,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,lowell-ma,MA,Lowell,Local,Enacted,Enacted,2026-01-01,year,2026-01,25017,place,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,caddo-parish-la,LA,Caddo Parish,County,Rejected,Rejected,2026-01-01,year,2026-01,22017,county,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,salisbury-md,MD,Salisbury,Local,Proposed,Proposed,,,,24045,place,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,elkhart-in,IN,Elkhart,Local,Enacted,Enacted,2026-01-01,year,2026-01,18039,place,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,north-berwick-me,ME,North Berwick,Local,Proposed,Proposed,,,,23031,place,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,trumbull-ct,CT,Trumbull,Local,Enacted,Enacted,2026-09-09,day,2026-09,,unmatched,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,augusta-richmond-county-ga,GA,Augusta-Richmond County,County,Enacted,Enacted,2026-01-01,year,2026-01,,unmatched,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,bulloch-county-ga,GA,Bulloch County,County,Enacted,Enacted,2026-01-01,year,2026-01,13031,county,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,camden-county-ga,GA,Camden County,County,Enacted,Enacted,2026-01-01,year,2026-01,13039,county,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,clayton-county-ga,GA,Clayton County,County,Enacted,Enacted,2025-01-01,year,2025-01,13063,county,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,covington-ga,GA,Covington,City,Enacted,Expired,2026-01-01,year,2026-01,13217,place,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,floyd-county-ga,GA,Floyd County,County,Enacted,Expired,2026-01-01,year,2026-01,13115,county,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,kingsland-ga,GA,Kingsland,City,Enacted,Expired,2026-01-01,year,2026-01,13039,place,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,marietta-ga,GA,Marietta,City,Enacted,Enacted,2026-01-01,year,2026-01,13067,place,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,pike-county-ga,GA,Pike County,County,Enacted,Enacted,2025-01-01,year,2025-01,13231,county,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,roswell-ga,GA,Roswell,City,Enacted,Enacted,2026-01-01,year,2026-01,,ambiguous_place,13067|13121,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,bristol-tn,TN,Bristol,Local,Enacted,Enacted,2025-01-01,year,2025-01,47163,place,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,cedar-hill-tn,TN,Cedar Hill,Local,Enacted,Enacted,2026-01-01,year,2026-01,47147,place,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,clinton-tn,TN,Clinton,Local,Enacted,Enacted,2026-01-01,year,2026-01,47001,place,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,grundy-county-tn,TN,Grundy County,County,Enacted,Enacted,2026-01-01,year,2026-01,47061,county,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,morgan-county-tn,TN,Morgan County,County,Enacted,Enacted,2026-01-01,year,2026-01,47129,county,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,shelbyville-tn,TN,Shelbyville,Local,Enacted,Enacted,2026-01-01,year,2026-01,47003,place,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,hamilton-county-tn,TN,Hamilton County,County,Enacted,Enacted,2026-01-01,year,2026-01,47065,county,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,warren-county-tn,TN,Warren County,County,Enacted,Enacted,2026-01-01,year,2026-01,47177,county,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,white-county-tn,TN,White County,County,Enacted,Enacted,2026-01-01,year,2026-01,47185,county,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,mitchell-county-ia,IA,Mitchell County,County,Enacted,Enacted,2025-01-01,year,2025-01,19131,county,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,taylor-county-ia,IA,Taylor County,County,Enacted,Enacted,2026-01-01,year,2026-01,19173,county,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,mcpherson-county-ks,KS,McPherson County,County,Enacted,Enacted,2026-01-01,year,2026-01,20113,county,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,riley-county-ks,KS,Riley County,County,Enacted,Enacted,2026-01-01,year,2026-01,20161,county,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,saline-county-ks,KS,Saline County,County,Enacted,Enacted,2026-01-01,year,2026-01,20169,county,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,bullitt-county-ky,KY,Bullitt County,County,Enacted,Enacted,2026-01-01,year,2026-01,21029,county,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,oldham-county-ky,KY,Oldham County,County,Enacted,Enacted,2025-01-01,year,2025-01,21185,county,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,independence-mo,MO,Independence,City,Enacted,Enacted,2026-01-01,year,2026-01,,ambiguous_place,29047|29095,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,marion-county-mo,MO,Marion County,County,Rescinded,Rescinded,2026-01-01,year,2026-01,29127,county,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,surry-county-nc,NC,Surry County,County,Enacted,Enacted,2026-01-01,year,2026-01,37171,county,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,wilson-nc,NC,Wilson,City,Enacted,Enacted,2026-01-01,year,2026-01,37195,place,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,brookville-pa,PA,Brookville,Borough,Enacted,Enacted,2026-01-01,year,2026-01,42065,place,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,center-township-pa,PA,Center Township,Local,Enacted,Enacted,2026-01-01,year,2026-01,,unmatched,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,muncy-township-pa,PA,Muncy Township,Local,Enacted,Enacted,2026-01-01,year,2026-01,42081,place,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,chester-county-sc,SC,Chester County,County,Enacted,Enacted,2026-01-01,year,2026-01,45023,county,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,greenwood-county-sc,SC,Greenwood County,County,Enacted,Enacted,2026-01-01,year,2026-01,45047,county,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,archuleta-county-co,CO,Archuleta County,County,Enacted,Enacted,2026-01-01,year,2026-01,08007,county,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,south-fork-co,CO,South Fork,Local,Enacted,Enacted,2026-01-01,year,2026-01,08105,place,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,madison-county-fl,FL,Madison County,County,Enacted,Enacted,2026-01-01,year,2026-01,12079,county,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,oakley-ca,CA,Oakley,City,Enacted,Enacted,2026-01-01,year,2026-01,06013,place,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,delta-county-mi,MI,Delta County,County,Enacted,Enacted,2026-01-01,year,2026-01,26041,county,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,forsyth-township-mi,MI,Forsyth Township,Local,Enacted,Enacted,2026-01-01,year,2026-01,,unmatched,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,houghton-mi,MI,Houghton,Local,Enacted,Enacted,2026-01-01,year,2026-01,26061,place,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,huron-county-mi,MI,Huron County,County,Enacted,Enacted,2026-01-01,year,2026-01,26063,county,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,sault-ste-marie-tribe-of-chippewa-indians-mi,MI,Sault Ste. Marie Tribe of Chippewa Indians,Local,Enacted,Enacted,2026-01-01,year,2026-01,,unmatched,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,gorham-me,ME,Gorham,Local,Enacted,Enacted,2026-01-01,year,2026-01,23005,place,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,waite-park-mn,MN,Waite Park,City,Enacted,Enacted,2026-01-01,year,2026-01,27145,place,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,galloway-township-nj,NJ,Galloway Township,Local,Enacted,Enacted,2026-01-01,year,2026-01,,unmatched,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,highland-ny,NY,Highland,Local,Enacted,Enacted,2026-01-01,year,2026-01,36111,place,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,seminole-nation-of-oklahoma-ok,OK,Seminole Nation of Oklahoma,Local,Enacted,Enacted,2026-01-01,year,2026-01,,unmatched,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,saugatuck-township-mi,MI,Saugatuck Township,Local,Enacted,Expired,2026-01-01,year,2026-01,26005,place,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,hagar-township-mi,MI,Hagar Township,Local,Enacted,Enacted,2026-01-01,year,2026-01,,unmatched,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,lake-township-mi,MI,Lake Township,Local,Enacted,Enacted,2026-01-01,year,2026-01,26113,place,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,webster-township-mi,MI,Webster Township,Local,Enacted,Enacted,2026-01-01,year,2026-01,,unmatched,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,lycoming-county-pa,PA,Lycoming County,County,Enacted,Enacted,2026-01-01,year,2026-01,42081,county,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,warrington-township-pa,PA,Warrington Township,Local,Enacted,Enacted,2026-01-01,year,2026-01,,unmatched,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,door-county-wi,WI,Door County,County,Enacted,Enacted,2026-01-01,year,2026-01,55029,county,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,prichard-al,AL,Prichard,Local,Enacted,Enacted,2026-01-01,year,2026-01,01097,place,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,martin-county-fl,FL,Martin County,County,Proposed,Proposed,2026-01-01,year,2026-01,12085,county,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,north-port-fl,FL,North Port,Local,Proposed,Proposed,2026-01-01,year,2026-01,12115,place,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,volusia-county-fl,FL,Volusia County,County,Proposed,Proposed,2026-01-01,year,2026-01,12127,county,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,griffin-ga,GA,Griffin,Local,Enacted,Expired,2026-01-01,year,2026-01,13255,place,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,savannah-ga,GA,Savannah,Local,Enacted,Enacted,2026-01-01,year,2026-01,13051,place,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,chicago-il,IL,Chicago,Local,Proposed,Proposed,,,,,ambiguous_place,17031|17043,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,ottawa-il,IL,Ottawa,Local,Enacted,Enacted,2026-03-03,day,2026-03,17099,place,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,michigan-city-in,IN,Michigan City,Local,Proposed,Proposed,,,,18091,place,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,vermillion-county-in,IN,Vermillion County,County,Proposed,Proposed,,,,18165,county,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,leavenworth-county-ks,KS,Leavenworth County,County,Expired,Expired,2026-05-13,day,2026-05,20103,county,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,topeka-ks,KS,Topeka,Local,Enacted,Enacted,2026-07-14,day,2026-07,20177,place,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,chesapeake-beach-md,MD,Chesapeake Beach,Local,Enacted,Enacted,2026-01-01,year,2026-01,24009,place,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,allen-park-mi,MI,Allen Park,Local,Proposed,Proposed,,,,26163,place,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,genoa-township-mi,MI,Genoa Township,Local,Enacted,Enacted,,,,,unmatched,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,lansing-mi,MI,Lansing,Local,Enacted,Enacted,,,,,ambiguous_place,26037|26045|26065,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,michigan-hb-5594-5596-mi,MI,Michigan (HB 5594-5596),State,Proposed,Proposed,,,,,unmatched,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,zeeland-township-mi,MI,Zeeland Township,Local,Enacted,Enacted,,,,26139,place,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,allendale-township-mi,MI,Allendale Township,Local,Enacted,Enacted,2026-06-08,day,2026-06,26139,place,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,big-rapids-charter-township-mi,MI,Big Rapids Charter Township,Local,Enacted,Enacted,2026-02-23,day,2026-02,26107,place,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,caledonia-township-mi,MI,Caledonia Township,Local,Enacted,Expired,2026-02-01,month,2026-02,26081,place,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,detroit-mi,MI,Detroit,Local,Proposed,Proposed,2026-03-10,day,2026-03,26163,place,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,fenton-township-mi,MI,Fenton Township,Local,Enacted,Enacted,2026-02-17,day,2026-02,,ambiguous_place,26049|26093|26125,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,filer-township-mi,MI,Filer Township,Local,Enacted,Enacted,2026-06-02,day,2026-06,26101,place,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,haring-township-mi,MI,Haring Township,Local,Enacted,Enacted,2026-07-14,day,2026-07,26165,place,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,hart-mi,MI,Hart,Local,Enacted,Enacted,2026-05-26,day,2026-05,26127,place,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,lincoln-township-mi,MI,Lincoln Township,Local,Enacted,Enacted,2026-06-11,day,2026-06,26001,place,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,lowell-township-mi,MI,Lowell Township,Local,Rejected,Rejected,2026-05-18,day,2026-05,26081,place,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,lyndon-township-mi,MI,Lyndon Township,Local,Enacted,Enacted,2026-05-01,month,2026-05,,unmatched,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,lyon-charter-township-mi,MI,Lyon Charter Township,Local,Enacted,Expired,2026-03-03,day,2026-03,,unmatched,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,mason-mi,MI,Mason,Local,Enacted,Expired,2026-01-06,day,2026-01,26065,place,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,parma-township-mi,MI,Parma Township,Local,Enacted,Enacted,2026-02-01,month,2026-02,26075,place,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,porter-township-mi,MI,Porter Township,Local,Enacted,Enacted,2026-05-01,month,2026-05,,unmatched,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,texas-township-mi,MI,Texas Township,Local,Enacted,Enacted,2026-06-22,day,2026-06,,unmatched,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,waterford-township-mi,MI,Waterford Township,Local,Enacted,Enacted,2026-03-23,day,2026-03,,unmatched,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,st-joseph-mn,MN,St. Joseph,Local,Enacted,Enacted,,,,27145,place,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,kansas-city-mo,MO,Kansas City,Local,Enacted,Enacted,,,,,ambiguous_place,29037|29047|29095|29165,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,ralls-county-mo,MO,Ralls County,County,Enacted,Enacted,2026-01-01,year,2026-01,29173,county,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,davidson-county-nc,NC,Davidson County,County,Rejected,Rejected,2026-01-01,year,2026-01,37057,county,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,mcdowell-county-nc,NC,McDowell County,County,Enacted,Enacted,2026-01-01,year,2026-01,37111,county,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,morton-county-nd,ND,Morton County,County,Rescinded,Rescinded,,,,38059,county,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,gage-county-ne,NE,Gage County,County,Enacted,Enacted,2026-08-05,day,2026-08,31067,county,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,bridgewater-township-nj,NJ,Bridgewater Township,Local,Proposed,Proposed,2026-01-01,year,2026-01,,unmatched,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,cranford-nj,NJ,Cranford,Local,Enacted,Enacted,2026-01-01,year,2026-01,34039,place,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,rockaway-township-nj,NJ,Rockaway Township,Local,Enacted,Enacted,2026-01-01,year,2026-01,34027,place,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,roselle-park-nj,NJ,Roselle Park,Local,Proposed,Proposed,2026-01-01,year,2026-01,34039,place,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,leray-ny,NY,LeRay,Local,Enacted,Enacted,2026-01-01,year,2026-01,,unmatched,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,allegheny-county-pa,PA,Allegheny County,County,Proposed,Proposed,2026-01-01,year,2026-01,42003,county,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,gregg-township-pa,PA,Gregg Township,Local,Enacted,Enacted,2026-01-01,year,2026-01,,unmatched,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,kershaw-county-sc,SC,Kershaw County,County,Proposed,Proposed,2026-01-01,year,2026-01,45055,county,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,orangeburg-county-sc,SC,Orangeburg County,County,Enacted,Enacted,2026-01-01,year,2026-01,45075,county,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,gallatin-tn,TN,Gallatin,Local,Proposed,Proposed,2026-01-01,year,2026-01,47165,place,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,brownsville-tx,TX,Brownsville,Local,Proposed,Proposed,2026-01-01,year,2026-01,48061,place,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,marathon-county-wi,WI,Marathon County,County,Enacted,Enacted,,,,55073,county,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,middleton-wi,WI,Middleton,Local,Enacted,Enacted,,,,55025,place,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,winnebago-county-wi,WI,Winnebago County,County,Enacted,Enacted,,,,55139,county,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,arvada-co,CO,Arvada,Local,Proposed,Proposed,,,,,ambiguous_place,08001|08059,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,butte-silver-bow-mt,MT,Butte-Silver Bow,County,Proposed,Proposed,2026-09-02,day,2026-09,30093,place,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,calaveras-county-ca,CA,Calaveras County,County,Enacted,Enacted,,,,06009,county,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,clackamas-county-or,OR,Clackamas County,County,Proposed,Proposed,2026-08-11,day,2026-08,41005,county,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,escondido-ca,CA,Escondido,Local,Enacted,Enacted,,,,06073,place,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,eureka-ca,CA,Eureka,Local,Enacted,Enacted,,,,06023,place,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,loveland-co,CO,Loveland,Local,Proposed,Proposed,,,,08069,place,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,mendocino-county-ca,CA,Mendocino County,County,Enacted,Enacted,,,,06045,county,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,missoula-county-mt,MT,Missoula County,County,Enacted,Enacted,2026-07-09,day,2026-07,30063,county,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,san-joaquin-county-ca,CA,San Joaquin County,County,Proposed,Proposed,,,,06077,county,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,humboldt-county-ca,CA,Humboldt County,County,Proposed,Proposed,,,,06023,county,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,calipatria-ca,CA,Calipatria,City,Enacted,Enacted,2026-08-26,day,2026-08,06025,place,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,el-monte-ca,CA,El Monte,City,Enacted,Enacted,2026-03-18,day,2026-03,06037,place,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,imperial-ca,CA,Imperial,City,Enacted,Enacted,2026-06-03,day,2026-06,06025,place,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,montebello-ca,CA,Montebello,City,Expired,Expired,2026-02-11,day,2026-02,06037,place,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,patterson-ca,CA,Patterson,City,Enacted,Enacted,2026-07-16,day,2026-07,06099,place,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,morgan-hill-ca,CA,Morgan Hill,City,Enacted,Enacted,2026-08-26,day,2026-08,06085,place,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,lake-elsinore-ca,CA,Lake Elsinore,City,Enacted,Enacted,2026-08-25,day,2026-08,06065,place,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,baldwin-park-ca,CA,Baldwin Park,City,Enacted,Enacted,2026-04-16,day,2026-04,06037,place,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,alhambra-ca,CA,Alhambra,City,Enacted,Enacted,2026-06-22,day,2026-06,06037,place,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,clark-county-in,IN,Clark County,County,Enacted,Enacted,,,,18019,county,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,benton-county-ar,AR,Benton County,County,Enacted,Enacted,2026-08-10,day,2026-08,05007,county,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,green-county-wi,WI,Green County,County,Enacted,Enacted,,,,55045,county,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,lancaster-county-ne,NE,Lancaster County,County,Withdrawn,Withdrawn,2026-09-10,day,2026-09,31109,county,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,pine-county-mn,MN,Pine County,County,Enacted,Enacted,2026-08-18,day,2026-08,27115,county,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,polk-county-wi,WI,Polk County,County,Proposed,Proposed,,,,55095,county,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,pottawatomie-county-ks,KS,Pottawatomie County,County,Proposed,Proposed,,,,20149,county,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,tazewell-county-il,IL,Tazewell County,County,Proposed,Proposed,,,,17179,county,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,upper-burrell-township-pa,PA,Upper Burrell Township,Local,Enacted,Enacted,,,,,unmatched,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,upper-sandusky-oh,OH,Upper Sandusky,Local,Enacted,Enacted,,,,39175,place,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,south-strabane-township-pa,PA,South Strabane Township,Local,Rejected,Rejected,,,,,unmatched,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,ellsworth-me,ME,Ellsworth,Local,Enacted,Enacted,2026-08-17,day,2026-08,23009,place,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,ellsworth-township-oh,OH,Ellsworth Township,Local,Enacted,Enacted,,,,,unmatched,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,orion-township-mi,MI,Orion Township,Local,Enacted,Enacted,2026-06-17,day,2026-06,,unmatched,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,marion-county-fl,FL,Marion County,County,Proposed,Proposed,2026-08-31,day,2026-08,12083,county,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,orange-county-fl,FL,Orange County,County,Proposed,Proposed,2026-09-01,month,2026-09,12095,county,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,jefferson-county-co,CO,Jefferson County,County,Enacted,Enacted,2026-01-01,year,2026-01,08059,county,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,west-haven-ct,CT,West Haven,City,Enacted,Enacted,2026-01-01,year,2026-01,09009,place,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,clay-county-fl,FL,Clay County,County,Enacted,Enacted,2026-01-01,year,2026-01,12019,county,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,nassau-county-fl,FL,Nassau County,County,Enacted,Enacted,2026-01-01,year,2026-01,12089,county,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,anchorage-ak,AK,Anchorage,Local,Enacted,Enacted,2026-03-27,day,2026-03,02020,place,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,fairbanks-north-star-borough-ak,AK,Fairbanks North Star Borough,Local,Proposed,Proposed,2026-08-27,day,2026-08,02090,county_name,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,delaware-sb-353-de,DE,Delaware (SB 353),State,Defeated,Defeated,2026-06-30,day,2026-06,10003,place,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,dover-de,DE,Dover,Local,Proposed,Proposed,2026-08-13,day,2026-08,10001,place,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,new-castle-county-de,DE,New Castle County,County,Enacted,Enacted,2026-03-11,day,2026-03,10003,county,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,kent-county-de,DE,Kent County,County,Enacted,Enacted,2026-07-21,day,2026-07,10001,county,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,kootenai-county-id,ID,Kootenai County,County,Enacted,Enacted,2025-09-25,day,2025-09,16055,county,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,bannock-county-id,ID,Bannock County,County,Enacted,Enacted,2026-07-30,day,2026-07,16005,county,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,sandpoint-id,ID,Sandpoint,Local,Proposed,Proposed,2026-07-15,day,2026-07,16017,place,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,canterbury-nh,NH,Canterbury,Local,Enacted,Enacted,2026-03-10,day,2026-03,,unmatched,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,nottingham-nh,NH,Nottingham,Local,Enacted,Enacted,2026-09-08,day,2026-09,,unmatched,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,rochester-nh,NH,Rochester,Local,Enacted,Enacted,2026-09-01,day,2026-09,33017,place,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,keene-nh,NH,Keene,Local,Under Review,Under Review,2026-06-18,day,2026-06,33005,place,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,new-hampshire-hb-1265-nh,NH,New Hampshire (HB 1265),State,Defeated,Defeated,2026-03-11,day,2026-03,,unmatched,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,new-hampshire-ayotte-nh,NH,New Hampshire (Ayotte),State,Proposed,Proposed,2026-08-20,day,2026-08,,unmatched,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,yankton-county-sd,SD,Yankton County,County,Enacted,Enacted,2026-07-21,day,2026-07,46135,county,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,lincoln-county-sd,SD,Lincoln County,County,Defeated,Defeated,2026-08-25,day,2026-08,46083,county,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,minnehaha-county-sd,SD,Minnehaha County,County,Under Review,Under Review,2026-08-24,day,2026-08,46099,county,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,newton-county-ga,GA,Newton County,County,Enacted,Enacted,2025-04-01,month,2025-04,13217,county,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,douglas-county-ga,GA,Douglas County,County,Enacted,Enacted,2025-03-19,day,2025-03,13097,county,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,lamar-county-ga,GA,Lamar County,County,Enacted,Enacted,2025-09-01,month,2025-09,13171,county,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,troup-county-ga,GA,Troup County,County,Rescinded,Rescinded,2025-09-16,day,2025-09,13285,county,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,lagrange-ga,GA,LaGrange,Local,Enacted,Enacted,2025-09-01,month,2025-09,13285,place,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,forest-park-ga,GA,Forest Park,Local,Enacted,Enacted,2026-08-31,day,2026-08,13063,place,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,rockdale-county-ga,GA,Rockdale County,County,Enacted,Expired,2026-03-01,month,2026-03,13247,county,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,madison-county-ga,GA,Madison County,County,Enacted,Enacted,2025-01-01,year,2025-01,13195,county,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,colquitt-county-ga,GA,Colquitt County,County,Enacted,Enacted,2026-01-01,year,2026-01,13071,county,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,garden-city-ga,GA,Garden City,Local,Enacted,Enacted,2026-01-01,year,2026-01,13051,place,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,decatur-county-ga,GA,Decatur County,County,Enacted,Enacted,2026-04-01,month,2026-04,13087,county,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,hart-county-ga,GA,Hart County,County,Enacted,Enacted,2026-01-01,year,2026-01,13147,county,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,franklin-county-ga,GA,Franklin County,County,Enacted,Enacted,2026-09-02,day,2026-09,13119,county,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,heard-county-ga,GA,Heard County,County,Enacted,Enacted,2026-01-01,year,2026-01,13149,county,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,cary-nc,NC,Cary,Local,Enacted,Enacted,2026-08-28,day,2026-08,,ambiguous_place,37037|37183,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,boiling-spring-lakes-nc,NC,Boiling Spring Lakes,Local,Enacted,Enacted,2026-01-01,year,2026-01,37019,place,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,spring-hope-nc,NC,Spring Hope,Local,Enacted,Enacted,2026-05-01,month,2026-05,37127,place,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,franklin-nc,NC,Franklin,Local,Enacted,Enacted,2026-01-01,year,2026-01,37113,place,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,northampton-county-nc,NC,Northampton County,County,Enacted,Enacted,2026-05-01,month,2026-05,37131,county,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,hendersonville-nc,NC,Hendersonville,Local,Proposed,Proposed,2026-09-03,day,2026-09,37089,place,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,lee-county-nc,NC,Lee County,County,Under Review,Under Review,,,,37105,county,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,austin-county-tx,TX,Austin County,County,Enacted,Enacted,2026-01-01,year,2026-01,48015,county,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,athens-tx,TX,Athens,Local,Enacted,Enacted,2026-08-23,day,2026-08,48213,place,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,tom-green-county-tx,TX,Tom Green County,County,Rejected,Rejected,2026-01-01,year,2026-01,48451,county,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,hood-county-tx,TX,Hood County,County,Rejected,Rejected,2026-02-25,day,2026-02,48221,county,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,forney-tx,TX,Forney,Local,Proposed,Proposed,2026-01-01,year,2026-01,48257,place,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,lewisville-tx,TX,Lewisville,Local,Enacted,Enacted,2026-01-01,year,2026-01,,ambiguous_place,48113|48121,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,el-paso-tx,TX,El Paso,Local,Enacted,Enacted,2026-01-01,year,2026-01,48141,place,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,corpus-christi-tx,TX,Corpus Christi,Local,Proposed,Proposed,2026-01-01,year,2026-01,,ambiguous_place,48007|48273|48355|48409,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,milam-county-tx,TX,Milam County,County,Enacted,Enacted,2026-01-01,year,2026-01,48331,county,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,princeton-tx,TX,Princeton,Local,Enacted,Enacted,2026-01-01,year,2026-01,48085,place,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,mesquite-tx,TX,Mesquite,Local,Proposed,Proposed,2026-01-01,year,2026-01,,ambiguous_place,48113|48257|48427,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,crossville-tn,TN,Crossville,Local,Enacted,Enacted,2026-08-12,day,2026-08,47035,place,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,coffee-county-tn,TN,Coffee County,County,Enacted,Enacted,2026-01-01,year,2026-01,47031,county,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,loudon-county-tn,TN,Loudon County,County,Enacted,Enacted,2026-01-01,year,2026-01,47105,county,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,hamblen-county-tn,TN,Hamblen County,County,Enacted,Enacted,2026-01-01,year,2026-01,47063,county,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,washington-county-tn,TN,Washington County,County,Enacted,Enacted,2026-03-24,day,2026-03,47179,county,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,hawkins-county-tn,TN,Hawkins County,County,Enacted,Enacted,2025-09-22,day,2025-09,47073,county,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,spring-city-tn,TN,Spring City,Local,Enacted,Enacted,2026-01-01,year,2026-01,47143,place,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,maury-county-tn,TN,Maury County,County,Enacted,Enacted,2026-01-01,year,2026-01,47119,county,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,jonesborough-tn,TN,Jonesborough,Local,Enacted,Enacted,2026-01-01,year,2026-01,47179,place,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,sheboygan-wi,WI,Sheboygan,Local,Enacted,Enacted,2026-01-01,year,2026-01,55117,place,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,shawano-county-wi,WI,Shawano County,County,Enacted,Enacted,2026-01-01,year,2026-01,55115,county,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,ashwaubenon-wi,WI,Ashwaubenon,Local,Enacted,Enacted,2026-01-01,year,2026-01,55009,place,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,monroe-county-wi,WI,Monroe County,County,Enacted,Enacted,2026-01-01,year,2026-01,55081,county,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,grant-county-wi,WI,Grant County,County,Enacted,Enacted,2026-01-01,year,2026-01,55043,county,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,oneida-county-wi,WI,Oneida County,County,Enacted,Enacted,2026-08-19,day,2026-08,55085,county,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,village-of-greenville-wi,WI,Village of Greenville,Local,Enacted,Enacted,2026-01-01,year,2026-01,,unmatched,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,village-of-cottage-grove-wi,WI,Village of Cottage Grove,Local,Enacted,Enacted,2026-01-01,year,2026-01,,unmatched,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,town-of-westport-wi,WI,Town of Westport,Local,Enacted,Enacted,2026-04-06,day,2026-04,,unmatched,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,town-of-hampden-wi,WI,Town of Hampden,Local,Enacted,Enacted,2026-05-26,day,2026-05,,unmatched,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,town-of-beetown-wi,WI,Town of Beetown,Local,Enacted,Enacted,2026-05-07,day,2026-05,,unmatched,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,town-of-bloomington-wi,WI,Town of Bloomington,Local,Enacted,Enacted,2026-01-01,year,2026-01,,unmatched,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,jackson-county-fl,FL,Jackson County,County,Enacted,Enacted,2026-01-01,year,2026-01,12063,county,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,walton-county-fl,FL,Walton County,County,Enacted,Enacted,2026-01-01,year,2026-01,12131,county,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,wakulla-county-fl,FL,Wakulla County,County,Enacted,Enacted,2026-01-01,year,2026-01,12129,county,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,holmes-county-fl,FL,Holmes County,County,Enacted,Enacted,2026-01-01,year,2026-01,12059,county,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,bay-county-fl,FL,Bay County,County,Enacted,Enacted,2026-01-01,year,2026-01,12005,county,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,leon-county-fl,FL,Leon County,County,Enacted,Enacted,2026-01-01,year,2026-01,12073,county,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,hernando-county-fl,FL,Hernando County,County,Enacted,Enacted,2026-01-01,year,2026-01,12053,county,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,levy-county-fl,FL,Levy County,County,Enacted,Enacted,2026-09-09,day,2026-09,12075,county,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,putnam-county-fl,FL,Putnam County,County,Enacted,Enacted,2026-09-08,day,2026-09,12107,county,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,collier-county-fl,FL,Collier County,County,Enacted,Enacted,2026-01-01,year,2026-01,12021,county,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,edgewater-fl,FL,Edgewater,City,Proposed,Proposed,2026-08-04,day,2026-08,12127,place,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,hillsborough-county-fl,FL,Hillsborough County,County,Proposed,Proposed,2026-08-06,day,2026-08,12057,county,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,hendry-county-fl,FL,Hendry County,County,Proposed,Proposed,2026-08-27,day,2026-08,12051,county,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,st-johns-county-fl,FL,St. Johns County,County,Proposed,Proposed,2026-01-01,year,2026-01,12109,county,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,miami-lakes-fl,FL,Miami Lakes,Town,Proposed,Proposed,2026-09-01,month,2026-09,12086,place,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,tallahassee-fl,FL,Tallahassee,City,Rejected,Rejected,2026-08-27,day,2026-08,12073,place,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,indiantown-fl,FL,Indiantown,Village,Rejected,Rejected,2026-09-01,day,2026-09,12085,place,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,frederick-county-md,MD,Frederick County,County,Enacted,Enacted,2026-01-01,year,2026-01,24021,county,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,worcester-county-md,MD,Worcester County,County,Enacted,Enacted,2026-01-01,year,2026-01,24047,county,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,wicomico-county-md,MD,Wicomico County,County,Enacted,Enacted,2026-08-06,day,2026-08,24045,county,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,federalsburg-md,MD,Federalsburg,City,Enacted,Enacted,2026-08-04,day,2026-08,24011,place,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,somerset-county-md,MD,Somerset County,County,Proposed,Proposed,2026-01-01,year,2026-01,24039,county,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,hazle-township-pa,PA,Hazle Township,Township,Enacted,Enacted,2026-01-01,year,2026-01,,unmatched,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,butler-township-pa,PA,Butler Township,Township,Enacted,Enacted,2026-05-12,day,2026-05,42019,place,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,little-britain-township-pa,PA,Little Britain Township,Township,Enacted,Enacted,2026-01-01,year,2026-01,42071,place,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,montour-county-pa,PA,Montour County,County,Enacted,Expired,2025-11-01,month,2025-11,42093,county,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,smithfield-township-pa,PA,Smithfield Township,Township,Enacted,Enacted,2026-05-06,day,2026-05,42051,place,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,west-whiteland-township-pa,PA,West Whiteland Township,Township,Enacted,Enacted,2026-05-05,day,2026-05,,unmatched,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,dickinson-county-ia,IA,Dickinson County,County,Enacted,Enacted,2026-05-12,day,2026-05,19059,county,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,buchanan-county-ia,IA,Buchanan County,County,Enacted,Enacted,2026-01-01,year,2026-01,19019,county,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,peosta-ia,IA,Peosta,City,Enacted,Enacted,2026-01-01,year,2026-01,19061,place,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,marshall-county-ia,IA,Marshall County,County,Proposed,Proposed,2026-09-01,month,2026-09,19127,county,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,longmont-co,CO,Longmont,City,Enacted,Enacted,2026-01-01,year,2026-01,,ambiguous_place,08013|08123,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,phillips-county-co,CO,Phillips County,County,Enacted,Enacted,2026-02-27,day,2026-02,08095,county,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,thornton-co,CO,Thornton,City,Proposed,Proposed,2026-01-01,year,2026-01,,ambiguous_place,08001|08123,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,commerce-city-co,CO,Commerce City,City,Proposed,Proposed,2026-08-17,day,2026-08,08001,place,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,madison-county-ar,AR,Madison County,County,Enacted,Enacted,2026-08-17,day,2026-08,05087,county,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,harrison-ar,AR,Harrison,Local,Rescinded,Rescinded,2023-05-30,day,2023-05,05009,place,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,woodford-county-ky,KY,Woodford County,County,Enacted,Enacted,2026-09-09,day,2026-09,21239,county,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,versailles-ky,KY,Versailles,City,Enacted,Enacted,2026-06-17,day,2026-06,21239,place,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,boyle-county-ky,KY,Boyle County,County,Enacted,Enacted,2026-06-09,day,2026-06,21021,county,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,boyd-county-ky,KY,Boyd County,County,Enacted,Enacted,2026-07-09,day,2026-07,21019,county,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,scott-county-ky,KY,Scott County,County,Enacted,Expired,2026-03-13,day,2026-03,21209,county,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,georgetown-ky,KY,Georgetown,City,Enacted,Enacted,2026-07-14,day,2026-07,21209,place,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,boone-county-ky,KY,Boone County,County,Enacted,Enacted,2026-06-16,day,2026-06,21015,county,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,shelby-county-ky,KY,Shelby County,County,Enacted,Enacted,2026-07-01,month,2026-07,21211,county,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,butler-county-ky,KY,Butler County,County,Enacted,Enacted,2026-06-26,day,2026-06,21031,county,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,edmonson-county-ky,KY,Edmonson County,County,Enacted,Enacted,2026-06-08,day,2026-06,21061,county,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,rowan-county-ky,KY,Rowan County,County,Enacted,Enacted,2026-08-01,month,2026-08,21205,county,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,winchester-ky,KY,Winchester,City,Enacted,Enacted,2026-09-02,day,2026-09,21049,place,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,clark-county-ky,KY,Clark County,County,Enacted,Enacted,2026-08-01,month,2026-08,21049,county,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,nelson-county-ky,KY,Nelson County,County,Enacted,Enacted,2026-07-01,month,2026-07,21179,county,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,grant-county-ky,KY,Grant County,County,Enacted,Enacted,2026-03-02,day,2026-03,21081,county,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,orangetown-ny,NY,Orangetown,Town,Enacted,Enacted,2026-08-25,day,2026-08,,unmatched,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,canton-ny,NY,Canton,Town,Enacted,Enacted,2026-07-08,day,2026-07,36089,place,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,potsdam-ny,NY,Potsdam,Town,Proposed,Proposed,2026-07-15,day,2026-07,36089,place,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,pacific-mo,MO,Pacific,City,Enacted,Enacted,2026-08-04,day,2026-08,,ambiguous_place,29071|29189,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,st-peters-mo,MO,St. Peters,City,Enacted,Enacted,2026-05-14,day,2026-05,29183,place,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,webster-county-mo,MO,Webster County,County,Enacted,Enacted,2026-06-16,day,2026-06,29225,county,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,oak-grove-mo,MO,Oak Grove,City,Enacted,Enacted,2026-08-05,day,2026-08,,ambiguous_place,29071|29095|29107,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,nodaway-county-mo,MO,Nodaway County,County,Enacted,Enacted,2026-07-21,day,2026-07,29147,county,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,mankato-mn,MN,Mankato,City,Enacted,Enacted,2026-07-13,day,2026-07,,ambiguous_place,27013|27079|27103,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,apple-valley-mn,MN,Apple Valley,City,Enacted,Enacted,2026-07-09,day,2026-07,27037,place,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,rosemount-mn,MN,Rosemount,City,Enacted,Enacted,2026-04-21,day,2026-04,27037,place,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,minnetrista-mn,MN,Minnetrista,City,Enacted,Enacted,2026-08-03,day,2026-08,27053,place,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,elk-river-mn,MN,Elk River,City,Enacted,Enacted,2026-08-03,day,2026-08,27141,place,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,le-sueur-county-mn,MN,Le Sueur County,County,Enacted,Enacted,2026-05-26,day,2026-05,27079,county,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,chesterfield-county-sc,SC,Chesterfield County,County,Enacted,Enacted,2026-06-01,day,2026-06,45025,county,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,laurens-county-sc,SC,Laurens County,County,Proposed,Proposed,2026-07-13,day,2026-07,45059,county,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,fairfield-county-sc,SC,Fairfield County,County,Proposed,Proposed,2026-08-01,month,2026-08,45039,county,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,jasper-county-sc,SC,Jasper County,County,Proposed,Proposed,2026-09-09,day,2026-09,45053,county,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,pierce-county-wa,WA,Pierce County,County,Enacted,Enacted,2026-08-25,day,2026-08,53053,county,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,spokane-county-wa,WA,Spokane County,County,Enacted,Enacted,2026-08-18,day,2026-08,53063,county,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,la-conner-wa,WA,La Conner,City,Enacted,Enacted,2026-07-29,day,2026-07,53057,place,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,lincoln-county-wa,WA,Lincoln County,County,Enacted,Enacted,2026-09-10,day,2026-09,53043,county,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,moses-lake-wa,WA,Moses Lake,City,Enacted,Enacted,2026-01-01,year,2026-01,53025,place,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,bourbonnais-il,IL,Bourbonnais,Village,Enacted,Enacted,2026-06-16,day,2026-06,17091,place,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,plainfield-il,IL,Plainfield,Village,Enacted,Enacted,2026-04-21,day,2026-04,,ambiguous_place,17093|17197,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,carbondale-il,IL,Carbondale,City,Enacted,Enacted,2026-06-23,day,2026-06,,ambiguous_place,17077|17199,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,effingham-il,IL,Effingham,City,Enacted,Enacted,2026-06-02,day,2026-06,17049,place,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,logan-county-il,IL,Logan County,County,Enacted,Enacted,2026-05-19,day,2026-05,17107,county,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,macon-county-il,IL,Macon County,County,Proposed,Proposed,2026-06-04,day,2026-06,17115,county,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,harpersville-al,AL,Harpersville,City,Enacted,Enacted,2026-08-03,day,2026-08,01117,place,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,tarrant-al,AL,Tarrant,City,Enacted,Enacted,2026-09-08,day,2026-09,01073,place,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,anniston-al,AL,Anniston,City,Enacted,Enacted,2026-08-18,day,2026-08,01015,place,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,westover-al,AL,Westover,City,Enacted,Enacted,2026-08-18,day,2026-08,01117,place,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,foley-al,AL,Foley,City,Enacted,Enacted,2026-09-08,day,2026-09,01003,place,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,lowndes-county-al,AL,Lowndes County,County,Enacted,Enacted,2026-08-26,day,2026-08,01085,county,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,pawhuska-ok,OK,Pawhuska,City,Enacted,Enacted,2026-04-14,day,2026-04,40113,place,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,shawnee-ok,OK,Shawnee,City,Enacted,Enacted,2026-08-19,day,2026-08,40125,place,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,cherokee-nation-ok,OK,Cherokee Nation,Tribal,Enacted,Enacted,2026-08-10,day,2026-08,,unmatched,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,kickapoo-tribe-of-oklahoma-ok,OK,Kickapoo Tribe of Oklahoma,Tribal,Enacted,Enacted,2026-07-01,month,2026-07,,unmatched,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,choctaw-ok,OK,Choctaw,City,Enacted,Enacted,2026-07-21,day,2026-07,40109,place,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,choctaw-county-ok,OK,Choctaw County,County,Enacted,Enacted,2026-05-18,day,2026-05,40023,county,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,oregon-state-land-or,OR,Oregon (state land),State,Enacted,Enacted,2026-09-08,day,2026-09,41005,place,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,woodburn-or,OR,Woodburn,City,Proposed,Proposed,2026-07-31,day,2026-07,41047,place,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,harvey-county-ks,KS,Harvey County,County,Enacted,Enacted,2026-01-13,day,2026-01,20079,county,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,kingman-county-ks,KS,Kingman County,County,Enacted,Enacted,2026-02-12,day,2026-02,20095,county,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,wichita-ks,KS,Wichita,City,Enacted,Expired,2026-01-01,year,2026-01,20173,place,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,south-hutchinson-ks,KS,South Hutchinson,City,Enacted,Enacted,2026-05-26,day,2026-05,20155,place,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,miami-county-ks,KS,Miami County,County,Enacted,Enacted,2026-01-01,year,2026-01,20121,county,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,geary-county-ks,KS,Geary County,County,Enacted,Enacted,2026-06-22,day,2026-06,20061,county,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,el-dorado-ks,KS,El Dorado,City,Enacted,Enacted,2026-07-13,day,2026-07,20015,place,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,lawrence-ks,KS,Lawrence,City,Enacted,Enacted,2026-07-14,day,2026-07,20045,place,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,kansas-sb-531-ks,KS,Kansas (SB 531),State,Proposed,Proposed,2026-03-09,day,2026-03,20209,place,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,brunswick-me,ME,Brunswick,Town,Enacted,Enacted,2026-06-02,day,2026-06,23005,place,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,scarborough-me,ME,Scarborough,Town,Enacted,Enacted,2026-06-03,day,2026-06,,unmatched,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,westbrook-me,ME,Westbrook,City,Enacted,Enacted,2026-06-01,day,2026-06,23005,place,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,biddeford-me,ME,Biddeford,City,Proposed,Proposed,2026-09-03,day,2026-09,23031,place,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,clearfield-ut,UT,Clearfield,City,Enacted,Enacted,2026-09-08,day,2026-09,49011,place,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,milford-ut,UT,Milford,City,Enacted,Enacted,2026-06-16,day,2026-06,49001,place,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,bow-nh,NH,Bow,Town,Under Review,Under Review,2026-09-01,month,2026-09,,unmatched,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,wells-nv,NV,Wells,City,Enacted,Enacted,2026-06-01,month,2026-06,32007,place,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,pyramid-lake-paiute-tribe-nv,NV,Pyramid Lake Paiute Tribe,Tribal,Enacted,Enacted,2026-08-21,day,2026-08,,unmatched,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,fallon-paiute-shoshone-tribe-nv,NV,Fallon Paiute-Shoshone Tribe,Tribal,Enacted,Enacted,2026-05-01,month,2026-05,,unmatched,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,nye-county-pahrump-nv,NV,Nye County (Pahrump),Local,Enacted,Enacted,2026-08-18,day,2026-08,32023,county,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,rio-communities-nm,NM,Rio Communities,City,Enacted,Enacted,2026-08-26,day,2026-08,35061,place,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,raton-nm,NM,Raton,City,Proposed,Proposed,2026-06-09,day,2026-06,35007,place,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,new-mexico-nm,NM,New Mexico,State,Proposed,Proposed,2026-07-02,day,2026-07,,unmatched,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,otoe-county-ne,NE,Otoe County,County,Enacted,Enacted,2026-05-20,day,2026-05,31131,county,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,butler-county-ne,NE,Butler County,County,Enacted,Enacted,2026-06-01,month,2026-06,31023,county,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,box-butte-county-ne,NE,Box Butte County,County,Enacted,Enacted,,,,31013,county,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,custer-county-ne,NE,Custer County,County,Enacted,Enacted,,,,31041,county,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,dundy-county-ne,NE,Dundy County,County,Enacted,Enacted,,,,31057,county,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,furnas-county-ne,NE,Furnas County,County,Enacted,Enacted,,,,31065,county,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,hayes-county-ne,NE,Hayes County,County,Enacted,Enacted,,,,31085,county,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,harlan-county-ne,NE,Harlan County,County,Enacted,Enacted,,,,31083,county,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,johnson-county-ne,NE,Johnson County,County,Enacted,Enacted,,,,31097,county,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,kearney-county-ne,NE,Kearney County,County,Enacted,Enacted,,,,31099,county,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,logan-county-ne,NE,Logan County,County,Enacted,Enacted,2026-07-15,day,2026-07,31113,county,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,cass-county-ne,NE,Cass County,County,Enacted,Enacted,2026-08-11,day,2026-08,31025,county,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,cherry-county-ne,NE,Cherry County,County,Enacted,Enacted,2026-07-14,day,2026-07,31031,county,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,nehawka-ne,NE,Nehawka,Town,Enacted,Enacted,2026-08-26,day,2026-08,31025,place,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,garfield-county-ne,NE,Garfield County,County,Proposed,Proposed,,,,31071,county,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,hall-county-ne,NE,Hall County,County,Proposed,Proposed,,,,31079,county,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,buffalo-township-pa,PA,Buffalo Township,Township,Enacted,Enacted,2026-08-12,day,2026-08,,unmatched,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,glassboro-nj,NJ,Glassboro,Local,Enacted,Enacted,2026-09-08,day,2026-09,34015,place,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,clarksville-in,IN,Clarksville,Town,Enacted,Enacted,2026-07-14,day,2026-07,18019,place,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,freeborn-county-mn,MN,Freeborn County,County,Enacted,Enacted,2025-08-19,day,2025-08,27047,county,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,thurston-county-wa,WA,Thurston County,County,Enacted,Enacted,2026-08-20,day,2026-08,53067,county,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,palmyra-mo,MO,Palmyra,City,Enacted,Enacted,2026-09-03,day,2026-09,29127,place,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,hualapai-indian-reservation-az,AZ,Hualapai Indian Reservation,Tribal,Enacted,Enacted,2026-08-20,day,2026-08,,unmatched,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,city-of-missoula-mt,MT,City of Missoula,City,Enacted,Enacted,2026-03-04,day,2026-03,,unmatched,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,fort-peck-reservation-mt,MT,Fort Peck Reservation,Tribal,Enacted,Enacted,2026-08-10,day,2026-08,,unmatched,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,holyoke-ma,MA,Holyoke,City,Enacted,Enacted,2026-06-17,day,2026-06,25013,place,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,westfield-ma,MA,Westfield,City,Enacted,Enacted,2026-07-06,day,2026-07,25013,place,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,shutesbury-ma,MA,Shutesbury,Town,Enacted,Enacted,2025-09-30,day,2025-09,,unmatched,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,agawam-ma,MA,Agawam,City,Enacted,Enacted,2026-08-12,day,2026-08,25013,place,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,plymouth-ma,MA,Plymouth,Town,Proposed,Proposed,2026-08-25,day,2026-08,25023,place,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,northampton-ma,MA,Northampton,City,Proposed,Proposed,2026-09-03,day,2026-09,25015,place,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,southbridge-ma,MA,Southbridge,Town,Under Review,Under Review,2026-08-10,day,2026-08,25027,place,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,new-orleans-la,LA,New Orleans,City,Enacted,Enacted,2026-01-28,day,2026-01,22071,place,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,st-charles-parish-la,LA,St. Charles Parish,County,Rejected,Rejected,2026-04-13,day,2026-04,22089,county,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,charlestown-ri,RI,Charlestown,Town,Enacted,Enacted,2026-08-11,day,2026-08,44009,place,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,westerly-ri,RI,Westerly,Town,Enacted,Enacted,2026-07-27,day,2026-07,44009,place,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,oliver-county-nd,ND,Oliver County,County,Rescinded,Rescinded,2026-03-13,day,2026-03,38065,county,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,mercer-county-nd,ND,Mercer County,County,Rescinded,Rescinded,2026-03-03,day,2026-03,38057,county,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,barnes-county-nd,ND,Barnes County,County,Enacted,Enacted,2026-05-19,day,2026-05,38003,county,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,royalton-vt,VT,Royalton,Town,Enacted,Enacted,2026-03-03,day,2026-03,,unmatched,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,south-burlington-vt,VT,South Burlington,City,Enacted,Enacted,2026-08-03,day,2026-08,50007,place,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,morristown-vt,VT,Morristown,Town,Enacted,Enacted,2026-09-01,month,2026-09,,unmatched,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips
+ai_gridwatch,hawaii-county-hi,HI,Hawaii County,County,Under Review,Under Review,2026-07-08,day,2026-07,15001,county,,c_moratoria_geo_stub_v0,best_effort_place_county_stub_no_invented_fips

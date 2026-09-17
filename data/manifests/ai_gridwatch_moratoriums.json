@@ -1,0 +1,14 @@
+{
+  "source_id": "ai_gridwatch_moratoriums",
+  "url": "https://aigridwatch.com/data/moratoriums.csv",
+  "path": "data/raw/ai_gridwatch/moratoriums.csv",
+  "bytes": 590438,
+  "sha256": "a5667446594a9cf2d4932366b67c5af10114ea64da3e4daebff9e413cde53156",
+  "status": "downloaded",
+  "notes": "AI GridWatch U.S. data center moratorium & community action tracker CSV (CC BY 4.0). Layer C.",
+  "license_note": "CC BY 4.0 (AI GridWatch)",
+  "layer": "C",
+  "portal": "https://aigridwatch.com/open-data",
+  "access_date_pt": "2026-09-16",
+  "recorded_at_utc": "2026-09-17T04:17:53.949719+00:00"
+}

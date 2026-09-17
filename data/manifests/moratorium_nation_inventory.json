@@ -1,0 +1,15 @@
+{
+  "source_id": "moratorium_nation_inventory",
+  "url": "https://raw.githubusercontent.com/mjbommar/moratorium-data-2026/main/data/moratorium_inventory.csv",
+  "path": "data/raw/moratorium_nation/moratorium_inventory.csv",
+  "bytes": 554384,
+  "sha256": "21348081b9559e7bf80a73b87b86e3d6ff5f2371c44be4e344e3e8a04c544b8f",
+  "status": "downloaded",
+  "notes": "Moratorium Nation local-moratorium inventory (CC BY 4.0). Layer C.",
+  "license_note": "CC BY 4.0 (mjbommar / Moratorium Nation)",
+  "layer": "C",
+  "portal": "https://mjbommar.github.io/moratorium-data-2026/",
+  "repo": "https://github.com/mjbommar/moratorium-data-2026",
+  "access_date_pt": "2026-09-16",
+  "recorded_at_utc": "2026-09-17T04:17:53.521015+00:00"
+}

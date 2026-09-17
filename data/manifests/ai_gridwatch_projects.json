@@ -1,0 +1,15 @@
+{
+  "source_id": "ai_gridwatch_projects",
+  "url": "https://aigridwatch.com/data/projects.csv",
+  "path": "data/raw/ai_gridwatch/projects.csv",
+  "bytes": 132996,
+  "sha256": "30dc601692f19e658cd0103cad67c7442239041432a5efc1c5cd5754f4de700f",
+  "status": "downloaded",
+  "notes": "AI GridWatch project intelligence tracker CSV (CC BY 4.0). Layer G/C adjunct \u2014 proposals not invented permits.",
+  "license_note": "CC BY 4.0 (AI GridWatch)",
+  "layer": "G",
+  "portal": "https://aigridwatch.com/open-data",
+  "access_date_pt": "2026-09-16",
+  "notes_extra": "Not DC permit registry invent; curated tracker rows only.",
+  "recorded_at_utc": "2026-09-17T04:17:54.274101+00:00"
+}

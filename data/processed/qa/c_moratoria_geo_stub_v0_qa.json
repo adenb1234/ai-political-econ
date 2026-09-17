@@ -1,0 +1,67 @@
+{
+  "transform_version": "c_moratoria_geo_stub_v0",
+  "layer": "C",
+  "policy": "Place/county FIPS crosswalk stubs only. Blank county_fips when unmatched or ambiguous \u2014 never invent. Not panel event counts; collate before modeling.",
+  "not_invented": [
+    "county_fips_for_unmatched",
+    "ordinance_event_counts",
+    "data_center_permit_outcomes"
+  ],
+  "geo_inputs": {
+    "counties_gazetteer": "data/raw/census/2024_Gaz_counties_national.txt",
+    "place_by_county": "data/raw/census/national_place_by_county2020.txt",
+    "place_by_county_present": true,
+    "county_keys": 3216,
+    "place_keys": 31929
+  },
+  "moratorium_nation": {
+    "source": "moratorium_nation",
+    "raw_path": "data/raw/moratorium_nation/moratorium_inventory.csv",
+    "total_rows": 533,
+    "matched_county_fips": 372,
+    "match_rate": 0.6979,
+    "month_parseable": 490,
+    "by_match_kind": {
+      "ambiguous_place": 20,
+      "place": 157,
+      "county": 212,
+      "unmatched": 140,
+      "ambiguous_county": 1,
+      "county_name": 3
+    },
+    "outputs": {
+      "crosswalk_csv": "data/processed/crosswalks/moratorium_nation_place_to_county_v0.csv",
+      "residuals_csv": "data/processed/crosswalks/moratorium_nation_place_to_county_v0_residuals.csv"
+    }
+  },
+  "ai_gridwatch": {
+    "source": "ai_gridwatch",
+    "raw_path": "data/raw/ai_gridwatch/moratoriums.csv",
+    "total_rows": 853,
+    "matched_county_fips": 658,
+    "match_rate": 0.7714,
+    "month_parseable": 808,
+    "by_match_kind": {
+      "place": 338,
+      "county": 315,
+      "unmatched": 136,
+      "ambiguous_place": 53,
+      "ambiguous_county": 2,
+      "county_name": 5,
+      "state_only": 4
+    },
+    "outputs": {
+      "crosswalk_csv": "data/processed/crosswalks/ai_gridwatch_place_to_county_v0.csv",
+      "residuals_csv": "data/processed/crosswalks/ai_gridwatch_place_to_county_v0_residuals.csv"
+    }
+  },
+  "outputs": {
+    "qa_json": "data/processed/qa/c_moratoria_geo_stub_v0_qa.json",
+    "mn_crosswalk_csv": "data/processed/crosswalks/moratorium_nation_place_to_county_v0.csv",
+    "mn_residuals_csv": "data/processed/crosswalks/moratorium_nation_place_to_county_v0_residuals.csv",
+    "gw_crosswalk_csv": "data/processed/crosswalks/ai_gridwatch_place_to_county_v0.csv",
+    "gw_residuals_csv": "data/processed/crosswalks/ai_gridwatch_place_to_county_v0_residuals.csv"
+  },
+  "generated_at_utc": "2026-09-17T04:19:07.739649+00:00",
+  "access_date_pt": "2026-09-16"
+}
