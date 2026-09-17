@@ -239,6 +239,26 @@ Public entry pages re-checked with curl HEAD/GET on **2026-09-16 PT** (UA `ai-ba
 
 ---
 
+## Lobbying adjunct — Senate LDA.gov — **already-have-raw** (sample v0)
+
+| Field | Detail |
+|-------|--------|
+| **Layer** | Lobbying / disclosure **adjunct** (not A–H spine layer; schema freeze unchanged) |
+| **Free status** | **already-have-raw** (API sample via documented `client_name` seeds) |
+| **Free access path** | REST API `https://lda.gov/api/v1/` (legacy `https://lda.senate.gov/api/` **301** → lda.gov). **No API key** required for public read. Anonymous **15 req/min**; optional key **120/min** ([ToS](https://lda.gov/api/tos/)). Redoc: https://lda.gov/api/redoc/v1/. Bulk XML alternate: https://www.senate.gov/legislative/lobbyingdisc.htm |
+| **License / ToS** | US Senate public LDA disclosures; cite **access date**; OPR cannot vouch for downstream analyses (ToS). |
+| **Raw on disk** | **yes (sample):** `data/raw/senate_lda/filings_sample_v0.jsonl` (9,295,953 bytes; sha256 `995c0ba6…f116`; **1,468** unique filings) + `fetch_meta_v0.json` + `ACCESS.md`. Bulk JSON gitignored. |
+| **Manifest** | `senate_lda.json` (`downloaded`) |
+| **Processed (v0)** | `data/processed/lobbying/senate_lda_ai_related_v0.csv` + `.jsonl` (**923** keyword-hit filings from **1,468** unique seed-fetched); QA `data/processed/qa/senate_lda_ai_related_v0_qa.json` (raw by year 2023/24/25: 437/460/571; hits 248/292/383). Filter: `docs/filters/lda_ai_keywords_v0.md` (`lda_rules_v0`). Entrypoint: `make fetch-senate-lda` / `python -m src.ingest.senate_lda`. |
+| **Geo / FIPS** | **`partial` / blank county.** Prefer `client.state` / `client.ppb_state` (USPS); **`county_fips` always blank** — federal lobbying disclosures rarely carry county. QA notes this explicitly. |
+| **Filter honesty** | v0 uses **documented `client_name` seeds** × years 2023–2025, then client-side `lda_rules_v0` keywords on client/registrant/activity text. Live probe (2026-09-16 PT): `issue_code` query param **does not filter** (counts unchanged vs year-only) — not used. Do not invent matches. |
+| **Next free step** | Optional registered free API key for faster pagination; optional bulk XML year files; expand seeds only with documented filter version bump. |
+| **Blockers** | None for anonymous free read. Polite rate limit only. |
+
+**Live check (2026-09-16 PT):** `GET https://lda.gov/api/v1/` **200**; `filings/?filing_year=2024` **200**; anonymous read verified without key.
+
+---
+
 ## Geography crosswalk (Census) — **already-have-raw**
 
 | Field | Detail |
@@ -279,7 +299,7 @@ Pew, Gallup, AP-NORC national AI/tech series and ballot measures: **cite release
 | F2 | Google Trends DMA→county | Accept state/DMA grain for early F, or fund crosswalk design |
 | G1 | No national DC permit registry | Accept hand-built ledger coverage (spec failure mode G) |
 | G2 | Opposition registries | Approve curated schema + which sites may be cited (no login-wall scrapes) |
-| Ops | GitHub remote missing | Local `.git` only (`git remote` empty) — create private remote when ready; **do not push from this agent** |
+| Ops | Private GitHub push may need credentials | Remote `origin` = `adenb1234/ai-political-econ`; push/PR from agent if `gh`/creds available, else hand commands to parent |
 
 ---
 
@@ -298,3 +318,4 @@ Pew, Gallup, AP-NORC national AI/tech series and ballot measures: **cite release
 **Verified live with curl 2026-09-16 PT (this pass):** LBNL Queued Up portal + 2026 publication page + XLSX HEAD **200** (`content-length` 15571236); EIA portal HEAD **503**/GET **200**, zip **200**; LegiScan datasets + API **403**; Open States docs **200**; Arctic Shift repo + download_links **200**; Google Trends **200**; Media Cloud **200**; Census gazetteer zip **200**; CCC project page **200** / Dataverse datafile HEAD **403** (file already on disk; range GET pattern works for LocalView meta **206**); PJM/MISO/CAISO(PascalCase)/ERCOT/NYISO/ISO-NE/SPP landing pages **200** (CAISO lowercase path **404**); datacenterwatch.org + datacenterknowledge.com **200**.
 
 **Reconciled from:** `SOURCES.md`, `data/manifests/*.json`, on-disk `data/raw/**` / `data/processed/**`, and draft inventory formerly at `/workspace/ai-backlash-free-data/docs/SOURCE_INVENTORY.md`.
+**Later 2026-09-16 PT (Senate LDA lobbying adjunct):** anonymous API `https://lda.gov/api/v1/` verified (no key); `lda.senate.gov` 301→lda.gov; raw sample 9,295,953 bytes / sha256 `995c0ba6…f116` / **1,468** unique filings (seeds × 2023–2025); `lda_rules_v0` → **923** keyword hits; county_fips blank (federal); issue_code query ineffective on probe.

@@ -29,6 +29,8 @@ data/raw/**/*.xlsx
 data/raw/**/*.xls
 data/raw/**/*.pdf
 data/raw/**/*.docx
+data/raw/**/*.json
+data/raw/**/*.jsonl
 # Allow small documentation samples under raw
 !data/raw/**/ACCESS.md
 !data/raw/**/codebook.md
@@ -43,6 +45,8 @@ data/processed/**
 !data/processed/qa/*.json
 !data/processed/localview/
 !data/processed/localview/**
+!data/processed/lobbying/
+!data/processed/lobbying/**
 
 # OS / editor
 .DS_Store
