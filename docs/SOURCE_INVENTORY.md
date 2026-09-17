@@ -29,7 +29,7 @@ The required layer status is one of `ready`, `blocked`, or `already-have-raw`. W
 | **B** Legislation | **blocked** | LegiScan raw empty; Open States documented only | `not started` | **Yes — free LegiScan bulk drop/key; optional Open States key** |
 | **E** Mobilization | **already-have-raw** | CCC phase 3 downloaded; versioned transform outputs on disk | `partial` → matched rows checked | None for access |
 | **F** Vernacular | **ready** | Arctic Shift and Google Trends documented only; no raw dumps | `not started` | Dump size, rate limits, and geo crosswalk |
-| **G** Project ledger | **already-have-raw** | EIA-861 + LBNL Queued Up 2026 XLSX downloaded; ISO/registries documented only | `partial` / `not started` | No access blocker; hand-curation and schema work remain |
+| **G** Project ledger | **already-have-raw** | EIA-861 + LBNL Queued Up transforms v0 on disk (ix-queue activity ≠ DC permits); ISO/registries documented only | `partial` (LBNL/EIA v0) | No access blocker; ISO pick + DC permit curation remain |
 
 Supplemental free options (Google Trends, hand-curated opposition registries, Media Cloud, and local RSS/HTML) are documented below without claiming unverified downloads. Census is a verified geography helper, not one of the five study layers.
 
@@ -146,11 +146,12 @@ Supplemental free options (Google Trends, hand-curated opposition registries, Me
 | **Free status** | **already-have-raw** |
 | **Free access path** | Portal https://www.eia.gov/electricity/data/eia861/ · 2024 zip `https://www.eia.gov/electricity/data/eia861/zip/f8612024.zip` |
 | **License / ToS** | US government work / public domain. |
-| **Raw on disk** | **yes:** `data/raw/eia/f8612024.zip` (4,568,208 bytes; sha256 `77ce49c6…54de` per `eia_861_2024.json`) + extracted `Utility_Data_2024.xlsx` (260,483 bytes). |
+| **Raw on disk** | **yes:** `data/raw/eia/f8612024.zip` (4,568,208 bytes; sha256 `77ce49c6…54de` per `eia_861_2024.json`) + extracted `Service_Territory_2024.xlsx` (440,753) + `Utility_Data_2024.xlsx` (260,483). |
 | **Manifest** | `eia_861_2024.json` |
-| **Geo / FIPS** | **`partial`.** Annual utility/territory — need utility→county FIPS; month grain is annual. |
-| **Next free step** | Map service-territory fields onto Census county FIPS via `src/geo/fips.py`. |
-| **Blockers** | None for access. |
+| **Geo / FIPS** | **`partial` → utility→county v0.** `src/transform/eia_861_to_coverage.py` / `make transform-eia`: Service Territory county names → Census FIPS (match_rate **0.9961**; 11,730/11,776); ambiguous county-vs-city + CT legacy + some AK historical areas left without FIPS (never invented). Grain remains **annual**, not county×month. |
+| **Processed (v0)** | Crosswalk `data/processed/crosswalks/eia_861_utility_county_v0.csv`; utility/state stub `data/processed/panel/eia_861_utility_state_v0.csv` (1,701 rows); sample `…/eia_861_utility_county_v0_sample.csv`; QA `data/processed/qa/eia_861_coverage_v0_qa.json`. Notes: `docs/notes/g_eia_lbnl_v0.md`. |
+| **Next free step** | Optional CT legacy→COG map; decide whether annual utility coverage joins the monthly panel as a slow-moving covariate. |
+| **Blockers** | None for access. CT / city-county ambiguity documented in QA. |
 
 **Live check (2026-09-16 PT):** portal HEAD **503** / GET **200** (treat as up); 2024 zip HEAD **200**.
 
@@ -163,8 +164,9 @@ Supplemental free options (Google Trends, hand-curated opposition registries, Me
 | **License / ToS** | **CC BY 4.0** — attribute LBNL and GridTracker. Generation/storage queues — **not** load / data-center permit registry. |
 | **Raw on disk** | **yes:** `data/raw/lbnl/LBNL_Ix_Queue_Data_File_thru2025.xlsx` (15,571,236 bytes; sha256 `794582d3…08b6`; access date PT 2026-09-16). Fetcher: `src/ingest/lbnl_queued_up.py` / `make fetch-lbnl`. |
 | **Manifest** | `lbnl_queued_up_2026.json` (`downloaded`; notes explicitly exclude data-center permit counts). |
-| **Geo / FIPS** | **`partial`** upstream (region/state/county map products); queue timestamps → `YYYY-MM` still need a transform plan. Do **not** invent proposed/approved/denied data-center counts. |
-| **Next free step** | Design a queue→county×month transform for generation/storage only; do **not** treat rows as DC permits. |
+| **Geo / FIPS** | **`partial` → county×month v0.** `src/transform/lbnl_queue_to_panel.py` / `make transform-lbnl` on sheet `03. Complete Queue Data`: upstream `fips_code` → `county_fips` (coverage_fips_share **0.9509**; 36,325/38,201); month from `q_date` (coverage_month_share **0.9969**). Metric = **generation/storage interconnection queue activity** — **not** DC proposed/approved/denied. |
+| **Processed (v0)** | County×month `data/processed/panel/lbnl_ix_queue_activity_v0.csv` (23,699 rows); state×month `…_state_month_v0.csv` (7,311); sample `…_v0_sample.csv`; QA `data/processed/qa/lbnl_ix_queue_activity_v0_qa.json`. |
+| **Next free step** | Keep labels honest in any panel join; optionally pick one ISO for load/DC-adjacent queues (still not a national DC permit registry). |
 | **Blockers** | None for free access. |
 
 **Live check (2026-09-16 PT):** portal / publication / XLSX HEAD **200** (`content-length` 15571236).
@@ -261,7 +263,7 @@ Pew, Gallup, AP-NORC national AI/tech series and ballot measures: **cite release
 
 1. **A:** Meta spine v0 landed (`python -m src.ingest.localview --include-meta`; 251,210 spine-ready / 83.28%; unmatched county keys 0). **Next:** human-review ambiguous/multi-county keys (32,395 rows; 110 place keys); optional `county_fips × month` meeting-count panel. No transcript tarballs.
 2. **E:** Already past raw + `ccc_rules_v0` transform; optional phase-2 CCC backfill later.
-3. **G:** LBNL Queued Up XLSX on disk — design generation/storage queue → county×month transform (not DC permits). Optionally pick one ISO next.
+3. **G:** LBNL ix-queue county×month + EIA-861 utility→county v0 landed (`make transform-g`). Optionally pick one ISO next; do not invent DC permit counts.
 4. **B:** Unblock only after Aden free LegiScan drop or free API key.
 5. **F/D:** Defer Arctic Shift torrents / Media Cloud until keys + disk plan exist.
 
@@ -293,7 +295,7 @@ Pew, Gallup, AP-NORC national AI/tech series and ballot measures: **cite release
 
 ## Verification log
 
-**Verified on disk 2026-09-16 PT (ls sizes + sha256sum where checked):** CCC CSV 47,231,658 bytes / sha256 matches manifest; LocalView codebook 6,387 plus metadata parquet 35,339,621 bytes / sha256 matches manifests; EIA zip 4,568,208 / sha256 matches; Census txt 647,830 / sha256 matches; LegiScan/Open States/Arctic Shift raw empty or ACCESS-only; CCC processed events/panel/QA present as above. **Later same day PT:** Census places gaz + `national_places.txt` downloaded; LocalView place→county crosswalk v0 QA (1,150 keys; 1,038 matched / 0.9026; meta-row match 0.8917; unmatched keys 2 / 263 rows); LocalView meta spine v0 (`data/processed/localview/meta_spine_v0.parquet`) QA: matched 269,001 / ambiguous 32,395 / unmatched 263; month ok 281,074 / fail 20,585; spine-ready 251,070; CT town→COG CSV 11,988 bytes / sha256 `4592692e…11a9`; LBNL Queued Up XLSX 15,571,236 bytes / sha256 `794582d3…08b6`. **Still later 2026-09-16 PT:** CT town→COG CSV + name-alias fallbacks rebuilt crosswalk (keys matched 1,038 / 0.9026; meta-row match 269,001 / 0.8917; unmatched keys 2); spine-ready 251,070 / 0.8323; residuals CSV on disk. **Same day PT (place_by_county_2020):** ANSI `national_place_by_county2020.txt` 2,736,928 / sha256 `9996494d…06ec6`; Semmes AL + Brookhaven GA matched; crosswalk keys 1,040 / 0.9043; meta matched 269,264 / 0.8926; unmatched keys **0**; spine-ready 251,210 / 0.8328.
+**Verified on disk 2026-09-16 PT (ls sizes + sha256sum where checked):** CCC CSV 47,231,658 bytes / sha256 matches manifest; LocalView codebook 6,387 plus metadata parquet 35,339,621 bytes / sha256 matches manifests; EIA zip 4,568,208 / sha256 matches; Census txt 647,830 / sha256 matches; LegiScan/Open States/Arctic Shift raw empty or ACCESS-only; CCC processed events/panel/QA present as above. **Later same day PT:** Census places gaz + `national_places.txt` downloaded; LocalView place→county crosswalk v0 QA (1,150 keys; 1,038 matched / 0.9026; meta-row match 0.8917; unmatched keys 2 / 263 rows); LocalView meta spine v0 (`data/processed/localview/meta_spine_v0.parquet`) QA: matched 269,001 / ambiguous 32,395 / unmatched 263; month ok 281,074 / fail 20,585; spine-ready 251,070; CT town→COG CSV 11,988 bytes / sha256 `4592692e…11a9`; LBNL Queued Up XLSX 15,571,236 bytes / sha256 `794582d3…08b6`. **Still later 2026-09-16 PT:** CT town→COG CSV + name-alias fallbacks rebuilt crosswalk (keys matched 1,038 / 0.9026; meta-row match 269,001 / 0.8917; unmatched keys 2); spine-ready 251,070 / 0.8323; residuals CSV on disk. **Same day PT (place_by_county_2020):** ANSI `national_place_by_county2020.txt` 2,736,928 / sha256 `9996494d…06ec6`; Semmes AL + Brookhaven GA matched; crosswalk keys 1,040 / 0.9043; meta matched 269,264 / 0.8926; unmatched keys **0**; spine-ready 251,210 / 0.8328. **G transform pass 2026-09-16 PT (evening):** LBNL `lbnl_ix_queue_v0` total_queue_rows 38,201; with_county_fips 36,325 (0.9509); month_parseable 38,084 (0.9969); panel_county_month_rows 23,699; panel_state_month_rows 7,311. EIA `eia_861_coverage_v0` territory_rows 11,776; matched_fips 11,730 (0.9961); ambiguous 11; unmatched 35 (CT legacy + AK historical + residual spellings); utility_state_rows 1,701. Schema freeze: events.sql / panel.sql / taxonomy untouched.
 
 **Verified live with curl 2026-09-16 PT (this pass):** LBNL Queued Up portal + 2026 publication page + XLSX HEAD **200** (`content-length` 15571236); EIA portal HEAD **503**/GET **200**, zip **200**; LegiScan datasets + API **403**; Open States docs **200**; Arctic Shift repo + download_links **200**; Google Trends **200**; Media Cloud **200**; Census gazetteer zip **200**; CCC project page **200** / Dataverse datafile HEAD **403** (file already on disk; range GET pattern works for LocalView meta **206**); PJM/MISO/CAISO(PascalCase)/ERCOT/NYISO/ISO-NE/SPP landing pages **200** (CAISO lowercase path **404**); datacenterwatch.org + datacenterknowledge.com **200**.
 

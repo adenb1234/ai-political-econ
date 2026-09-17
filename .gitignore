@@ -43,6 +43,8 @@ data/processed/**
 !data/processed/qa/*.json
 !data/processed/localview/
 !data/processed/localview/**
+!data/processed/panel/
+!data/processed/panel/*_sample.csv
 
 # OS / editor
 .DS_Store

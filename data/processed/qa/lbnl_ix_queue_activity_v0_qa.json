@@ -1,0 +1,1657 @@
+{
+  "transform_version": "lbnl_ix_queue_v0",
+  "layer": "G",
+  "metric_label": "generation_storage_interconnection_queue_activity",
+  "not_data_center_permits": true,
+  "content_scope": "generation_storage_interconnection_queues",
+  "explicitly_excluded": [
+    "data_center_permit_counts",
+    "n_projects_proposed",
+    "n_projects_approved",
+    "n_projects_denied",
+    "n_projects_delayed"
+  ],
+  "raw_path": "data/raw/lbnl/LBNL_Ix_Queue_Data_File_thru2025.xlsx",
+  "sheet": "03. Complete Queue Data",
+  "license_note": "CC BY 4.0 \u2014 attribute LBNL / EMP / GridTracker",
+  "month_derivation": "Primary: q_date (interconnection request). Fallbacks in order: ia_date, on_date, wd_date, prop_date.",
+  "geo_policy": "county_fips from upstream fips_code via normalize_fips; else state-only with QA exception; never invent FIPS.",
+  "total_queue_rows": 38201,
+  "with_county_fips": 36325,
+  "state_only": 641,
+  "no_geo": 1235,
+  "month_parseable": 38084,
+  "month_unparseable": 117,
+  "fips_not_in_gazetteer": 225,
+  "mw_1_present": 38201,
+  "panel_county_month_rows": 23699,
+  "panel_state_month_rows": 7311,
+  "panel_n_ix_queue_requests_sum": 36221,
+  "coverage_fips_share": 0.9509,
+  "coverage_month_share": 0.9969,
+  "by_status": {
+    "withdrawn": 24221,
+    "active": 8513,
+    "operational": 4789,
+    "suspended": 668,
+    "unknown": 10
+  },
+  "by_type_clean_top20": {
+    "Solar": 13479,
+    "Wind": 6470,
+    "Battery": 5826,
+    "Solar+Battery": 4451,
+    "Gas": 3744,
+    "Other": 1767,
+    "Hydro": 499,
+    "Coal": 446,
+    "Offshore Wind": 220,
+    "Nuclear": 211,
+    "Geothermal": 176,
+    "Wind+Battery": 132,
+    "Gas+Oil": 113,
+    "Other Storage": 111,
+    "Diesel": 108,
+    "Other+Battery": 84,
+    "Oil": 83,
+    "Solar+Wind+Battery": 75,
+    "Gas+Battery": 48,
+    "Solar+Other": 29
+  },
+  "by_state": {
+    "AL": 528,
+    "AR": 496,
+    "AZ": 1049,
+    "CA": 2831,
+    "CO": 601,
+    "CT": 228,
+    "DC": 3,
+    "DE": 151,
+    "FL": 908,
+    "GA": 810,
+    "IA": 507,
+    "ID": 861,
+    "IL": 1225,
+    "IN": 948,
+    "KS": 587,
+    "KY": 487,
+    "LA": 466,
+    "MA": 465,
+    "MB": 1,
+    "MD": 560,
+    "ME": 284,
+    "MI": 780,
+    "MN": 747,
+    "MO": 401,
+    "MS": 441,
+    "MT": 533,
+    "MX": 19,
+    "NC": 603,
+    "ND": 410,
+    "NE": 388,
+    "NH": 105,
+    "NJ": 1195,
+    "NM": 632,
+    "NV": 645,
+    "NY": 1882,
+    "OH": 919,
+    "OK": 803,
+    "ON": 2,
+    "OR": 1489,
+    "PA": 1875,
+    "RI": 112,
+    "SC": 714,
+    "SD": 355,
+    "TN": 327,
+    "TX": 3442,
+    "UT": 894,
+    "VA": 1343,
+    "VT": 79,
+    "WA": 777,
+    "WI": 420,
+    "WV": 238,
+    "WY": 400
+  },
+  "qa_exception_kinds": {
+    "state_only_missing_fips": 173,
+    "no_geo": 31,
+    "month_unparseable": 75,
+    "fips_not_in_gazetteer": 221
+  },
+  "qa_exceptions_capped": [
+    {
+      "kind": "state_only_missing_fips",
+      "q_id": "Q344",
+      "entity": "APS",
+      "state": "AZ",
+      "county": null,
+      "fips_raw": null
+    },
+    {
+      "kind": "state_only_missing_fips",
+      "q_id": "Q448",
+      "entity": "APS",
+      "state": "AZ",
+      "county": null,
+      "fips_raw": null
+    },
+    {
+      "kind": "state_only_missing_fips",
+      "q_id": "SP102",
+      "entity": "APS",
+      "state": "AZ",
+      "county": null,
+      "fips_raw": null
+    },
+    {
+      "kind": "no_geo",
+      "q_id": 45,
+      "entity": "Avista",
+      "county": null,
+      "state_raw": null
+    },
+    {
+      "kind": "month_unparseable",
+      "q_id": "Q59",
+      "entity": "Avista",
+      "state": "WA",
+      "q_date": "None"
+    },
+    {
+      "kind": "month_unparseable",
+      "q_id": "Q60",
+      "entity": "Avista",
+      "state": "WA",
+      "q_date": "None"
+    },
+    {
+      "kind": "month_unparseable",
+      "q_id": "Q97",
+      "entity": "Avista",
+      "state": "ID",
+      "q_date": "None"
+    },
+    {
+      "kind": "fips_not_in_gazetteer",
+      "q_id": "BHBE G10",
+      "entity": "BHP",
+      "state": "SD",
+      "county": "Shannon",
+      "fips_code": "46113"
+    },
+    {
+      "kind": "fips_not_in_gazetteer",
+      "q_id": "BHBE G23",
+      "entity": "BHP",
+      "state": "SD",
+      "county": "Oglala Lakota",
+      "fips_code": "46113"
+    },
+    {
+      "kind": "state_only_missing_fips",
+      "q_id": 1348,
+      "entity": "CAISO",
+      "state": "CA",
+      "county": null,
+      "fips_raw": null
+    },
+    {
+      "kind": "state_only_missing_fips",
+      "q_id": 1439,
+      "entity": "CAISO",
+      "state": "CA",
+      "county": null,
+      "fips_raw": null
+    },
+    {
+      "kind": "state_only_missing_fips",
+      "q_id": 1474,
+      "entity": "CAISO",
+      "state": "CA",
+      "county": null,
+      "fips_raw": null
+    },
+    {
+      "kind": "state_only_missing_fips",
+      "q_id": "159A",
+      "entity": "CAISO",
+      "state": "MX",
+      "county": "Baja California",
+      "fips_raw": null
+    },
+    {
+      "kind": "state_only_missing_fips",
+      "q_id": 164,
+      "entity": "CAISO",
+      "state": "MX",
+      "county": "Baja California",
+      "fips_raw": null
+    },
+    {
+      "kind": "state_only_missing_fips",
+      "q_id": 1660,
+      "entity": "CAISO",
+      "state": "MX",
+      "county": "Tecate",
+      "fips_raw": null
+    },
+    {
+      "kind": "state_only_missing_fips",
+      "q_id": 1661,
+      "entity": "CAISO",
+      "state": "MX",
+      "county": "Baja California",
+      "fips_raw": null
+    },
+    {
+      "kind": "state_only_missing_fips",
+      "q_id": 1664,
+      "entity": "CAISO",
+      "state": "MX",
+      "county": "Sonora",
+      "fips_raw": null
+    },
+    {
+      "kind": "state_only_missing_fips",
+      "q_id": 168,
+      "entity": "CAISO",
+      "state": "MX",
+      "county": "Baja California",
+      "fips_raw": null
+    },
+    {
+      "kind": "state_only_missing_fips",
+      "q_id": "178A",
+      "entity": "CAISO",
+      "state": "MX",
+      "county": "Mexicali",
+      "fips_raw": null
+    },
+    {
+      "kind": "state_only_missing_fips",
+      "q_id": "178B",
+      "entity": "CAISO",
+      "state": "MX",
+      "county": "Mexicali",
+      "fips_raw": null
+    },
+    {
+      "kind": "state_only_missing_fips",
+      "q_id": 1824,
+      "entity": "CAISO",
+      "state": "MX",
+      "county": "Municipality Of Tecate",
+      "fips_raw": null
+    },
+    {
+      "kind": "state_only_missing_fips",
+      "q_id": 183,
+      "entity": "CAISO",
+      "state": "MX",
+      "county": "Baja California",
+      "fips_raw": null
+    },
+    {
+      "kind": "state_only_missing_fips",
+      "q_id": 1938,
+      "entity": "CAISO",
+      "state": "CA",
+      "county": null,
+      "fips_raw": null
+    },
+    {
+      "kind": "state_only_missing_fips",
+      "q_id": 1939,
+      "entity": "CAISO",
+      "state": "CA",
+      "county": null,
+      "fips_raw": null
+    },
+    {
+      "kind": "state_only_missing_fips",
+      "q_id": 1961,
+      "entity": "CAISO",
+      "state": "CA",
+      "county": null,
+      "fips_raw": null
+    },
+    {
+      "kind": "state_only_missing_fips",
+      "q_id": 1979,
+      "entity": "CAISO",
+      "state": "CA",
+      "county": null,
+      "fips_raw": null
+    },
+    {
+      "kind": "state_only_missing_fips",
+      "q_id": 209,
+      "entity": "CAISO",
+      "state": "MX",
+      "county": "Baja California",
+      "fips_raw": null
+    },
+    {
+      "kind": "state_only_missing_fips",
+      "q_id": 215,
+      "entity": "CAISO",
+      "state": "MX",
+      "county": "Baja California",
+      "fips_raw": null
+    },
+    {
+      "kind": "state_only_missing_fips",
+      "q_id": 303,
+      "entity": "CAISO",
+      "state": "MX",
+      "county": "Baja California",
+      "fips_raw": null
+    },
+    {
+      "kind": "state_only_missing_fips",
+      "q_id": 2224,
+      "entity": "CAISO",
+      "state": "MX",
+      "county": "Tijuana",
+      "fips_raw": null
+    },
+    {
+      "kind": "state_only_missing_fips",
+      "q_id": "643B",
+      "entity": "CAISO",
+      "state": "MX",
+      "county": "Baja California",
+      "fips_raw": null
+    },
+    {
+      "kind": "state_only_missing_fips",
+      "q_id": "643C",
+      "entity": "CAISO",
+      "state": "MX",
+      "county": "Baja California",
+      "fips_raw": null
+    },
+    {
+      "kind": "state_only_missing_fips",
+      "q_id": "643G",
+      "entity": "CAISO",
+      "state": "CA",
+      "county": null,
+      "fips_raw": null
+    },
+    {
+      "kind": "state_only_missing_fips",
+      "q_id": 764,
+      "entity": "CAISO",
+      "state": "MX",
+      "county": "Ensenada",
+      "fips_raw": null
+    },
+    {
+      "kind": "state_only_missing_fips",
+      "q_id": 961,
+      "entity": "CAISO",
+      "state": "MX",
+      "county": "Baja California",
+      "fips_raw": null
+    },
+    {
+      "kind": "state_only_missing_fips",
+      "q_id": 37,
+      "entity": "Duke",
+      "state": "FL",
+      "county": "Highland",
+      "fips_raw": null
+    },
+    {
+      "kind": "month_unparseable",
+      "q_id": "AMALNAM",
+      "entity": "IP",
+      "state": "ID",
+      "q_date": "None"
+    },
+    {
+      "kind": "month_unparseable",
+      "q_id": "BADM",
+      "entity": "IP",
+      "state": "ID",
+      "q_date": "None"
+    },
+    {
+      "kind": "month_unparseable",
+      "q_id": "BKC3",
+      "entity": "IP",
+      "state": "ID",
+      "q_date": "None"
+    },
+    {
+      "kind": "month_unparseable",
+      "q_id": "BLCY",
+      "entity": "IP",
+      "state": "ID",
+      "q_date": "None"
+    },
+    {
+      "kind": "month_unparseable",
+      "q_id": "BRCK",
+      "entity": "IP",
+      "state": "ID",
+      "q_date": "None"
+    },
+    {
+      "kind": "month_unparseable",
+      "q_id": "BRCR",
+      "entity": "IP",
+      "state": "ID",
+      "q_date": "None"
+    },
+    {
+      "kind": "month_unparseable",
+      "q_id": "BXCN",
+      "entity": "IP",
+      "state": "ID",
+      "q_date": "None"
+    },
+    {
+      "kind": "month_unparseable",
+      "q_id": "CLSP",
+      "entity": "IP",
+      "state": "ID",
+      "q_date": "None"
+    },
+    {
+      "kind": "month_unparseable",
+      "q_id": "CYCT",
+      "entity": "IP",
+      "state": "ID",
+      "q_date": "None"
+    },
+    {
+      "kind": "month_unparseable",
+      "q_id": "ELKC",
+      "entity": "IP",
+      "state": "ID",
+      "q_date": "None"
+    },
+    {
+      "kind": "month_unparseable",
+      "q_id": "FALK",
+      "entity": "IP",
+      "state": "ID",
+      "q_date": "None"
+    },
+    {
+      "kind": "month_unparseable",
+      "q_id": "FDPT",
+      "entity": "IP",
+      "state": "ID",
+      "q_date": "None"
+    },
+    {
+      "kind": "month_unparseable",
+      "q_id": "FLRV",
+      "entity": "IP",
+      "state": "ID",
+      "q_date": "None"
+    },
+    {
+      "kind": "month_unparseable",
+      "q_id": "GOB2",
+      "entity": "IP",
+      "state": "ID",
+      "q_date": "None"
+    },
+    {
+      "kind": "month_unparseable",
+      "q_id": "HBTP",
+      "entity": "IP",
+      "state": "ID",
+      "q_date": "None"
+    },
+    {
+      "kind": "month_unparseable",
+      "q_id": "hist_q10",
+      "entity": "IP",
+      "state": "ID",
+      "q_date": "None"
+    },
+    {
+      "kind": "month_unparseable",
+      "q_id": "hist_q12",
+      "entity": "IP",
+      "state": "OR",
+      "q_date": "None"
+    },
+    {
+      "kind": "month_unparseable",
+      "q_id": "hist_q13",
+      "entity": "IP",
+      "state": "ID",
+      "q_date": "None"
+    },
+    {
+      "kind": "month_unparseable",
+      "q_id": "hist_q15",
+      "entity": "IP",
+      "state": "ID",
+      "q_date": "None"
+    },
+    {
+      "kind": "month_unparseable",
+      "q_id": "hist_q17",
+      "entity": "IP",
+      "state": "ID",
+      "q_date": "None"
+    },
+    {
+      "kind": "month_unparseable",
+      "q_id": "hist_q25",
+      "entity": "IP",
+      "state": "ID",
+      "q_date": "None"
+    },
+    {
+      "kind": "month_unparseable",
+      "q_id": "hist_q26",
+      "entity": "IP",
+      "state": "ID",
+      "q_date": "None"
+    },
+    {
+      "kind": "month_unparseable",
+      "q_id": "hist_q27",
+      "entity": "IP",
+      "state": "MT",
+      "q_date": "None"
+    },
+    {
+      "kind": "state_only_missing_fips",
+      "q_id": "hist_q27",
+      "entity": "IP",
+      "state": "MT",
+      "county": null,
+      "fips_raw": null
+    },
+    {
+      "kind": "month_unparseable",
+      "q_id": "hist_q34",
+      "entity": "IP",
+      "state": "ID",
+      "q_date": "None"
+    },
+    {
+      "kind": "month_unparseable",
+      "q_id": "hist_q36",
+      "entity": "IP",
+      "state": "ID",
+      "q_date": "None"
+    },
+    {
+      "kind": "month_unparseable",
+      "q_id": "hist_q38",
+      "entity": "IP",
+      "state": "ID",
+      "q_date": "None"
+    },
+    {
+      "kind": "month_unparseable",
+      "q_id": "hist_q39",
+      "entity": "IP",
+      "state": "ID",
+      "q_date": "None"
+    },
+    {
+      "kind": "month_unparseable",
+      "q_id": "hist_q41",
+      "entity": "IP",
+      "state": "ID",
+      "q_date": "None"
+    },
+    {
+      "kind": "month_unparseable",
+      "q_id": "hist_q43",
+      "entity": "IP",
+      "state": "OR",
+      "q_date": "None"
+    },
+    {
+      "kind": "month_unparseable",
+      "q_id": "hist_q44",
+      "entity": "IP",
+      "state": "ID",
+      "q_date": "None"
+    },
+    {
+      "kind": "month_unparseable",
+      "q_id": "hist_q45",
+      "entity": "IP",
+      "state": "ID",
+      "q_date": "None"
+    },
+    {
+      "kind": "month_unparseable",
+      "q_id": "hist_q50",
+      "entity": "IP",
+      "state": "ID",
+      "q_date": "None"
+    },
+    {
+      "kind": "month_unparseable",
+      "q_id": "hist_q51",
+      "entity": "IP",
+      "state": "ID",
+      "q_date": "None"
+    },
+    {
+      "kind": "month_unparseable",
+      "q_id": "hist_q53",
+      "entity": "IP",
+      "state": "ID",
+      "q_date": "None"
+    },
+    {
+      "kind": "month_unparseable",
+      "q_id": "hist_q57",
+      "entity": "IP",
+      "state": "ID",
+      "q_date": "None"
+    },
+    {
+      "kind": "month_unparseable",
+      "q_id": "hist_q62",
+      "entity": "IP",
+      "state": "ID",
+      "q_date": "None"
+    },
+    {
+      "kind": "month_unparseable",
+      "q_id": "hist_q63",
+      "entity": "IP",
+      "state": "ID",
+      "q_date": "None"
+    },
+    {
+      "kind": "month_unparseable",
+      "q_id": "hist_q64",
+      "entity": "IP",
+      "state": "ID",
+      "q_date": "None"
+    },
+    {
+      "kind": "month_unparseable",
+      "q_id": "hist_q65",
+      "entity": "IP",
+      "state": "ID",
+      "q_date": "None"
+    },
+    {
+      "kind": "month_unparseable",
+      "q_id": "hist_q68",
+      "entity": "IP",
+      "state": "MT",
+      "q_date": "None"
+    },
+    {
+      "kind": "month_unparseable",
+      "q_id": "hist_q70",
+      "entity": "IP",
+      "state": "OR",
+      "q_date": "None"
+    },
+    {
+      "kind": "month_unparseable",
+      "q_id": "hist_q71",
+      "entity": "IP",
+      "state": "WA",
+      "q_date": "None"
+    },
+    {
+      "kind": "month_unparseable",
+      "q_id": "hist_q72",
+      "entity": "IP",
+      "state": "ID",
+      "q_date": "None"
+    },
+    {
+      "kind": "month_unparseable",
+      "q_id": "hist_q8",
+      "entity": "IP",
+      "state": "ID",
+      "q_date": "None"
+    },
+    {
+      "kind": "month_unparseable",
+      "q_id": "hist_q9",
+      "entity": "IP",
+      "state": "ID",
+      "q_date": "None"
+    },
+    {
+      "kind": "month_unparseable",
+      "q_id": "HLYC",
+      "entity": "IP",
+      "state": "ID",
+      "q_date": "None"
+    },
+    {
+      "kind": "month_unparseable",
+      "q_id": "JKNT",
+      "entity": "IP",
+      "state": "ID",
+      "q_date": "None"
+    },
+    {
+      "kind": "month_unparseable",
+      "q_id": "KOYL",
+      "entity": "IP",
+      "state": "ID",
+      "q_date": "None"
+    },
+    {
+      "kind": "month_unparseable",
+      "q_id": "KSWS",
+      "entity": "IP",
+      "state": "ID",
+      "q_date": "None"
+    },
+    {
+      "kind": "month_unparseable",
+      "q_id": "LMOY",
+      "entity": "IP",
+      "state": "ID",
+      "q_date": "None"
+    },
+    {
+      "kind": "month_unparseable",
+      "q_id": "LOL2",
+      "entity": "IP",
+      "state": "ID",
+      "q_date": "None"
+    },
+    {
+      "kind": "month_unparseable",
+      "q_id": "LT10",
+      "entity": "IP",
+      "state": "ID",
+      "q_date": "None"
+    },
+    {
+      "kind": "month_unparseable",
+      "q_id": "LWRA",
+      "entity": "IP",
+      "state": "ID",
+      "q_date": "None"
+    },
+    {
+      "kind": "month_unparseable",
+      "q_id": "MDRR",
+      "entity": "IP",
+      "state": "ID",
+      "q_date": "None"
+    },
+    {
+      "kind": "month_unparseable",
+      "q_id": "MGRV",
+      "entity": "IP",
+      "state": "ID",
+      "q_date": "None"
+    },
+    {
+      "kind": "month_unparseable",
+      "q_id": "MI28",
+      "entity": "IP",
+      "state": "ID",
+      "q_date": "None"
+    },
+    {
+      "kind": "state_only_missing_fips",
+      "q_id": "NVE",
+      "entity": "IP",
+      "state": "NV",
+      "county": null,
+      "fips_raw": null
+    },
+    {
+      "kind": "month_unparseable",
+      "q_id": "OYDM",
+      "entity": "IP",
+      "state": "OR",
+      "q_date": "None"
+    },
+    {
+      "kind": "month_unparseable",
+      "q_id": "PGJN",
+      "entity": "IP",
+      "state": "ID",
+      "q_date": "None"
+    },
+    {
+      "kind": "month_unparseable",
+      "q_id": "POWW",
+      "entity": "IP",
+      "state": "ID",
+      "q_date": "None"
+    },
+    {
+      "kind": "month_unparseable",
+      "q_id": "PSPG",
+      "entity": "IP",
+      "state": "ID",
+      "q_date": "None"
+    },
+    {
+      "kind": "month_unparseable",
+      "q_id": "RCK2",
+      "entity": "IP",
+      "state": "ID",
+      "q_date": "None"
+    },
+    {
+      "kind": "month_unparseable",
+      "q_id": "RKCK",
+      "entity": "IP",
+      "state": "ID",
+      "q_date": "None"
+    },
+    {
+      "kind": "month_unparseable",
+      "q_id": "RYIR",
+      "entity": "IP",
+      "state": "ID",
+      "q_date": "None"
+    },
+    {
+      "kind": "month_unparseable",
+      "q_id": "SGBR",
+      "entity": "IP",
+      "state": "ID",
+      "q_date": "None"
+    },
+    {
+      "kind": "month_unparseable",
+      "q_id": "SHCK",
+      "entity": "IP",
+      "state": "ID",
+      "q_date": "None"
+    },
+    {
+      "kind": "state_only_missing_fips",
+      "q_id": "SHCK",
+      "entity": "IP",
+      "state": "ID",
+      "county": null,
+      "fips_raw": null
+    },
+    {
+      "kind": "month_unparseable",
+      "q_id": "SHCS",
+      "entity": "IP",
+      "state": "ID",
+      "q_date": "None"
+    },
+    {
+      "kind": "month_unparseable",
+      "q_id": "SHS2",
+      "entity": "IP",
+      "state": "ID",
+      "q_date": "None"
+    },
+    {
+      "kind": "month_unparseable",
+      "q_id": "TCTP",
+      "entity": "IP",
+      "state": "ID",
+      "q_date": "None"
+    },
+    {
+      "kind": "month_unparseable",
+      "q_id": "TRCO",
+      "entity": "IP",
+      "state": "ID",
+      "q_date": "None"
+    },
+    {
+      "kind": "month_unparseable",
+      "q_id": "WSTP",
+      "entity": "IP",
+      "state": "ID",
+      "q_date": "None"
+    },
+    {
+      "kind": "month_unparseable",
+      "q_id": "WWRA",
+      "entity": "IP",
+      "state": "ID",
+      "q_date": "None"
+    },
+    {
+      "kind": "fips_not_in_gazetteer",
+      "q_id": 1017,
+      "entity": "ISO-NE",
+      "state": "CT",
+      "county": "New Haven",
+      "fips_code": "09009"
+    },
+    {
+      "kind": "fips_not_in_gazetteer",
+      "q_id": 1030,
+      "entity": "ISO-NE",
+      "state": "CT",
+      "county": "Hartford",
+      "fips_code": "09003"
+    },
+    {
+      "kind": "fips_not_in_gazetteer",
+      "q_id": 1033,
+      "entity": "ISO-NE",
+      "state": "CT",
+      "county": "Tolland",
+      "fips_code": "09013"
+    },
+    {
+      "kind": "fips_not_in_gazetteer",
+      "q_id": 104,
+      "entity": "ISO-NE",
+      "state": "CT",
+      "county": "Fairfield",
+      "fips_code": "09001"
+    },
+    {
+      "kind": "fips_not_in_gazetteer",
+      "q_id": 1055,
+      "entity": "ISO-NE",
+      "state": "CT",
+      "county": "New Haven",
+      "fips_code": "09009"
+    },
+    {
+      "kind": "fips_not_in_gazetteer",
+      "q_id": 1056,
+      "entity": "ISO-NE",
+      "state": "CT",
+      "county": "New Haven",
+      "fips_code": "09009"
+    },
+    {
+      "kind": "state_only_missing_fips",
+      "q_id": 1058,
+      "entity": "ISO-NE",
+      "state": "CT",
+      "county": null,
+      "fips_raw": null
+    },
+    {
+      "kind": "state_only_missing_fips",
+      "q_id": 1059,
+      "entity": "ISO-NE",
+      "state": "MA",
+      "county": null,
+      "fips_raw": null
+    },
+    {
+      "kind": "state_only_missing_fips",
+      "q_id": 1060,
+      "entity": "ISO-NE",
+      "state": "CT",
+      "county": null,
+      "fips_raw": null
+    },
+    {
+      "kind": "fips_not_in_gazetteer",
+      "q_id": 1061,
+      "entity": "ISO-NE",
+      "state": "CT",
+      "county": "Hartford",
+      "fips_code": "09003"
+    },
+    {
+      "kind": "fips_not_in_gazetteer",
+      "q_id": 1062,
+      "entity": "ISO-NE",
+      "state": "CT",
+      "county": "Fairfield",
+      "fips_code": "09001"
+    },
+    {
+      "kind": "fips_not_in_gazetteer",
+      "q_id": 107,
+      "entity": "ISO-NE",
+      "state": "CT",
+      "county": "Fairfield",
+      "fips_code": "09001"
+    },
+    {
+      "kind": "fips_not_in_gazetteer",
+      "q_id": 1089,
+      "entity": "ISO-NE",
+      "state": "CT",
+      "county": "New Haven",
+      "fips_code": "09009"
+    },
+    {
+      "kind": "fips_not_in_gazetteer",
+      "q_id": 1092,
+      "entity": "ISO-NE",
+      "state": "CT",
+      "county": "Hartford",
+      "fips_code": "09003"
+    },
+    {
+      "kind": "fips_not_in_gazetteer",
+      "q_id": 110,
+      "entity": "ISO-NE",
+      "state": "CT",
+      "county": "Tolland",
+      "fips_code": "09013"
+    },
+    {
+      "kind": "state_only_missing_fips",
+      "q_id": 1109,
+      "entity": "ISO-NE",
+      "state": "MA",
+      "county": null,
+      "fips_raw": null
+    },
+    {
+      "kind": "state_only_missing_fips",
+      "q_id": 1116,
+      "entity": "ISO-NE",
+      "state": "MA",
+      "county": null,
+      "fips_raw": null
+    },
+    {
+      "kind": "state_only_missing_fips",
+      "q_id": 1118,
+      "entity": "ISO-NE",
+      "state": "MA",
+      "county": null,
+      "fips_raw": null
+    },
+    {
+      "kind": "state_only_missing_fips",
+      "q_id": 1119,
+      "entity": "ISO-NE",
+      "state": "MA",
+      "county": null,
+      "fips_raw": null
+    },
+    {
+      "kind": "fips_not_in_gazetteer",
+      "q_id": 1120,
+      "entity": "ISO-NE",
+      "state": "CT",
+      "county": "Windham",
+      "fips_code": "09015"
+    },
+    {
+      "kind": "state_only_missing_fips",
+      "q_id": 1121,
+      "entity": "ISO-NE",
+      "state": "MA",
+      "county": null,
+      "fips_raw": null
+    },
+    {
+      "kind": "fips_not_in_gazetteer",
+      "q_id": 1134,
+      "entity": "ISO-NE",
+      "state": "CT",
+      "county": "New London",
+      "fips_code": "09011"
+    },
+    {
+      "kind": "fips_not_in_gazetteer",
+      "q_id": 1138,
+      "entity": "ISO-NE",
+      "state": "CT",
+      "county": "Windham",
+      "fips_code": "09015"
+    },
+    {
+      "kind": "fips_not_in_gazetteer",
+      "q_id": 114,
+      "entity": "ISO-NE",
+      "state": "CT",
+      "county": "Fairfield",
+      "fips_code": "09001"
+    },
+    {
+      "kind": "fips_not_in_gazetteer",
+      "q_id": 115,
+      "entity": "ISO-NE",
+      "state": "CT",
+      "county": "Fairfield",
+      "fips_code": "09001"
+    },
+    {
+      "kind": "state_only_missing_fips",
+      "q_id": 1150,
+      "entity": "ISO-NE",
+      "state": "ME",
+      "county": null,
+      "fips_raw": null
+    },
+    {
+      "kind": "state_only_missing_fips",
+      "q_id": 1153,
+      "entity": "ISO-NE",
+      "state": "MA",
+      "county": null,
+      "fips_raw": null
+    },
+    {
+      "kind": "state_only_missing_fips",
+      "q_id": 1154,
+      "entity": "ISO-NE",
+      "state": "MA",
+      "county": null,
+      "fips_raw": null
+    },
+    {
+      "kind": "fips_not_in_gazetteer",
+      "q_id": 1155,
+      "entity": "ISO-NE",
+      "state": "CT",
+      "county": "Hartford",
+      "fips_code": "09003"
+    },
+    {
+      "kind": "fips_not_in_gazetteer",
+      "q_id": 1156,
+      "entity": "ISO-NE",
+      "state": "CT",
+      "county": "Hartford",
+      "fips_code": "09003"
+    },
+    {
+      "kind": "fips_not_in_gazetteer",
+      "q_id": 1162,
+      "entity": "ISO-NE",
+      "state": "CT",
+      "county": "Windham",
+      "fips_code": "09015"
+    },
+    {
+      "kind": "fips_not_in_gazetteer",
+      "q_id": 1166,
+      "entity": "ISO-NE",
+      "state": "CT",
+      "county": "New Haven",
+      "fips_code": "09009"
+    },
+    {
+      "kind": "fips_not_in_gazetteer",
+      "q_id": 1167,
+      "entity": "ISO-NE",
+      "state": "CT",
+      "county": "Windham",
+      "fips_code": "09015"
+    },
+    {
+      "kind": "fips_not_in_gazetteer",
+      "q_id": 1168,
+      "entity": "ISO-NE",
+      "state": "CT",
+      "county": "Hartford",
+      "fips_code": "09003"
+    },
+    {
+      "kind": "fips_not_in_gazetteer",
+      "q_id": 1192,
+      "entity": "ISO-NE",
+      "state": "CT",
+      "county": "Hartford",
+      "fips_code": "09003"
+    },
+    {
+      "kind": "fips_not_in_gazetteer",
+      "q_id": 1193,
+      "entity": "ISO-NE",
+      "state": "CT",
+      "county": "Windham",
+      "fips_code": "09015"
+    },
+    {
+      "kind": "fips_not_in_gazetteer",
+      "q_id": 1199,
+      "entity": "ISO-NE",
+      "state": "CT",
+      "county": "Tolland",
+      "fips_code": "09013"
+    },
+    {
+      "kind": "fips_not_in_gazetteer",
+      "q_id": 1200,
+      "entity": "ISO-NE",
+      "state": "CT",
+      "county": "Hartford",
+      "fips_code": "09003"
+    },
+    {
+      "kind": "fips_not_in_gazetteer",
+      "q_id": 1201,
+      "entity": "ISO-NE",
+      "state": "CT",
+      "county": "Hartford",
+      "fips_code": "09003"
+    },
+    {
+      "kind": "fips_not_in_gazetteer",
+      "q_id": 1202,
+      "entity": "ISO-NE",
+      "state": "CT",
+      "county": "Tolland",
+      "fips_code": "09013"
+    },
+    {
+      "kind": "fips_not_in_gazetteer",
+      "q_id": 1203,
+      "entity": "ISO-NE",
+      "state": "CT",
+      "county": "Hartford",
+      "fips_code": "09003"
+    },
+    {
+      "kind": "fips_not_in_gazetteer",
+      "q_id": 1204,
+      "entity": "ISO-NE",
+      "state": "CT",
+      "county": "Windham",
+      "fips_code": "09015"
+    },
+    {
+      "kind": "fips_not_in_gazetteer",
+      "q_id": 1205,
+      "entity": "ISO-NE",
+      "state": "CT",
+      "county": "Hartford",
+      "fips_code": "09003"
+    },
+    {
+      "kind": "fips_not_in_gazetteer",
+      "q_id": 1208,
+      "entity": "ISO-NE",
+      "state": "CT",
+      "county": "New Haven",
+      "fips_code": "09009"
+    },
+    {
+      "kind": "fips_not_in_gazetteer",
+      "q_id": 121,
+      "entity": "ISO-NE",
+      "state": "CT",
+      "county": "Fairfield",
+      "fips_code": "09001"
+    },
+    {
+      "kind": "fips_not_in_gazetteer",
+      "q_id": 122,
+      "entity": "ISO-NE",
+      "state": "CT",
+      "county": "New London",
+      "fips_code": "09011"
+    },
+    {
+      "kind": "state_only_missing_fips",
+      "q_id": 1225,
+      "entity": "ISO-NE",
+      "state": "MA",
+      "county": null,
+      "fips_raw": null
+    },
+    {
+      "kind": "fips_not_in_gazetteer",
+      "q_id": 1245,
+      "entity": "ISO-NE",
+      "state": "CT",
+      "county": "Hartford",
+      "fips_code": "09003"
+    },
+    {
+      "kind": "fips_not_in_gazetteer",
+      "q_id": 1247,
+      "entity": "ISO-NE",
+      "state": "CT",
+      "county": "Hartford",
+      "fips_code": "09003"
+    },
+    {
+      "kind": "fips_not_in_gazetteer",
+      "q_id": 1249,
+      "entity": "ISO-NE",
+      "state": "CT",
+      "county": "New London",
+      "fips_code": "09011"
+    },
+    {
+      "kind": "fips_not_in_gazetteer",
+      "q_id": 125,
+      "entity": "ISO-NE",
+      "state": "CT",
+      "county": "Fairfield",
+      "fips_code": "09001"
+    },
+    {
+      "kind": "fips_not_in_gazetteer",
+      "q_id": 1251,
+      "entity": "ISO-NE",
+      "state": "CT",
+      "county": "Hartford",
+      "fips_code": "09003"
+    },
+    {
+      "kind": "fips_not_in_gazetteer",
+      "q_id": 1262,
+      "entity": "ISO-NE",
+      "state": "CT",
+      "county": "Middlesex",
+      "fips_code": "09007"
+    },
+    {
+      "kind": "fips_not_in_gazetteer",
+      "q_id": 1266,
+      "entity": "ISO-NE",
+      "state": "CT",
+      "county": "Hartford",
+      "fips_code": "09003"
+    },
+    {
+      "kind": "fips_not_in_gazetteer",
+      "q_id": 1267,
+      "entity": "ISO-NE",
+      "state": "CT",
+      "county": "New London",
+      "fips_code": "09011"
+    },
+    {
+      "kind": "fips_not_in_gazetteer",
+      "q_id": 128,
+      "entity": "ISO-NE",
+      "state": "CT",
+      "county": "Litchfield",
+      "fips_code": "09005"
+    },
+    {
+      "kind": "fips_not_in_gazetteer",
+      "q_id": 1296,
+      "entity": "ISO-NE",
+      "state": "CT",
+      "county": "Hartford",
+      "fips_code": "09003"
+    },
+    {
+      "kind": "state_only_missing_fips",
+      "q_id": 1297,
+      "entity": "ISO-NE",
+      "state": "MA",
+      "county": null,
+      "fips_raw": null
+    },
+    {
+      "kind": "state_only_missing_fips",
+      "q_id": 1314,
+      "entity": "ISO-NE",
+      "state": "MA",
+      "county": null,
+      "fips_raw": null
+    },
+    {
+      "kind": "fips_not_in_gazetteer",
+      "q_id": 1315,
+      "entity": "ISO-NE",
+      "state": "CT",
+      "county": "Windham",
+      "fips_code": "09015"
+    },
+    {
+      "kind": "fips_not_in_gazetteer",
+      "q_id": 1319,
+      "entity": "ISO-NE",
+      "state": "CT",
+      "county": "Litchfield",
+      "fips_code": "09005"
+    },
+    {
+      "kind": "fips_not_in_gazetteer",
+      "q_id": 1334,
+      "entity": "ISO-NE",
+      "state": "CT",
+      "county": "New London",
+      "fips_code": "09011"
+    },
+    {
+      "kind": "state_only_missing_fips",
+      "q_id": 1343,
+      "entity": "ISO-NE",
+      "state": "MA",
+      "county": null,
+      "fips_raw": null
+    },
+    {
+      "kind": "fips_not_in_gazetteer",
+      "q_id": 1345,
+      "entity": "ISO-NE",
+      "state": "CT",
+      "county": "New London",
+      "fips_code": "09011"
+    },
+    {
+      "kind": "fips_not_in_gazetteer",
+      "q_id": 1346,
+      "entity": "ISO-NE",
+      "state": "CT",
+      "county": "Hartford",
+      "fips_code": "09003"
+    },
+    {
+      "kind": "fips_not_in_gazetteer",
+      "q_id": 1347,
+      "entity": "ISO-NE",
+      "state": "CT",
+      "county": "Hartford",
+      "fips_code": "09003"
+    },
+    {
+      "kind": "fips_not_in_gazetteer",
+      "q_id": 1348,
+      "entity": "ISO-NE",
+      "state": "CT",
+      "county": "Middlesex",
+      "fips_code": "09007"
+    },
+    {
+      "kind": "fips_not_in_gazetteer",
+      "q_id": 1349,
+      "entity": "ISO-NE",
+      "state": "CT",
+      "county": "Hartford",
+      "fips_code": "09003"
+    },
+    {
+      "kind": "fips_not_in_gazetteer",
+      "q_id": 1351,
+      "entity": "ISO-NE",
+      "state": "CT",
+      "county": "Fairfield",
+      "fips_code": "09001"
+    },
+    {
+      "kind": "fips_not_in_gazetteer",
+      "q_id": 1352,
+      "entity": "ISO-NE",
+      "state": "CT",
+      "county": "New Haven",
+      "fips_code": "09009"
+    },
+    {
+      "kind": "fips_not_in_gazetteer",
+      "q_id": 1353,
+      "entity": "ISO-NE",
+      "state": "CT",
+      "county": "New London",
+      "fips_code": "09011"
+    },
+    {
+      "kind": "fips_not_in_gazetteer",
+      "q_id": 1354,
+      "entity": "ISO-NE",
+      "state": "CT",
+      "county": "Middlesex",
+      "fips_code": "09007"
+    },
+    {
+      "kind": "fips_not_in_gazetteer",
+      "q_id": 1355,
+      "entity": "ISO-NE",
+      "state": "CT",
+      "county": "New Haven",
+      "fips_code": "09009"
+    },
+    {
+      "kind": "state_only_missing_fips",
+      "q_id": 1356,
+      "entity": "ISO-NE",
+      "state": "MA",
+      "county": null,
+      "fips_raw": null
+    },
+    {
+      "kind": "fips_not_in_gazetteer",
+      "q_id": 1357,
+      "entity": "ISO-NE",
+      "state": "CT",
+      "county": "Hartford",
+      "fips_code": "09003"
+    },
+    {
+      "kind": "fips_not_in_gazetteer",
+      "q_id": 1358,
+      "entity": "ISO-NE",
+      "state": "CT",
+      "county": "Hartford",
+      "fips_code": "09003"
+    },
+    {
+      "kind": "fips_not_in_gazetteer",
+      "q_id": 1359,
+      "entity": "ISO-NE",
+      "state": "CT",
+      "county": "Hartford",
+      "fips_code": "09003"
+    },
+    {
+      "kind": "fips_not_in_gazetteer",
+      "q_id": 1360,
+      "entity": "ISO-NE",
+      "state": "CT",
+      "county": "Middlesex",
+      "fips_code": "09007"
+    },
+    {
+      "kind": "state_only_missing_fips",
+      "q_id": 1361,
+      "entity": "ISO-NE",
+      "state": "MA",
+      "county": null,
+      "fips_raw": null
+    },
+    {
+      "kind": "fips_not_in_gazetteer",
+      "q_id": 1366,
+      "entity": "ISO-NE",
+      "state": "CT",
+      "county": "Fairfield",
+      "fips_code": "09001"
+    },
+    {
+      "kind": "fips_not_in_gazetteer",
+      "q_id": 1376,
+      "entity": "ISO-NE",
+      "state": "CT",
+      "county": "New Haven",
+      "fips_code": "09009"
+    },
+    {
+      "kind": "fips_not_in_gazetteer",
+      "q_id": 1392,
+      "entity": "ISO-NE",
+      "state": "CT",
+      "county": "New Haven",
+      "fips_code": "09009"
+    },
+    {
+      "kind": "fips_not_in_gazetteer",
+      "q_id": 1393,
+      "entity": "ISO-NE",
+      "state": "CT",
+      "county": "Fairfield",
+      "fips_code": "09001"
+    },
+    {
+      "kind": "fips_not_in_gazetteer",
+      "q_id": 1394,
+      "entity": "ISO-NE",
+      "state": "CT",
+      "county": "Middlesex",
+      "fips_code": "09007"
+    },
+    {
+      "kind": "fips_not_in_gazetteer",
+      "q_id": 140,
+      "entity": "ISO-NE",
+      "state": "CT",
+      "county": "New Haven",
+      "fips_code": "09009"
+    },
+    {
+      "kind": "fips_not_in_gazetteer",
+      "q_id": 1400,
+      "entity": "ISO-NE",
+      "state": "CT",
+      "county": "Hartford",
+      "fips_code": "09003"
+    },
+    {
+      "kind": "fips_not_in_gazetteer",
+      "q_id": 1403,
+      "entity": "ISO-NE",
+      "state": "CT",
+      "county": "Middlesex",
+      "fips_code": "09007"
+    },
+    {
+      "kind": "fips_not_in_gazetteer",
+      "q_id": 1417,
+      "entity": "ISO-NE",
+      "state": "CT",
+      "county": "Windham",
+      "fips_code": "09015"
+    },
+    {
+      "kind": "fips_not_in_gazetteer",
+      "q_id": 1420,
+      "entity": "ISO-NE",
+      "state": "CT",
+      "county": "New London",
+      "fips_code": "09011"
+    },
+    {
+      "kind": "fips_not_in_gazetteer",
+      "q_id": 1422,
+      "entity": "ISO-NE",
+      "state": "CT",
+      "county": "Hartford",
+      "fips_code": "09003"
+    }
+  ],
+  "qa_exceptions_cap_note": "First 200 exceptions embedded; kinds counted fully.",
+  "outputs": {
+    "panel_county_month_csv": "data/processed/panel/lbnl_ix_queue_activity_v0.csv",
+    "panel_state_month_csv": "data/processed/panel/lbnl_ix_queue_activity_state_month_v0.csv",
+    "sample_csv": "data/processed/panel/lbnl_ix_queue_activity_v0_sample.csv",
+    "qa_json": "data/processed/qa/lbnl_ix_queue_activity_v0_qa.json"
+  },
+  "generated_at_utc": "2026-09-17T04:21:49.230948+00:00",
+  "access_date_pt": "2026-09-16"
+}

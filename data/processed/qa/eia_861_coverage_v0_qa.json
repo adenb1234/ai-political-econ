@@ -1,0 +1,804 @@
+{
+  "transform_version": "eia_861_coverage_v0",
+  "layer": "G",
+  "metric_label": "utility_service_territory_coverage",
+  "content_scope": "eia861_utility_service_territory_and_utility_state",
+  "explicitly_excluded": [
+    "data_center_permit_counts",
+    "monthly_panel_grain",
+    "invented_county_fips"
+  ],
+  "raw_paths": {
+    "service_territory": "data/raw/eia/Service_Territory_2024.xlsx",
+    "utility_data": "data/raw/eia/Utility_Data_2024.xlsx",
+    "zip_note": "Also present: data/raw/eia/f8612024.zip (source of XLSX extracts)"
+  },
+  "license_note": "US EIA / public domain",
+  "geo_policy": "Best-effort county_fips from EIA County name + State via Census gazetteer name match (suffix strip, St/Saint, hyphen/space, limited unique aliases). Ambiguous county-vs-city names and CT legacy counties left without FIPS.",
+  "grain": "annual (Data Year 2024); not county\u00d7month",
+  "territory_rows": 11776,
+  "matched_fips": 11730,
+  "ambiguous": 11,
+  "unmatched": 35,
+  "match_rate": 0.9961,
+  "match_status_counts": {
+    "matched": 11730,
+    "unmatched": 35,
+    "ambiguous": 11
+  },
+  "utility_state_rows": 1701,
+  "ownership_type_counts": {
+    "Cooperative": 602,
+    "Municipal": 458,
+    "Retail Power Marketer": 250,
+    "Investor Owned": 163,
+    "Political Subdivision": 88,
+    "Wholesale Power Marketer": 34,
+    "Transmission": 29,
+    "Community Choice Aggregator": 26,
+    "State": 18,
+    "Municipal Mktg Authority": 14,
+    "Behind the Meter": 11,
+    "Federal": 8
+  },
+  "known_gaps": [
+    {
+      "gap": "connecticut_legacy_counties",
+      "detail": "EIA Service Territory still lists CT legacy counties (Fairfield, Hartford, \u2026); Census 2024 gazetteer uses planning-region COGs. No FIPS assigned without a dedicated CT crosswalk."
+    },
+    {
+      "gap": "county_vs_independent_city",
+      "detail": "VA/MD/MO names that collide with independent cities (e.g. Fairfax, Baltimore, St Louis) are marked ambiguous \u2014 FIPS not invented."
+    },
+    {
+      "gap": "alaska_historical_census_areas",
+      "detail": "Some EIA AK labels (Valdez Cordova, Wrangell Petersburg, Skagway Hoonah Angoon) reflect pre-split geographies; left unmatched."
+    },
+    {
+      "gap": "not_monthly",
+      "detail": "EIA-861 is annual; do not treat as county\u00d7month panel without interpolation policy."
+    }
+  ],
+  "qa_exception_kinds": {
+    "unmatched_county_name": 16,
+    "ambiguous_county_name": 11,
+    "ct_legacy_county": 19
+  },
+  "qa_exceptions_capped": [
+    {
+      "kind": "unmatched_county_name",
+      "utility_number": 219,
+      "utility_name": "Alaska Power and Telephone Co",
+      "state": "AK",
+      "county_eia": "Skagway Hoonah Angoon",
+      "note": "No unique gazetteer match; FIPS not invented"
+    },
+    {
+      "kind": "ambiguous_county_name",
+      "utility_number": 733,
+      "utility_name": "Appalachian Power Co",
+      "state": "VA",
+      "county_eia": "Franklin",
+      "note": "County vs independent city share the same base name; FIPS not invented"
+    },
+    {
+      "kind": "ambiguous_county_name",
+      "utility_number": 733,
+      "utility_name": "Appalachian Power Co",
+      "state": "VA",
+      "county_eia": "Roanoke",
+      "note": "County vs independent city share the same base name; FIPS not invented"
+    },
+    {
+      "kind": "ambiguous_county_name",
+      "utility_number": 1167,
+      "utility_name": "Baltimore Gas & Electric Co",
+      "state": "MD",
+      "county_eia": "Baltimore",
+      "note": "County vs independent city share the same base name; FIPS not invented"
+    },
+    {
+      "kind": "unmatched_county_name",
+      "utility_number": 1747,
+      "utility_name": "Birch Creek Village Elec Util - (AK)",
+      "state": "AK",
+      "county_eia": "Valdez Cordova",
+      "note": "No unique gazetteer match; FIPS not invented"
+    },
+    {
+      "kind": "ct_legacy_county",
+      "utility_number": 2089,
+      "utility_name": "Bozrah Light & Power Company",
+      "state": "CT",
+      "county_eia": "New London",
+      "note": "CT rows use pre-2022 county names; Census 2024 gazetteer uses COGs"
+    },
+    {
+      "kind": "unmatched_county_name",
+      "utility_number": 3421,
+      "utility_name": "City of Chignik - (AK)",
+      "state": "AK",
+      "county_eia": "Wrangell Petersburg",
+      "note": "No unique gazetteer match; FIPS not invented"
+    },
+    {
+      "kind": "unmatched_county_name",
+      "utility_number": 3465,
+      "utility_name": "Chitina Electric Inc",
+      "state": "AK",
+      "county_eia": "Valdez Cordova",
+      "note": "No unique gazetteer match; FIPS not invented"
+    },
+    {
+      "kind": "ct_legacy_county",
+      "utility_number": 4176,
+      "utility_name": "Connecticut Light & Power Co",
+      "state": "CT",
+      "county_eia": "Fairfield",
+      "note": "CT rows use pre-2022 county names; Census 2024 gazetteer uses COGs"
+    },
+    {
+      "kind": "ct_legacy_county",
+      "utility_number": 4176,
+      "utility_name": "Connecticut Light & Power Co",
+      "state": "CT",
+      "county_eia": "Hartford",
+      "note": "CT rows use pre-2022 county names; Census 2024 gazetteer uses COGs"
+    },
+    {
+      "kind": "ct_legacy_county",
+      "utility_number": 4176,
+      "utility_name": "Connecticut Light & Power Co",
+      "state": "CT",
+      "county_eia": "Litchfield",
+      "note": "CT rows use pre-2022 county names; Census 2024 gazetteer uses COGs"
+    },
+    {
+      "kind": "ct_legacy_county",
+      "utility_number": 4176,
+      "utility_name": "Connecticut Light & Power Co",
+      "state": "CT",
+      "county_eia": "Middlesex",
+      "note": "CT rows use pre-2022 county names; Census 2024 gazetteer uses COGs"
+    },
+    {
+      "kind": "ct_legacy_county",
+      "utility_number": 4176,
+      "utility_name": "Connecticut Light & Power Co",
+      "state": "CT",
+      "county_eia": "New Haven",
+      "note": "CT rows use pre-2022 county names; Census 2024 gazetteer uses COGs"
+    },
+    {
+      "kind": "ct_legacy_county",
+      "utility_number": 4176,
+      "utility_name": "Connecticut Light & Power Co",
+      "state": "CT",
+      "county_eia": "New London",
+      "note": "CT rows use pre-2022 county names; Census 2024 gazetteer uses COGs"
+    },
+    {
+      "kind": "ct_legacy_county",
+      "utility_number": 4176,
+      "utility_name": "Connecticut Light & Power Co",
+      "state": "CT",
+      "county_eia": "Tolland",
+      "note": "CT rows use pre-2022 county names; Census 2024 gazetteer uses COGs"
+    },
+    {
+      "kind": "ct_legacy_county",
+      "utility_number": 4176,
+      "utility_name": "Connecticut Light & Power Co",
+      "state": "CT",
+      "county_eia": "Windham",
+      "note": "CT rows use pre-2022 county names; Census 2024 gazetteer uses COGs"
+    },
+    {
+      "kind": "unmatched_county_name",
+      "utility_number": 4329,
+      "utility_name": "Copper Valley Elec Assn, Inc",
+      "state": "AK",
+      "county_eia": "Valdez Cordova",
+      "note": "No unique gazetteer match; FIPS not invented"
+    },
+    {
+      "kind": "ambiguous_county_name",
+      "utility_number": 4471,
+      "utility_name": "Craig-Botetourt Electric Coop",
+      "state": "VA",
+      "county_eia": "Roanoke",
+      "note": "County vs independent city share the same base name; FIPS not invented"
+    },
+    {
+      "kind": "unmatched_county_name",
+      "utility_number": 5721,
+      "utility_name": "City of Elfin Cove - (AK)",
+      "state": "AK",
+      "county_eia": "Not Applicable",
+      "note": "No unique gazetteer match; FIPS not invented"
+    },
+    {
+      "kind": "unmatched_county_name",
+      "utility_number": 5721,
+      "utility_name": "City of Elfin Cove - (AK)",
+      "state": "AK",
+      "county_eia": "Skagway Hoonah Angoon",
+      "note": "No unique gazetteer match; FIPS not invented"
+    },
+    {
+      "kind": "ct_legacy_county",
+      "utility_number": 6207,
+      "utility_name": "Farmington River Power Company",
+      "state": "CT",
+      "county_eia": "Hartford",
+      "note": "CT rows use pre-2022 county names; Census 2024 gazetteer uses COGs"
+    },
+    {
+      "kind": "ct_legacy_county",
+      "utility_number": 7716,
+      "utility_name": "Groton Dept of Utilities - (CT)",
+      "state": "CT",
+      "county_eia": "New London",
+      "note": "CT rows use pre-2022 county names; Census 2024 gazetteer uses COGs"
+    },
+    {
+      "kind": "ct_legacy_county",
+      "utility_number": 9734,
+      "utility_name": "City of Jewett City - (CT)",
+      "state": "CT",
+      "county_eia": "New London",
+      "note": "CT rows use pre-2022 county names; Census 2024 gazetteer uses COGs"
+    },
+    {
+      "kind": "ambiguous_county_name",
+      "utility_number": 13640,
+      "utility_name": "Northern Virginia Elec Coop",
+      "state": "VA",
+      "county_eia": "Fairfax",
+      "note": "County vs independent city share the same base name; FIPS not invented"
+    },
+    {
+      "kind": "ambiguous_county_name",
+      "utility_number": 13762,
+      "utility_name": "Northern Neck Elec Coop, Inc",
+      "state": "VA",
+      "county_eia": "Richmond",
+      "note": "County vs independent city share the same base name; FIPS not invented"
+    },
+    {
+      "kind": "ct_legacy_county",
+      "utility_number": 13825,
+      "utility_name": "Norwalk Third Taxing District",
+      "state": "CT",
+      "county_eia": "Fairfield",
+      "note": "CT rows use pre-2022 county names; Census 2024 gazetteer uses COGs"
+    },
+    {
+      "kind": "ct_legacy_county",
+      "utility_number": 13831,
+      "utility_name": "City of Norwich - (CT)",
+      "state": "CT",
+      "county_eia": "New London",
+      "note": "CT rows use pre-2022 county names; Census 2024 gazetteer uses COGs"
+    },
+    {
+      "kind": "unmatched_county_name",
+      "utility_number": 14856,
+      "utility_name": "Petersburg Borough - (AK)",
+      "state": "AK",
+      "county_eia": "Wrangell Petersburg",
+      "note": "No unique gazetteer match; FIPS not invented"
+    },
+    {
+      "kind": "ambiguous_county_name",
+      "utility_number": 16558,
+      "utility_name": "City of Salem - (VA)",
+      "state": "VA",
+      "county_eia": "Roanoke",
+      "note": "County vs independent city share the same base name; FIPS not invented"
+    },
+    {
+      "kind": "ct_legacy_county",
+      "utility_number": 17569,
+      "utility_name": "City of South Norwalk - (CT)",
+      "state": "CT",
+      "county_eia": "Fairfield",
+      "note": "CT rows use pre-2022 county names; Census 2024 gazetteer uses COGs"
+    },
+    {
+      "kind": "unmatched_county_name",
+      "utility_number": 18480,
+      "utility_name": "Tatitlek Electric Utility",
+      "state": "AK",
+      "county_eia": "Valdez Cordova",
+      "note": "No unique gazetteer match; FIPS not invented"
+    },
+    {
+      "kind": "unmatched_county_name",
+      "utility_number": 18541,
+      "utility_name": "City of Tenakee Springs - (AK)",
+      "state": "AK",
+      "county_eia": "Skagway Hoonah Angoon",
+      "note": "No unique gazetteer match; FIPS not invented"
+    },
+    {
+      "kind": "unmatched_county_name",
+      "utility_number": 18963,
+      "utility_name": "Inside Passage Elec Coop, Inc",
+      "state": "AK",
+      "county_eia": "Skagway Hoonah Angoon",
+      "note": "No unique gazetteer match; FIPS not invented"
+    },
+    {
+      "kind": "unmatched_county_name",
+      "utility_number": 18963,
+      "utility_name": "Inside Passage Elec Coop, Inc",
+      "state": "AK",
+      "county_eia": "Wrangell Petersburg",
+      "note": "No unique gazetteer match; FIPS not invented"
+    },
+    {
+      "kind": "ambiguous_county_name",
+      "utility_number": 19436,
+      "utility_name": "Union Electric Co - (MO)",
+      "state": "MO",
+      "county_eia": "St Louis",
+      "note": "County vs independent city share the same base name; FIPS not invented"
+    },
+    {
+      "kind": "ct_legacy_county",
+      "utility_number": 19497,
+      "utility_name": "United Illuminating Co",
+      "state": "CT",
+      "county_eia": "Fairfield",
+      "note": "CT rows use pre-2022 county names; Census 2024 gazetteer uses COGs"
+    },
+    {
+      "kind": "ct_legacy_county",
+      "utility_number": 19497,
+      "utility_name": "United Illuminating Co",
+      "state": "CT",
+      "county_eia": "New Haven",
+      "note": "CT rows use pre-2022 county names; Census 2024 gazetteer uses COGs"
+    },
+    {
+      "kind": "unmatched_county_name",
+      "utility_number": 19876,
+      "utility_name": "Virginia Electric & Power Co",
+      "state": "VA",
+      "county_eia": "Bedford City",
+      "note": "No unique gazetteer match; FIPS not invented"
+    },
+    {
+      "kind": "ambiguous_county_name",
+      "utility_number": 19876,
+      "utility_name": "Virginia Electric & Power Co",
+      "state": "VA",
+      "county_eia": "Fairfax",
+      "note": "County vs independent city share the same base name; FIPS not invented"
+    },
+    {
+      "kind": "ambiguous_county_name",
+      "utility_number": 19876,
+      "utility_name": "Virginia Electric & Power Co",
+      "state": "VA",
+      "county_eia": "Franklin",
+      "note": "County vs independent city share the same base name; FIPS not invented"
+    },
+    {
+      "kind": "ambiguous_county_name",
+      "utility_number": 19876,
+      "utility_name": "Virginia Electric & Power Co",
+      "state": "VA",
+      "county_eia": "Richmond",
+      "note": "County vs independent city share the same base name; FIPS not invented"
+    },
+    {
+      "kind": "ct_legacy_county",
+      "utility_number": 20038,
+      "utility_name": "Town of Wallingford - (CT)",
+      "state": "CT",
+      "county_eia": "New Haven",
+      "note": "CT rows use pre-2022 county names; Census 2024 gazetteer uses COGs"
+    },
+    {
+      "kind": "unmatched_county_name",
+      "utility_number": 21015,
+      "utility_name": "City of Wrangell - (AK)",
+      "state": "AK",
+      "county_eia": "Wrangell Petersburg",
+      "note": "No unique gazetteer match; FIPS not invented"
+    },
+    {
+      "kind": "unmatched_county_name",
+      "utility_number": 29297,
+      "utility_name": "Pelican Utility",
+      "state": "AK",
+      "county_eia": "Skagway Hoonah Angoon",
+      "note": "No unique gazetteer match; FIPS not invented"
+    },
+    {
+      "kind": "unmatched_county_name",
+      "utility_number": 40215,
+      "utility_name": "Cordova Electric Coop, Inc",
+      "state": "AK",
+      "county_eia": "Valdez Cordova",
+      "note": "No unique gazetteer match; FIPS not invented"
+    },
+    {
+      "kind": "ct_legacy_county",
+      "utility_number": 49826,
+      "utility_name": "Mohegan Tribal Utility Authority",
+      "state": "CT",
+      "county_eia": "New London",
+      "note": "CT rows use pre-2022 county names; Census 2024 gazetteer uses COGs"
+    }
+  ],
+  "outputs": {
+    "utility_county_crosswalk_csv": "data/processed/crosswalks/eia_861_utility_county_v0.csv",
+    "utility_state_csv": "data/processed/panel/eia_861_utility_state_v0.csv",
+    "sample_csv": "data/processed/panel/eia_861_utility_county_v0_sample.csv",
+    "qa_json": "data/processed/qa/eia_861_coverage_v0_qa.json"
+  },
+  "generated_at_utc": "2026-09-17T04:22:40.756912+00:00",
+  "access_date_pt": "2026-09-16",
+  "by_state": {
+    "AK": {
+      "n": 84,
+      "matched": 69,
+      "ambiguous": 0,
+      "unmatched": 15,
+      "match_rate": 0.8214
+    },
+    "AL": {
+      "n": 213,
+      "matched": 213,
+      "ambiguous": 0,
+      "unmatched": 0,
+      "match_rate": 1.0
+    },
+    "AR": {
+      "n": 220,
+      "matched": 220,
+      "ambiguous": 0,
+      "unmatched": 0,
+      "match_rate": 1.0
+    },
+    "AZ": {
+      "n": 91,
+      "matched": 91,
+      "ambiguous": 0,
+      "unmatched": 0,
+      "match_rate": 1.0
+    },
+    "CA": {
+      "n": 179,
+      "matched": 179,
+      "ambiguous": 0,
+      "unmatched": 0,
+      "match_rate": 1.0
+    },
+    "CO": {
+      "n": 263,
+      "matched": 263,
+      "ambiguous": 0,
+      "unmatched": 0,
+      "match_rate": 1.0
+    },
+    "CT": {
+      "n": 19,
+      "matched": 0,
+      "ambiguous": 0,
+      "unmatched": 19,
+      "match_rate": 0.0
+    },
+    "DC": {
+      "n": 1,
+      "matched": 1,
+      "ambiguous": 0,
+      "unmatched": 0,
+      "match_rate": 1.0
+    },
+    "DE": {
+      "n": 16,
+      "matched": 16,
+      "ambiguous": 0,
+      "unmatched": 0,
+      "match_rate": 1.0
+    },
+    "FL": {
+      "n": 206,
+      "matched": 206,
+      "ambiguous": 0,
+      "unmatched": 0,
+      "match_rate": 1.0
+    },
+    "GA": {
+      "n": 572,
+      "matched": 572,
+      "ambiguous": 0,
+      "unmatched": 0,
+      "match_rate": 1.0
+    },
+    "HI": {
+      "n": 5,
+      "matched": 5,
+      "ambiguous": 0,
+      "unmatched": 0,
+      "match_rate": 1.0
+    },
+    "IA": {
+      "n": 600,
+      "matched": 600,
+      "ambiguous": 0,
+      "unmatched": 0,
+      "match_rate": 1.0
+    },
+    "ID": {
+      "n": 119,
+      "matched": 119,
+      "ambiguous": 0,
+      "unmatched": 0,
+      "match_rate": 1.0
+    },
+    "IL": {
+      "n": 357,
+      "matched": 357,
+      "ambiguous": 0,
+      "unmatched": 0,
+      "match_rate": 1.0
+    },
+    "IN": {
+      "n": 455,
+      "matched": 455,
+      "ambiguous": 0,
+      "unmatched": 0,
+      "match_rate": 1.0
+    },
+    "KS": {
+      "n": 460,
+      "matched": 460,
+      "ambiguous": 0,
+      "unmatched": 0,
+      "match_rate": 1.0
+    },
+    "KY": {
+      "n": 375,
+      "matched": 375,
+      "ambiguous": 0,
+      "unmatched": 0,
+      "match_rate": 1.0
+    },
+    "LA": {
+      "n": 182,
+      "matched": 182,
+      "ambiguous": 0,
+      "unmatched": 0,
+      "match_rate": 1.0
+    },
+    "MA": {
+      "n": 71,
+      "matched": 71,
+      "ambiguous": 0,
+      "unmatched": 0,
+      "match_rate": 1.0
+    },
+    "MD": {
+      "n": 47,
+      "matched": 46,
+      "ambiguous": 1,
+      "unmatched": 0,
+      "match_rate": 0.9787
+    },
+    "ME": {
+      "n": 29,
+      "matched": 29,
+      "ambiguous": 0,
+      "unmatched": 0,
+      "match_rate": 1.0
+    },
+    "MI": {
+      "n": 276,
+      "matched": 276,
+      "ambiguous": 0,
+      "unmatched": 0,
+      "match_rate": 1.0
+    },
+    "MN": {
+      "n": 505,
+      "matched": 505,
+      "ambiguous": 0,
+      "unmatched": 0,
+      "match_rate": 1.0
+    },
+    "MO": {
+      "n": 494,
+      "matched": 493,
+      "ambiguous": 1,
+      "unmatched": 0,
+      "match_rate": 0.998
+    },
+    "MS": {
+      "n": 236,
+      "matched": 236,
+      "ambiguous": 0,
+      "unmatched": 0,
+      "match_rate": 1.0
+    },
+    "MT": {
+      "n": 214,
+      "matched": 214,
+      "ambiguous": 0,
+      "unmatched": 0,
+      "match_rate": 1.0
+    },
+    "NC": {
+      "n": 395,
+      "matched": 395,
+      "ambiguous": 0,
+      "unmatched": 0,
+      "match_rate": 1.0
+    },
+    "ND": {
+      "n": 233,
+      "matched": 233,
+      "ambiguous": 0,
+      "unmatched": 0,
+      "match_rate": 1.0
+    },
+    "NE": {
+      "n": 409,
+      "matched": 409,
+      "ambiguous": 0,
+      "unmatched": 0,
+      "match_rate": 1.0
+    },
+    "NH": {
+      "n": 32,
+      "matched": 32,
+      "ambiguous": 0,
+      "unmatched": 0,
+      "match_rate": 1.0
+    },
+    "NJ": {
+      "n": 49,
+      "matched": 49,
+      "ambiguous": 0,
+      "unmatched": 0,
+      "match_rate": 1.0
+    },
+    "NM": {
+      "n": 121,
+      "matched": 121,
+      "ambiguous": 0,
+      "unmatched": 0,
+      "match_rate": 1.0
+    },
+    "NV": {
+      "n": 39,
+      "matched": 39,
+      "ambiguous": 0,
+      "unmatched": 0,
+      "match_rate": 1.0
+    },
+    "NY": {
+      "n": 177,
+      "matched": 177,
+      "ambiguous": 0,
+      "unmatched": 0,
+      "match_rate": 1.0
+    },
+    "OH": {
+      "n": 435,
+      "matched": 435,
+      "ambiguous": 0,
+      "unmatched": 0,
+      "match_rate": 1.0
+    },
+    "OK": {
+      "n": 352,
+      "matched": 352,
+      "ambiguous": 0,
+      "unmatched": 0,
+      "match_rate": 1.0
+    },
+    "OR": {
+      "n": 157,
+      "matched": 157,
+      "ambiguous": 0,
+      "unmatched": 0,
+      "match_rate": 1.0
+    },
+    "PA": {
+      "n": 214,
+      "matched": 214,
+      "ambiguous": 0,
+      "unmatched": 0,
+      "match_rate": 1.0
+    },
+    "RI": {
+      "n": 7,
+      "matched": 7,
+      "ambiguous": 0,
+      "unmatched": 0,
+      "match_rate": 1.0
+    },
+    "SC": {
+      "n": 167,
+      "matched": 167,
+      "ambiguous": 0,
+      "unmatched": 0,
+      "match_rate": 1.0
+    },
+    "SD": {
+      "n": 312,
+      "matched": 312,
+      "ambiguous": 0,
+      "unmatched": 0,
+      "match_rate": 1.0
+    },
+    "TN": {
+      "n": 262,
+      "matched": 262,
+      "ambiguous": 0,
+      "unmatched": 0,
+      "match_rate": 1.0
+    },
+    "TX": {
+      "n": 978,
+      "matched": 978,
+      "ambiguous": 0,
+      "unmatched": 0,
+      "match_rate": 1.0
+    },
+    "UT": {
+      "n": 93,
+      "matched": 93,
+      "ambiguous": 0,
+      "unmatched": 0,
+      "match_rate": 1.0
+    },
+    "VA": {
+      "n": 288,
+      "matched": 278,
+      "ambiguous": 9,
+      "unmatched": 1,
+      "match_rate": 0.9653
+    },
+    "VT": {
+      "n": 44,
+      "matched": 44,
+      "ambiguous": 0,
+      "unmatched": 0,
+      "match_rate": 1.0
+    },
+    "WA": {
+      "n": 170,
+      "matched": 170,
+      "ambiguous": 0,
+      "unmatched": 0,
+      "match_rate": 1.0
+    },
+    "WI": {
+      "n": 370,
+      "matched": 370,
+      "ambiguous": 0,
+      "unmatched": 0,
+      "match_rate": 1.0
+    },
+    "WV": {
+      "n": 81,
+      "matched": 81,
+      "ambiguous": 0,
+      "unmatched": 0,
+      "match_rate": 1.0
+    },
+    "WY": {
+      "n": 102,
+      "matched": 102,
+      "ambiguous": 0,
+      "unmatched": 0,
+      "match_rate": 1.0
+    }
+  }
+}
